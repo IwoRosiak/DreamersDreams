@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<ThingDef ParentName="PlantBase">
+  <defName>Plant_Opium</defName>
+  <label>opium plant</label>
+  <description>A peculiar plant that resemblences tentacle like vines.</description>
+  <statBases>
+    <MaxHitPoints>85</MaxHitPoints>
+    <Nutrition>0.15</Nutrition>
+  </statBases>
+  <graphicData>
+    <texPath>Things/Plant/PsychoidPlant</texPath>
+    <graphicClass>Graphic_Random</graphicClass>
+  </graphicData>
+  <selectable>true</selectable>
+  <pathCost>14</pathCost>
+  <ingestible />
+  <plant>
+    <growDays>9.00</growDays>
+    <dieIfLeafless>true</dieIfLeafless>
+    <harvestTag>Standard</harvestTag>
+    <harvestedThingDef>OpiumLeaves</harvestedThingDef>
+    <harvestYield>8</harvestYield>
+    <sowMinSkill>6</sowMinSkill>
+    <sowTags>
+      <li>Ground</li>
+      <li>Hydroponic</li>
+    </sowTags>
+    <topWindExposure>0.1</topWindExposure>
+    <visualSizeRange>0.3~1.0</visualSizeRange>
+    <wildOrder>2</wildOrder>
+  </plant>
+</ThingDef>
+
+</Defs>

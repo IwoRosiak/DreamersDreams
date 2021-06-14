@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+<!-- POSITIVE DREAMS -->
+<ThoughtDef Class= "DreamersDream.DD_ThoughtDef">
+  <defName>WonderfulDream</defName>
+  <showBubble>true</showBubble>
+  <durationDays>0.8</durationDays>
+  <stackLimit>1</stackLimit>
+  <chance>3</chance>
+  <stages>
+    <li>
+      <label>had a wonderful dream</label>
+      <description>I have dreamt about wonderful things that are hard to describe. I felt like a god!</description>
+      <baseMoodEffect>8</baseMoodEffect>
+    </li>
+  </stages>
+</ThoughtDef>
+
+  <ThoughtDef Class= "DreamersDream.DD_ThoughtDef">
+    <defName>VeryGoodDream</defName>
+    <showBubble>true</showBubble>
+    <durationDays>0.8</durationDays>
+    <stackLimit>1</stackLimit>
+    <chance>7</chance>
+    <stages>
+      <li>
+        <label>had a very pleasent dream</label>
+        <description>I had a dream about my favourite food and people! It gives me hopes.</description>
+        <baseMoodEffect>6</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+<ThoughtDef Class= "DreamersDream.DD_ThoughtDef">
+  <defName>GoodDream</defName>
+  <showBubble>true</showBubble>
+  <durationDays>0.8</durationDays>
+  <stackLimit>1</stackLimit>
+  <chance>25</chance>
+  <stages>
+    <li>
+      <label>had a pleasent dream</label>
+      <description>I had a dream about calming places and kind people.</description>
+      <baseMoodEffect>3</baseMoodEffect>
+    </li>
+  </stages>
+</ThoughtDef>
+
+<ThoughtDef Class= "DreamersDream.DD_ThoughtDef">
+  <defName>FlyingDream</defName>
+  <showBubble>true</showBubble>
+  <durationDays>0.8</durationDays>
+  <stackLimit>1</stackLimit>
+  <chance>5</chance>
+  <stages>
+    <li>
+      <label>had a dream about flying</label>
+      <description>I was flying in my dream dream! It was an amazing experience. I just wanted it to keep going...</description>
+      <baseMoodEffect>5</baseMoodEffect>
+    </li>
+  </stages>
+</ThoughtDef>
+
+<ThoughtDef Class= "DreamersDream.DD_ThoughtDef">
+  <defName>HealingDream</defName>
+  <showBubble>true</showBubble>
+  <durationDays>0.8</durationDays>
+  <stackLimit>1</stackLimit>
+  <chance>0.5</chance>
+  <stages>
+    <li>
+      <label>had a miraculus healing dream</label>
+      <description>I dreamt that my wounds closed up and when I woke up I felt so much better!</description>
+      <baseMoodEffect>2</baseMoodEffect>
+    </li>
+  </stages>
+</ThoughtDef>
+
+<ThoughtDef Class= "DreamersDream.DD_ThoughtDef">
+  <defName>LucidDream</defName>
+  <showBubble>true</showBubble>
+  <durationDays>2</durationDays>
+  <stackLimit>1</stackLimit>
+  <chance>2.5</chance>
+  <stages>
+    <li>
+      <label>had lucid dream</label>
+      <description>I realised that I'm in the dream so I could do anything I want! If only I could do it more often...</description>
+      <baseMoodEffect>8</baseMoodEffect>
+    </li>
+  </stages>
+</ThoughtDef>
+
+<ThoughtDef Class= "DreamersDream.DD_ThoughtDef">
+  <defName>ChildhoodGoodDream</defName>
+  <showBubble>true</showBubble>
+  <durationDays>1.6</durationDays>
+  <stackLimit>1</stackLimit>
+  <chance>2</chance>
+  <stages>
+    <li>
+      <label>had a dream about childhood</label>
+      <description>I was back in my childhood house! I've regained connection with some of my the best memories.</description>
+      <baseMoodEffect>8</baseMoodEffect>
+    </li>
+  </stages>
+</ThoughtDef>
+
+</Defs>
