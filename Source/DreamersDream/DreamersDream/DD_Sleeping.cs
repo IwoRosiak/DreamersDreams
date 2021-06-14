@@ -2,12 +2,15 @@
 using RimWorld.Planet;
 using System.Reflection;
 using Verse;
+using static DreamersDream.DD_DreamingUtility;
 
 namespace DreamersDream
 {
     [StaticConstructorOnStartup]
     static class HarmonyPatches
     {
+
+
         static HarmonyPatches()
         {
             var harmony = new Harmony("com.company.QarsoonMeel.DreamersDreams");
@@ -18,19 +21,7 @@ namespace DreamersDream
 
             harmony.Patch(targetmethod, null, postfixmethod);
 
-            MethodInfo targetmethodtick = AccessTools.Method(typeof(Verse.TickManager), "DoSingleTick");
-
-            HarmonyMethod postfixmethodtick = new HarmonyMethod(typeof(DreamersDream.HarmonyPatches).GetMethod("PurgeDictionary_Postfix"));
-
-            harmony.Patch(targetmethodtick, null, postfixmethodtick);
         }
-
-        public static void PurgeDictionary_Postfix()
-        {
-
-
-        }
-
         public static void CheckSleep_Postfix(Pawn __instance)
         {
             var currentTime = Find.TickManager.TicksGame;
@@ -39,7 +30,7 @@ namespace DreamersDream
             if (__instance.RaceProps.Humanlike && !__instance.Dead && (__instance.Spawned || CaravanUtility.IsCaravanMember(__instance)))
             {
                 //needs to use different classes but it checks if the pawn is resting
-                if (__instance.needs.rest.GUIChangeArrow == 1)                       //      !(__instance.health.capacities.CanBeAwake && (!__instance.Spawned || __instance.CurJob == null || __instance.jobs.curDriver == null || !__instance.jobs.curDriver.asleep)))
+                if (IsAwake(__instance))                       //      !(__instance.health.capacities.CanBeAwake && (!__instance.Spawned || __instance.CurJob == null || __instance.jobs.curDriver == null || !__instance.jobs.curDriver.asleep)))
                 {
                     //variable that holds whether the pawn can get a dream or not
                     var eligibleForDream = false;
@@ -85,7 +76,7 @@ namespace DreamersDream
                         //loop that fills out totalDreamChance to generate a random number later
                         foreach (DD_ThoughtDef dream in DD_ThoughtDefArray.dreams)
                         {
-                            totalDreamChance += CheckForHigherChanceDream(dream);
+                            totalDreamChance += CheckDreamChance(dream);
                         }
                         var dreamChanceRoll = Rand.Range(0, totalDreamChance);
 
@@ -95,7 +86,7 @@ namespace DreamersDream
                         //loop for applying dreams (thoughts)
                         foreach (DD_ThoughtDef dream in DD_ThoughtDefArray.dreams)
                         {
-                            var chanceForDream = CheckForHigherChanceDream(dream);
+                            var chanceForDream = CheckDreamChance(dream);
 
                             if (dreamChanceRoll < dreamChanceProgress + chanceForDream)
                             {
@@ -110,7 +101,7 @@ namespace DreamersDream
                         }
                     }
                 }
-                else if (__instance.needs.rest.GUIChangeArrow == -1)
+                else if (!IsAwake(__instance))
                 {
                     //Messages.Message("Pawn awake. Adding " + __instance.Name + " to the list", MessageTypeDefOf.NeutralEvent);
                     SleepingPawnTracker.SleepingList.Remove(__instance);
@@ -120,35 +111,9 @@ namespace DreamersDream
             }
             else if (SleepingPawnTracker.SleepingList.ContainsKey(__instance))
             {
-
                 //Messages.Message("Deleted " + __instance.Name + "Dead? : " + __instance.Dead, MessageTypeDefOf.NeutralEvent);
                 SleepingPawnTracker.SleepingList.Remove(__instance);
             }
-
-            float CheckForHigherChanceDream(DD_ThoughtDef dream)
-            {
-                /*if (CheckForHigh() && dream.defName == "VeryGoodDream")
-                {
-                    return dream.chance + 1000;
-
-                }*/
-                return dream.chance;
-            }
-
-            /*bool CheckForHigh()
-            {
-                for (int i = 0; i < __instance.health.hediffSet.hediffs.Count; i++)
-                {
-                    Hediff hediff = __instance.health.hediffSet.hediffs[i];
-
-                    if (hediff.def.defName == "DreamHigh")
-                    {
-                        //Messages.Message("Dream High Detected!", MessageTypeDefOf.NeutralEvent);
-                        return true;
-                    }
-                }
-                return false;
-            }*/
         }
     }
 }

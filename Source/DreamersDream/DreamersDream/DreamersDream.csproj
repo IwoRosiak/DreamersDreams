@@ -58,6 +58,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DD_DreamingUtility.cs" />
     <Compile Include="DD_SleepingPawnTracker.cs" />
     <Compile Include="DD_ThoughtDef.cs" />
     <Compile Include="DD_ThoughtDefOf.cs" />
