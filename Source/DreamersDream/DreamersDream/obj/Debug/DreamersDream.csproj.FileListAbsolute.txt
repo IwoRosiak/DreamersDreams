@@ -6,3 +6,11 @@ C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\DreamersDreams\Assem
 C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\DreamersDreams\Source\DreamersDream\DreamersDream\obj\Debug\DreamersDream.csproj.CopyComplete
 C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\DreamersDreams\Source\DreamersDream\DreamersDream\obj\Debug\DreamersDream.dll
 C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\DreamersDreams\Source\DreamersDream\DreamersDream\obj\Debug\DreamersDream.pdb
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\DreamersDreamsDevBranch\Source\DreamersDream\DreamersDream\obj\Debug\DreamersDream.csproj.AssemblyReference.cache
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\DreamersDreamsDevBranch\Source\DreamersDream\DreamersDream\obj\Debug\DreamersDream.csproj.CoreCompileInputs.cache
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\DreamersDreamsDevBranch\Source\DreamersDream\DreamersDream\obj\Debug\DreamersDream.dll
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\DreamersDreamsDevBranch\Source\DreamersDream\DreamersDream\obj\Debug\DreamersDream.pdb
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\DreamersDreamsDevBranch\Assemblies\0Harmony.dll
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\DreamersDreamsDevBranch\Assemblies\DreamersDream.dll
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\DreamersDreamsDevBranch\Assemblies\DreamersDream.pdb
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\DreamersDreamsDevBranch\Source\DreamersDream\DreamersDream\obj\Debug\DreamersDream.csproj.CopyComplete
