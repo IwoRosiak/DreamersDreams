@@ -113,7 +113,7 @@ namespace DreamersDream
                 }
                 else if (__instance.needs.rest.GUIChangeArrow == -1)
                 {
-                    Messages.Message("Pawn awake. Adding " + __instance.Name + " to the list", MessageTypeDefOf.NeutralEvent);
+                    //Messages.Message("Pawn awake. Adding " + __instance.Name + " to the list", MessageTypeDefOf.NeutralEvent);
                     SleepingPawnTracker.SleepingList.Remove(__instance);
                     SleepingPawnTracker.SleepingList.Add(__instance, Find.TickManager.TicksGame);
                     return;
