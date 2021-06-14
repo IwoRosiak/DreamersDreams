@@ -1,5 +1,6 @@
 ﻿using HarmonyLib;
 using RimWorld;
+using RimWorld.Planet;
 using System.Reflection;
 using Verse;
 
@@ -36,7 +37,7 @@ namespace DreamersDream
             var currentTime = Find.TickManager.TicksGame;
 
             //is the instance a colonist and is it dead
-            if (__instance.RaceProps.Humanlike && !__instance.Dead && __instance.Spawned)
+            if (__instance.RaceProps.Humanlike && !__instance.Dead && (__instance.Spawned || CaravanUtility.IsCaravanMember(__instance)))
             {
                 //needs to use different classes but it checks if the pawn is resting
                 if (__instance.needs.rest.GUIChangeArrow == 1)                       //      !(__instance.health.capacities.CanBeAwake && (!__instance.Spawned || __instance.CurJob == null || __instance.jobs.curDriver == null || !__instance.jobs.curDriver.asleep)))
