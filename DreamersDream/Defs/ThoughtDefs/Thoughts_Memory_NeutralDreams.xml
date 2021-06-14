@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+<!-- NEUTRAL DREAMS -->
+<ThoughtDef Class= "DreamersDream.DD_ThoughtDef">
+  <defName>NoDreams</defName>
+  <showBubble>true</showBubble>
+  <durationDays>0.8</durationDays>
+  <stackLimit>1</stackLimit>
+  <chance>30</chance>
+  <stages>
+    <li>
+      <label>no dream</label>
+      <description>It seems I did not have any dreams this night...</description>
+      <baseMoodEffect>0</baseMoodEffect>
+    </li>
+  </stages>
+</ThoughtDef>
+
+<ThoughtDef Class= "DreamersDream.DD_ThoughtDef">
+  <defName>NoRememberGoodDream</defName>
+  <showBubble>true</showBubble>
+  <durationDays>0.8</durationDays>
+  <stackLimit>1</stackLimit>
+  <chance>20</chance>
+  <stages>
+    <li>
+      <label>I can't recall a pleasent dream</label>
+      <description>I had a pleasent dream but I forgot it the moment I woke up...</description>
+      <baseMoodEffect>1</baseMoodEffect>
+    </li>
+  </stages>
+</ThoughtDef>
+
+<ThoughtDef Class= "DreamersDream.DD_ThoughtDef">
+  <defName>NoRememberBadDream</defName>
+  <showBubble>true</showBubble>
+  <durationDays>0.8</durationDays>
+  <stackLimit>1</stackLimit>
+  <chance>20</chance>
+  <stages>
+    <li>
+      <label>I can't recall a bad dream</label>
+      <description>I dreamt about something upsetting but I don't really remember what was that...</description>
+      <baseMoodEffect>-1</baseMoodEffect>
+    </li>
+  </stages>
+</ThoughtDef>
+
+</Defs>
