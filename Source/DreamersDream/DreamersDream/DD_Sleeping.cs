@@ -8,11 +8,8 @@ namespace DreamersDream
     [StaticConstructorOnStartup]
     static class HarmonyPatches
     {
-
         static HarmonyPatches()
         {
-
-
             var harmony = new Harmony("com.company.QarsoonMeel.DreamersDreams");
 
             MethodInfo targetmethod = AccessTools.Method(typeof(Verse.Pawn), "TickRare");
@@ -20,37 +17,29 @@ namespace DreamersDream
             HarmonyMethod postfixmethod = new HarmonyMethod(typeof(DreamersDream.HarmonyPatches).GetMethod("CheckSleep_Postfix"));
 
             harmony.Patch(targetmethod, null, postfixmethod);
-
-
-
-
         }
-
-        public static void CheckSleep_Postfix(Pawn __instance)
+        public static void CheckSleep_Postfix(Pawn __pawn)
         {
-
             var currentTime = Find.TickManager.TicksGame;
-            //var lastTimeAwake = __instance.needs.rest.TicksAtZero.ToStringSecondsFromTicks()
-
 
             //is the instance a colonist and is it dead
-            if (__instance.RaceProps.Humanlike && !__instance.Dead)
+            if (__pawn.RaceProps.Humanlike && !__pawn.Dead)
             {
                 //needs to use different classes but it checks if the pawn is resting
-                if (!(__instance.health.capacities.CanBeAwake && (!__instance.Spawned || __instance.CurJob == null || __instance.jobs.curDriver == null || !__instance.jobs.curDriver.asleep)))
+                if (!(__pawn.health.capacities.CanBeAwake && (!__pawn.Spawned || __pawn.CurJob == null || __pawn.jobs.curDriver == null || !__pawn.jobs.curDriver.asleep)))
                 {
                     //variable that holds whether the pawn can get a dream or not
                     var eligibleForDream = false;
 
                     //checks if pawn is on the dictionary to check last time it was awake
-                    if (SleepingPawnTracker.SleepingList.ContainsKey(__instance.ThingID))
+                    if (SleepingPawnTracker.SleepingList.ContainsKey(__pawn.ThingID))
                     {
                         //saves the time the pawn has fallen asleep
-                        var pawnFallenAsleepTime = SleepingPawnTracker.SleepingList[__instance.ThingID];
+                        var pawnFallenAsleepTime = SleepingPawnTracker.SleepingList[__pawn.ThingID];
                         //Messages.Message("First sleep: " + pawnFallenAsleepTime + "Current time :" + currentTime, MessageTypeDefOf.NeutralEvent); //debug message about sleeping times
 
                         //timeToDream is the time pawn needs to sleep to be eligible for a dream
-                        var timeToDream = 2500;
+                        var timeToDream = Rand.Range(10000, 15000);
 
                         //checks if pawn has slepted enough to get a dream. If yes then it checks if the pawn has a dream already if yes 
                         if (currentTime >= pawnFallenAsleepTime + timeToDream)
@@ -58,7 +47,7 @@ namespace DreamersDream
                             //loop for all the avaible dreams, then it checks if pawn has any of those dreams
                             foreach (DD_ThoughtDef dream in DD_ThoughtDefArray.dreams)
                             {
-                                if (__instance.needs.mood.thoughts.memories.GetFirstMemoryOfDef(dream) == null)
+                                if (__pawn.needs.mood.thoughts.memories.GetFirstMemoryOfDef(dream) == null)
                                 {
                                     eligibleForDream = true;
                                 }
@@ -97,7 +86,7 @@ namespace DreamersDream
 
                             if (dreamChanceRoll < dreamChanceProgress + chanceForDream)
                             {
-                                __instance.needs.mood.thoughts.memories.TryGainMemory(dream, null);
+                                __pawn.needs.mood.thoughts.memories.TryGainMemory(dream, null);
                                 //Log.Message("Dream applied: " + dream + " Chance roll is: " + dreamChanceRoll + " Chance progress: " + dreamChanceProgress + " Progress: " + (dreamChanceProgress + chanceForDream) + " Chance :" + (chanceForDream / totalDreamChance) * 100 + "%");
                                 return;
                             }
@@ -110,27 +99,27 @@ namespace DreamersDream
                 }
                 else
                 {
-                    SleepingPawnTracker.SleepingList.Remove(__instance.ThingID);
-                    SleepingPawnTracker.SleepingList.Add(__instance.ThingID, Find.TickManager.TicksGame);
+                    SleepingPawnTracker.SleepingList.Remove(__pawn.ThingID);
+                    SleepingPawnTracker.SleepingList.Add(__pawn.ThingID, Find.TickManager.TicksGame);
                     return;
                 }
             }
 
             float CheckForHigherChanceDream(DD_ThoughtDef dream)
             {
-                if (CheckForHigh() && dream.defName == "VeryGoodDream")
+                /*if (CheckForHigh() && dream.defName == "VeryGoodDream")
                 {
                     return dream.chance + 1000;
 
-                }
+                }*/
                 return dream.chance;
             }
 
-            bool CheckForHigh()
+            /*bool CheckForHigh()
             {
-                for (int i = 0; i < __instance.health.hediffSet.hediffs.Count; i++)
+                for (int i = 0; i < __pawn.health.hediffSet.hediffs.Count; i++)
                 {
-                    Hediff hediff = __instance.health.hediffSet.hediffs[i];
+                    Hediff hediff = __pawn.health.hediffSet.hediffs[i];
 
                     if (hediff.def.defName == "DreamHigh")
                     {
@@ -139,7 +128,7 @@ namespace DreamersDream
                     }
                 }
                 return false;
-            }
+            }*/
         }
     }
 }
