@@ -6,6 +6,6 @@ namespace DreamersDream
     [StaticConstructorOnStartup]
     public class SleepingPawnTracker
     {
-        public static Dictionary<string, int> SleepingList = new Dictionary<string, int>();
+        public static Dictionary<Pawn, int> SleepingList = new Dictionary<Pawn, int>();
     }
 }

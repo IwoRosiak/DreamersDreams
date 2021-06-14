@@ -21,6 +21,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <GenerateSerializationAssemblies>On</GenerateSerializationAssemblies>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -57,19 +58,19 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
-    <Compile Include="Class2.cs" />
+    <Compile Include="DD_SleepingPawnTracker.cs" />
     <Compile Include="DD_ThoughtDef.cs" />
     <Compile Include="DD_ThoughtDefOf.cs" />
     <Compile Include="DD_Sleeping.cs" />
-    <Compile Include="DD_CompDrug.cs" />
-    <Compile Include="DD_CompProperties_DreamDrug.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="DD_PurgeDictionary.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="0Harmony.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
