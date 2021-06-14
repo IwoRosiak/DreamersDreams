@@ -1,5 +1,4 @@
 ﻿using HarmonyLib;
-using RimWorld;
 using RimWorld.Planet;
 using System.Reflection;
 using Verse;
@@ -53,7 +52,7 @@ namespace DreamersDream
                         //Messages.Message("First sleep: " + pawnFallenAsleepTime + "Current time :" + currentTime, MessageTypeDefOf.NeutralEvent); //debug message about sleeping times
 
                         //timeToDream is the time pawn needs to sleep to be eligible for a dream
-                        var timeToDream = Rand.Range(10000, 15000);
+                        var timeToDream = Rand.Range(7500, 10000);
 
                         //checks if pawn has slepted enough to get a dream. If yes then it checks if the pawn has a dream already if yes 
                         if (currentTime >= pawnFallenAsleepTime + timeToDream)
@@ -101,7 +100,7 @@ namespace DreamersDream
                             if (dreamChanceRoll < dreamChanceProgress + chanceForDream)
                             {
                                 __instance.needs.mood.thoughts.memories.TryGainMemory(dream, null);
-                                Log.Message("Dream applied: " + dream + " Chance roll is: " + dreamChanceRoll + " Chance progress: " + dreamChanceProgress + " Progress: " + (dreamChanceProgress + chanceForDream) + " Chance :" + (chanceForDream / totalDreamChance) * 100 + "%");
+                                //Log.Message("Dream applied: " + dream + " Chance roll is: " + dreamChanceRoll + " Chance progress: " + dreamChanceProgress + " Progress: " + (dreamChanceProgress + chanceForDream) + " Chance :" + (chanceForDream / totalDreamChance) * 100 + "%");
                                 return;
                             }
                             else
@@ -122,7 +121,7 @@ namespace DreamersDream
             else if (SleepingPawnTracker.SleepingList.ContainsKey(__instance))
             {
 
-                Messages.Message("Deleted " + __instance.Name + "Dead? : " + __instance.Dead, MessageTypeDefOf.NeutralEvent);
+                //Messages.Message("Deleted " + __instance.Name + "Dead? : " + __instance.Dead, MessageTypeDefOf.NeutralEvent);
                 SleepingPawnTracker.SleepingList.Remove(__instance);
             }
 

@@ -5,7 +5,7 @@ namespace DreamersDream
     [DefOf]
     public class DD_ThoughtDef : ThoughtDef
     {
-        public int chance = 1;
+        public float chance = 1;
 
     }
 

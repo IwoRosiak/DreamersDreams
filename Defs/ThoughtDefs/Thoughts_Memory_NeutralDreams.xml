@@ -6,7 +6,7 @@
   <showBubble>true</showBubble>
   <durationDays>0.8</durationDays>
   <stackLimit>1</stackLimit>
-  <chance>30</chance>
+  <chance>20</chance>
   <stages>
     <li>
       <label>no dream</label>
@@ -24,7 +24,7 @@
   <chance>20</chance>
   <stages>
     <li>
-      <label>I can't recall a pleasent dream</label>
+      <label>Can't recall a pleasent dream</label>
       <description>I had a pleasent dream but I forgot it the moment I woke up...</description>
       <baseMoodEffect>1</baseMoodEffect>
     </li>
@@ -39,7 +39,7 @@
   <chance>20</chance>
   <stages>
     <li>
-      <label>I can't recall a bad dream</label>
+      <label>Can't recall a bad dream</label>
       <description>I dreamt about something upsetting but I don't really remember what was that...</description>
       <baseMoodEffect>-1</baseMoodEffect>
     </li>
