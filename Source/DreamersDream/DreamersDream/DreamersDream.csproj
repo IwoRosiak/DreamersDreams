@@ -58,12 +58,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DD_DreamingUtility.cs" />
+    <Compile Include="DD_Utility.cs" />
+    <Compile Include="MentalStates\MentalState_Sleepwalking.cs" />
+    <Compile Include="MentalStates\DD_MentalStateDefOf.cs" />
     <Compile Include="DD_SleepingPawnTracker.cs" />
-    <Compile Include="DD_ThoughtDef.cs" />
-    <Compile Include="DD_ThoughtDefOf.cs" />
+    <Compile Include="MentalStates\DD_MentalStateDef.cs" />
+    <Compile Include="Dreams\DD_ThoughtDef.cs" />
+    <Compile Include="Dreams\DD_ThoughtDefOf.cs" />
     <Compile Include="DD_Sleeping.cs" />
-    <Compile Include="DD_PurgeDictionary.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="0Harmony.dll">

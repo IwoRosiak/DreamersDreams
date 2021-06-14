@@ -2,7 +2,7 @@
 using RimWorld.Planet;
 using System.Reflection;
 using Verse;
-using static DreamersDream.DD_DreamingUtility;
+using static DreamersDream.DD_Utility;
 
 namespace DreamersDream
 {
@@ -91,6 +91,7 @@ namespace DreamersDream
                             if (dreamChanceRoll < dreamChanceProgress + chanceForDream)
                             {
                                 __instance.needs.mood.thoughts.memories.TryGainMemory(dream, null);
+                                __instance.mindState.mentalStateHandler.TryStartMentalState(DD_MentalStateDefOf.Sleepwalk, null, true);
                                 //Log.Message("Dream applied: " + dream + " Chance roll is: " + dreamChanceRoll + " Chance progress: " + dreamChanceProgress + " Progress: " + (dreamChanceProgress + chanceForDream) + " Chance :" + (chanceForDream / totalDreamChance) * 100 + "%");
                                 return;
                             }

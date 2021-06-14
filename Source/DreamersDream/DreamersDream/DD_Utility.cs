@@ -2,9 +2,10 @@
 
 namespace DreamersDream
 {
-    public static class DD_DreamingUtility
+    [StaticConstructorOnStartup]
+    public static class DD_Utility
     {
-        static DD_DreamingUtility()
+        static DD_Utility()
         {
         }
 
@@ -45,5 +46,27 @@ namespace DreamersDream
             }
             return false;
         }
+
+
+
+
+
+        /* public virtual void MentalStateTick()
+         {
+             if (this.pawn.IsHashIntervalTick(150))
+             {
+                 this.age += 150;
+                 if (this.age >= this.def.maxTicksBeforeRecovery || (this.age >= this.def.minTicksBeforeRecovery && this.CanEndBeforeMaxDurationNow && Rand.MTBEventOccurs(this.def.recoveryMtbDays, 60000f, 150f)) || (this.forceRecoverAfterTicks != -1 && this.age >= this.forceRecoverAfterTicks))
+                 {
+                     this.RecoverFromState();
+                     return;
+                 }
+                 if (this.def.recoverFromSleep && !this.pawn.Awake())
+                 {
+                     this.RecoverFromState();
+                     return;
+                 }
+             }
+         } CHECK BASED ON AGE*/
     }
 }
