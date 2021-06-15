@@ -14,7 +14,9 @@
       <baseMoodEffect>1</baseMoodEffect>
     </li>
   </stages>
-  <triggers>Sleepwalk</triggers>
+  <triggers>
+    <li>Sleepwalk</li>
+  </triggers>
 </ThoughtDef>
 
 

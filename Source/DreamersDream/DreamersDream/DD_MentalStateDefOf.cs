@@ -14,6 +14,12 @@ namespace DreamersDream
         // Token: 0x04003A63 RID: 14947
         public static DD_MentalStateDef Sleepwalk;
 
+        public static DD_MentalStateDef SleepwalkBerserk;
+
+        public static DD_MentalStateDef SleepwalkTantrum;
+
+        public static DD_MentalStateDef SleepwalkFireStarter;
+
         // Token: 0x04003A64 RID: 14948
         // public static MentalStateDef Binging_DrugExtreme;
 

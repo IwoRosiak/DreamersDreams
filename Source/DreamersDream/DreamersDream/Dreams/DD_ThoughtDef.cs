@@ -1,4 +1,5 @@
 ﻿using RimWorld;
+using System.Collections.Generic;
 
 namespace DreamersDream
 {
@@ -7,7 +8,7 @@ namespace DreamersDream
     {
         public float chance = 1;
 
-        public DD_MentalStateDef triggers = null;
+        public List<DD_MentalStateDef> triggers;
 
     }
 
