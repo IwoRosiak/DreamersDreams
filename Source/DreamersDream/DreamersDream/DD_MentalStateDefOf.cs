@@ -12,7 +12,7 @@ namespace DreamersDream
         }
 
         // Token: 0x04003A63 RID: 14947
-        public static Verse.MentalStateDef Sleepwalk;
+        public static DD_MentalStateDef Sleepwalk;
 
         // Token: 0x04003A64 RID: 14948
         // public static MentalStateDef Binging_DrugExtreme;

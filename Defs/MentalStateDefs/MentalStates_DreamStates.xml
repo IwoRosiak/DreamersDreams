@@ -1,11 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-  <MentalStateDef Abstract="True" Name="BaseDreamMentalState">
-    <minTicksBeforeRecovery>1250</minTicksBeforeRecovery>
-    <recoveryMtbDays>0.3</recoveryMtbDays>
-  </MentalStateDef>
 
+  <!--
     <MentalStateDef ParentName="BaseDreamMentalState" Class= "Verse.MentalStateDef">
       <defName>Sleepwalk</defName>
       <label>sleepwalking</label>
@@ -14,6 +11,7 @@
       <minTicksBeforeRecovery>1250</minTicksBeforeRecovery>
       <recoveryMtbDays>0.2</recoveryMtbDays>
       <blockNormalThoughts>true</blockNormalThoughts>
+      <blockRandomInteraction>true</blockRandomInteraction>
       <nameColor>(0.65, 0.9, 0.93)</nameColor>
       <beginLetterLabel>sleepwalking</beginLetterLabel>
       <beginLetter>{0} stood up from his bed and started to wander around in his sleep.</beginLetter>
@@ -22,19 +20,85 @@
       <baseInspectLine>Mental state: Sleepwalking</baseInspectLine>
       <unspawnedCanDo>true</unspawnedCanDo>
     </MentalStateDef>
+    <MentalBreakDef>
+        <defName>BerserkDream</defName>
+        <mentalState>BerserkDream</mentalState>
+        <baseCommonality>1</baseCommonality>
+        <intensity>Extreme</intensity>
+      </MentalBreakDef>
+
+        -->
+
+
+        <MentalBreakDef>
+          <defName>Sleepwalk</defName>
+          <mentalState>Sleepwalk</mentalState>
+          <baseCommonality>0</baseCommonality>
+          <intensity>Major</intensity>
+        </MentalBreakDef>
+
+        <MentalStateDef ParentName="BaseMentalState" Class= "DreamersDream.DD_MentalStateDef">
+          <defName>Sleepwalk</defName>
+          <label>sleepwalking</label>
+          <stateClass>MentalState_WanderConfused</stateClass>
+          <minTicksBeforeRecovery>1250</minTicksBeforeRecovery>
+          <maxTicksBeforeRecovery>5000</maxTicksBeforeRecovery>
+          <recoveryMtbDays>0.02</recoveryMtbDays>
+          <blockNormalThoughts>true</blockNormalThoughts>
+          <blockRandomInteraction>true</blockRandomInteraction>
+          <nameColor>(0.65, 0.9, 0.93)</nameColor>
+          <beginLetterLabel>Sleepwalking</beginLetterLabel>
+          <beginLetter>{0} stood up from bed and started to wander around while asleep.</beginLetter>
+          <beginLetterDef>NegativeEvent</beginLetterDef>
+          <recoveryMessage>{0} no longer walks in his sleep.</recoveryMessage>
+          <baseInspectLine>Mental state: Sleepwalking</baseInspectLine>
+          <recoverFromSleep>false</recoverFromSleep>
+          <recoverFromDowned>false</recoverFromDowned>
+          <recoverFromCollapsingExhausted>false</recoverFromCollapsingExhausted>
+          <unspawnedCanDo>true</unspawnedCanDo>
+        </MentalStateDef>
 
   <!-- Mental breaks: extreme -->
-
-  <!--<MentalBreakDef>
+  <!--
+  <MentalBreakDef>
     <defName>BerserkDream</defName>
     <mentalState>BerserkDream</mentalState>
     <baseCommonality>1</baseCommonality>
     <intensity>Extreme</intensity>
   </MentalBreakDef>
-  <MentalStateDef ParentName="BaseMentalState">
-    <defName>Berserk</defName>
-    <stateClass>MentalState_Berserk</stateClass>
+  <MentalStateDef ParentName="BaseMentalState" >
+    <defName>BerserkDream</defName>
+    <stateClass>Verse.AI.MentalState_Berserk</stateClass>
     <label>berserk</label>
+    <category>Aggro</category>
+    <blockInteractionInitiationExcept>
+      <li>Insult</li>
+    </blockInteractionInitiationExcept>
+    <blockInteractionRecipientExcept>
+      <li>Insult</li>
+    </blockInteractionRecipientExcept>
+    <blockRandomInteraction>true</blockRandomInteraction>
+    <moodRecoveryThought>Catharsis</moodRecoveryThought>
+    <blockNormalThoughts>true</blockNormalThoughts>
+    <nameColor>(0.9,0.2,0.5)</nameColor>
+    <beginLetter>{0} has gone berserk.\n\n[PAWN_pronoun] will attack anyone [PAWN_pronoun] sees.</beginLetter>
+    <beginLetterDef>ThreatSmall</beginLetterDef>
+    <minTicksBeforeRecovery>40000</minTicksBeforeRecovery>
+    <maxTicksBeforeRecovery>60000</maxTicksBeforeRecovery>
+    <recoveryMtbDays>0.166</recoveryMtbDays>
+    <recoveryMessage>{0}'s berserk rage has come to an end.</recoveryMessage>
+    <baseInspectLine>Mental state: Berserk</baseInspectLine>
+    <stateEffecter>BerserkDream</stateEffecter>
+    <tale>MentalStateBerserk</tale>
+    <recoverFromSleep>false</recoverFromSleep>
+    <unspawnedCanDo>true</unspawnedCanDo>
+  </MentalStateDef> -->
+
+<!--
+  <MentalStateDef ParentName="BaseMentalState">
+    <defName>Sleepwalk</defName>
+    <stateClass>DreamersDream.Dreams.MentalState_Sleepwalking</stateClass>
+    <label>Sleepwalk</label>
     <category>Aggro</category>
     <blockInteractionInitiationExcept>
       <li>Insult</li>
@@ -55,7 +119,7 @@
     <baseInspectLine>Mental state: Berserk</baseInspectLine>
     <stateEffecter>Berserk</stateEffecter>
     <tale>MentalStateBerserk</tale>
-    <recoverFromSleep>true</recoverFromSleep>
+    <recoverFromSleep>false</recoverFromSleep>
     <unspawnedCanDo>true</unspawnedCanDo>
   </MentalStateDef> -->
 

@@ -15,14 +15,14 @@ namespace DreamersDream
         {
             var harmony = new Harmony("com.company.QarsoonMeel.DreamersDreams");
 
-            MethodInfo targetmethod = AccessTools.Method(typeof(Verse.Pawn), "TickRare");
+            MethodInfo targetmethod = AccessTools.Method(typeof(Verse.Pawn), "Tick");
 
-            HarmonyMethod postfixmethod = new HarmonyMethod(typeof(DreamersDream.HarmonyPatches).GetMethod("CheckSleep_Postfix"));
+            HarmonyMethod postfixmethod = new HarmonyMethod(typeof(DreamersDream.HarmonyPatches).GetMethod("CheckSleep_Prefix"));
 
-            harmony.Patch(targetmethod, null, postfixmethod);
+            harmony.Patch(targetmethod, postfixmethod, null);
 
         }
-        public static void CheckSleep_Postfix(Pawn __instance)
+        public static void CheckSleep_Prefix(Pawn __instance)
         {
             var currentTime = Find.TickManager.TicksGame;
 
@@ -43,7 +43,7 @@ namespace DreamersDream
                         //Messages.Message("First sleep: " + pawnFallenAsleepTime + "Current time :" + currentTime, MessageTypeDefOf.NeutralEvent); //debug message about sleeping times
 
                         //timeToDream is the time pawn needs to sleep to be eligible for a dream
-                        var timeToDream = Rand.Range(7500, 10000);
+                        var timeToDream = 2500;//Rand.Range(7500, 10000);
 
                         //checks if pawn has slepted enough to get a dream. If yes then it checks if the pawn has a dream already if yes 
                         if (currentTime >= pawnFallenAsleepTime + timeToDream)
@@ -68,7 +68,7 @@ namespace DreamersDream
                         }
                     }
 
-                    if (eligibleForDream)
+                    if (eligibleForDream && __instance.needs.rest.CurCategory == RimWorld.RestCategory.Rested)
                     {
                         //variable that holds sum of all chances for all the dreams to generate a random number
                         float totalDreamChance = 0;
@@ -91,7 +91,12 @@ namespace DreamersDream
                             if (dreamChanceRoll < dreamChanceProgress + chanceForDream)
                             {
                                 __instance.needs.mood.thoughts.memories.TryGainMemory(dream, null);
-                                __instance.mindState.mentalStateHandler.TryStartMentalState(DD_MentalStateDefOf.Sleepwalk, null, true);
+
+                                __instance.mindState.mentalStateHandler.TryStartMentalState(DD_MentalStateDefOf.Sleepwalk, null, true, false, null, false);
+
+                                //__instance.jobs.EndCurrentJob(Verse.AI.JobCondition.InterruptForced, false, true);
+
+                                //__instance.jobs.EndCurrentJob(JobCondition.InterruptForced, true, true);
                                 //Log.Message("Dream applied: " + dream + " Chance roll is: " + dreamChanceRoll + " Chance progress: " + dreamChanceProgress + " Progress: " + (dreamChanceProgress + chanceForDream) + " Chance :" + (chanceForDream / totalDreamChance) * 100 + "%");
                                 return;
                             }

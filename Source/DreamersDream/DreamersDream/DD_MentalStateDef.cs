@@ -4,8 +4,8 @@ using Verse;
 namespace DreamersDream
 {
     [DefOf]
-    public class DD_MentalStateDef : MentalBreakDef
+    public class DD_MentalStateDef : MentalStateDef
     {
-        public float test = 1;
+
     }
 }
