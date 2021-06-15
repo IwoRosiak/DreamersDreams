@@ -6,10 +6,10 @@
   <showBubble>true</showBubble>
   <durationDays>0.8</durationDays>
   <stackLimit>1</stackLimit>
-  <chance>0.5</chance>
+  <chance>10</chance>
   <stages>
     <li>
-      <label>good dream</label>
+      <label>had a dream about spoons</label>
       <description>I had a ridicoulus dream where I was drinking water using only spoon!</description>
       <baseMoodEffect>2</baseMoodEffect>
     </li>
@@ -21,10 +21,10 @@
   <showBubble>true</showBubble>
   <durationDays>0.8</durationDays>
   <stackLimit>1</stackLimit>
-  <chance>1</chance>
+  <chance>10</chance>
   <stages>
     <li>
-      <label>dwarf ambush dream</label>
+      <label>Had a dream about little dwarf</label>
       <description>I dreamt I walked around the forest with my friend and a little dwarf ambushed us and stabbed my friend with a tiny knife!</description>
       <baseMoodEffect>-2</baseMoodEffect>
     </li>
@@ -36,10 +36,10 @@
   <showBubble>true</showBubble>
   <durationDays>0.8</durationDays>
   <stackLimit>1</stackLimit>
-  <chance>1</chance>
+  <chance>10</chance>
   <stages>
     <li>
-      <label>pizza dream</label>
+      <label>had a dream about pizza</label>
       <description>I dreamt I was making pizza with my friends and then having it together!</description>
       <baseMoodEffect>2</baseMoodEffect>
     </li>
@@ -51,10 +51,10 @@
   <showBubble>true</showBubble>
   <durationDays>1.6</durationDays>
   <stackLimit>1</stackLimit>
-  <chance>2</chance>
+  <chance>10</chance>
   <stages>
     <li>
-      <label>exclusion because of dream  dream</label>
+      <label>Had a dream about being excluded from my friends </label>
       <description>In my dream I was excluded from my friendship group because I was scared to snort Yayo...</description>
       <baseMoodEffect>-3</baseMoodEffect>
     </li>

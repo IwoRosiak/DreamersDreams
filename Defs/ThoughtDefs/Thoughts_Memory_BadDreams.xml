@@ -124,8 +124,8 @@
   <chance>1</chance>
   <stages>
     <li>
-      <label>Dark figure attacked me during sleep</label>
-      <description>Some dark figure was sitting on my chest while I slepted and I couldn't move!</description>
+      <label>Dark figure attacked during sleep</label>
+      <description>Some dark figure was sitting on my chest while I slept and I couldn't move!</description>
       <baseMoodEffect>-10</baseMoodEffect>
     </li>
   </stages>
@@ -136,10 +136,10 @@
   <showBubble>true</showBubble>
   <durationDays>0.8</durationDays>
   <stackLimit>1</stackLimit>
-  <chance>1</chance>
+  <chance>4</chance>
   <stages>
     <li>
-      <label>Had dream about the end of the world</label>
+      <label>Had dream about the armageddon</label>
       <description>I dreamt that whole world fell apart. It was a disaster.</description>
       <baseMoodEffect>-6</baseMoodEffect>
     </li>
@@ -151,7 +151,7 @@
   <showBubble>true</showBubble>
   <durationDays>0.8</durationDays>
   <stackLimit>1</stackLimit>
-  <chance>2</chance>
+  <chance>6</chance>
   <stages>
     <li>
       <label>Had a dream about childhood</label>
