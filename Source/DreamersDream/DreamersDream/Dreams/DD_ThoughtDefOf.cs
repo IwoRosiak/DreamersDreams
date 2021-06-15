@@ -57,6 +57,8 @@ namespace DreamersDream
         public static DD_ThoughtDef PizzaDream;
 
         public static DD_ThoughtDef ExclusionDrugDream;
+
+        public static DD_ThoughtDef DebugDream;
     }
 
     public static class DD_ThoughtDefArray
@@ -88,7 +90,8 @@ namespace DreamersDream
         DD_ThoughtDefOf.SpoonDream,
         DD_ThoughtDefOf.DwarfAmbushDream,
         DD_ThoughtDefOf.PizzaDream,
-        DD_ThoughtDefOf.ExclusionDrugDream
+        DD_ThoughtDefOf.ExclusionDrugDream,
+        DD_ThoughtDefOf.DebugDream
 
         };
     }

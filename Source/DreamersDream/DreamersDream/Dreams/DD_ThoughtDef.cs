@@ -7,6 +7,8 @@ namespace DreamersDream
     {
         public float chance = 1;
 
+        public DD_MentalStateDef triggers = null;
+
     }
 
 }

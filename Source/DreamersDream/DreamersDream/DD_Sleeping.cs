@@ -92,7 +92,10 @@ namespace DreamersDream
                             {
                                 __instance.needs.mood.thoughts.memories.TryGainMemory(dream, null);
 
-                                __instance.mindState.mentalStateHandler.TryStartMentalState(DD_MentalStateDefOf.Sleepwalk, null, true, false, null, false);
+                                if (dream.triggers != null)
+                                {
+                                    __instance.mindState.mentalStateHandler.TryStartMentalState(dream.triggers, null, true, false, null, false);
+                                }
 
                                 //__instance.jobs.EndCurrentJob(Verse.AI.JobCondition.InterruptForced, false, true);
 
