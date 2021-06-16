@@ -43,7 +43,7 @@ namespace DreamersDream
                         //Messages.Message("First sleep: " + pawnFallenAsleepTime + "Current time :" + currentTime, MessageTypeDefOf.NeutralEvent); //debug message about sleeping times
 
                         //timeToDream is the time pawn needs to sleep to be eligible for a dream
-                        var timeToDream = 2500;//Rand.Range(7500, 10000);
+                        var timeToDream = Rand.Range(7500, 10000);
 
                         //checks if pawn has slepted enough to get a dream. If yes then it checks if the pawn has a dream already if yes 
                         if (currentTime >= pawnFallenAsleepTime + timeToDream)
