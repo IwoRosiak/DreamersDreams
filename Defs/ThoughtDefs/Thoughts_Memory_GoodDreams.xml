@@ -25,7 +25,7 @@
     <stages>
       <li>
         <label>had a very pleasent dream</label>
-        <description>I had a dream about my favourite food and people! It gives me hopes.</description>
+        <description>I Dreamt about my favourite food and people! It gives me hopes.</description>
         <baseMoodEffect>6</baseMoodEffect>
       </li>
     </stages>
@@ -40,7 +40,7 @@
   <stages>
     <li>
       <label>had a pleasent dream</label>
-      <description>I had a dream about calming places and kind people.</description>
+      <description>I dreamt about calming places and kind people.</description>
       <baseMoodEffect>3</baseMoodEffect>
     </li>
   </stages>
@@ -54,7 +54,7 @@
   <chance>8</chance>
   <stages>
     <li>
-      <label>had a dream about flying</label>
+      <label>Dreamt about flying</label>
       <description>I was flying in my dream dream! It was an amazing experience. I just wanted it to keep going...</description>
       <baseMoodEffect>5</baseMoodEffect>
     </li>
@@ -99,7 +99,7 @@
   <chance>8</chance>
   <stages>
     <li>
-      <label>had a dream about childhood</label>
+      <label>Dreamt about childhood</label>
       <description>I was back in my childhood house! I've regained connection with some of my the best memories.</description>
       <baseMoodEffect>8</baseMoodEffect>
     </li>
