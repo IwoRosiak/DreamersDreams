@@ -11,7 +11,7 @@
     <li>
       <label>no dream</label>
       <description>It seems I did not have any dreams this night...</description>
-      <baseMoodEffect>-1</baseMoodEffect>
+      <baseMoodEffect>0</baseMoodEffect>
     </li>
   </stages>
 </ThoughtDef>
