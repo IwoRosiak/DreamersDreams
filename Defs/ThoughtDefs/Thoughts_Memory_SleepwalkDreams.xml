@@ -6,7 +6,7 @@
   <showBubble>true</showBubble>
   <durationDays>0.8</durationDays>
   <stackLimit>1</stackLimit>
-  <chance>0</chance>
+  <chance>1</chance>
   <stages>
     <li>
       <label>Debug dream</label>
@@ -16,6 +16,98 @@
   </stages>
   <triggers>
     <li>SleepwalkBerserk</li>
+  </triggers>
+</ThoughtDef>
+
+<ThoughtDef Class= "DreamersDream.DD_ThoughtDef">
+  <defName>SleepwalkShapesDream</defName>
+  <showBubble>true</showBubble>
+  <durationDays>0.8</durationDays>
+  <stackLimit>1</stackLimit>
+  <chance>1</chance>
+  <stages>
+    <li>
+      <label>Dreamt about abstract shapes</label>
+      <description>I saw many abstract shapes which were floating around me like planets. I thought the shapes were my family and friends. At some point a foreign shape appeared consuming my close ones and thus growing bigger. At the end it got me too... </description>
+      <baseMoodEffect>-6</baseMoodEffect>
+    </li>
+  </stages>
+  <triggers>
+    <li>Sleepwalk</li>
+  </triggers>
+</ThoughtDef>
+
+<ThoughtDef Class= "DreamersDream.DD_ThoughtDef">
+  <defName>SleepwalkRedheadWithBeardDream</defName>
+  <showBubble>true</showBubble>
+  <durationDays>0.8</durationDays>
+  <stackLimit>1</stackLimit>
+  <chance>1</chance>
+  <stages>
+    <li>
+      <label>Dreamt about redhead with beard</label>
+      <description>It started off at school, where I began to realize something was wrong. Everyone I saw looked like they could barely contain themselves from instantly becoming violent, and they had this look in their eye like they had just spotted the best prey they had ever seen, but were being held back by something. I remember thinking "No way, I'm out", and ran home as fast as I could. Some of it is blurry, but I remember coming across people that I knew, either friends or family, or people from the neighborhood, telling me to get home, that it's not safe. Finally I make it there, put the key in the front door, open it, and I am literally surrounded by all of those same people, only now they look like the one's at school, and there stands the redhead with the beard. Without saying a word she lunges at me and out came the fangs right into my neck. ~Rinzler0001</description>
+      <baseMoodEffect>-7</baseMoodEffect>
+    </li>
+  </stages>
+  <triggers>
+    <li>SleepwalkBerserk</li>
+  </triggers>
+</ThoughtDef>
+
+<ThoughtDef Class= "DreamersDream.DD_ThoughtDef">
+  <defName>SleepwalkFurnitureDream</defName>
+  <showBubble>true</showBubble>
+  <durationDays>0.8</durationDays>
+  <stackLimit>1</stackLimit>
+  <chance>1</chance>
+  <stages>
+    <li>
+      <label>Dreamt about furniture</label>
+      <description> Furniture around me started to grow and at some point it was as tall old buildings in books. I knew they are evil... I had to fight them!</description>
+      <baseMoodEffect>-4</baseMoodEffect>
+    </li>
+  </stages>
+  <triggers>
+    <li>SleepwalkTantrum</li>
+  </triggers>
+</ThoughtDef>
+
+<ThoughtDef Class= "DreamersDream.DD_ThoughtDef">
+  <defName>SleepwalkDarknessDream</defName>
+  <showBubble>true</showBubble>
+  <durationDays>0.8</durationDays>
+  <stackLimit>1</stackLimit>
+  <chance>1</chance>
+  <stages>
+    <li>
+      <label>Dreamt about darkness</label>
+      <description> There was darkness all around me... There was light somewhere but I didn't know where, so I searched for it. Without the light there was no hope...</description>
+      <baseMoodEffect>-4</baseMoodEffect>
+    </li>
+  </stages>
+  <triggers>
+    <li>Sleepwalk</li>
+    <li>SleepwalkSafe</li>
+    <li>SleepwalkTantrum</li>
+  </triggers>
+</ThoughtDef>
+
+<ThoughtDef Class= "DreamersDream.DD_ThoughtDef">
+  <defName>SleepwalkHungerDream</defName>
+  <showBubble>true</showBubble>
+  <durationDays>0.8</durationDays>
+  <stackLimit>1</stackLimit>
+  <chance>1</chance>
+  <stages>
+    <li>
+      <label>Dreamt about starvation</label>
+      <description> I was starving... I was begging people to help me... But they wouldn't!</description>
+      <baseMoodEffect>-4</baseMoodEffect>
+    </li>
+  </stages>
+  <triggers>
+    <li>BingingFood</li>
   </triggers>
 </ThoughtDef>
 

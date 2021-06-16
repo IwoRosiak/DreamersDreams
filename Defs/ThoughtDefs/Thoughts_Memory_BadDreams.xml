@@ -59,7 +59,7 @@
   <showBubble>true</showBubble>
   <durationDays>0.8</durationDays>
   <stackLimit>1</stackLimit>
-  <chance>25</chance>
+  <chance>45</chance>
   <stages>
     <li>
       <label>Had a bad dream</label>
@@ -74,7 +74,7 @@
   <showBubble>true</showBubble>
   <durationDays>0.8</durationDays>
   <stackLimit>1</stackLimit>
-  <chance>7</chance>
+  <chance>21</chance>
   <stages>
     <li>
       <label>Had a very bad dream</label>
@@ -89,7 +89,7 @@
   <showBubble>true</showBubble>
   <durationDays>0.8</durationDays>
   <stackLimit>1</stackLimit>
-  <chance>6</chance>
+  <chance>18</chance>
   <stages>
     <li>
       <label>Had a stressful dream</label>
@@ -106,7 +106,7 @@
   <showBubble>true</showBubble>
   <durationDays>0.8</durationDays>
   <stackLimit>1</stackLimit>
-  <chance>5</chance>
+  <chance>15</chance>
   <stages>
     <li>
       <label>Had a nightmare</label>
@@ -121,7 +121,7 @@
   <showBubble>true</showBubble>
   <durationDays>0.8</durationDays>
   <stackLimit>1</stackLimit>
-  <chance>1</chance>
+  <chance>3</chance>
   <stages>
     <li>
       <label>Dark figure attacked during sleep</label>
@@ -136,7 +136,7 @@
   <showBubble>true</showBubble>
   <durationDays>0.8</durationDays>
   <stackLimit>1</stackLimit>
-  <chance>4</chance>
+  <chance>12</chance>
   <stages>
     <li>
       <label>Had dream about the armageddon</label>
@@ -151,7 +151,7 @@
   <showBubble>true</showBubble>
   <durationDays>0.8</durationDays>
   <stackLimit>1</stackLimit>
-  <chance>6</chance>
+  <chance>18</chance>
   <stages>
     <li>
       <label>Had a dream about childhood</label>

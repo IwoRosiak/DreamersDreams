@@ -21,7 +21,7 @@
     <showBubble>true</showBubble>
     <durationDays>0.8</durationDays>
     <stackLimit>1</stackLimit>
-    <chance>12</chance>
+    <chance>36</chance>
     <stages>
       <li>
         <label>had a very pleasent dream</label>
@@ -36,7 +36,7 @@
   <showBubble>true</showBubble>
   <durationDays>0.8</durationDays>
   <stackLimit>1</stackLimit>
-  <chance>25</chance>
+  <chance>45</chance>
   <stages>
     <li>
       <label>had a pleasent dream</label>
@@ -51,7 +51,7 @@
   <showBubble>true</showBubble>
   <durationDays>0.8</durationDays>
   <stackLimit>1</stackLimit>
-  <chance>8</chance>
+  <chance>24</chance>
   <stages>
     <li>
       <label>Dreamt about flying</label>
@@ -81,7 +81,7 @@
   <showBubble>true</showBubble>
   <durationDays>2</durationDays>
   <stackLimit>1</stackLimit>
-  <chance>1</chance>
+  <chance>3</chance>
   <stages>
     <li>
       <label>had lucid dream</label>
@@ -96,7 +96,7 @@
   <showBubble>true</showBubble>
   <durationDays>1.6</durationDays>
   <stackLimit>1</stackLimit>
-  <chance>8</chance>
+  <chance>24</chance>
   <stages>
     <li>
       <label>Dreamt about childhood</label>
