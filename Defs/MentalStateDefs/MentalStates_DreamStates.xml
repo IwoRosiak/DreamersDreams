@@ -15,7 +15,7 @@
           <recoverFromSleep>false</recoverFromSleep>
           <recoverFromDowned>false</recoverFromDowned>
           <recoverFromCollapsingExhausted>false</recoverFromCollapsingExhausted>
-          <unspawnedCanDo>true</unspawnedCanDo>
+          <unspawnedCanDo>false</unspawnedCanDo>
         </MentalStateDef>
 
         <MentalBreakDef>
@@ -44,7 +44,7 @@
           <label>sleepwalking berserk</label>
           <category>Aggro</category>
           <stateClass>MentalState_Berserk</stateClass>
-          <beginLetter>{0} stood up from bed and started to attack everyone people!</beginLetter>
+          <beginLetter>{0} stood up from bed and started to attack everyone!</beginLetter>
         </MentalStateDef>
 
         <MentalBreakDef>
@@ -75,7 +75,7 @@
           <category>Aggro</category>
           <stateClass>MentalState_TantrumAll</stateClass>
           <workerClass>MentalStateWorker_TantrumAll</workerClass>
-          <beginLetter>{0} stood up from bed and started destroy its surroundings!</beginLetter>
+          <beginLetter>{0} stood up from bed and started to destroy its surroundings!</beginLetter>
         </MentalStateDef>
 
 
