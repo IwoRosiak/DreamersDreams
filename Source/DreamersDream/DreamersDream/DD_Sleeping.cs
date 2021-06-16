@@ -93,7 +93,7 @@ namespace DreamersDream
                                 __instance.needs.mood.thoughts.memories.TryGainMemory(dream, null);
                                 if (dream.triggers != null)
                                 {
-                                    __instance.mindState.mentalStateHandler.TryStartMentalState(dream.triggers[Rand.Range(0, dream.triggers.Count - 1)], null, true, false, null, false);
+                                    __instance.mindState.mentalStateHandler.TryStartMentalState(dream.triggers[Rand.RangeInclusive(0, dream.triggers.Count - 1)], null, true, false, null, false);
                                 }
 
 

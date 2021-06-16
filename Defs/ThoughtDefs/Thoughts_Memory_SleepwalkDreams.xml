@@ -107,7 +107,7 @@
     </li>
   </stages>
   <triggers>
-    <li>BingingFood</li>
+    <li>SleepwalkBingingFood</li>
   </triggers>
 </ThoughtDef>
 

@@ -72,6 +72,19 @@ namespace DreamersDream
 
         public static DD_ThoughtDef AllNakedColonyDream;
 
+        //SLEEPWALKERS
+
+        public static DD_ThoughtDef SleepwalkShapesDream;
+
+        public static DD_ThoughtDef SleepwalkRedheadWithBeardDream;
+
+        public static DD_ThoughtDef SleepwalkFurnitureDream;
+
+        public static DD_ThoughtDef SleepwalkDarknessDream;
+
+        public static DD_ThoughtDef SleepwalkHungerDream;
+
+
 
     }
 
@@ -115,6 +128,13 @@ namespace DreamersDream
         DD_ThoughtDefOf.NakedColonyDream,
         DD_ThoughtDefOf.NakedSchoolDream,
         DD_ThoughtDefOf.AllNakedColonyDream,
+
+        //SLEEPWALKERS
+        DD_ThoughtDefOf.SleepwalkShapesDream,
+        DD_ThoughtDefOf.SleepwalkRedheadWithBeardDream,
+        DD_ThoughtDefOf.SleepwalkFurnitureDream,
+        DD_ThoughtDefOf.SleepwalkDarknessDream,
+        DD_ThoughtDefOf.SleepwalkHungerDream
 
     };
     }
