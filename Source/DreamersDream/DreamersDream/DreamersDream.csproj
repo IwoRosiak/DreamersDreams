@@ -59,11 +59,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DD_Utility.cs" />
-    <Compile Include="DD_MentalBreakDef.cs" />
-    <Compile Include="MentalState_Sleepwalking.cs" />
-    <Compile Include="DD_MentalStateDefOf.cs" />
+    <Compile Include="MentalStates\DD_MentalStateDefOf.cs" />
     <Compile Include="DD_SleepingPawnTracker.cs" />
-    <Compile Include="DD_MentalStateDef.cs" />
+    <Compile Include="MentalStates\DD_MentalStateDef.cs" />
     <Compile Include="Dreams\DD_ThoughtDef.cs" />
     <Compile Include="Dreams\DD_ThoughtDefOf.cs" />
     <Compile Include="DD_Sleeping.cs" />
@@ -74,7 +72,6 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="MentalStates\" />
     <Folder Include="Properties\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
