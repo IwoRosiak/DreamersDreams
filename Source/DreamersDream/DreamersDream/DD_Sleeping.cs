@@ -9,7 +9,7 @@ namespace DreamersDream
     [StaticConstructorOnStartup]
     static class HarmonyPatches
     {
-
+        //Verse.LoadedModManager.GetMod<DD_Mod>().GetSettings<ExampleSettings>().exampleBool
 
         static HarmonyPatches()
         {

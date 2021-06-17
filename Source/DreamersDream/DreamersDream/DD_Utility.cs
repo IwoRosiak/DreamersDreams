@@ -24,12 +24,60 @@ namespace DreamersDream
 
         public static float CheckDreamChance(DD_ThoughtDef dream)
         {
+
+
+            float chanceMutliplier = 1;
+
+            if (dream.triggers != null)
+            {
+                if (!DD_Settings.isSleepwalkingActive)
+                {
+                    return 0;
+                }
+                foreach (DD_MentalStateDef state in dream.triggers)
+                {
+                    if (!DD_Settings.isSleepBerserkActive && state == DD_MentalStateDefOf.SleepwalkBerserk)
+                    {
+                        return 0;
+                    }
+                    else if (!DD_Settings.isSleepNormalActive && (state == DD_MentalStateDefOf.Sleepwalk || state == DD_MentalStateDefOf.SleepwalkOwnRoom || state == DD_MentalStateDefOf.SleepwalkSafe))
+                    {
+                        return 0;
+                    }
+                    else if (!DD_Settings.isSleepTantrumActive && state == DD_MentalStateDefOf.SleepwalkTantrum)
+                    {
+                        return 0;
+                    }
+                }
+                chanceMutliplier = DD_Settings.chanceForSleepwalkingDreams / 100;
+            }
+            else if (!DD_Settings.isDreamingActive)
+            {
+                return 0;
+            }
+            else
+            {
+                float typeOfDream = dream.stages[0].baseMoodEffect;
+                if (typeOfDream > 0)
+                {
+                    chanceMutliplier = DD_Settings.chanceForPositiveDreams / 100;
+                }
+                else if (typeOfDream < 0)
+                {
+                    chanceMutliplier = DD_Settings.chanceForNegativeDreams / 100;
+                }
+                else if (typeOfDream == 0)
+                {
+                    chanceMutliplier = DD_Settings.chanceForNoDream / 100;
+                }
+            }
+
             /*if (CheckForHigh() && dream.defName == "VeryGoodDream")
             {
                 return dream.chance + 1000;
 
             }*/
-            return dream.chance;
+            return dream.chance * chanceMutliplier;
         }
 
         public static bool CheckForHigh(Pawn pawn)

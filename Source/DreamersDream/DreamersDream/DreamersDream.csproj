@@ -58,6 +58,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DD_Mod_Settings.cs" />
     <Compile Include="DD_Utility.cs" />
     <Compile Include="MentalStates\DD_MentalStateDefOf.cs" />
     <Compile Include="DD_SleepingPawnTracker.cs" />

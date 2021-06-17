@@ -103,7 +103,7 @@
         <MentalStateDef ParentName="BaseSleepWalkState" Class= "DreamersDream.DD_MentalStateDef">
           <defName>SleepwalkBingingFood</defName>
           <label>Sleepwalk Binging Food</label>
-          <stateClass>MentalState_WanderConfused</stateClass>
+          <stateClass>MentalState_Binging</stateClass>
           <beginLetter>{0} stood up from bed and started to eat...</beginLetter>
         </MentalStateDef>
 

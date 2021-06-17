@@ -20,6 +20,8 @@ namespace DreamersDream
 
         public static DD_MentalStateDef SleepwalkTantrum;
 
+        public static DD_MentalStateDef SleepwalkBingingFood;
+
         //public static DD_MentalStateDef SleepwalkFireStarter;
 
         public static DD_MentalStateDef SleepwalkOwnRoom;
