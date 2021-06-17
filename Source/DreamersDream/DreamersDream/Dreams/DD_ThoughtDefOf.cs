@@ -74,6 +74,13 @@ namespace DreamersDream
 
         public static DD_ThoughtDef AllNakedColonyDream;
 
+
+
+
+        public static DD_ThoughtDef CannibalismDream;
+
+
+
         //SLEEPWALKERS
 
         public static DD_ThoughtDef SleepwalkShapesDream;
@@ -131,6 +138,8 @@ namespace DreamersDream
         DD_ThoughtDefOf.NakedColonyDream,
         DD_ThoughtDefOf.NakedSchoolDream,
         DD_ThoughtDefOf.AllNakedColonyDream,
+
+        DD_ThoughtDefOf.CannibalismDream,
 
         //SLEEPWALKERS
         DD_ThoughtDefOf.SleepwalkShapesDream,
