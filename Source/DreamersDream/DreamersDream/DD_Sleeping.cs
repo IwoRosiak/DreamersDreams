@@ -24,6 +24,13 @@ namespace DreamersDream
         }
         public static void CheckSleep_Prefix(Pawn __instance)
         {
+            /* if (__instance.NameShortColored == "TEST" && __instance.AmbientTemperature > GenTemperature.SafeTemperatureRange(__instance).TrueMax)
+             {
+
+                 Messages.Message("Hot is here", RimWorld.MessageTypeDefOf.NeutralEvent);
+
+             }*/
+
             var currentTime = Find.TickManager.TicksGame;
 
             //is the instance a colonist and is it dead
@@ -76,7 +83,7 @@ namespace DreamersDream
                         //loop that fills out totalDreamChance to generate a random number later
                         foreach (DD_ThoughtDef dream in DD_ThoughtDefArray.dreams)
                         {
-                            totalDreamChance += CheckDreamChance(dream);
+                            totalDreamChance += CheckDreamChance(dream, __instance);
                         }
                         var dreamChanceRoll = Rand.Range(0, totalDreamChance);
 
@@ -86,7 +93,7 @@ namespace DreamersDream
                         //loop for applying dreams (thoughts)
                         foreach (DD_ThoughtDef dream in DD_ThoughtDefArray.dreams)
                         {
-                            var chanceForDream = CheckDreamChance(dream);
+                            var chanceForDream = CheckDreamChance(dream, __instance);
 
                             if (dreamChanceRoll < dreamChanceProgress + chanceForDream)
                             {

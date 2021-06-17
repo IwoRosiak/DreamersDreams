@@ -10,6 +10,8 @@ namespace DreamersDream
 
         public List<DD_MentalStateDef> triggers;
 
+        public List<string> sensitivities;
+
     }
 
 }

@@ -10,6 +10,8 @@ namespace DreamersDream
             DefOfHelper.EnsureInitializedInCtor(typeof(DD_ThoughtDefOf));
         }
 
+        public static DD_ThoughtDef DebugDream;
+
         public static DD_ThoughtDef GoodDream;
 
         public static DD_ThoughtDef BadDream;
@@ -93,6 +95,7 @@ namespace DreamersDream
 
 
         public static DD_ThoughtDef[] dreams = new DD_ThoughtDef[] {
+        DD_ThoughtDefOf.DebugDream,
 
         DD_ThoughtDefOf.VeryBadDream,
         DD_ThoughtDefOf.BadDream,
@@ -135,6 +138,7 @@ namespace DreamersDream
         DD_ThoughtDefOf.SleepwalkFurnitureDream,
         DD_ThoughtDefOf.SleepwalkDarknessDream,
         DD_ThoughtDefOf.SleepwalkHungerDream
+
 
     };
     }

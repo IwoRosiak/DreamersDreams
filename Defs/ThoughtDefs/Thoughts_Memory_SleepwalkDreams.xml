@@ -6,7 +6,7 @@
   <showBubble>true</showBubble>
   <durationDays>0.8</durationDays>
   <stackLimit>1</stackLimit>
-  <chance>0</chance>
+  <chance>1</chance>
   <stages>
     <li>
       <label>Debug dream</label>
@@ -14,9 +14,9 @@
       <baseMoodEffect>1</baseMoodEffect>
     </li>
   </stages>
-  <triggers>
-    <li>SleepwalkBerserk</li>
-  </triggers>
+  <sensitivities>
+    <li>ilness</li>
+  </sensitivities>
 </ThoughtDef>
 
 <ThoughtDef Class= "DreamersDream.DD_ThoughtDef">
@@ -32,6 +32,9 @@
       <baseMoodEffect>-6</baseMoodEffect>
     </li>
   </stages>
+  <sensitivities>
+    <li>ilness</li>
+  </sensitivities>
   <triggers>
     <li>Sleepwalk</li>
   </triggers>
@@ -50,6 +53,9 @@
       <baseMoodEffect>-7</baseMoodEffect>
     </li>
   </stages>
+  <sensitivities>
+    <li>ilness</li>
+  </sensitivities>
   <triggers>
     <li>SleepwalkBerserk</li>
   </triggers>
@@ -68,6 +74,9 @@
       <baseMoodEffect>-4</baseMoodEffect>
     </li>
   </stages>
+  <sensitivities>
+    <li>ilness</li>
+  </sensitivities>
   <triggers>
     <li>SleepwalkTantrum</li>
   </triggers>
@@ -86,6 +95,9 @@
       <baseMoodEffect>-4</baseMoodEffect>
     </li>
   </stages>
+  <sensitivities>
+    <li>ilness</li>
+  </sensitivities>
   <triggers>
     <li>Sleepwalk</li>
     <li>SleepwalkSafe</li>

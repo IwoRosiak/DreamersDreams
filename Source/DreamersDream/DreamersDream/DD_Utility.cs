@@ -22,7 +22,7 @@ namespace DreamersDream
             return true;
         }
 
-        public static float CheckDreamChance(DD_ThoughtDef dream)
+        public static float CheckDreamChance(DD_ThoughtDef dream, Pawn pawn)
         {
 
 
@@ -71,13 +71,62 @@ namespace DreamersDream
                     chanceMutliplier = DD_Settings.chanceForNoDream / 100;
                 }
             }
+            var environmentMultiplier = EnvironmentDreamChance(dream, pawn);
 
             /*if (CheckForHigh() && dream.defName == "VeryGoodDream")
             {
                 return dream.chance + 1000;
 
             }*/
-            return dream.chance * chanceMutliplier;
+            return dream.chance + (dream.chance * chanceMutliplier) * (dream.chance * environmentMultiplier);
+        }
+
+        public static float EnvironmentDreamChance(DD_ThoughtDef dream, Pawn pawn)
+        {
+            float multiplier = 1;
+            if (dream.sensitivities != null)
+            {
+                foreach (string sensitivity in dream.sensitivities)
+                {
+                    if (sensitivity == "ilness" && pawn.health.hediffSet.AnyHediffMakesSickThought)
+                    {
+                        multiplier += DD_Settings.chanceMultiplierForIlness / 100;
+                    }
+
+                    if (sensitivity == "temperatureHot" && pawn.AmbientTemperature > GenTemperature.ComfortableTemperatureRange(pawn).TrueMax)
+                    {
+                        multiplier += DD_Settings.chanceMultiplierForTemperature / 100;
+                    }
+
+                    if (sensitivity == "temperatureCold" && pawn.AmbientTemperature < GenTemperature.ComfortableTemperatureRange(pawn).TrueMin)
+                    {
+                        multiplier += DD_Settings.chanceMultiplierForTemperature / 100;
+                    }
+
+                    if (sensitivity == "Hunger" && pawn.needs.food.CurLevelPercentage < pawn.needs.food.PercentageThreshHungry)
+                    {
+                        float hungerMultiplier = 0;
+                        switch (pawn.needs.food.CurCategory)
+                        {
+                            case RimWorld.HungerCategory.Fed:
+                                break;
+                            case RimWorld.HungerCategory.Hungry:
+                                hungerMultiplier = 0.1f;
+                                break;
+                            case RimWorld.HungerCategory.UrgentlyHungry:
+                                hungerMultiplier = 0.25f;
+                                break;
+                            case RimWorld.HungerCategory.Starving:
+                                hungerMultiplier = 0.75f;
+                                break;
+                            default:
+                                break;
+                        }
+                        multiplier += hungerMultiplier * DD_Settings.chanceMultiplierForHunger / 100;
+                    }
+                }
+            }
+            return multiplier;
         }
 
         public static bool CheckForHigh(Pawn pawn)
