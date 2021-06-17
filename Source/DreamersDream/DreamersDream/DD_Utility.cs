@@ -49,6 +49,10 @@ namespace DreamersDream
                     {
                         return 0;
                     }
+                    else if (!DD_Settings.isSleepFoodBingeActive && state == DD_MentalStateDefOf.SleepwalkBingingFood)
+                    {
+                        return 0;
+                    }
                 }
                 chanceMutliplier = DD_Settings.chanceForSleepwalkingDreams / 100;
             }

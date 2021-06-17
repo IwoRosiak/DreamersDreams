@@ -84,14 +84,11 @@
   <showBubble>true</showBubble>
   <durationDays>0.8</durationDays>
   <stackLimit>1</stackLimit>
-  <nullifyingTraits>
-    <li>
-      Psychopath
-    </li>
-    <li>
-      Bloodlust
-    </li>
-  </nullifyingTraits>
+    <nullifyingTraits>
+      <li>Psychopath</li>
+      <li>Bloodlust</li>
+      <li>Cannibal</li>
+    </nullifyingTraits>
   <chance>10</chance>
   <stages>
     <li>
