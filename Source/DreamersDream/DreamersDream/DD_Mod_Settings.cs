@@ -69,7 +69,8 @@ namespace DreamersDream
             Listing_Standard listingStandard = new Listing_Standard();
             listingStandard.Begin(inRect);
             //listingStandard.CheckboxLabeled("exampleBoolExplanation", ref settings.exampleBool, "exampleBoolToolTip");
-
+            listingStandard.Label("Settings are global for all the saves!");
+            listingStandard.Label("");
             listingStandard.Label("How does it work? Increasing the slider will cause particular dreams to have higher chance than other dreams. 100% chance for sleepwalking doesn't mean that the actual chance for sleepwalking is 100%. In that case it would be around 1% (coded chance for sleepwalking dreams) each rest multiplied by 1 (100% divided by 100). Setting all the dreams to 1% is the same as setting all of them to 200%.");
             listingStandard.Label("");
 
