@@ -1,4 +1,5 @@
-﻿using Verse;
+﻿using RimWorld;
+using Verse;
 
 namespace DreamersDream
 {
@@ -51,10 +52,10 @@ namespace DreamersDream
                 }
                 chanceMutliplier = DD_Settings.chanceForSleepwalkingDreams / 100;
             }
-            else if (!DD_Settings.isDreamingActive)
+            /*else if (!DD_Settings.isDreamingActive)
             {
                 return 0;
-            }
+            }*/
             else
             {
                 float typeOfDream = dream.stages[0].baseMoodEffect;
@@ -93,6 +94,27 @@ namespace DreamersDream
                         multiplier += DD_Settings.chanceMultiplierForIlness / 100;
                     }
 
+                    if (sensitivity == "injured" && pawn.health.hediffSet.HasTemperatureInjury(TemperatureInjuryStage.Serious))
+                    {
+                        multiplier += DD_Settings.chanceMultiplierForIlness / 100;
+                    }
+
+                    if (sensitivity == "healthy" && !pawn.health.hediffSet.AnyHediffMakesSickThought && !pawn.health.hediffSet.HasTemperatureInjury(TemperatureInjuryStage.Serious))
+                    {
+                        multiplier += DD_Settings.chanceMultiplierForIlness / 100;
+                    }
+
+                    /*if (sensitivity == "noPart" && pawn.health.hediffSet.)
+                    {
+                        multiplier += DD_Settings.chanceMultiplierForIlness / 100;
+                    }*/
+
+
+                    if (sensitivity == "goodTemperature" && pawn.AmbientTemperature > GenTemperature.ComfortableTemperatureRange(pawn).TrueMin && pawn.AmbientTemperature < GenTemperature.ComfortableTemperatureRange(pawn).TrueMax)
+                    {
+                        multiplier += DD_Settings.chanceMultiplierForTemperature / 100;
+                    }
+
                     if (sensitivity == "temperatureHot" && pawn.AmbientTemperature > GenTemperature.ComfortableTemperatureRange(pawn).TrueMax)
                     {
                         multiplier += DD_Settings.chanceMultiplierForTemperature / 100;
@@ -103,26 +125,60 @@ namespace DreamersDream
                         multiplier += DD_Settings.chanceMultiplierForTemperature / 100;
                     }
 
-                    if (sensitivity == "Hunger" && pawn.needs.food.CurLevelPercentage < pawn.needs.food.PercentageThreshHungry)
+                    if (sensitivity == "hunger" && pawn.needs.food.CurLevelPercentage < pawn.needs.food.PercentageThreshHungry)
                     {
                         float hungerMultiplier = 0;
                         switch (pawn.needs.food.CurCategory)
                         {
-                            case RimWorld.HungerCategory.Fed:
-                                break;
-                            case RimWorld.HungerCategory.Hungry:
+                            case HungerCategory.Hungry:
                                 hungerMultiplier = 0.1f;
                                 break;
-                            case RimWorld.HungerCategory.UrgentlyHungry:
+                            case HungerCategory.UrgentlyHungry:
                                 hungerMultiplier = 0.25f;
                                 break;
-                            case RimWorld.HungerCategory.Starving:
-                                hungerMultiplier = 0.75f;
+                            case HungerCategory.Starving:
+                                hungerMultiplier = 0.40f;
                                 break;
                             default:
                                 break;
                         }
                         multiplier += hungerMultiplier * DD_Settings.chanceMultiplierForHunger / 100;
+                    }
+
+                    var malnutrition = pawn.health.hediffSet.GetFirstHediffOfDef(HediffDefOf.Malnutrition);
+                    if (sensitivity == "malnourished" && malnutrition != null)
+                    {
+                        float malnourishedMultiplier = 0;
+
+
+                        foreach (var stage in HediffDefOf.Malnutrition.stages)
+                        {
+                            if (malnutrition.CurStage == stage)
+                            {
+                                switch (stage.label.ToString())
+                                {
+                                    case "trivial":
+                                        malnourishedMultiplier = 0.1f;
+                                        break;
+                                    case "minor":
+                                        malnourishedMultiplier = 0.4f;
+                                        break;
+                                    case "moderate":
+                                        malnourishedMultiplier = 0.7f;
+                                        break;
+                                    case "severe":
+                                        malnourishedMultiplier = 1.0f;
+                                        break;
+                                    case "extreme":
+                                        malnourishedMultiplier = 2.0f;
+                                        break;
+                                    default:
+                                        break;
+                                }
+                            }
+                        }
+
+                        multiplier += malnourishedMultiplier * DD_Settings.chanceMultiplierForMalnourished / 100;
                     }
                 }
             }

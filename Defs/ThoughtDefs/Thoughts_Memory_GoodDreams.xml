@@ -14,6 +14,10 @@
       <baseMoodEffect>8</baseMoodEffect>
     </li>
   </stages>
+  <sensitivities>
+        <li>healthy</li>
+    <li>goodTemperature</li>
+  </sensitivities>
 </ThoughtDef>
 
   <ThoughtDef Class= "DreamersDream.DD_ThoughtDef">
@@ -29,6 +33,10 @@
         <baseMoodEffect>6</baseMoodEffect>
       </li>
     </stages>
+    <sensitivities>
+          <li>healthy</li>
+      <li>goodTemperature</li>
+    </sensitivities>
   </ThoughtDef>
 
 <ThoughtDef Class= "DreamersDream.DD_ThoughtDef">
@@ -44,6 +52,10 @@
       <baseMoodEffect>3</baseMoodEffect>
     </li>
   </stages>
+  <sensitivities>
+        <li>healthy</li>
+    <li>goodTemperature</li>
+  </sensitivities>
 </ThoughtDef>
 
 <ThoughtDef Class= "DreamersDream.DD_ThoughtDef">
@@ -59,6 +71,10 @@
       <baseMoodEffect>5</baseMoodEffect>
     </li>
   </stages>
+  <sensitivities>
+        <li>healthy</li>
+    <li>goodTemperature</li>
+  </sensitivities>
 </ThoughtDef>
 
 <ThoughtDef Class= "DreamersDream.DD_ThoughtDef">
@@ -66,7 +82,7 @@
   <showBubble>true</showBubble>
   <durationDays>0.8</durationDays>
   <stackLimit>1</stackLimit>
-  <chance>1</chance>
+  <chance>0</chance>
   <stages>
     <li>
       <label>had a miraculus healing dream</label>
@@ -76,6 +92,8 @@
   </stages>
   <sensitivities>
     <li>ilness</li>
+    <li>ilness</li>
+    <li>goodTemperature</li>
   </sensitivities>
 </ThoughtDef>
 
@@ -92,6 +110,10 @@
       <baseMoodEffect>8</baseMoodEffect>
     </li>
   </stages>
+  <sensitivities>
+    <li>healthy</li>
+    <li>goodTemperature</li>
+  </sensitivities>
 </ThoughtDef>
 
 <ThoughtDef Class= "DreamersDream.DD_ThoughtDef">
@@ -109,6 +131,7 @@
   </stages>
   <sensitivities>
     <li>ilness</li>
+    <li>goodTemperature</li>
   </sensitivities>
 </ThoughtDef>
 

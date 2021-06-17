@@ -40,6 +40,30 @@
 </ThoughtDef>
 
 <ThoughtDef Class= "DreamersDream.DD_ThoughtDef">
+  <defName>CannibalismDream</defName>
+  <showBubble>true</showBubble>
+  <durationDays>0.8</durationDays>
+  <stackLimit>1</stackLimit>
+  <chance>4</chance>
+  <nullifyingTraits>
+    <li>Psychopath</li>
+    <li>Bloodlust</li>
+    <li>Cannibal</li>
+  </nullifyingTraits>
+  <stages>
+    <li>
+      <label>Had a dream about eating someone</label>
+      <description>I was forced to eat someone in my dream. It was an awful experience...</description>
+      <baseMoodEffect>-3</baseMoodEffect>
+    </li>
+  </stages>
+  <sensitivities>
+    <li>hunger</li>
+    <li>malnourished</li>
+  </sensitivities>
+</ThoughtDef>
+
+<ThoughtDef Class= "DreamersDream.DD_ThoughtDef">
   <defName>PrisonerDream</defName>
   <showBubble>true</showBubble>
   <durationDays>0.8</durationDays>
@@ -52,6 +76,7 @@
       <baseMoodEffect>-2</baseMoodEffect>
     </li>
   </stages>
+
 </ThoughtDef>
 
 <ThoughtDef Class= "DreamersDream.DD_ThoughtDef">
@@ -69,6 +94,7 @@
   </stages>
   <sensitivities>
     <li>ilness</li>
+    <li>hunger</li>
   </sensitivities>
 </ThoughtDef>
 
@@ -87,6 +113,8 @@
   </stages>
   <sensitivities>
     <li>ilness</li>
+    <li>hunger</li>
+    <li>malnourished</li>
   </sensitivities>
 </ThoughtDef>
 
@@ -158,6 +186,8 @@
   </stages>
   <sensitivities>
     <li>ilness</li>
+    <li>hunger</li>
+    <li>malnourished</li>
   </sensitivities>
 </ThoughtDef>
 
@@ -176,6 +206,28 @@
   </stages>
   <sensitivities>
     <li>ilness</li>
+    <li>hunger</li>
+    <li>malnourished</li>
+  </sensitivities>
+</ThoughtDef>
+
+<ThoughtDef Class= "DreamersDream.DD_ThoughtDef">
+  <defName>ImplantGlitchDream</defName>
+  <showBubble>true</showBubble>
+  <durationDays>0.8</durationDays>
+  <stackLimit>1</stackLimit>
+  <chance>18</chance>
+  <stages>
+    <li>
+      <label>Had a dream about childhood</label>
+      <description>I relived some of the worst moments from my childhood.</description>
+      <baseMoodEffect>-4</baseMoodEffect>
+    </li>
+  </stages>
+  <sensitivities>
+    <li>ilness</li>
+    <li>hunger</li>
+    <li>malnourished</li>
   </sensitivities>
 </ThoughtDef>
 

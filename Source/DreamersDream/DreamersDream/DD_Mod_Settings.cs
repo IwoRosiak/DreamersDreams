@@ -25,6 +25,7 @@ namespace DreamersDream
         public static int chanceMultiplierForIlness = 50;
         public static int chanceMultiplierForTemperature = 25;
         public static int chanceMultiplierForHunger = 50;
+        public static int chanceMultiplierForMalnourished = 50;
 
         /// <summary>
         /// The part that writes our settings to file. Note that saving is by ref.
@@ -47,7 +48,8 @@ namespace DreamersDream
 
             Scribe_Values.Look(ref chanceMultiplierForIlness, "chanceMultiplierForIlness", 50);
             Scribe_Values.Look(ref chanceMultiplierForTemperature, "chanceMultiplierForTemperature", 25);
-            Scribe_Values.Look(ref chanceMultiplierForHunger, "chanceMultiplierForHunger", 50);
+            Scribe_Values.Look(ref chanceMultiplierForHunger, "chanceMultiplierForHunger", 100);
+            Scribe_Values.Look(ref chanceMultiplierForHunger, "chanceMultiplierForMalnourished", 100);
             base.ExposeData();
         }
     }
@@ -69,30 +71,30 @@ namespace DreamersDream
 
 
             Listing_Standard listingStandard = new Listing_Standard();
-            Rect rect = new Rect(0f, 0f, inRect.width, 600f);
+            Rect rect = new Rect(0f, 0f, inRect.width, 800f);
             rect.xMax *= 0.9f;
             listingStandard.BeginScrollView(inRect, ref DD_Mod.ScrollPos, ref rect);
             //listingStandard.CheckboxLabeled("exampleBoolExplanation", ref settings.exampleBool, "exampleBoolToolTip");
-            listingStandard.Label("Remember, decreasing value for one category increases the odds to get other type of dreams.");
+            listingStandard.Label("Remember, decreasing value for one category increases the odds to get other type of dreams. It is best to adjust those settings as you play. If you get a lot of sleepwalker then decrease that chance, but try to see if default settings work for you. Afterall I tested all of those and tried to balance them for challenging playthrough :)");
             listingStandard.Label("");
 
-            listingStandard.Label("Chance for no dreams: " + DD_Settings.chanceForNoDream.ToString() + "%");
+            listingStandard.Label("Chance modifier for no dreams: " + DD_Settings.chanceForNoDream.ToString() + "%");
             DD_Settings.chanceForNoDream = (int)listingStandard.Slider(DD_Settings.chanceForNoDream, -100, 100);
 
 
-            listingStandard.Label("Chance for good dreams: " + DD_Settings.chanceForPositiveDreams.ToString() + "%");
+            listingStandard.Label("Chance modifier for good dreams: " + DD_Settings.chanceForPositiveDreams.ToString() + "%");
             DD_Settings.chanceForPositiveDreams = (int)listingStandard.Slider(DD_Settings.chanceForPositiveDreams, -100, 100);
 
 
-            listingStandard.Label("Chance for bad dreams: " + DD_Settings.chanceForNegativeDreams.ToString() + "%");
+            listingStandard.Label("Chance modifier for bad dreams: " + DD_Settings.chanceForNegativeDreams.ToString() + "%");
             DD_Settings.chanceForNegativeDreams = (int)listingStandard.Slider(DD_Settings.chanceForNegativeDreams, -100, 100);
             //settings.chanceForUserCreatedDreams = listingStandard.Slider(settings.chanceForUserCreatedDreams, 0f, 100f);
 
 
-            listingStandard.Label("Chance for sleepwalking: " + DD_Settings.chanceForSleepwalkingDreams.ToString() + "%");
+            listingStandard.Label("Chance modifier for sleepwalking: " + DD_Settings.chanceForSleepwalkingDreams.ToString() + "%");
             DD_Settings.chanceForSleepwalkingDreams = (int)listingStandard.Slider(DD_Settings.chanceForSleepwalkingDreams, -100, 100);
 
-            listingStandard.CheckboxLabeled("Do you want your colonists to dream? (ON by default)", ref DD_Settings.isDreamingActive, "If OFF it will stop colonists from getting new dreams. It won't erase the ones colonists already have. It doesn't stop colonists from getting dreams which trigger sleepwalking.");
+            //listingStandard.CheckboxLabeled("Do you want your colonists to dream? (ON by default)", ref DD_Settings.isDreamingActive, "If OFF it will stop colonists from getting new dreams. It won't erase the ones colonists already have. It doesn't stop colonists from getting dreams which trigger sleepwalking.");
             listingStandard.CheckboxLabeled("Do you want your colonists to sleepwalk? (ON by default)", ref DD_Settings.isSleepwalkingActive, "If OFF it will stop colonists from sleepwalking, It won't stop currently sleepwalking colonists from wrecking your colony.");
 
             listingStandard.Label("");
@@ -104,15 +106,19 @@ namespace DreamersDream
             //listingStandard.CheckboxLabeled("Sleepwalking - berserk: ", ref DD_Settings.isSleepwalkingActive, "Turns off sleepwalking berserk state.");
 
             listingStandard.Label("");
-            listingStandard.Label("If a dream has a sensitivity to particular factor (all listed below) the setting for that factor will increase the chance. E.g. 100% will double that chance. This chance is added (not multiplied!) to overall chance. If a dream has sensitivity to more than one thing then those settings will stack.");
+            listingStandard.Label("If a dream has a sensitivity to particular factor (all listed below) the setting for that factor will increase the chance. E.g. 100% will double the dreams base chance. If a dream has sensitivity to more than one thing then those settings will stack. Set to 0% to turn off effects of particular feature.");
             listingStandard.Label("How much ilness increases chance for ilness sensitive dreams: " + DD_Settings.chanceMultiplierForIlness.ToString() + "%");
             DD_Settings.chanceMultiplierForIlness = (int)listingStandard.Slider(DD_Settings.chanceMultiplierForIlness, 0, 250);
 
             listingStandard.Label("How much temperature increases chance for temperature sensitive dreams: " + DD_Settings.chanceMultiplierForTemperature.ToString() + "%");
             DD_Settings.chanceMultiplierForTemperature = (int)listingStandard.Slider(DD_Settings.chanceMultiplierForTemperature, 0, 250);
 
-            listingStandard.Label("How much temperature increases chance for temperature sensitive dreams: " + DD_Settings.chanceMultiplierForHunger.ToString() + "%");
+            listingStandard.Label("The more hungry the pawn, the higher the chance for nightmares (and if not hungry then higher chance for good ones). The base chance is quite small when just hungry but if pawn is starving or malnourished then that chance raises drastically.");
+            listingStandard.Label("How much hunger increases chance for hunger sensitive dreams: " + DD_Settings.chanceMultiplierForHunger.ToString() + "%");
             DD_Settings.chanceMultiplierForHunger = (int)listingStandard.Slider(DD_Settings.chanceMultiplierForHunger, 0, 250);
+
+            listingStandard.Label("How much malnourished increases chance for malnourished sensitive dreams: " + DD_Settings.chanceMultiplierForMalnourished.ToString() + "%");
+            DD_Settings.chanceMultiplierForMalnourished = (int)listingStandard.Slider(DD_Settings.chanceMultiplierForMalnourished, 0, 250);
 
             listingStandard.EndScrollView(ref rect);
         }

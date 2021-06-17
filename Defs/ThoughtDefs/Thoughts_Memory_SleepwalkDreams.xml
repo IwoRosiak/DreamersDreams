@@ -121,6 +121,10 @@
   <triggers>
     <li>SleepwalkBingingFood</li>
   </triggers>
+  <sensitivities>
+    <li>hunger</li>
+    <li>malnourished</li>
+  </sensitivities>
 </ThoughtDef>
 
 

@@ -24,12 +24,12 @@ namespace DreamersDream
         }
         public static void CheckSleep_Prefix(Pawn __instance)
         {
-            /* if (__instance.NameShortColored == "TEST" && __instance.AmbientTemperature > GenTemperature.SafeTemperatureRange(__instance).TrueMax)
-             {
+            if (__instance.NameShortColored == "TEST" && __instance.AmbientTemperature > GenTemperature.SafeTemperatureRange(__instance).TrueMax)
+            {
 
-                 Messages.Message("Hot is here", RimWorld.MessageTypeDefOf.NeutralEvent);
+                Messages.Message(__instance.jobs.curJob.ToString(), RimWorld.MessageTypeDefOf.NeutralEvent);
 
-             }*/
+            }
 
             var currentTime = Find.TickManager.TicksGame;
 
