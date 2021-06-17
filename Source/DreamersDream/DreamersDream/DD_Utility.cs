@@ -72,14 +72,14 @@ namespace DreamersDream
                     chanceMutliplier = DD_Settings.chanceForNoDream / 100;
                 }
             }
-            var environmentMultiplier = EnvironmentDreamChance(dream, pawn);
+            //var environmentMultiplier = EnvironmentDreamChance(dream, pawn);
 
             /*if (CheckForHigh() && dream.defName == "VeryGoodDream")
             {
                 return dream.chance + 1000;
 
             }*/
-            return dream.chance + (dream.chance * chanceMutliplier) * (dream.chance * environmentMultiplier);
+            return dream.chance + (dream.chance * chanceMutliplier); //* (dream.chance * environmentMultiplier);
         }
 
         public static float EnvironmentDreamChance(DD_ThoughtDef dream, Pawn pawn)
