@@ -33,6 +33,13 @@ namespace DreamersDream
 
             var currentTime = Find.TickManager.TicksGame;
 
+            var type = __instance.GetType();
+
+            if (type.GetProperty("needs") == null)
+            {
+                return;
+            }
+
             //is the instance a colonist and is it dead
             if (__instance.RaceProps.Humanlike && __instance.RaceProps.IsFlesh && !__instance.Dead && (__instance.Spawned || CaravanUtility.IsCaravanMember(__instance)))
             {

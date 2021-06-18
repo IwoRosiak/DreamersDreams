@@ -12,6 +12,7 @@ namespace DreamersDream
 
         public static bool IsAwake(Pawn pawn)
         {
+
             if (pawn.needs.rest.GUIChangeArrow == 1)
             {
                 return true;
