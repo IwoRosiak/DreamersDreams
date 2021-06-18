@@ -93,7 +93,7 @@
     </li>
   </stages>
   <sensitivities>
-    <li>ilness</li>
+    <li>ill</li>
     <li>hunger</li>
   </sensitivities>
 </ThoughtDef>
@@ -112,7 +112,7 @@
     </li>
   </stages>
   <sensitivities>
-    <li>ilness</li>
+    <li>ill</li>
     <li>hunger</li>
     <li>malnourished</li>
   </sensitivities>
@@ -132,7 +132,7 @@
     </li>
   </stages>
   <sensitivities>
-    <li>ilness</li>
+    <li>ill</li>
   </sensitivities>
 </ThoughtDef>
 
@@ -152,7 +152,7 @@
     </li>
   </stages>
   <sensitivities>
-    <li>ilness</li>
+    <li>ill</li>
   </sensitivities>
 </ThoughtDef>
 
@@ -185,7 +185,7 @@
     </li>
   </stages>
   <sensitivities>
-    <li>ilness</li>
+    <li>ill</li>
     <li>hunger</li>
     <li>malnourished</li>
   </sensitivities>
@@ -205,7 +205,7 @@
     </li>
   </stages>
   <sensitivities>
-    <li>ilness</li>
+    <li>ill</li>
     <li>hunger</li>
     <li>malnourished</li>
   </sensitivities>
@@ -216,7 +216,7 @@
   <showBubble>true</showBubble>
   <durationDays>0.8</durationDays>
   <stackLimit>1</stackLimit>
-  <chance>18</chance>
+  <chance>0</chance>
   <stages>
     <li>
       <label>Had a dream about childhood</label>
@@ -225,7 +225,7 @@
     </li>
   </stages>
   <sensitivities>
-    <li>ilness</li>
+    <li>ill</li>
     <li>hunger</li>
     <li>malnourished</li>
   </sensitivities>

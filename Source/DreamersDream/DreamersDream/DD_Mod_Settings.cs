@@ -23,7 +23,7 @@ namespace DreamersDream
         public static int chanceForSleepwalkingDreams = 0;
 
         public static int chanceMultiplierForIlness = 50;
-        public static int chanceMultiplierForTemperature = 25;
+        public static int chanceMultiplierForTemperature = 50;
         public static int chanceMultiplierForHunger = 50;
         public static int chanceMultiplierForMalnourished = 50;
 
@@ -47,7 +47,7 @@ namespace DreamersDream
             //Scribe_Collections.Look(ref exampleListOfPawns, "exampleListOfPawns", LookMode.Reference);
 
             Scribe_Values.Look(ref chanceMultiplierForIlness, "chanceMultiplierForIlness", 50);
-            Scribe_Values.Look(ref chanceMultiplierForTemperature, "chanceMultiplierForTemperature", 25);
+            Scribe_Values.Look(ref chanceMultiplierForTemperature, "chanceMultiplierForTemperature", 50);
             Scribe_Values.Look(ref chanceMultiplierForHunger, "chanceMultiplierForHunger", 50);
             Scribe_Values.Look(ref chanceMultiplierForHunger, "chanceMultiplierForMalnourished", 50);
             base.ExposeData();
@@ -105,11 +105,11 @@ namespace DreamersDream
             listingStandard.CheckboxLabeled("Sleepwalking - foodbinge: ", ref DD_Settings.isSleepFoodBingeActive, "Turns off sleepwalking food binge state.");
             //listingStandard.CheckboxLabeled("Sleepwalking - berserk: ", ref DD_Settings.isSleepwalkingActive, "Turns off sleepwalking berserk state.");
 
-            /*
+
 
             listingStandard.Label("");
             listingStandard.Label("If a dream has a sensitivity to particular factor (all listed below) the setting for that factor will increase the chance. E.g. 100% will double the dreams base chance. If a dream has sensitivity to more than one thing then those settings will stack. Set to 0% to turn off effects of particular feature.");
-            listingStandard.Label("How much ilness increases chance for ilness sensitive dreams: " + DD_Settings.chanceMultiplierForIlness.ToString() + "%");
+            listingStandard.Label("How much physical wellbeing (ilness, injury or being healthy) increases chance dreams that are sensitive to those factors: " + DD_Settings.chanceMultiplierForIlness.ToString() + "%");
             DD_Settings.chanceMultiplierForIlness = (int)listingStandard.Slider(DD_Settings.chanceMultiplierForIlness, 0, 250);
 
             listingStandard.Label("How much temperature increases chance for temperature sensitive dreams: " + DD_Settings.chanceMultiplierForTemperature.ToString() + "%");
@@ -120,7 +120,7 @@ namespace DreamersDream
             DD_Settings.chanceMultiplierForHunger = (int)listingStandard.Slider(DD_Settings.chanceMultiplierForHunger, 0, 250);
 
             listingStandard.Label("How much malnourished increases chance for malnourished sensitive dreams: " + DD_Settings.chanceMultiplierForMalnourished.ToString() + "%");
-            DD_Settings.chanceMultiplierForMalnourished = (int)listingStandard.Slider(DD_Settings.chanceMultiplierForMalnourished, 0, 250); */
+            DD_Settings.chanceMultiplierForMalnourished = (int)listingStandard.Slider(DD_Settings.chanceMultiplierForMalnourished, 0, 250);
 
             listingStandard.EndScrollView(ref rect);
         }

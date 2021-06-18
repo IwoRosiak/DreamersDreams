@@ -15,7 +15,7 @@
     </li>
   </stages>
   <sensitivities>
-    <li>ilness</li>
+    <li>ill</li>
   </sensitivities>
 </ThoughtDef>
 
@@ -33,7 +33,7 @@
     </li>
   </stages>
   <sensitivities>
-    <li>ilness</li>
+    <li>ill</li>
   </sensitivities>
   <triggers>
     <li>Sleepwalk</li>
@@ -54,7 +54,7 @@
     </li>
   </stages>
   <sensitivities>
-    <li>ilness</li>
+    <li>ill</li>
   </sensitivities>
   <triggers>
     <li>SleepwalkBerserk</li>
@@ -75,7 +75,7 @@
     </li>
   </stages>
   <sensitivities>
-    <li>ilness</li>
+    <li>ill</li>
   </sensitivities>
   <triggers>
     <li>SleepwalkTantrum</li>
@@ -96,7 +96,7 @@
     </li>
   </stages>
   <sensitivities>
-    <li>ilness</li>
+    <li>ill</li>
   </sensitivities>
   <triggers>
     <li>Sleepwalk</li>

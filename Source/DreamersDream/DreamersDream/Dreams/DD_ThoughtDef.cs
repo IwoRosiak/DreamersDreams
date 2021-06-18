@@ -10,7 +10,20 @@ namespace DreamersDream
 
         public List<DD_MentalStateDef> triggers;
 
-        public List<string> sensitivities;
+        public enum Sensitivities
+        {
+            ill,
+            healthy,
+
+            injured,
+            goodTemp,
+            hot,
+            cold,
+            hungry,
+            malnourished
+        }
+
+        public List<Sensitivities> sensitivities;
 
     }
 
