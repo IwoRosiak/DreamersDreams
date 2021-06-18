@@ -75,6 +75,21 @@ namespace DreamersDream
         public static DD_ThoughtDef AllNakedColonyDream;
 
 
+        public static DD_ThoughtDef LostHeadDream;
+
+        public static DD_ThoughtDef EverestDream;
+
+        public static DD_ThoughtDef HoneyDream;
+
+        public static DD_ThoughtDef HealthyDream;
+
+        public static DD_ThoughtDef InjuryDream;
+
+        public static DD_ThoughtDef BeachDream;
+
+        public static DD_ThoughtDef InsectsDream;
+
+        public static DD_ThoughtDef ExDream;
 
 
         public static DD_ThoughtDef CannibalismDream;
@@ -92,6 +107,8 @@ namespace DreamersDream
         public static DD_ThoughtDef SleepwalkDarknessDream;
 
         public static DD_ThoughtDef SleepwalkHungerDream;
+
+        public static DD_ThoughtDef SleepwalkStepsDream;
 
 
 
@@ -139,12 +156,30 @@ namespace DreamersDream
 
         DD_ThoughtDefOf.CannibalismDream,
 
+        DD_ThoughtDefOf.LostHeadDream,
+
+        DD_ThoughtDefOf.EverestDream,
+
+        DD_ThoughtDefOf.HoneyDream,
+
+        DD_ThoughtDefOf.HealthyDream,
+
+        DD_ThoughtDefOf.InjuryDream,
+
+        DD_ThoughtDefOf.BeachDream,
+
+        DD_ThoughtDefOf.InsectsDream,
+
+        DD_ThoughtDefOf.ExDream,
+
+
         //SLEEPWALKERS
         DD_ThoughtDefOf.SleepwalkShapesDream,
         DD_ThoughtDefOf.SleepwalkRedheadWithBeardDream,
         DD_ThoughtDefOf.SleepwalkFurnitureDream,
         DD_ThoughtDefOf.SleepwalkDarknessDream,
-        DD_ThoughtDefOf.SleepwalkHungerDream
+        DD_ThoughtDefOf.SleepwalkHungerDream,
+        DD_ThoughtDefOf.SleepwalkStepsDream
 
 
     };

@@ -133,6 +133,23 @@
   </sensitivities>
 </ThoughtDef>
 
+<ThoughtDef Class= "DreamersDream.DD_ThoughtDef">
+  <defName>SleepwalkStepsDream</defName>
+  <showBubble>true</showBubble>
+  <durationDays>0.8</durationDays>
+  <stackLimit>1</stackLimit>
+  <chance>0.5</chance>
+  <stages>
+    <li>
+      <label>Dreamt about strange steps</label>
+      <description>I dreamt about strange cavern with hundreds of steps. I knew some other world is there but it was too far for me to reach. With each step I made towards it, I was noticing that the cavern is smaller and smaller. At some point it dissapeared... and I was all alone in the dark.</description>
+      <baseMoodEffect>-2</baseMoodEffect>
+    </li>
+  </stages>
+  <triggers>
+    <li>sleepwalking</li>
+  </triggers>
+</ThoughtDef>
 
 
 </Defs>
