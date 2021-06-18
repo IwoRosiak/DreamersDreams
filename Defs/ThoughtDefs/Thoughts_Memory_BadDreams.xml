@@ -58,7 +58,7 @@
     </li>
   </stages>
   <sensitivities>
-    <li>hunger</li>
+    <li>hungry</li>
     <li>malnourished</li>
   </sensitivities>
 </ThoughtDef>
@@ -94,7 +94,7 @@
   </stages>
   <sensitivities>
     <li>ill</li>
-    <li>hunger</li>
+    <li>hungry</li>
   </sensitivities>
 </ThoughtDef>
 
@@ -113,7 +113,7 @@
   </stages>
   <sensitivities>
     <li>ill</li>
-    <li>hunger</li>
+    <li>hungry</li>
     <li>malnourished</li>
   </sensitivities>
 </ThoughtDef>
@@ -186,7 +186,7 @@
   </stages>
   <sensitivities>
     <li>ill</li>
-    <li>hunger</li>
+    <li>hungry</li>
     <li>malnourished</li>
   </sensitivities>
 </ThoughtDef>
@@ -206,7 +206,7 @@
   </stages>
   <sensitivities>
     <li>ill</li>
-    <li>hunger</li>
+    <li>hungry</li>
     <li>malnourished</li>
   </sensitivities>
 </ThoughtDef>
@@ -226,7 +226,7 @@
   </stages>
   <sensitivities>
     <li>ill</li>
-    <li>hunger</li>
+    <li>hungry</li>
     <li>malnourished</li>
   </sensitivities>
 </ThoughtDef>

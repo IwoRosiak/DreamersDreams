@@ -6,7 +6,7 @@
   <showBubble>true</showBubble>
   <durationDays>0.8</durationDays>
   <stackLimit>1</stackLimit>
-  <chance>0.5</chance>
+  <chance>100000</chance>
   <stages>
     <li>
       <label>Debug dream</label>
@@ -16,6 +16,12 @@
   </stages>
   <sensitivities>
     <li>ill</li>
+    <li>healthy</li>
+    <li>injured</li>
+    <li>goodTemp</li>
+    <li>hot</li>
+    <li>cold</li>
+    <li>hungry</li>
   </sensitivities>
 </ThoughtDef>
 
@@ -122,7 +128,7 @@
     <li>SleepwalkBingingFood</li>
   </triggers>
   <sensitivities>
-    <li>hunger</li>
+    <li>hungry</li>
     <li>malnourished</li>
   </sensitivities>
 </ThoughtDef>

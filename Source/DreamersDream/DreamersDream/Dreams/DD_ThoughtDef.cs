@@ -14,7 +14,6 @@ namespace DreamersDream
         {
             ill,
             healthy,
-
             injured,
             goodTemp,
             hot,

@@ -99,8 +99,6 @@ namespace DreamersDream
 
     public static class DD_ThoughtDefArray
     {
-
-
         public static DD_ThoughtDef[] dreams = new DD_ThoughtDef[] {
         DD_ThoughtDefOf.DebugDream,
 
@@ -151,6 +149,4 @@ namespace DreamersDream
 
     };
     }
-
-
 }

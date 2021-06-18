@@ -103,6 +103,12 @@ namespace DreamersDream
                                     __instance.mindState.mentalStateHandler.TryStartMentalState(dream.triggers[Rand.RangeInclusive(0, dream.triggers.Count - 1)], null, true, false, null, false);
                                 }
 
+                                if (dream.defName == "DebugDream")
+                                {
+                                    //Log.Message("Base chance " + dream.chance + " increased by environment by " + DD_CalcTools.EnvironmentDreamChance(dream, __instance) + "% " + "to " + DD_CalcTools.EnvironmentDreamChance(dream, __instance) * dream.chance);
+                                    //Log.Message("Final chance: " + dream.chance * DD_CalcTools.CheckSettingsDream(dream.stages[0].baseMoodEffect) * DD_CalcTools.EnvironmentDreamChance(dream, __instance));
+                                }
+
 
 
                                 //__instance.jobs.EndCurrentJob(Verse.AI.JobCondition.InterruptForced, false, true);

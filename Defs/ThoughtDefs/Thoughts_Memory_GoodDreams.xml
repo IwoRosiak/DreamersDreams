@@ -16,7 +16,7 @@
   </stages>
   <sensitivities>
     <li>healthy</li>
-    <li>goodTemperature</li>
+    <li>goodTemp</li>
   </sensitivities>
 </ThoughtDef>
 
@@ -35,7 +35,7 @@
     </stages>
     <sensitivities>
       <li>healthy</li>
-      <li>goodTemperature</li>
+      <li>goodTemp</li>
     </sensitivities>
   </ThoughtDef>
 
@@ -54,7 +54,7 @@
   </stages>
   <sensitivities>
         <li>healthy</li>
-    <li>goodTemperature</li>
+    <li>goodTemp</li>
   </sensitivities>
 </ThoughtDef>
 
@@ -73,7 +73,7 @@
   </stages>
   <sensitivities>
         <li>healthy</li>
-    <li>goodTemperature</li>
+    <li>goodTemp</li>
   </sensitivities>
 </ThoughtDef>
 
@@ -94,7 +94,7 @@
     <li>ill</li>
     <li>ill</li>
     <li>injured</li>
-    <li>goodTemperature</li>
+    <li>goodTemp</li>
   </sensitivities>
 </ThoughtDef>
 
@@ -113,7 +113,7 @@
   </stages>
   <sensitivities>
     <li>healthy</li>
-    <li>goodTemperature</li>
+    <li>goodTemp</li>
   </sensitivities>
 </ThoughtDef>
 
@@ -132,7 +132,7 @@
   </stages>
   <sensitivities>
     <li>ill</li>
-    <li>goodTemperature</li>
+    <li>goodTemp</li>
   </sensitivities>
 </ThoughtDef>
 
