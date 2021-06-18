@@ -54,6 +54,8 @@ namespace DreamersDream
                         return 0;
                     }
                 }
+                var sleepwalkerChances = SleepwalkerDreamChance(dream, pawn);
+
                 chanceMutliplier = DD_Settings.chanceForSleepwalkingDreams / 100;
             }
             /*else if (!DD_Settings.isDreamingActive)
@@ -84,6 +86,65 @@ namespace DreamersDream
 
             }*/
             return dream.chance + (dream.chance * chanceMutliplier); //* (dream.chance * environmentMultiplier);
+        }
+
+        public static float SleepwalkerDreamChance(DD_ThoughtDef dream, Pawn pawn)
+        {
+            float traitMultiplier = 0;
+            if (pawn.story.traits.HasTrait(DD_TraitDefOf.Sleepwalker))
+            {
+                var traitDegree = pawn.story.traits.DegreeOfTrait(DD_TraitDefOf.Sleepwalker);
+                float traitMultiplierTemp = 0;
+
+                switch (traitDegree)
+                {
+                    case 1:
+                        traitMultiplierTemp = 0.2f;
+                        break;
+                    case 2:
+                        traitMultiplierTemp = 1f;
+                        break;
+                    case 3:
+                        traitMultiplierTemp = 2f;
+                        break;
+                    default:
+                        break;
+                }
+
+
+
+
+                foreach (DD_MentalStateDef state in dream.triggers)
+                {
+                    if (state == DD_MentalStateDefOf.SleepwalkBerserk && pawn.story.traits.HasTrait(TraitDefOf.Bloodlust) || pawn.story.traits.HasTrait(TraitDefOf.Psychopath))
+                    {
+                        traitMultiplier = 2.0f;
+                    }
+                    else if (state == DD_MentalStateDefOf.SleepwalkTantrum && pawn.story.traits.HasTrait(TraitDefOf.NaturalMood))
+                    {
+                        if (pawn.story.traits.DegreeOfTrait(TraitDefOf.NaturalMood) == -1)
+                        {
+                            traitMultiplier = 1.5f;
+                        }
+                        else if (pawn.story.traits.DegreeOfTrait(TraitDefOf.NaturalMood) == -2)
+                        {
+                            traitMultiplier = 2.0f;
+                        }
+                    }
+                    else if (state == DD_MentalStateDefOf.SleepwalkBingingFood && pawn.story.traits.HasTrait(DD_TraitDefOf.Gourmand))
+                    {
+                        traitMultiplier = 2.0f;
+                    }
+                    else if (state == DD_MentalStateDefOf.Sleepwalk || state == DD_MentalStateDefOf.SleepwalkOwnRoom || state == DD_MentalStateDefOf.SleepwalkSafe)
+                    {
+                        traitMultiplier = 3.0f;
+                    }
+                }
+
+                return dream.chance * traitMultiplier * traitMultiplierTemp;
+            }
+
+            return 0;
         }
 
         public static float EnvironmentDreamChance(DD_ThoughtDef dream, Pawn pawn)
