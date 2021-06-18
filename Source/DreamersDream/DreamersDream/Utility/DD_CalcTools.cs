@@ -17,78 +17,51 @@ namespace DreamersDream
                     //{
                     //    Log.Message(sensitivity.ToString());
                     //}
-
-
-
+                    /*if (pawn.NameShortColored == "TEST")
+                    {
+                        Log.Message(sensitivity + " success");
+                    }*/
                     switch (sensitivity)
                     {
                         case DD_ThoughtDef.Sensitivities.ill:
                             if (pawn.health.hediffSet.AnyHediffMakesSickThought)
                             {
                                 multiplier += (float)DD_Settings.chanceMultiplierForIlness / 100;
-                                if (pawn.NameShortColored == "TEST")
-                                {
-                                    Log.Message(sensitivity + " success");
-                                }
                             }
                             break;
                         case DD_ThoughtDef.Sensitivities.healthy:
                             if (!pawn.health.hediffSet.AnyHediffMakesSickThought && !pawn.health.hediffSet.HasTemperatureInjury(TemperatureInjuryStage.Serious))
                             {
                                 multiplier += (float)DD_Settings.chanceMultiplierForIlness / 100;
-                                if (pawn.NameShortColored == "TEST")
-                                {
-                                    Log.Message(sensitivity + " success");
-                                }
                             }
                             break;
                         case DD_ThoughtDef.Sensitivities.injured:
                             if (pawn.health.hediffSet.HasTemperatureInjury(TemperatureInjuryStage.Serious))
                             {
                                 multiplier += (float)DD_Settings.chanceMultiplierForIlness / 100;
-                                if (pawn.NameShortColored == "TEST")
-                                {
-                                    Log.Message(sensitivity + " success");
-                                }
                             }
                             break;
                         case DD_ThoughtDef.Sensitivities.goodTemp:
                             if (pawn.AmbientTemperature > GenTemperature.ComfortableTemperatureRange(pawn).TrueMin && pawn.AmbientTemperature < GenTemperature.ComfortableTemperatureRange(pawn).TrueMax)
                             {
                                 multiplier += (float)DD_Settings.chanceMultiplierForTemperature / 100;
-                                if (pawn.NameShortColored == "TEST")
-                                {
-                                    Log.Message(sensitivity + " success");
-                                }
                             }
                             break;
                         case DD_ThoughtDef.Sensitivities.hot:
                             if (pawn.AmbientTemperature > GenTemperature.ComfortableTemperatureRange(pawn).TrueMax)
                             {
                                 multiplier += (float)DD_Settings.chanceMultiplierForTemperature / 100;
-                                if (pawn.NameShortColored == "TEST")
-                                {
-                                    Log.Message(sensitivity + " success");
-                                }
                             }
                             break;
                         case DD_ThoughtDef.Sensitivities.cold:
                             if (pawn.AmbientTemperature < GenTemperature.ComfortableTemperatureRange(pawn).TrueMin)
                             {
                                 multiplier += (float)DD_Settings.chanceMultiplierForTemperature / 100;
-                                if (pawn.NameShortColored == "TEST")
-                                {
-                                    Log.Message(sensitivity + " success");
-                                }
                             }
                             break;
                         case DD_ThoughtDef.Sensitivities.hungry:
                             if (pawn.needs.food.CurLevelPercentage < pawn.needs.food.PercentageThreshHungry)
                             {
-                                if (pawn.NameShortColored == "TEST")
-                                {
-                                    Log.Message(sensitivity + " success");
-                                }
                                 switch (pawn.needs.food.CurCategory)
                                 {
                                     case HungerCategory.Starving:
@@ -109,10 +82,6 @@ namespace DreamersDream
                             var malnutrition = pawn.health.hediffSet.GetFirstHediffOfDef(HediffDefOf.Malnutrition);
                             if (malnutrition != null)
                             {
-                                if (pawn.NameShortColored == "TEST")
-                                {
-                                    Log.Message(sensitivity + " success");
-                                }
                                 float malnourishedMultiplier = 0;
 
 
@@ -154,10 +123,6 @@ namespace DreamersDream
                         multiplier += DD_Settings.chanceMultiplierForIlness / 100;
                     }*/
                 }
-            }
-            if (pawn.NameShortColored == "TEST")
-            {
-                Log.Message(multiplier * 100 + "% - multiplier environment");
             }
             return multiplier;
         }

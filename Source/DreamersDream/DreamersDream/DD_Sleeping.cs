@@ -13,6 +13,15 @@ namespace DreamersDream
 
         static HarmonyPatches()
         {
+            var totalDreams = 0;
+            foreach (DD_ThoughtDef dream in DD_ThoughtDefArray.dreams)
+            {
+                totalDreams++;
+            }
+            Log.Message("Dreamer's Dreams: succesfully loaded " + totalDreams + " dreams.");
+
+
+
             var harmony = new Harmony("com.company.QarsoonMeel.DreamersDreams");
 
             MethodInfo targetmethod = AccessTools.Method(typeof(Verse.Pawn), "Tick");
@@ -34,7 +43,7 @@ namespace DreamersDream
             var currentTime = Find.TickManager.TicksGame;
 
             //is the instance a colonist and is it dead
-            if (__instance.RaceProps.Humanlike && !__instance.Dead && (__instance.Spawned || CaravanUtility.IsCaravanMember(__instance)))
+            if (__instance.RaceProps.Humanlike && __instance.RaceProps.IsFlesh && !__instance.Dead && (__instance.Spawned || CaravanUtility.IsCaravanMember(__instance)))
             {
                 //needs to use different classes but it checks if the pawn is resting
                 if (IsAwake(__instance))                       //      !(__instance.health.capacities.CanBeAwake && (!__instance.Spawned || __instance.CurJob == null || __instance.jobs.curDriver == null || !__instance.jobs.curDriver.asleep)))
@@ -103,11 +112,11 @@ namespace DreamersDream
                                     __instance.mindState.mentalStateHandler.TryStartMentalState(dream.triggers[Rand.RangeInclusive(0, dream.triggers.Count - 1)], null, true, false, null, false);
                                 }
 
-                                if (dream.defName == "DebugDream")
-                                {
-                                    //Log.Message("Base chance " + dream.chance + " increased by environment by " + DD_CalcTools.EnvironmentDreamChance(dream, __instance) + "% " + "to " + DD_CalcTools.EnvironmentDreamChance(dream, __instance) * dream.chance);
-                                    //Log.Message("Final chance: " + dream.chance * DD_CalcTools.CheckSettingsDream(dream.stages[0].baseMoodEffect) * DD_CalcTools.EnvironmentDreamChance(dream, __instance));
-                                }
+                                //if (dream.defName == "DebugDream")
+                                //{
+                                //Log.Message("Base chance " + dream.chance + " increased by environment by " + DD_CalcTools.EnvironmentDreamChance(dream, __instance) + "% " + "to " + DD_CalcTools.EnvironmentDreamChance(dream, __instance) * dream.chance);
+                                //Log.Message("Final chance: " + dream.chance * DD_CalcTools.CheckSettingsDream(dream.stages[0].baseMoodEffect) * DD_CalcTools.EnvironmentDreamChance(dream, __instance));
+                                //}
 
 
 
