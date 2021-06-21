@@ -21,11 +21,14 @@ namespace DreamersDream
         public static int chanceForNegativeDreams = 0;
         //public float chanceForUserCreatedDreams = 1.0f;
         public static int chanceForSleepwalkingDreams = 0;
+        public static int traitMultiplierForSleepwalking = 100;
 
         public static int chanceMultiplierForIlness = 50;
-        public static int chanceMultiplierForTemperature = 25;
+        public static int chanceMultiplierForTemperature = 50;
         public static int chanceMultiplierForHunger = 50;
         public static int chanceMultiplierForMalnourished = 50;
+
+        public static bool isDebugMode = false;
 
         /// <summary>
         /// The part that writes our settings to file. Note that saving is by ref.
@@ -39,6 +42,7 @@ namespace DreamersDream
             Scribe_Values.Look(ref isSleepFoodBingeActive, "isSleepFoodBingeActive", true);
             Scribe_Values.Look(ref isSleepTantrumActive, "isSleepTantrumActive", true);
 
+
             Scribe_Values.Look(ref chanceForNoDream, "chanceForNoDream", 0);
             Scribe_Values.Look(ref chanceForPositiveDreams, "chanceForPositiveDreams", 0);
             Scribe_Values.Look(ref chanceForNegativeDreams, "chanceForNegativeDreams", 0);
@@ -46,10 +50,15 @@ namespace DreamersDream
             Scribe_Values.Look(ref chanceForSleepwalkingDreams, "chanceForSleepwalkingDreams", 0);
             //Scribe_Collections.Look(ref exampleListOfPawns, "exampleListOfPawns", LookMode.Reference);
 
+            Scribe_Values.Look(ref traitMultiplierForSleepwalking, "traitMultiplierForSleepwalking", 100);
+
             Scribe_Values.Look(ref chanceMultiplierForIlness, "chanceMultiplierForIlness", 50);
-            Scribe_Values.Look(ref chanceMultiplierForTemperature, "chanceMultiplierForTemperature", 25);
+            Scribe_Values.Look(ref chanceMultiplierForTemperature, "chanceMultiplierForTemperature", 50);
             Scribe_Values.Look(ref chanceMultiplierForHunger, "chanceMultiplierForHunger", 50);
             Scribe_Values.Look(ref chanceMultiplierForHunger, "chanceMultiplierForMalnourished", 50);
+
+
+
             base.ExposeData();
         }
     }
@@ -95,7 +104,7 @@ namespace DreamersDream
             DD_Settings.chanceForSleepwalkingDreams = (int)listingStandard.Slider(DD_Settings.chanceForSleepwalkingDreams, -100, 100);
 
             //listingStandard.CheckboxLabeled("Do you want your colonists to dream? (ON by default)", ref DD_Settings.isDreamingActive, "If OFF it will stop colonists from getting new dreams. It won't erase the ones colonists already have. It doesn't stop colonists from getting dreams which trigger sleepwalking.");
-            listingStandard.CheckboxLabeled("Do you want your colonists to sleepwalk? (ON by default)", ref DD_Settings.isSleepwalkingActive, "If OFF it will stop colonists from sleepwalking, It won't stop currently sleepwalking colonists from wrecking your colony.");
+            //listingStandard.CheckboxLabeled("Do you want your colonists to sleepwalk? (ON by default)", ref DD_Settings.isSleepwalkingActive, "If OFF it will stop colonists from sleepwalking, It won't stop currently sleepwalking colonists from wrecking your colony.");
 
             listingStandard.Label("");
             listingStandard.Label("Those settings are for turning off particular sleepwalking states. These do not affect dreams.");
@@ -105,11 +114,14 @@ namespace DreamersDream
             listingStandard.CheckboxLabeled("Sleepwalking - foodbinge: ", ref DD_Settings.isSleepFoodBingeActive, "Turns off sleepwalking food binge state.");
             //listingStandard.CheckboxLabeled("Sleepwalking - berserk: ", ref DD_Settings.isSleepwalkingActive, "Turns off sleepwalking berserk state.");
 
-            /*
+            listingStandard.Label("How much traits affect dreams (including sleepwalking): " + DD_Settings.traitMultiplierForSleepwalking.ToString() + "%");
+            DD_Settings.traitMultiplierForSleepwalking = (int)listingStandard.Slider(DD_Settings.traitMultiplierForSleepwalking, 0, 250);
+
+
 
             listingStandard.Label("");
             listingStandard.Label("If a dream has a sensitivity to particular factor (all listed below) the setting for that factor will increase the chance. E.g. 100% will double the dreams base chance. If a dream has sensitivity to more than one thing then those settings will stack. Set to 0% to turn off effects of particular feature.");
-            listingStandard.Label("How much ilness increases chance for ilness sensitive dreams: " + DD_Settings.chanceMultiplierForIlness.ToString() + "%");
+            listingStandard.Label("How much physical wellbeing (ilness, injury or being healthy) increases chance dreams that are sensitive to those factors: " + DD_Settings.chanceMultiplierForIlness.ToString() + "%");
             DD_Settings.chanceMultiplierForIlness = (int)listingStandard.Slider(DD_Settings.chanceMultiplierForIlness, 0, 250);
 
             listingStandard.Label("How much temperature increases chance for temperature sensitive dreams: " + DD_Settings.chanceMultiplierForTemperature.ToString() + "%");
@@ -120,7 +132,9 @@ namespace DreamersDream
             DD_Settings.chanceMultiplierForHunger = (int)listingStandard.Slider(DD_Settings.chanceMultiplierForHunger, 0, 250);
 
             listingStandard.Label("How much malnourished increases chance for malnourished sensitive dreams: " + DD_Settings.chanceMultiplierForMalnourished.ToString() + "%");
-            DD_Settings.chanceMultiplierForMalnourished = (int)listingStandard.Slider(DD_Settings.chanceMultiplierForMalnourished, 0, 250); */
+            DD_Settings.chanceMultiplierForMalnourished = (int)listingStandard.Slider(DD_Settings.chanceMultiplierForMalnourished, 0, 250);
+
+            listingStandard.CheckboxLabeled("Debug mode: ", ref DD_Settings.isDebugMode, "Turns on Debug Mode. It will automatically turn off when you reload the game.");
 
             listingStandard.EndScrollView(ref rect);
         }

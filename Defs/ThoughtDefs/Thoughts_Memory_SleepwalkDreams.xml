@@ -6,7 +6,7 @@
   <showBubble>true</showBubble>
   <durationDays>0.8</durationDays>
   <stackLimit>1</stackLimit>
-  <chance>0.5</chance>
+  <chance>0</chance>
   <stages>
     <li>
       <label>Debug dream</label>
@@ -15,7 +15,13 @@
     </li>
   </stages>
   <sensitivities>
-    <li>ilness</li>
+    <li>ill</li>
+    <li>healthy</li>
+    <li>injured</li>
+    <li>goodTemp</li>
+    <li>hot</li>
+    <li>cold</li>
+    <li>hungry</li>
   </sensitivities>
 </ThoughtDef>
 
@@ -33,7 +39,7 @@
     </li>
   </stages>
   <sensitivities>
-    <li>ilness</li>
+    <li>ill</li>
   </sensitivities>
   <triggers>
     <li>Sleepwalk</li>
@@ -54,7 +60,7 @@
     </li>
   </stages>
   <sensitivities>
-    <li>ilness</li>
+    <li>ill</li>
   </sensitivities>
   <triggers>
     <li>SleepwalkBerserk</li>
@@ -75,7 +81,7 @@
     </li>
   </stages>
   <sensitivities>
-    <li>ilness</li>
+    <li>ill</li>
   </sensitivities>
   <triggers>
     <li>SleepwalkTantrum</li>
@@ -96,12 +102,10 @@
     </li>
   </stages>
   <sensitivities>
-    <li>ilness</li>
+    <li>ill</li>
   </sensitivities>
   <triggers>
-    <li>Sleepwalk</li>
     <li>SleepwalkSafe</li>
-    <li>SleepwalkTantrum</li>
   </triggers>
 </ThoughtDef>
 
@@ -122,11 +126,28 @@
     <li>SleepwalkBingingFood</li>
   </triggers>
   <sensitivities>
-    <li>hunger</li>
+    <li>hungry</li>
     <li>malnourished</li>
   </sensitivities>
 </ThoughtDef>
 
+<ThoughtDef Class= "DreamersDream.DD_ThoughtDef">
+  <defName>SleepwalkStepsDream</defName>
+  <showBubble>true</showBubble>
+  <durationDays>0.8</durationDays>
+  <stackLimit>1</stackLimit>
+  <chance>0.5</chance>
+  <stages>
+    <li>
+      <label>Dreamt about strange steps</label>
+      <description>I dreamt about strange cavern with hundreds of steps. I knew some other world is there but it was too far for me to reach. With each step I made towards it, I was noticing that the cavern is smaller and smaller. At some point it dissapeared... and I was all alone in the dark.</description>
+      <baseMoodEffect>-2</baseMoodEffect>
+    </li>
+  </stages>
+  <triggers>
+    <li>Sleepwalk</li>
+  </triggers>
+</ThoughtDef>
 
 
 </Defs>

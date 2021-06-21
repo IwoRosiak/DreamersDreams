@@ -15,8 +15,8 @@
     </li>
   </stages>
   <sensitivities>
-        <li>healthy</li>
-    <li>goodTemperature</li>
+    <li>healthy</li>
+    <li>goodTemp</li>
   </sensitivities>
 </ThoughtDef>
 
@@ -34,8 +34,8 @@
       </li>
     </stages>
     <sensitivities>
-          <li>healthy</li>
-      <li>goodTemperature</li>
+      <li>healthy</li>
+      <li>goodTemp</li>
     </sensitivities>
   </ThoughtDef>
 
@@ -54,7 +54,7 @@
   </stages>
   <sensitivities>
         <li>healthy</li>
-    <li>goodTemperature</li>
+    <li>goodTemp</li>
   </sensitivities>
 </ThoughtDef>
 
@@ -73,7 +73,7 @@
   </stages>
   <sensitivities>
         <li>healthy</li>
-    <li>goodTemperature</li>
+    <li>goodTemp</li>
   </sensitivities>
 </ThoughtDef>
 
@@ -91,9 +91,10 @@
     </li>
   </stages>
   <sensitivities>
-    <li>ilness</li>
-    <li>ilness</li>
-    <li>goodTemperature</li>
+    <li>ill</li>
+    <li>ill</li>
+    <li>injured</li>
+    <li>goodTemp</li>
   </sensitivities>
 </ThoughtDef>
 
@@ -112,14 +113,14 @@
   </stages>
   <sensitivities>
     <li>healthy</li>
-    <li>goodTemperature</li>
+    <li>goodTemp</li>
   </sensitivities>
 </ThoughtDef>
 
 <ThoughtDef Class= "DreamersDream.DD_ThoughtDef">
   <defName>ChildhoodGoodDream</defName>
   <showBubble>true</showBubble>
-  <durationDays>1.6</durationDays>
+  <durationDays>0.8</durationDays>
   <stackLimit>1</stackLimit>
   <chance>24</chance>
   <stages>
@@ -130,8 +131,66 @@
     </li>
   </stages>
   <sensitivities>
-    <li>ilness</li>
-    <li>goodTemperature</li>
+    <li>ill</li>
+    <li>goodTemp</li>
+  </sensitivities>
+</ThoughtDef>
+
+<ThoughtDef Class= "DreamersDream.DD_ThoughtDef">
+  <defName>BeachDream</defName>
+  <showBubble>true</showBubble>
+  <durationDays>0.8</durationDays>
+  <stackLimit>1</stackLimit>
+  <chance>15</chance>
+  <stages>
+    <li>
+      <label>Dreamt about ocean beach</label>
+      <description>Cold drinks and sand. Yep, I could stay there forever.</description>
+      <baseMoodEffect>4</baseMoodEffect>
+    </li>
+  </stages>
+  <sensitivities>
+    <li>hot</li>
+    <li>goodTemp</li>
+  </sensitivities>
+</ThoughtDef>
+
+<ThoughtDef Class= "DreamersDream.DD_ThoughtDef">
+  <defName>EverestDream</defName>
+  <showBubble>true</showBubble>
+  <durationDays>0.8</durationDays>
+  <stackLimit>1</stackLimit>
+  <chance>15</chance>
+  <stages>
+    <li>
+      <label>Dreamt about snow mountain</label>
+      <description>On top of that, I could see the whole world. All cities and forests. It was so cold though and I could barely breath, yet, I felt calm. I sat down and enjoyed the view...</description>
+      <baseMoodEffect>4</baseMoodEffect>
+    </li>
+  </stages>
+  <sensitivities>
+    <li>cold</li>
+  </sensitivities>
+</ThoughtDef>
+
+<ThoughtDef Class= "DreamersDream.DD_ThoughtDef">
+  <defName>HealthyDream</defName>
+  <showBubble>true</showBubble>
+  <durationDays>0.8</durationDays>
+  <stackLimit>1</stackLimit>
+  <chance>10</chance>
+  <stages>
+    <li>
+      <label>Dreamt about being healthy</label>
+      <description>I could finally relax... no pain... no suffering.</description>
+      <baseMoodEffect>5</baseMoodEffect>
+    </li>
+  </stages>
+  <sensitivities>
+    <li>injured</li>
+    <li>injured</li>
+    <li>injured</li>
+    <li>injured</li>
   </sensitivities>
 </ThoughtDef>
 

@@ -159,6 +159,38 @@
   </stages>
 </ThoughtDef>
 
+<ThoughtDef Class= "DreamersDream.DD_ThoughtDef">
+  <defName>AnimalForestDream</defName>
+  <showBubble>true</showBubble>
+  <durationDays>0.8</durationDays>
+  <stackLimit>1</stackLimit>
+  <chance>24</chance>
+  <stages>
+    <li>
+      <label>Dreamt about being a racoon</label>
+      <description>I was a small animal (I think it was a raccoon?) in a random windy forest. It was pretty nice even if all I did was wander around and occasionally see other creatures, and at some point I think I befriended a groundhog. I'm not too sure on how it ended but the last thing I vaguely remember was seeing buildings over a hill. ~~okoyum</description>
+      <baseMoodEffect>3</baseMoodEffect>
+    </li>
+  </stages>
+</ThoughtDef>
 
+<ThoughtDef Class= "DreamersDream.DD_ThoughtDef">
+  <defName>CheeseDream</defName>
+  <showBubble>true</showBubble>
+  <durationDays>0.8</durationDays>
+  <stackLimit>1</stackLimit>
+  <chance>10</chance>
+  <stages>
+    <li>
+      <label>Dreamt about cheese</label>
+      <description>Cheese.... Cheese everywhere! By Male_07</description>
+      <baseMoodEffect>3</baseMoodEffect>
+    </li>
+  </stages>
+  <sensitivities>
+    <li>malnourished</li>
+    <li>hungry</li>
+  </sensitivities>
+</ThoughtDef>
 
 </Defs>
