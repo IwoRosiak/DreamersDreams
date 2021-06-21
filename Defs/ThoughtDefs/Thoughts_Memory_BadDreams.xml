@@ -273,7 +273,7 @@
   <showBubble>true</showBubble>
   <durationDays>0.8</durationDays>
   <stackLimit>1</stackLimit>
-  <chance>15</chance>
+  <chance>5</chance>
   <stages>
     <li>
       <label>Dreamt about injury</label>
@@ -286,26 +286,7 @@
   </sensitivities>
 </ThoughtDef>
 
-<ThoughtDef Class= "DreamersDream.DD_ThoughtDef">
-  <defName>HealthyDream</defName>
-  <showBubble>true</showBubble>
-  <durationDays>0.8</durationDays>
-  <stackLimit>1</stackLimit>
-  <chance>10</chance>
-  <stages>
-    <li>
-      <label>Dreamt about being healthy</label>
-      <description>I could finally relax... no pain... no suffering.</description>
-      <baseMoodEffect>-2</baseMoodEffect>
-    </li>
-  </stages>
-  <sensitivities>
-    <li>injured</li>
-    <li>injured</li>
-    <li>injured</li>
-    <li>injured</li>
-  </sensitivities>
-</ThoughtDef>
+
 
 <ThoughtDef Class= "DreamersDream.DD_ThoughtDef">
   <defName>HoneyDream</defName>

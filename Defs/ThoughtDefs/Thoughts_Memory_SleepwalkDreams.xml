@@ -105,9 +105,7 @@
     <li>ill</li>
   </sensitivities>
   <triggers>
-    <li>Sleepwalk</li>
     <li>SleepwalkSafe</li>
-    <li>SleepwalkTantrum</li>
   </triggers>
 </ThoughtDef>
 
@@ -147,7 +145,7 @@
     </li>
   </stages>
   <triggers>
-    <li>sleepwalking</li>
+    <li>Sleepwalk</li>
   </triggers>
 </ThoughtDef>
 

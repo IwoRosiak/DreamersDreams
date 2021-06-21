@@ -27,36 +27,60 @@ namespace DreamersDream
                             if (pawn.health.hediffSet.AnyHediffMakesSickThought)
                             {
                                 multiplier += (float)DD_Settings.chanceMultiplierForIlness / 100;
+                                if (DD_Settings.isDebugMode && dream.defName == "DebugDream" && pawn.NameShortColored == "TEST")
+                                {
+                                    Log.Message("Chance increased because sick");
+                                }
                             }
                             break;
                         case DD_ThoughtDef.Sensitivities.healthy:
                             if (!pawn.health.hediffSet.AnyHediffMakesSickThought && !pawn.health.hediffSet.HasTemperatureInjury(TemperatureInjuryStage.Serious))
                             {
                                 multiplier += (float)DD_Settings.chanceMultiplierForIlness / 100;
+                                if (DD_Settings.isDebugMode && dream.defName == "DebugDream" && pawn.NameShortColored == "TEST")
+                                {
+                                    Log.Message("Chance increased because healthy");
+                                }
                             }
                             break;
                         case DD_ThoughtDef.Sensitivities.injured:
                             if (pawn.health.hediffSet.HasTemperatureInjury(TemperatureInjuryStage.Serious))
                             {
                                 multiplier += (float)DD_Settings.chanceMultiplierForIlness / 100;
+                                if (DD_Settings.isDebugMode && dream.defName == "DebugDream" && pawn.NameShortColored == "TEST")
+                                {
+                                    Log.Message("Chance increased because injured");
+                                }
                             }
                             break;
                         case DD_ThoughtDef.Sensitivities.goodTemp:
                             if (pawn.AmbientTemperature > GenTemperature.ComfortableTemperatureRange(pawn).TrueMin && pawn.AmbientTemperature < GenTemperature.ComfortableTemperatureRange(pawn).TrueMax)
                             {
                                 multiplier += (float)DD_Settings.chanceMultiplierForTemperature / 100;
+                                if (DD_Settings.isDebugMode && dream.defName == "DebugDream" && pawn.NameShortColored == "TEST")
+                                {
+                                    Log.Message("Chance increased because good temp");
+                                }
                             }
                             break;
                         case DD_ThoughtDef.Sensitivities.hot:
                             if (pawn.AmbientTemperature > GenTemperature.ComfortableTemperatureRange(pawn).TrueMax)
                             {
                                 multiplier += (float)DD_Settings.chanceMultiplierForTemperature / 100;
+                                if (DD_Settings.isDebugMode && dream.defName == "DebugDream" && pawn.NameShortColored == "TEST")
+                                {
+                                    Log.Message("Chance increased because hot");
+                                }
                             }
                             break;
                         case DD_ThoughtDef.Sensitivities.cold:
                             if (pawn.AmbientTemperature < GenTemperature.ComfortableTemperatureRange(pawn).TrueMin)
                             {
                                 multiplier += (float)DD_Settings.chanceMultiplierForTemperature / 100;
+                                if (DD_Settings.isDebugMode && dream.defName == "DebugDream" && pawn.NameShortColored == "TEST")
+                                {
+                                    Log.Message("Chance increased because cold");
+                                }
                             }
                             break;
                         case DD_ThoughtDef.Sensitivities.hungry:
@@ -66,12 +90,24 @@ namespace DreamersDream
                                 {
                                     case HungerCategory.Starving:
                                         multiplier += 0.4f * (float)DD_Settings.chanceMultiplierForHunger / 100;
+                                        if (DD_Settings.isDebugMode && dream.defName == "DebugDream" && pawn.NameShortColored == "TEST")
+                                        {
+                                            Log.Message("Chance increased because starving");
+                                        }
                                         break;
                                     case HungerCategory.UrgentlyHungry:
                                         multiplier += 0.25f * (float)DD_Settings.chanceMultiplierForHunger / 100;
+                                        if (DD_Settings.isDebugMode && dream.defName == "DebugDream" && pawn.NameShortColored == "TEST")
+                                        {
+                                            Log.Message("Chance increased because very hungry");
+                                        }
                                         break;
                                     case HungerCategory.Hungry:
                                         multiplier += 0.1f * (float)DD_Settings.chanceMultiplierForHunger / 100;
+                                        if (DD_Settings.isDebugMode && dream.defName == "DebugDream" && pawn.NameShortColored == "TEST")
+                                        {
+                                            Log.Message("Chance increased because hungry");
+                                        }
                                         break;
                                     default:
                                         break;
@@ -93,18 +129,38 @@ namespace DreamersDream
                                         {
                                             case "trivial":
                                                 malnourishedMultiplier = 0.1f;
+                                                if (DD_Settings.isDebugMode && dream.defName == "DebugDream" && pawn.NameShortColored == "TEST")
+                                                {
+                                                    Log.Message("Chance increased because trivial malnourished");
+                                                }
                                                 break;
                                             case "minor":
                                                 malnourishedMultiplier = 0.4f;
+                                                if (DD_Settings.isDebugMode && dream.defName == "DebugDream" && pawn.NameShortColored == "TEST")
+                                                {
+                                                    Log.Message("Chance increased because minor malnourished");
+                                                }
                                                 break;
                                             case "moderate":
                                                 malnourishedMultiplier = 0.7f;
+                                                if (DD_Settings.isDebugMode && dream.defName == "DebugDream" && pawn.NameShortColored == "TEST")
+                                                {
+                                                    Log.Message("Chance increased because moderate malnourished");
+                                                }
                                                 break;
                                             case "severe":
                                                 malnourishedMultiplier = 1.0f;
+                                                if (DD_Settings.isDebugMode && dream.defName == "DebugDream" && pawn.NameShortColored == "TEST")
+                                                {
+                                                    Log.Message("Chance increased because severe malnourished");
+                                                }
                                                 break;
                                             case "extreme":
                                                 malnourishedMultiplier = 2.0f;
+                                                if (DD_Settings.isDebugMode && dream.defName == "DebugDream" && pawn.NameShortColored == "TEST")
+                                                {
+                                                    Log.Message("Chance increased because extreme malnourished");
+                                                }
                                                 break;
                                             default:
                                                 break;
@@ -127,54 +183,68 @@ namespace DreamersDream
             return multiplier;
         }
 
+        public static float CheckSleepwalkerTrait(Pawn pawn)
+        {
+            float traitMultiplier = 1;
+            var traitDegree = pawn.story.traits.DegreeOfTrait(DD_TraitDefOf.Sleepwalker);
+
+            switch (traitDegree)
+            {
+                case 1:
+                    traitMultiplier += 50f * ((float)DD_Settings.traitMultiplierForSleepwalking / 100);
+                    break;
+                case 2:
+                    traitMultiplier += 100f * ((float)DD_Settings.traitMultiplierForSleepwalking / 100);
+                    break;
+                case 3:
+                    traitMultiplier += 200.0f * ((float)DD_Settings.traitMultiplierForSleepwalking / 100);
+                    break;
+                default:
+                    break;
+            }
+
+            return traitMultiplier;
+
+        }
+
         public static float TraitDreamChance(DD_ThoughtDef dream, Pawn pawn)
         {
+
             float traitMultiplier = 1;
             if (pawn.story.traits.HasTrait(DD_TraitDefOf.Sleepwalker))
             {
-                var traitDegree = pawn.story.traits.DegreeOfTrait(DD_TraitDefOf.Sleepwalker);
-
-                switch (traitDegree)
+                if (DD_Settings.isDebugMode && dream.defName == "DebugDream" && pawn.NameShortColored == "TEST")
                 {
-                    case 1:
-                        traitMultiplier += 1f * DD_Settings.traitMultiplierForSleepwalking;
-                        break;
-                    case 2:
-                        traitMultiplier += 2.5f * DD_Settings.traitMultiplierForSleepwalking;
-                        break;
-                    case 3:
-                        traitMultiplier += 5.0f * DD_Settings.traitMultiplierForSleepwalking;
-                        break;
-                    default:
-                        break;
+                    Log.Message("Chance increased because of sleepwalker trait");
                 }
 
-                /*foreach (DD_MentalStateDef state in dream.triggers)
+                foreach (DD_MentalStateDef state in dream.triggers)
                 {
-                    if (state == DD_MentalStateDefOf.SleepwalkBerserk && pawn.story.traits.HasTrait(TraitDefOf.Bloodlust) || pawn.story.traits.HasTrait(TraitDefOf.Psychopath))
+                    if (state == DD_MentalStateDefOf.SleepwalkBerserk && (pawn.story.traits.HasTrait(TraitDefOf.Bloodlust) || pawn.story.traits.HasTrait(TraitDefOf.Psychopath)))
                     {
-                        traitMultiplier += 2.0f;
+                        traitMultiplier = CheckSleepwalkerTrait(pawn) * 10.0f;
                     }
                     else if (state == DD_MentalStateDefOf.SleepwalkTantrum && pawn.story.traits.HasTrait(TraitDefOf.NaturalMood))
                     {
                         if (pawn.story.traits.DegreeOfTrait(TraitDefOf.NaturalMood) == -1)
                         {
-                            traitMultiplier = 1.5f;
+                            traitMultiplier = CheckSleepwalkerTrait(pawn) * 5.0f;
                         }
                         else if (pawn.story.traits.DegreeOfTrait(TraitDefOf.NaturalMood) == -2)
                         {
-                            traitMultiplier = 2.0f;
+                            traitMultiplier = CheckSleepwalkerTrait(pawn) * 10.0f;
                         }
                     }
                     else if (state == DD_MentalStateDefOf.SleepwalkBingingFood && pawn.story.traits.HasTrait(DD_TraitDefOf.Gourmand))
                     {
-                        traitMultiplier = 2.0f;
+                        traitMultiplier = CheckSleepwalkerTrait(pawn) * 10.0f;
                     }
                     else if (state == DD_MentalStateDefOf.Sleepwalk || state == DD_MentalStateDefOf.SleepwalkOwnRoom || state == DD_MentalStateDefOf.SleepwalkSafe)
                     {
-                        traitMultiplier = 3.0f;
+                        traitMultiplier = CheckSleepwalkerTrait(pawn);
                     }
-                }*/
+                }
+
             }
             return traitMultiplier;
         }

@@ -56,6 +56,9 @@ namespace DreamersDream
             Scribe_Values.Look(ref chanceMultiplierForTemperature, "chanceMultiplierForTemperature", 50);
             Scribe_Values.Look(ref chanceMultiplierForHunger, "chanceMultiplierForHunger", 50);
             Scribe_Values.Look(ref chanceMultiplierForHunger, "chanceMultiplierForMalnourished", 50);
+
+
+
             base.ExposeData();
         }
     }
@@ -97,8 +100,8 @@ namespace DreamersDream
             //settings.chanceForUserCreatedDreams = listingStandard.Slider(settings.chanceForUserCreatedDreams, 0f, 100f);
 
 
-            listingStandard.Label("Chance modifier for sleepwalking: " + DD_Settings.traitMultiplierForSleepwalking.ToString() + "%");
-            DD_Settings.traitMultiplierForSleepwalking = (int)listingStandard.Slider(DD_Settings.traitMultiplierForSleepwalking, 0, 500);
+            listingStandard.Label("Chance modifier for sleepwalking: " + DD_Settings.chanceForSleepwalkingDreams.ToString() + "%");
+            DD_Settings.chanceForSleepwalkingDreams = (int)listingStandard.Slider(DD_Settings.chanceForSleepwalkingDreams, -100, 100);
 
             //listingStandard.CheckboxLabeled("Do you want your colonists to dream? (ON by default)", ref DD_Settings.isDreamingActive, "If OFF it will stop colonists from getting new dreams. It won't erase the ones colonists already have. It doesn't stop colonists from getting dreams which trigger sleepwalking.");
             //listingStandard.CheckboxLabeled("Do you want your colonists to sleepwalk? (ON by default)", ref DD_Settings.isSleepwalkingActive, "If OFF it will stop colonists from sleepwalking, It won't stop currently sleepwalking colonists from wrecking your colony.");
@@ -111,8 +114,8 @@ namespace DreamersDream
             listingStandard.CheckboxLabeled("Sleepwalking - foodbinge: ", ref DD_Settings.isSleepFoodBingeActive, "Turns off sleepwalking food binge state.");
             //listingStandard.CheckboxLabeled("Sleepwalking - berserk: ", ref DD_Settings.isSleepwalkingActive, "Turns off sleepwalking berserk state.");
 
-            listingStandard.Label("How much traits affect dreams (including sleepwalking): " + DD_Settings.chanceMultiplierForMalnourished.ToString() + "%");
-            DD_Settings.chanceMultiplierForMalnourished = (int)listingStandard.Slider(DD_Settings.chanceMultiplierForMalnourished, 0, 250);
+            listingStandard.Label("How much traits affect dreams (including sleepwalking): " + DD_Settings.traitMultiplierForSleepwalking.ToString() + "%");
+            DD_Settings.traitMultiplierForSleepwalking = (int)listingStandard.Slider(DD_Settings.traitMultiplierForSleepwalking, 0, 250);
 
 
 
