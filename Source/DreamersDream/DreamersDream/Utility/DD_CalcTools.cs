@@ -127,6 +127,58 @@ namespace DreamersDream
             return multiplier;
         }
 
+        public static float TraitDreamChance(DD_ThoughtDef dream, Pawn pawn)
+        {
+            float traitMultiplier = 1;
+            if (pawn.story.traits.HasTrait(DD_TraitDefOf.Sleepwalker))
+            {
+                var traitDegree = pawn.story.traits.DegreeOfTrait(DD_TraitDefOf.Sleepwalker);
+
+                switch (traitDegree)
+                {
+                    case 1:
+                        traitMultiplier += 1f * DD_Settings.traitMultiplierForSleepwalking;
+                        break;
+                    case 2:
+                        traitMultiplier += 2.5f * DD_Settings.traitMultiplierForSleepwalking;
+                        break;
+                    case 3:
+                        traitMultiplier += 5.0f * DD_Settings.traitMultiplierForSleepwalking;
+                        break;
+                    default:
+                        break;
+                }
+
+                /*foreach (DD_MentalStateDef state in dream.triggers)
+                {
+                    if (state == DD_MentalStateDefOf.SleepwalkBerserk && pawn.story.traits.HasTrait(TraitDefOf.Bloodlust) || pawn.story.traits.HasTrait(TraitDefOf.Psychopath))
+                    {
+                        traitMultiplier += 2.0f;
+                    }
+                    else if (state == DD_MentalStateDefOf.SleepwalkTantrum && pawn.story.traits.HasTrait(TraitDefOf.NaturalMood))
+                    {
+                        if (pawn.story.traits.DegreeOfTrait(TraitDefOf.NaturalMood) == -1)
+                        {
+                            traitMultiplier = 1.5f;
+                        }
+                        else if (pawn.story.traits.DegreeOfTrait(TraitDefOf.NaturalMood) == -2)
+                        {
+                            traitMultiplier = 2.0f;
+                        }
+                    }
+                    else if (state == DD_MentalStateDefOf.SleepwalkBingingFood && pawn.story.traits.HasTrait(DD_TraitDefOf.Gourmand))
+                    {
+                        traitMultiplier = 2.0f;
+                    }
+                    else if (state == DD_MentalStateDefOf.Sleepwalk || state == DD_MentalStateDefOf.SleepwalkOwnRoom || state == DD_MentalStateDefOf.SleepwalkSafe)
+                    {
+                        traitMultiplier = 3.0f;
+                    }
+                }*/
+            }
+            return traitMultiplier;
+        }
+
         public static float CheckSettingsDream(float typeOfDream)
         {
             if (typeOfDream > 0)

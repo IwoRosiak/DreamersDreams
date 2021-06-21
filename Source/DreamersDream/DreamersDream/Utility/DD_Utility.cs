@@ -30,11 +30,9 @@ namespace DreamersDream
             switch (CheckTypeOfDream(dream))
             {
                 case TypeOfDream.sleepwalk:
-                    return dream.chance * DD_CalcTools.CheckSettingsSleepwalk(dream) * DD_CalcTools.EnvironmentDreamChance(dream, pawn);
+                    return dream.chance * DD_CalcTools.CheckSettingsSleepwalk(dream) * DD_CalcTools.EnvironmentDreamChance(dream, pawn) * DD_CalcTools.TraitDreamChance(dream, pawn);
                     break;
                 case TypeOfDream.normal:
-
-
                     return dream.chance * DD_CalcTools.CheckSettingsDream(dream.stages[0].baseMoodEffect) * DD_CalcTools.EnvironmentDreamChance(dream, pawn);
                     break;
                 default:

@@ -19,6 +19,5 @@ namespace DreamersDream
 
         public static TraitDef Gourmand;
 
-
     }
 }

@@ -21,11 +21,14 @@ namespace DreamersDream
         public static int chanceForNegativeDreams = 0;
         //public float chanceForUserCreatedDreams = 1.0f;
         public static int chanceForSleepwalkingDreams = 0;
+        public static int traitMultiplierForSleepwalking = 100;
 
         public static int chanceMultiplierForIlness = 50;
         public static int chanceMultiplierForTemperature = 50;
         public static int chanceMultiplierForHunger = 50;
         public static int chanceMultiplierForMalnourished = 50;
+
+        public static bool isDebugMode = false;
 
         /// <summary>
         /// The part that writes our settings to file. Note that saving is by ref.
@@ -39,12 +42,15 @@ namespace DreamersDream
             Scribe_Values.Look(ref isSleepFoodBingeActive, "isSleepFoodBingeActive", true);
             Scribe_Values.Look(ref isSleepTantrumActive, "isSleepTantrumActive", true);
 
+
             Scribe_Values.Look(ref chanceForNoDream, "chanceForNoDream", 0);
             Scribe_Values.Look(ref chanceForPositiveDreams, "chanceForPositiveDreams", 0);
             Scribe_Values.Look(ref chanceForNegativeDreams, "chanceForNegativeDreams", 0);
             //Scribe_Values.Look(ref chanceForUserCreatedDreams, "chanceForUserCreatedDreams", 1.0f);
             Scribe_Values.Look(ref chanceForSleepwalkingDreams, "chanceForSleepwalkingDreams", 0);
             //Scribe_Collections.Look(ref exampleListOfPawns, "exampleListOfPawns", LookMode.Reference);
+
+            Scribe_Values.Look(ref traitMultiplierForSleepwalking, "traitMultiplierForSleepwalking", 100);
 
             Scribe_Values.Look(ref chanceMultiplierForIlness, "chanceMultiplierForIlness", 50);
             Scribe_Values.Look(ref chanceMultiplierForTemperature, "chanceMultiplierForTemperature", 50);
@@ -91,8 +97,8 @@ namespace DreamersDream
             //settings.chanceForUserCreatedDreams = listingStandard.Slider(settings.chanceForUserCreatedDreams, 0f, 100f);
 
 
-            listingStandard.Label("Chance modifier for sleepwalking: " + DD_Settings.chanceForSleepwalkingDreams.ToString() + "%");
-            DD_Settings.chanceForSleepwalkingDreams = (int)listingStandard.Slider(DD_Settings.chanceForSleepwalkingDreams, -100, 100);
+            listingStandard.Label("Chance modifier for sleepwalking: " + DD_Settings.traitMultiplierForSleepwalking.ToString() + "%");
+            DD_Settings.traitMultiplierForSleepwalking = (int)listingStandard.Slider(DD_Settings.traitMultiplierForSleepwalking, 0, 500);
 
             //listingStandard.CheckboxLabeled("Do you want your colonists to dream? (ON by default)", ref DD_Settings.isDreamingActive, "If OFF it will stop colonists from getting new dreams. It won't erase the ones colonists already have. It doesn't stop colonists from getting dreams which trigger sleepwalking.");
             //listingStandard.CheckboxLabeled("Do you want your colonists to sleepwalk? (ON by default)", ref DD_Settings.isSleepwalkingActive, "If OFF it will stop colonists from sleepwalking, It won't stop currently sleepwalking colonists from wrecking your colony.");
@@ -104,6 +110,9 @@ namespace DreamersDream
             listingStandard.CheckboxLabeled("Sleepwalking - tantrum: ", ref DD_Settings.isSleepTantrumActive, "Turns off sleepwalking tantrum state.");
             listingStandard.CheckboxLabeled("Sleepwalking - foodbinge: ", ref DD_Settings.isSleepFoodBingeActive, "Turns off sleepwalking food binge state.");
             //listingStandard.CheckboxLabeled("Sleepwalking - berserk: ", ref DD_Settings.isSleepwalkingActive, "Turns off sleepwalking berserk state.");
+
+            listingStandard.Label("How much traits affect dreams (including sleepwalking): " + DD_Settings.chanceMultiplierForMalnourished.ToString() + "%");
+            DD_Settings.chanceMultiplierForMalnourished = (int)listingStandard.Slider(DD_Settings.chanceMultiplierForMalnourished, 0, 250);
 
 
 
@@ -121,6 +130,8 @@ namespace DreamersDream
 
             listingStandard.Label("How much malnourished increases chance for malnourished sensitive dreams: " + DD_Settings.chanceMultiplierForMalnourished.ToString() + "%");
             DD_Settings.chanceMultiplierForMalnourished = (int)listingStandard.Slider(DD_Settings.chanceMultiplierForMalnourished, 0, 250);
+
+            listingStandard.CheckboxLabeled("Debug mode: ", ref DD_Settings.isDebugMode, "Turns on Debug Mode. It will automatically turn off when you reload the game.");
 
             listingStandard.EndScrollView(ref rect);
         }
