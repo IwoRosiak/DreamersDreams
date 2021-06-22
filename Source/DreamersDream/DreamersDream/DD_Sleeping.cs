@@ -42,19 +42,14 @@ namespace DreamersDream
 
             var currentTime = Find.TickManager.TicksGame;
 
-            var type = __instance.GetType();
-
-            if (type.GetProperty("needs") == null)
-            {
-                return;
-            }
-
             //is the instance a colonist and is it dead
-            if (__instance.RaceProps.Humanlike && __instance.RaceProps.IsFlesh && !__instance.RaceProps.IsMechanoid && !__instance.Dead && (__instance.Spawned || CaravanUtility.IsCaravanMember(__instance)))
+            if (__instance.RaceProps.Humanlike && __instance.RaceProps.leatherDef.defName == "Leather_Human" && !__instance.RaceProps.IsMechanoid && !__instance.Dead && (__instance.Spawned || CaravanUtility.IsCaravanMember(__instance)))
             {
+
                 //needs to use different classes but it checks if the pawn is resting
                 if (IsAwake(__instance))                       //      !(__instance.health.capacities.CanBeAwake && (!__instance.Spawned || __instance.CurJob == null || __instance.jobs.curDriver == null || !__instance.jobs.curDriver.asleep)))
                 {
+
                     //variable that holds whether the pawn can get a dream or not
                     var eligibleForDream = false;
 
@@ -113,6 +108,7 @@ namespace DreamersDream
 
                             if (dreamChanceRoll < dreamChanceProgress + chanceForDream)
                             {
+
                                 __instance.needs.mood.thoughts.memories.TryGainMemory(dream, null);
                                 if (dream.triggers != null)
                                 {
