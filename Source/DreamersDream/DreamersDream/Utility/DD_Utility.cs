@@ -36,16 +36,12 @@ namespace DreamersDream
             {
                 case TypeOfDream.sleepwalk:
                     return dream.chance * DD_CalcTools.CheckSettingsSleepwalk(dream) * DD_CalcTools.EnvironmentDreamChance(dream, pawn) * DD_CalcTools.TraitDreamChance(dream, pawn);
-                    break;
                 case TypeOfDream.inspiration:
-                    return dream.chance * 10000;//DD_CalcTools.CheckSettingsDream(dream.stages[0].baseMoodEffect) * DD_CalcTools.EnvironmentDreamChance(dream, pawn);
-                    break;
+                    return dream.chance * DD_CalcTools.CheckSettingsInspiration(dream);
                 case TypeOfDream.normal:
                     return dream.chance * DD_CalcTools.CheckSettingsDream(dream.stages[0].baseMoodEffect) * DD_CalcTools.EnvironmentDreamChance(dream, pawn);
-                    break;
                 default:
                     return 0;
-                    break;
             }
         }
 

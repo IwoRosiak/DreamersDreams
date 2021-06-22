@@ -59,6 +59,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DD_Mod_Settings.cs" />
+    <Compile Include="Inspirations\DD_InspirationDefOf.cs" />
     <Compile Include="Traits\DD_TraitsDefOf.cs" />
     <Compile Include="Utility\DD_CalcTools.cs" />
     <Compile Include="Utility\DD_Utility.cs" />

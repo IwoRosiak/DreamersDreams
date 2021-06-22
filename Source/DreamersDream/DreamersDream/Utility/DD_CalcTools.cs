@@ -293,5 +293,15 @@ namespace DreamersDream
             }
             return 1 + DD_Settings.chanceForSleepwalkingDreams / 100;
         }
+
+        public static float CheckSettingsInspiration(DD_ThoughtDef dream)
+        {
+            if (!DD_Settings.isInspirationActive)
+            {
+                return 0;
+            }
+
+            return 1;
+        }
     }
 }

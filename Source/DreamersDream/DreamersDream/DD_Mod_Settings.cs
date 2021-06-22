@@ -10,6 +10,7 @@ namespace DreamersDream
         /// </summary>
         /// 
         public static bool isDreamingActive = true;
+        public static bool isInspirationActive = true;
         public static bool isSleepwalkingActive = true;
         public static bool isSleepBerserkActive = true;
         public static bool isSleepNormalActive = true;
@@ -36,6 +37,7 @@ namespace DreamersDream
         public override void ExposeData()
         {
             Scribe_Values.Look(ref isDreamingActive, "isDreamingActive", true);
+            Scribe_Values.Look(ref isInspirationActive, "isInspirationActive", true);
             Scribe_Values.Look(ref isSleepwalkingActive, "isSleepwalkingActive", true);
             Scribe_Values.Look(ref isSleepBerserkActive, "isSleepBerserkActive", true);
             Scribe_Values.Look(ref isSleepNormalActive, "isSleepNormalActive", true);
@@ -80,7 +82,7 @@ namespace DreamersDream
 
 
             Listing_Standard listingStandard = new Listing_Standard();
-            Rect rect = new Rect(0f, 0f, inRect.width, 800f);
+            Rect rect = new Rect(0f, 0f, inRect.width, 850f);
             rect.xMax *= 0.9f;
             listingStandard.BeginScrollView(inRect, ref DD_Mod.ScrollPos, ref rect);
             //listingStandard.CheckboxLabeled("exampleBoolExplanation", ref settings.exampleBool, "exampleBoolToolTip");
@@ -105,7 +107,8 @@ namespace DreamersDream
 
             //listingStandard.CheckboxLabeled("Do you want your colonists to dream? (ON by default)", ref DD_Settings.isDreamingActive, "If OFF it will stop colonists from getting new dreams. It won't erase the ones colonists already have. It doesn't stop colonists from getting dreams which trigger sleepwalking.");
             //listingStandard.CheckboxLabeled("Do you want your colonists to sleepwalk? (ON by default)", ref DD_Settings.isSleepwalkingActive, "If OFF it will stop colonists from sleepwalking, It won't stop currently sleepwalking colonists from wrecking your colony.");
-
+            listingStandard.Label("");
+            listingStandard.CheckboxLabeled("Gaining inspiration from dreams: ", ref DD_Settings.isInspirationActive, "Turns off inspirations from some dreams.");
             listingStandard.Label("");
             listingStandard.Label("Those settings are for turning off particular sleepwalking states. These do not affect dreams.");
             listingStandard.CheckboxLabeled("Sleepwalking - normal: ", ref DD_Settings.isSleepNormalActive, "Turns off normal sleepwalking state.");
