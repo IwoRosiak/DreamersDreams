@@ -5,7 +5,7 @@ namespace DreamersDream
     [StaticConstructorOnStartup]
     public static class DD_Utility
     {
-        private enum TypeOfDream { sleepwalk, normal };
+        private enum TypeOfDream { sleepwalk, normal, inspiration };
         static DD_Utility()
         {
         }
@@ -16,6 +16,11 @@ namespace DreamersDream
             if (dream.triggers != null)
             {
                 typeOfDream = TypeOfDream.sleepwalk;
+                return typeOfDream;
+            }
+            else if (dream.inspiration != null)
+            {
+                typeOfDream = TypeOfDream.inspiration;
                 return typeOfDream;
             }
             else
@@ -31,6 +36,9 @@ namespace DreamersDream
             {
                 case TypeOfDream.sleepwalk:
                     return dream.chance * DD_CalcTools.CheckSettingsSleepwalk(dream) * DD_CalcTools.EnvironmentDreamChance(dream, pawn) * DD_CalcTools.TraitDreamChance(dream, pawn);
+                    break;
+                case TypeOfDream.inspiration:
+                    return dream.chance * 10000;//DD_CalcTools.CheckSettingsDream(dream.stages[0].baseMoodEffect) * DD_CalcTools.EnvironmentDreamChance(dream, pawn);
                     break;
                 case TypeOfDream.normal:
                     return dream.chance * DD_CalcTools.CheckSettingsDream(dream.stages[0].baseMoodEffect) * DD_CalcTools.EnvironmentDreamChance(dream, pawn);
