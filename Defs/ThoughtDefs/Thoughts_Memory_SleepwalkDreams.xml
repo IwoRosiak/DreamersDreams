@@ -23,6 +23,7 @@
     <li>cold</li>
     <li>hungry</li>
   </sensitivities>
+  <inspiration>Dream_Inspired_Trade</inspiration>
 </ThoughtDef>
 
 <ThoughtDef Class= "DreamersDream.DD_ThoughtDef">

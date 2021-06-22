@@ -115,6 +115,11 @@ namespace DreamersDream
                                     __instance.mindState.mentalStateHandler.TryStartMentalState(dream.triggers[Rand.RangeInclusive(0, dream.triggers.Count - 1)], null, true, false, null, false);
                                 }
 
+                                if (dream.inspiration != null)
+                                {
+                                    __instance.mindState.inspirationHandler.TryStartInspiration_NewTemp(dream.inspiration);
+                                }
+
                                 //if (dream.defName == "DebugDream")
                                 //{
                                 //Log.Message("Base chance " + dream.chance + " increased by environment by " + DD_CalcTools.EnvironmentDreamChance(dream, __instance) + "% " + "to " + DD_CalcTools.EnvironmentDreamChance(dream, __instance) * dream.chance);

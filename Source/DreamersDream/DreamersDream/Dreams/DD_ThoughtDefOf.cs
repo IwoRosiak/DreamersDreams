@@ -95,6 +95,14 @@ namespace DreamersDream
         public static DD_ThoughtDef CannibalismDream;
 
 
+        public static DD_ThoughtDef WorkDream;
+
+        public static DD_ThoughtDef CharismaticSpeechDream;
+
+
+        public static DD_ThoughtDef GodlyArtDream;
+
+
 
         //SLEEPWALKERS
 
@@ -171,6 +179,13 @@ namespace DreamersDream
         DD_ThoughtDefOf.InsectsDream,
 
         DD_ThoughtDefOf.ExDream,
+
+        DD_ThoughtDefOf.WorkDream,
+
+        DD_ThoughtDefOf.CharismaticSpeechDream,
+
+
+        DD_ThoughtDefOf.GodlyArtDream,
 
 
         //SLEEPWALKERS

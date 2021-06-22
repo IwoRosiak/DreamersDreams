@@ -194,4 +194,52 @@
   </sensitivities>
 </ThoughtDef>
 
+
+<ThoughtDef Class= "DreamersDream.DD_ThoughtDef">
+  <defName>GodlyArtDream</defName>
+  <showBubble>true</showBubble>
+  <durationDays>0.8</durationDays>
+  <stackLimit>1</stackLimit>
+  <chance>0.8</chance>
+  <stages>
+    <li>
+      <label>Dreamt about wonders</label>
+      <description>First, there was light... Then the most beautiful thing my eyes ever saw appeared before me...</description>
+      <baseMoodEffect>8</baseMoodEffect>
+    </li>
+  </stages>
+  <inspiration>Dream_Inspired_Creativity</inspiration>
+</ThoughtDef>
+
+<ThoughtDef Class= "DreamersDream.DD_ThoughtDef">
+  <defName>CharismaticSpeechDream</defName>
+  <showBubble>true</showBubble>
+  <durationDays>0.8</durationDays>
+  <stackLimit>1</stackLimit>
+  <chance>0.8</chance>
+  <stages>
+    <li>
+      <label>Dreamt about giving speech</label>
+      <description>Everyone looked at me but I was not stressed. I started talking about ideals and principles of life and people listened to me with interest. Before the dream ended I received standing ovations! </description>
+      <baseMoodEffect>8</baseMoodEffect>
+    </li>
+  </stages>
+  <inspiration>Dream_Inspired_Trade</inspiration>
+</ThoughtDef>
+
+<ThoughtDef Class= "DreamersDream.DD_ThoughtDef">
+  <defName>WorkDream</defName>
+  <showBubble>true</showBubble>
+  <durationDays>0.8</durationDays>
+  <stackLimit>1</stackLimit>
+  <chance>0.8</chance>
+  <stages>
+    <li>
+      <label>Dreamt about doing good job</label>
+      <description>I was tasked to build strange shapes which looked like a traingle from the side. I gathered immense amounts of stone and helped little people to finish the yellow construction. The little humans were so happy from my work that they decided to place their kings there after death!</description>
+      <baseMoodEffect>8</baseMoodEffect>
+    </li>
+  </stages>
+  <inspiration>Dream_Frenzy_Work</inspiration>
+</ThoughtDef>
 </Defs>
