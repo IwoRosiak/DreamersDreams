@@ -39,11 +39,13 @@ namespace DreamersDream
                 Messages.Message(__instance.jobs.curJob.ToString(), RimWorld.MessageTypeDefOf.NeutralEvent);
 
             }*/
+            // __instance.GetType().GetProperty("needs") != null
+
 
             var currentTime = Find.TickManager.TicksGame;
 
             //is the instance a colonist and is it dead
-            if (__instance.RaceProps.Humanlike && __instance.RaceProps.leatherDef.defName == "Leather_Human" && !__instance.RaceProps.IsMechanoid && !__instance.Dead && (__instance.Spawned || CaravanUtility.IsCaravanMember(__instance)))
+            if (__instance.needs.rest != null && __instance.needs != null && __instance.RaceProps.Humanlike && !__instance.RaceProps.IsMechanoid && !__instance.Dead && (__instance.Spawned || CaravanUtility.IsCaravanMember(__instance)))
             {
 
                 //needs to use different classes but it checks if the pawn is resting
