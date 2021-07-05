@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+<!--EXTRAORDINARY DREAMS -->
+<ThoughtDef Class= "DreamersDream.DD_ThoughtDef">
+  <defName>SpoonDream</defName>
+  <showBubble>true</showBubble>
+  <durationDays>0.8</durationDays>
+  <stackLimit>1</stackLimit>
+  <chance>15</chance>
+  <stages>
+    <li>
+      <label>Dreamt about spoons</label>
+      <description>I had a ridicoulus dream where I was drinking water using only spoon!</description>
+      <baseMoodEffect>2</baseMoodEffect>
+    </li>
+  </stages>
+</ThoughtDef>
+
+<ThoughtDef Class= "DreamersDream.DD_ThoughtDef">
+  <defName>DwarfAmbushDream</defName>
+  <showBubble>true</showBubble>
+  <durationDays>0.8</durationDays>
+  <stackLimit>1</stackLimit>
+  <chance>30</chance>
+  <stages>
+    <li>
+      <label>Dreamt about little dwarf</label>
+      <description>I dreamt I walked around the forest with my friend and a little dwarf ambushed us and stabbed my friend with a tiny knife!</description>
+      <baseMoodEffect>-2</baseMoodEffect>
+    </li>
+  </stages>
+</ThoughtDef>
+
+<ThoughtDef Class= "DreamersDream.DD_ThoughtDef">
+  <defName>PizzaDream</defName>
+  <showBubble>true</showBubble>
+  <durationDays>0.8</durationDays>
+  <stackLimit>1</stackLimit>
+  <chance>15</chance>
+  <stages>
+    <li>
+      <label>Dreamt about pizza</label>
+      <description>I dreamt I was making pizza with my friends and then having it together!</description>
+      <baseMoodEffect>2</baseMoodEffect>
+    </li>
+  </stages>
+</ThoughtDef>
+
+<ThoughtDef Class= "DreamersDream.DD_ThoughtDef">
+  <defName>ExclusionDrugDream</defName>
+  <showBubble>true</showBubble>
+  <durationDays>1.6</durationDays>
+  <stackLimit>1</stackLimit>
+  <chance>15</chance>
+  <stages>
+    <li>
+      <label>Dreamt about social exclusion</label>
+      <description>In my dream I was excluded from my friendship group because I was scared to snort Yayo...</description>
+      <baseMoodEffect>-3</baseMoodEffect>
+    </li>
+  </stages>
+</ThoughtDef>
+
+<!--test-->
+<ThoughtDef Class= "DreamersDream.DD_ThoughtDef">
+  <defName>RedheadWithBeardDream</defName>
+  <showBubble>true</showBubble>
+  <durationDays>0.8</durationDays>
+  <stackLimit>1</stackLimit>
+  <chance>3</chance>
+  <stages>
+    <li>
+      <label>Dreamt about redhead with beard</label>
+      <description>It started off at school, where I began to realize something was wrong. Everyone I saw looked like they could barely contain themselves from instantly becoming violent, and they had this look in their eye like they had just spotted the best prey they had ever seen, but were being held back by something. I remember thinking "No way, I'm out", and ran home as fast as I could. Some of it is blurry, but I remember coming across people that I knew, either friends or family, or people from the neighborhood, telling me to get home, that it's not safe. Finally I make it there, put the key in the front door, open it, and I am literally surrounded by all of those same people, only now they look like the one's at school, and there stands the redhead with the beard. Without saying a word she lunges at me and out came the fangs right into my neck. ~Rinzler0001</description>
+      <baseMoodEffect>-5</baseMoodEffect>
+    </li>
+  </stages>
+</ThoughtDef>
+
+
+
+<ThoughtDef Class= "DreamersDream.DD_ThoughtDef">
+  <defName>PileCorpsesDream</defName>
+  <showBubble>true</showBubble>
+  <durationDays>0.8</durationDays>
+  <stackLimit>1</stackLimit>
+    <nullifyingTraits>
+      <li>Psychopath</li>
+      <li>Bloodlust</li>
+      <li>Cannibal</li>
+    </nullifyingTraits>
+  <chance>10</chance>
+  <stages>
+    <li>
+      <label>Dreamt about pile of corpses</label>
+      <description>I layed on huge pile of human corpse, some rotten, some freshs. I couldn't move. It was some kind cargo section inside a sea ships. From pile crawled rotten corpse towards me and he grabbed my feet and bite off some fingers. After he crawled closer and tried to bite...well...that place... I woke up with pain in that place... ~Backrevol</description>
+      <baseMoodEffect>-5</baseMoodEffect>
+    </li>
+  </stages>
+</ThoughtDef>
+
+<ThoughtDef Class= "DreamersDream.DD_ThoughtDef">
+  <defName>MoonHitDream</defName>
+  <showBubble>true</showBubble>
+  <durationDays>0.8</durationDays>
+  <stackLimit>1</stackLimit>
+  <chance>10</chance>
+  <stages>
+    <li>
+      <label>Dreamt about moon armageddon</label>
+      <description>I awoke in my room. Felt a bit thirsty so I went to the kitchen to drink some water. Opened window to let some fresh air in and there was a enormous moon, everything was shaking almost like an earthquake. Orange light iluminated surroundings. Buildings were floating here and there, like gravity never existed. Moon was getting closer. Shaking become stronger. I heard some screams. Then some odd force hit me and I colapsed. ~Backrevol</description>
+      <baseMoodEffect>-5</baseMoodEffect>
+    </li>
+  </stages>
+</ThoughtDef>
+
+<ThoughtDef Class= "DreamersDream.DD_ThoughtDef">
+  <defName>NakedColonyDream</defName>
+  <showBubble>true</showBubble>
+  <durationDays>0.8</durationDays>
+  <stackLimit>1</stackLimit>
+  <chance>15</chance>
+  <stages>
+    <li>
+      <label>Dreamt about naked walking</label>
+      <description>I was walking around our colony, when I realised that I'm with no clothes! I felt so embarrased as other colonists were laughing at me!</description>
+      <baseMoodEffect>-2</baseMoodEffect>
+    </li>
+  </stages>
+</ThoughtDef>
+
+<ThoughtDef Class= "DreamersDream.DD_ThoughtDef">
+  <defName>NakedSchoolDream</defName>
+  <showBubble>true</showBubble>
+  <durationDays>0.8</durationDays>
+  <stackLimit>1</stackLimit>
+  <chance>30</chance>
+  <stages>
+    <li>
+      <label>Dreamt about naked walking</label>
+      <description>I was walking around school, when I realised that I'm with no clothes! I felt so embarrased as my friends were laughing at me! ~Toast</description>
+      <baseMoodEffect>-2</baseMoodEffect>
+    </li>
+  </stages>
+</ThoughtDef>
+
+<ThoughtDef Class= "DreamersDream.DD_ThoughtDef">
+  <defName>AllNakedColonyDream</defName>
+  <showBubble>true</showBubble>
+  <durationDays>0.8</durationDays>
+  <stackLimit>1</stackLimit>
+  <chance>15</chance>
+  <stages>
+    <li>
+      <label>Dreamt about partying naked</label>
+      <description>I was walking around colony, when I realised that I'm with no clothes! I looked around and noticed that everyone took off their clothes as they saw me! We started to drink and dance around our home naked.</description>
+      <baseMoodEffect>3</baseMoodEffect>
+    </li>
+  </stages>
+</ThoughtDef>
+
+<ThoughtDef Class= "DreamersDream.DD_ThoughtDef">
+  <defName>AnimalForestDream</defName>
+  <showBubble>true</showBubble>
+  <durationDays>0.8</durationDays>
+  <stackLimit>1</stackLimit>
+  <chance>24</chance>
+  <stages>
+    <li>
+      <label>Dreamt about being a racoon</label>
+      <description>I was a small animal (I think it was a raccoon?) in a random windy forest. It was pretty nice even if all I did was wander around and occasionally see other creatures, and at some point I think I befriended a groundhog. I'm not too sure on how it ended but the last thing I vaguely remember was seeing buildings over a hill. ~~okoyum</description>
+      <baseMoodEffect>3</baseMoodEffect>
+    </li>
+  </stages>
+</ThoughtDef>
+
+<ThoughtDef Class= "DreamersDream.DD_ThoughtDef">
+  <defName>CheeseDream</defName>
+  <showBubble>true</showBubble>
+  <durationDays>0.8</durationDays>
+  <stackLimit>1</stackLimit>
+  <chance>10</chance>
+  <stages>
+    <li>
+      <label>Dreamt about cheese</label>
+      <description>Cheese.... Cheese everywhere! By Male_07</description>
+      <baseMoodEffect>3</baseMoodEffect>
+    </li>
+  </stages>
+  <sensitivities>
+    <li>malnourished</li>
+    <li>hungry</li>
+  </sensitivities>
+</ThoughtDef>
+
+</Defs>
