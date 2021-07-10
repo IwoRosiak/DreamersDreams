@@ -47,7 +47,6 @@ namespace DreamersDream
             //is the instance a colonist and is it dead
             if (__instance.needs.rest != null && __instance.needs != null && __instance.RaceProps.Humanlike && !__instance.RaceProps.IsMechanoid && !__instance.Dead && (__instance.Spawned || CaravanUtility.IsCaravanMember(__instance)))
             {
-                Log.Message("Hello!");
                 //needs to use different classes but it checks if the pawn is resting
                 if (IsAwake(__instance))                       //      !(__instance.health.capacities.CanBeAwake && (!__instance.Spawned || __instance.CurJob == null || __instance.jobs.curDriver == null || !__instance.jobs.curDriver.asleep)))
                 {
