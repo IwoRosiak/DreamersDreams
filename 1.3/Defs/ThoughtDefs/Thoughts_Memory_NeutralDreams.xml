@@ -9,7 +9,7 @@
   <chance>80</chance>
   <stages>
     <li>
-      <label>no dream</label>
+      <label>No dream</label>
       <description>It seems I did not have any dreams this night...</description>
       <baseMoodEffect>0</baseMoodEffect>
     </li>
@@ -24,8 +24,8 @@
   <chance>60</chance>
   <stages>
     <li>
-      <label>Can't recall a pleasent dream</label>
-      <description>I had a pleasent dream but I forgot it the moment I woke up...</description>
+      <label>Can't recall a pleasant dream</label>
+      <description>I had a pleasant dream but I forgot it the moment I woke up...</description>
       <baseMoodEffect>1</baseMoodEffect>
     </li>
   </stages>
@@ -40,7 +40,7 @@
   <stages>
     <li>
       <label>Can't recall a bad dream</label>
-      <description>I dreamt about something upsetting but I don't really remember what was that...</description>
+      <description>I dreamt about something upsetting but I don't really remember what it was...</description>
       <baseMoodEffect>-1</baseMoodEffect>
     </li>
   </stages>

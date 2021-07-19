@@ -127,7 +127,7 @@
   <stages>
     <li>
       <label>Had a stressful dream</label>
-      <description>I had a dream about stressful event from my past...</description>
+      <description>I had a dream about a stressful event from my past...</description>
       <baseMoodEffect>-2</baseMoodEffect>
     </li>
   </stages>
@@ -147,7 +147,7 @@
   <stages>
     <li>
       <label>Had a nightmare</label>
-      <description>Something was chasing me but I couldn't run! </description>
+      <description>Something was chasing me but I couldn't run!</description>
       <baseMoodEffect>-5</baseMoodEffect>
     </li>
   </stages>
@@ -179,7 +179,7 @@
   <chance>12</chance>
   <stages>
     <li>
-      <label>Had dream about the armageddon</label>
+      <label>Had dream about armageddon</label>
       <description>I dreamt that whole world fell apart. It was a disaster.</description>
       <baseMoodEffect>-6</baseMoodEffect>
     </li>
@@ -240,7 +240,7 @@
   <stages>
     <li>
       <label>Dreamt about my ex partners</label>
-      <description>I don't you back in my life! Stop bothering me in my sleep!</description>
+      <description>I don't want you back in my life! Stop bothering me in my sleep!</description>
       <baseMoodEffect>-2</baseMoodEffect>
     </li>
   </stages>
@@ -255,7 +255,7 @@
   <stages>
     <li>
       <label>Dreamt about insects</label>
-      <description>They were crawling everywhere. Millions of bugs and worms chasing me. I woke up the moment they got me...</description>
+      <description>They were crawling everywhere. Millions of bugs and worms were chasing me. I woke up the moment they got me...</description>
       <baseMoodEffect>-3</baseMoodEffect>
     </li>
   </stages>
@@ -318,7 +318,7 @@
   <stages>
     <li>
       <label>Dreamt about distant danger</label>
-      <description>I had a dream in which I walked around the colony. After a few moments I realised that my head rolls down the hill away from our home. I chased until it stopped. After finally regaining my precious head, I looked around. Everything was burned to the ground and only strange machinery spitting out mechanoids was creating any sound...</description>
+      <description>I had a dream in which I walked around the colony. After a few moments I realised that my head was rolling down the hill away from our home. I chased it until it stopped. After finally regaining my precious head, I looked around. Everything was burned to the ground and the only sounds were coming from strange machinery spitting out mechanoids...</description>
       <baseMoodEffect>-5</baseMoodEffect>
     </li>
   </stages>

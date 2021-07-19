@@ -9,7 +9,7 @@
   <chance>4</chance>
   <stages>
     <li>
-      <label>had a wonderful dream</label>
+      <label>Had a wonderful dream</label>
       <description>I have dreamt about wonderful things that are hard to describe. I felt like a god!</description>
       <baseMoodEffect>8</baseMoodEffect>
     </li>
@@ -28,8 +28,8 @@
     <chance>36</chance>
     <stages>
       <li>
-        <label>had a very pleasent dream</label>
-        <description>I Dreamt about my favourite food and people! It gives me hopes.</description>
+        <label>Had a very pleasant dream</label>
+        <description>I dreamt about my favourite food and people! It gives me hope.</description>
         <baseMoodEffect>6</baseMoodEffect>
       </li>
     </stages>
@@ -47,8 +47,8 @@
   <chance>45</chance>
   <stages>
     <li>
-      <label>had a pleasent dream</label>
-      <description>I dreamt about calming places and kind people.</description>
+      <label>Had a pleasant dream</label>
+      <description>I dreamt about calm places and kind people.</description>
       <baseMoodEffect>3</baseMoodEffect>
     </li>
   </stages>
@@ -85,7 +85,7 @@
   <chance>0</chance>
   <stages>
     <li>
-      <label>had a miraculus healing dream</label>
+      <label>Had a miraculus healing dream</label>
       <description>I dreamt that my wounds closed up and when I woke up I felt so much better!</description>
       <baseMoodEffect>2</baseMoodEffect>
     </li>
@@ -106,7 +106,7 @@
   <chance>3</chance>
   <stages>
     <li>
-      <label>had lucid dream</label>
+      <label>Had lucid dream</label>
       <description>I realised that I'm in the dream so I could do anything I want! If only I could do it more often...</description>
       <baseMoodEffect>8</baseMoodEffect>
     </li>
@@ -164,7 +164,7 @@
   <stages>
     <li>
       <label>Dreamt about snow mountain</label>
-      <description>On top of that, I could see the whole world. All cities and forests. It was so cold though and I could barely breath, yet, I felt calm. I sat down and enjoyed the view...</description>
+      <description>From the mountaintop I could see the whole world. All the cities and forests. It was so cold though and I could barely breathe, yet I felt calm. I sat down and enjoyed the view...</description>
       <baseMoodEffect>4</baseMoodEffect>
     </li>
   </stages>
@@ -182,7 +182,7 @@
   <stages>
     <li>
       <label>Dreamt about being healthy</label>
-      <description>I could finally relax... no pain... no suffering.</description>
+      <description>I could finally relax... No pain... No suffering.</description>
       <baseMoodEffect>5</baseMoodEffect>
     </li>
   </stages>
@@ -220,7 +220,7 @@
   <stages>
     <li>
       <label>Dreamt about giving speech</label>
-      <description>Everyone looked at me but I was not stressed. I started talking about ideals and principles of life and people listened to me with interest. Before the dream ended I received standing ovations! </description>
+      <description>Everyone looked at me but I was not stressed. I started talking about ideals and principles of life and people listened to me with interest. Before the dream ended I received standing ovations!</description>
       <baseMoodEffect>8</baseMoodEffect>
     </li>
   </stages>
@@ -236,7 +236,7 @@
   <stages>
     <li>
       <label>Dreamt about doing good job</label>
-      <description>I was tasked to build strange shapes which looked like a traingle from the side. I gathered immense amounts of stone and helped little people to finish the yellow construction. The little humans were so happy from my work that they decided to place their kings there after death!</description>
+      <description>I was tasked to build strange shapes which looked like a traingle from the side. I gathered immense amounts of stone and helped little people finish the yellow construction. The little humans were so happy with my work that they decided to place their kings there after death!</description>
       <baseMoodEffect>8</baseMoodEffect>
     </li>
   </stages>
