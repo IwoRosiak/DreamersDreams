@@ -90,7 +90,7 @@
           <defName>SleepwalkOwnRoom</defName>
           <label>sleepwalking in own room</label>
           <stateClass>MentalState_WanderConfused</stateClass>
-          <beginLetter>{0} stood up from bed and started to wander around its own room.</beginLetter>
+          <beginLetter>{0} stood up from bed and started to wander around the room.</beginLetter>
         </MentalStateDef>
 
         <MentalBreakDef>

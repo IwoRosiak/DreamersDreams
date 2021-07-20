@@ -18,7 +18,7 @@
     <degreeDatas>
       <li>
         <label>Occasional sleepwalker</label>
-        <description>Once per a while [PAWN_nameDef] will sleepwalk.</description>
+        <description>Once in a while [PAWN_nameDef] will sleepwalk.</description>
         <degree>1</degree>
       </li>
       <li>
