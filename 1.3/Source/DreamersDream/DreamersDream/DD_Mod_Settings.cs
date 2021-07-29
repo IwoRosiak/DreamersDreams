@@ -5,11 +5,8 @@ namespace DreamersDream
 {
     public class DD_Settings : ModSettings
     {
-        /// <summary>
-        /// The three settings our mod has.
-        /// </summary>
-        /// 
         public static bool isDreamingActive = true;
+
         public static bool isInspirationActive = true;
         public static bool isSleepwalkingActive = true;
         public static bool isSleepBerserkActive = true;
@@ -20,8 +17,10 @@ namespace DreamersDream
         public static int chanceForNoDream = 0;
         public static int chanceForPositiveDreams = 0;
         public static int chanceForNegativeDreams = 0;
+
         //public float chanceForUserCreatedDreams = 1.0f;
         public static int chanceForSleepwalkingDreams = 0;
+
         public static int traitMultiplierForSleepwalking = 100;
 
         public static int chanceMultiplierForIlness = 50;
@@ -31,9 +30,6 @@ namespace DreamersDream
 
         public static bool isDebugMode = false;
 
-        /// <summary>
-        /// The part that writes our settings to file. Note that saving is by ref.
-        /// </summary>
         public override void ExposeData()
         {
             Scribe_Values.Look(ref isDreamingActive, "isDreamingActive", true);
@@ -43,7 +39,6 @@ namespace DreamersDream
             Scribe_Values.Look(ref isSleepNormalActive, "isSleepNormalActive", true);
             Scribe_Values.Look(ref isSleepFoodBingeActive, "isSleepFoodBingeActive", true);
             Scribe_Values.Look(ref isSleepTantrumActive, "isSleepTantrumActive", true);
-
 
             Scribe_Values.Look(ref chanceForNoDream, "chanceForNoDream", 0);
             Scribe_Values.Look(ref chanceForPositiveDreams, "chanceForPositiveDreams", 0);
@@ -59,18 +54,15 @@ namespace DreamersDream
             Scribe_Values.Look(ref chanceMultiplierForHunger, "chanceMultiplierForHunger", 50);
             Scribe_Values.Look(ref chanceMultiplierForHunger, "chanceMultiplierForMalnourished", 50);
 
-
-
             base.ExposeData();
         }
     }
 
     public class DD_Mod : Mod
     {
-        DD_Settings settings;
+        private DD_Settings settings;
 
         private static Vector2 ScrollPos = Vector2.zero;
-
 
         public DD_Mod(ModContentPack content) : base(content)
         {
@@ -79,8 +71,6 @@ namespace DreamersDream
 
         public override void DoSettingsWindowContents(Rect inRect)
         {
-
-
             Listing_Standard listingStandard = new Listing_Standard();
             Rect rect = new Rect(0f, 0f, inRect.width, 850f);
             rect.xMax *= 0.9f;
@@ -92,15 +82,12 @@ namespace DreamersDream
             listingStandard.Label("Chance modifier for no dreams: " + DD_Settings.chanceForNoDream.ToString() + "%");
             DD_Settings.chanceForNoDream = (int)listingStandard.Slider(DD_Settings.chanceForNoDream, -100, 100);
 
-
             listingStandard.Label("Chance modifier for good dreams: " + DD_Settings.chanceForPositiveDreams.ToString() + "%");
             DD_Settings.chanceForPositiveDreams = (int)listingStandard.Slider(DD_Settings.chanceForPositiveDreams, -100, 100);
-
 
             listingStandard.Label("Chance modifier for bad dreams: " + DD_Settings.chanceForNegativeDreams.ToString() + "%");
             DD_Settings.chanceForNegativeDreams = (int)listingStandard.Slider(DD_Settings.chanceForNegativeDreams, -100, 100);
             //settings.chanceForUserCreatedDreams = listingStandard.Slider(settings.chanceForUserCreatedDreams, 0f, 100f);
-
 
             listingStandard.Label("Chance modifier for sleepwalking: " + DD_Settings.chanceForSleepwalkingDreams.ToString() + "%");
             DD_Settings.chanceForSleepwalkingDreams = (int)listingStandard.Slider(DD_Settings.chanceForSleepwalkingDreams, -100, 100);
@@ -119,8 +106,6 @@ namespace DreamersDream
 
             listingStandard.Label("How much traits affect dreams (including sleepwalking): " + DD_Settings.traitMultiplierForSleepwalking.ToString() + "%");
             DD_Settings.traitMultiplierForSleepwalking = (int)listingStandard.Slider(DD_Settings.traitMultiplierForSleepwalking, 0, 250);
-
-
 
             listingStandard.Label("");
             listingStandard.Label("If a dream has a sensitivity to particular factor (all listed below) the setting for that factor will increase the chance. E.g. 100% will double the dreams base chance. If a dream has sensitivity to more than one thing then those settings will stack. Set to 0% to turn off effects of particular feature.");
@@ -142,11 +127,6 @@ namespace DreamersDream
             //listingStandard.EndScrollView(ref rect);
         }
 
-        /// <summary>
-        /// Override SettingsCategory to show up in the list of settings.
-        /// Using .Translate() is optional, but does allow for localisation.
-        /// </summary>
-        /// <returns>The (translated) mod name.</returns>
         public override string SettingsCategory()
         {
             return "Dreamer's Dreams";
