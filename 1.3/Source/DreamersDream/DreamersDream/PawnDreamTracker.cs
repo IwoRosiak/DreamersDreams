@@ -17,7 +17,7 @@ namespace DreamersDream
         {
             if (CanGetDreamNow())
             {
-                ChooseDream()?.TriggerDreamEffects();
+                //ChooseDream()?.TriggerDreamEffects();
             }
         }
 
@@ -79,38 +79,6 @@ namespace DreamersDream
             return pawn.needs?.rest != null && pawn.def.defName == "Human" && !pawn.Dead && (pawn.Spawned || pawn.IsCaravanMember());
         }
 
-        private static DreamDef ChooseDream()
-        {
-            float totalDreamChance = 0;
-
-            var cycle = 0;
-
-            foreach (DreamDef dream in listOfAllDreamDefs)
-            {
-                cycle++;
-                totalDreamChance += dream.chance;         //DD_Utility.CheckDreamChance(dream, pawn);
-            }
-            var dreamChanceRoll = Rand.Range(0, totalDreamChance);
-            Log.Message(dreamChanceRoll.ToString());
-            var dreamChanceProgress = 0.0f;
-
-            foreach (DreamDef dream in listOfAllDreamDefs)
-            {
-                var chanceForDream = dream.chance; //DD_Utility.CheckDreamChance(dream, pawn);
-
-                if (dreamChanceRoll < dreamChanceProgress + chanceForDream)
-                {
-                    return dream;
-                }
-                else
-                {
-                    dreamChanceProgress += chanceForDream;
-                }
-            }
-            Log.Error("ChooseDream() was called but it did not select a dream.");
-            return null;
-        }
-
         public static IEnumerable<DreamDef> AllAvailibleDreamsForPawn()
         {
             foreach (var dream in listOfAllDreamDefs)
@@ -121,6 +89,6 @@ namespace DreamersDream
 
         private static Pawn pawn;
 
-        private static List<DreamDef> listOfAllDreamDefs = new List<DreamDef>();
+        internal static List<DreamDef> listOfAllDreamDefs = new List<DreamDef>();
     }
 }

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+  <DreamersDream.DreamQualityDef>
+    <defName>Legendary</defName>
+    <label>legendary</label>
+    <isSpecial>true</isSpecial>
+    <chance>1</chance>
+  </DreamersDream.DreamQualityDef>
+
+  <DreamersDream.DreamQualityDef>
+    <defName>Epic</defName>
+    <label>epic</label>
+    <isSpecial>true</isSpecial>
+    <chance>5</chance>
+  </DreamersDream.DreamQualityDef>
+
+  <DreamersDream.DreamQualityDef>
+    <defName>Amazing</defName>
+    <label>amazing</label>
+    <isSpecial>false</isSpecial>
+    <chance>10</chance>
+  </DreamersDream.DreamQualityDef>
+
+  <DreamersDream.DreamQualityDef>
+    <defName>Exciting</defName>
+    <label>exciting</label>
+    <isSpecial>false</isSpecial>
+    <chance>20</chance>
+  </DreamersDream.DreamQualityDef>
+
+  <DreamersDream.DreamQualityDef>
+    <defName>Pleasant</defName>
+    <label>pleasant</label>
+    <isSpecial>false</isSpecial>
+    <chance>50</chance>
+  </DreamersDream.DreamQualityDef>
+
+  <DreamersDream.DreamQualityDef>
+    <defName>Boring</defName>
+    <label>boring</label>
+    <isSpecial>false</isSpecial>
+    <chance>50</chance>
+  </DreamersDream.DreamQualityDef>
+
+  <DreamersDream.DreamQualityDef>
+    <defName>Disturbing</defName>
+    <label>disturbing</label>
+    <isSpecial>false</isSpecial>
+    <chance>20</chance>
+  </DreamersDream.DreamQualityDef>
+
+  <DreamersDream.DreamQualityDef>
+    <defName>Frightening</defName>
+    <label>frightnening</label>
+    <isSpecial>false</isSpecial>
+    <chance>10</chance>
+  </DreamersDream.DreamQualityDef>
+
+  <DreamersDream.DreamQualityDef>
+    <defName>Terrorising</defName>
+    <label>terrorising</label>
+    <isSpecial>true</isSpecial>
+    <chance>5</chance>
+  </DreamersDream.DreamQualityDef>
+
+  <DreamersDream.DreamQualityDef>
+    <defName>Helllike</defName>
+    <label>hell-like</label>
+    <isSpecial>true</isSpecial>
+    <chance>1</chance>
+  </DreamersDream.DreamQualityDef>
+</Defs>

@@ -13,11 +13,15 @@ namespace DreamersDream
 
             foreach (DreamDef dream in GenDefDatabase.GetAllDefsInDatabaseForDef(typeof(DreamDef)))
             {
-                totalDreams++;
-                PawnDreamTracker.listOfAllDreamDefs.Add(dream);
+                if (dream.quality != null)
+                {
+                    totalDreams++;
+                    PawnDreamTracker.listOfAllDreamDefs.Add(dream);
+                    Log.Message("Loaded " + dream.defName + ".");
+                }
 
                 //if you want to see if you dream loads correctly then uncomment that
-                //Log.Message("Loaded " + dream.defName + ".");
+
                 //Log.Message("It is " + PawnDreamTracker.listOfAllDreamDefs.IndexOf(dream) + " dream on the list.");
                 //Log.Message("With chance of " + dream.chance + ".");
             }

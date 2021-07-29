@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <DreamersDream.DreamDef ParentName = "BaseDream">
+    <defName>KillSomeoneDream</defName>
+    <chance>5</chance>
+    <nullifyingTraits>
+      <li>Psychopath</li>
+      <li>Bloodlust</li>
+    </nullifyingTraits>
+    <stages>
+      <li>
+        <label>Had a dream about killing</label>
+        <description>I was killing... But I didn't want to...</description>
+        <baseMoodEffect>-2</baseMoodEffect>
+      </li>
+    </stages>
+  </DreamersDream.DreamDef>
+
+  <DreamersDream.DreamDef ParentName = "BaseDream">
+  <defName>PrisonerDream</defName>
+  <chance>5</chance>
+  <stages>
+    <li>
+      <label>Had a dream about prison</label>
+      <description>I was asking them to let me out... I was innocent...</description>
+      <baseMoodEffect>-2</baseMoodEffect>
+    </li>
+  </stages>
+</DreamersDream.DreamDef>
+
+<DreamersDream.DreamDef ParentName = "BaseDream">
+  <defName>VeryBadDream</defName>
+  <chance>21</chance>
+  <stages>
+    <li>
+      <label>Had a very bad dream</label>
+      <description>I had a dreamt about losing things I love...</description>
+      <baseMoodEffect>-4</baseMoodEffect>
+    </li>
+  </stages>
+  <sensitivities>
+    <li>ill</li>
+    <li>hungry</li>
+    <li>malnourished</li>
+  </sensitivities>
+</DreamersDream.DreamDef>
+
+<DreamersDream.DreamDef ParentName = "BaseDream">
+  <defName>ChildhoodBadDream</defName>
+  <chance>18</chance>
+  <stages>
+    <li>
+      <label>Had a dream about childhood</label>
+      <description>I relived some of the worst moments from my childhood.</description>
+      <baseMoodEffect>-4</baseMoodEffect>
+    </li>
+  </stages>
+  <sensitivities>
+    <li>ill</li>
+    <li>hungry</li>
+    <li>malnourished</li>
+  </sensitivities>
+</DreamersDream.DreamDef>
+
+<DreamersDream.DreamDef ParentName = "BaseDream">
+  <defName>InsectsDream</defName>
+  <chance>15</chance>
+  <stages>
+    <li>
+      <label>Dreamt about insects</label>
+      <description>They were crawling everywhere. Millions of bugs and worms were chasing me. I woke up the moment they got me...</description>
+      <baseMoodEffect>-3</baseMoodEffect>
+    </li>
+  </stages>
+  <sensitivities>
+    <li>hungry</li>
+    <li>malnourished</li>
+    <li>hot</li>
+  </sensitivities>
+</DreamersDream.DreamDef>
+
+<DreamersDream.DreamDef ParentName = "BaseDream">
+  <defName>InjuryDream</defName>
+  <chance>5</chance>
+  <stages>
+    <li>
+      <label>Dreamt about injury</label>
+      <description>I had wounds all over my body. Someone hurt me pretty badly but I managed to escape.</description>
+      <baseMoodEffect>-2</baseMoodEffect>
+    </li>
+  </stages>
+  <sensitivities>
+    <li>healthy</li>
+  </sensitivities>
+</DreamersDream.DreamDef>
+
+<DreamersDream.DreamDef ParentName = "BaseDream">
+  <defName>HoneyDream</defName>
+  <chance>15</chance>
+  <stages>
+    <li>
+      <label>Dreamt about stealing honey</label>
+      <description>I was in some kind of magical forest. After walking a few miles I noticed big bee hive. I was hungry, so I put my hand in it to snatch some honey but when I took it out there was no honey... but maggots.</description>
+      <baseMoodEffect>-4</baseMoodEffect>
+    </li>
+  </stages>
+  <sensitivities>
+    <li>hungry</li>
+    <li>malnourished</li>
+  </sensitivities>
+</DreamersDream.DreamDef>
+
+<DreamersDream.DreamDef ParentName = "BaseDream">
+  <defName>LostHeadDream</defName>
+  <chance>15</chance>
+  <stages>
+    <li>
+      <label>Dreamt about distant danger</label>
+      <description>I had a dream in which I walked around the colony. After a few moments I realised that my head was rolling down the hill away from our home. I chased it until it stopped. After finally regaining my precious head, I looked around. Everything was burned to the ground and the only sounds were coming from strange machinery spitting out mechanoids...</description>
+      <baseMoodEffect>-5</baseMoodEffect>
+    </li>
+  </stages>
+  <sensitivities>
+    <li>ill</li>
+  </sensitivities>
+</DreamersDream.DreamDef>
+
+<DreamersDream.DreamDef ParentName = "BaseDream">
+  <defName>ExclusionDrugDream</defName>
+  <chance>15</chance>
+  <stages>
+    <li>
+      <label>Dreamt about social exclusion</label>
+      <description>In my dream I was excluded from my friendship group because I was scared to snort Yayo...</description>
+      <baseMoodEffect>-3</baseMoodEffect>
+    </li>
+  </stages>
+</DreamersDream.DreamDef>
+
+</Defs>

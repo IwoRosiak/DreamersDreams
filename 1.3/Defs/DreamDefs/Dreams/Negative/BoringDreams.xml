@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <DreamersDream.DreamDef Name="BoringDream" Abstract="True" ParentName = "BaseDream">
+    <quality>Boring</quality>
+    <chance>45</chance>
+  </DreamersDream.DreamDef>
+
+  <DreamersDream.DreamDef ParentName = "BoringDream">
+    <defName>BadDream</defName>
+    <stages>
+      <li>
+        <label>Had a bad dream</label>
+        <description>I've dreamt about sad things...</description>
+        <baseMoodEffect>-2</baseMoodEffect>
+      </li>
+    </stages>
+    <sensitivities>
+      <li>ill</li>
+      <li>hungry</li>
+    </sensitivities>
+  </DreamersDream.DreamDef>
+
+  <DreamersDream.DreamDef ParentName = "BoringDream">
+    <defName>ExDream</defName>
+    <stages>
+      <li>
+        <label>Dreamt about my ex partners</label>
+        <description>I don't want you back in my life! Stop bothering me in my sleep!</description>
+        <baseMoodEffect>-2</baseMoodEffect>
+      </li>
+    </stages>
+  </DreamersDream.DreamDef>
+
+  <DreamersDream.DreamDef ParentName = "BoringDream">
+  <defName>DwarfAmbushDream</defName>
+  <stages>
+    <li>
+      <label>Dreamt about little dwarf</label>
+      <description>I dreamt I walked around the forest with my friend and a little dwarf ambushed us and stabbed my friend with a tiny knife!</description>
+      <baseMoodEffect>-2</baseMoodEffect>
+    </li>
+  </stages>
+</DreamersDream.DreamDef>
+
+<DreamersDream.DreamDef ParentName = "BoringDream">
+  <defName>NakedColonyDream</defName>
+  <stages>
+    <li>
+      <label>Dreamt about naked walking</label>
+      <description>I was walking around our colony, when I realised that I'm wearing no clothes! I felt so embarrased when all the other other colonists were laughing at me!</description>
+      <baseMoodEffect>-2</baseMoodEffect>
+    </li>
+  </stages>
+</DreamersDream.DreamDef>
+</Defs>

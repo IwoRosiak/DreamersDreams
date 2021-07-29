@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+<!-- NEGATIVE DREAMS -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- I HAD A CHILD DREAM -->
+
+
+
+<DreamersDream.DreamDef ParentName = "BaseDream">
+  <defName>SleepParalisesDream</defName>
+  <chance>3</chance>
+  <stages>
+    <li>
+      <label>Dark figure attacked during sleep</label>
+      <description>Some dark figure was sitting on my chest while I slept and I couldn't move!</description>
+      <baseMoodEffect>-10</baseMoodEffect>
+    </li>
+  </stages>
+</DreamersDream.DreamDef>
+
+<DreamersDream.DreamDef ParentName = "BaseDream">
+  <defName>WorldApartDream</defName>
+  <chance>12</chance>
+  <stages>
+    <li>
+      <label>Had dream about armageddon</label>
+      <description>I dreamt that whole world fell apart. It was a disaster.</description>
+      <baseMoodEffect>-6</baseMoodEffect>
+    </li>
+  </stages>
+  <sensitivities>
+    <li>ill</li>
+    <li>hungry</li>
+    <li>malnourished</li>
+  </sensitivities>
+</DreamersDream.DreamDef>
+
+
+
+<DreamersDream.DreamDef ParentName = "BaseDream">
+  <defName>ImplantGlitchDream</defName>
+  <chance>0</chance>
+  <stages>
+    <li>
+      <label>Had a dream about childhood</label>
+      <description>I relived some of the worst moments from my childhood.</description>
+      <baseMoodEffect>-4</baseMoodEffect>
+    </li>
+  </stages>
+  <sensitivities>
+    <li>ill</li>
+    <li>hungry</li>
+    <li>malnourished</li>
+  </sensitivities>
+</DreamersDream.DreamDef>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</Defs>

@@ -8,9 +8,13 @@ namespace DreamersDream
     {
         public float chance = 1;
 
+        public DreamQualityDef quality;
+
         public List<DD_MentalStateDef> triggers;
 
         public InspirationDef inspiration;
+
+        public bool isSpecial = false;
 
         public enum Sensitivities
         {
