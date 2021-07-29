@@ -2,7 +2,7 @@
 <Defs>
 <!-- TRAVEL DREAMS -->
 <!--
-<ThoughtDef Class= "DreamersDream.DD_ThoughtDef">
+<ThoughtDef Class= "DreamersDream.DreamDef">
   <defName>TravelDreamUlthar</defName>
   <showBubble>true</showBubble>
   <durationDays>0.8</durationDays>
@@ -18,7 +18,7 @@
   </stages>
 </ThoughtDef>
 
-<ThoughtDef Class= "DreamersDream.DD_ThoughtDef">
+<ThoughtDef Class= "DreamersDream.DreamDef">
   <defName>TravelDreamKadath</defName>
   <showBubble>true</showBubble>
   <durationDays>0.8</durationDays>
@@ -34,7 +34,7 @@
   </stages>
 </ThoughtDef>
 
-<ThoughtDef Class= "DreamersDream.DD_ThoughtDef">
+<ThoughtDef Class= "DreamersDream.DreamDef">
   <defName>TravelDreamCelephais</defName>
   <showBubble>true</showBubble>
   <durationDays>0.8</durationDays>
@@ -50,7 +50,7 @@
   </stages>
 </ThoughtDef>
 
-<ThoughtDef Class= "DreamersDream.DD_ThoughtDef">
+<ThoughtDef Class= "DreamersDream.DreamDef">
   <defName>TravelDreamMoon</defName>
   <showBubble>true</showBubble>
   <durationDays>0.8</durationDays>
@@ -66,7 +66,7 @@
   </stages>
 </ThoughtDef>
 
-<ThoughtDef Class= "DreamersDream.DD_ThoughtDef">
+<ThoughtDef Class= "DreamersDream.DreamDef">
   <defName>TravelDreamLeng</defName>
   <showBubble>true</showBubble>
   <durationDays>0.8</durationDays>
@@ -82,7 +82,7 @@
   </stages>
 </ThoughtDef>
 
-<ThoughtDef Class= "DreamersDream.DD_ThoughtDef">
+<ThoughtDef Class= "DreamersDream.DreamDef">
   <defName>TravelDreamEnchantedForest</defName>
   <showBubble>true</showBubble>
   <durationDays>0.8</durationDays>

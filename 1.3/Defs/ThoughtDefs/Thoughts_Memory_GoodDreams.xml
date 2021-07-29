@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 <!-- POSITIVE DREAMS -->
-<ThoughtDef Class= "DreamersDream.DD_ThoughtDef">
+<ThoughtDef Class= "DreamersDream.DreamDef">
   <defName>WonderfulDream</defName>
   <showBubble>true</showBubble>
   <durationDays>0.8</durationDays>
@@ -20,7 +20,7 @@
   </sensitivities>
 </ThoughtDef>
 
-  <ThoughtDef Class= "DreamersDream.DD_ThoughtDef">
+  <ThoughtDef Class= "DreamersDream.DreamDef">
     <defName>VeryGoodDream</defName>
     <showBubble>true</showBubble>
     <durationDays>0.8</durationDays>
@@ -39,7 +39,7 @@
     </sensitivities>
   </ThoughtDef>
 
-<ThoughtDef Class= "DreamersDream.DD_ThoughtDef">
+<ThoughtDef Class= "DreamersDream.DreamDef">
   <defName>GoodDream</defName>
   <showBubble>true</showBubble>
   <durationDays>0.8</durationDays>
@@ -58,7 +58,7 @@
   </sensitivities>
 </ThoughtDef>
 
-<ThoughtDef Class= "DreamersDream.DD_ThoughtDef">
+<ThoughtDef Class= "DreamersDream.DreamDef">
   <defName>FlyingDream</defName>
   <showBubble>true</showBubble>
   <durationDays>0.8</durationDays>
@@ -77,7 +77,7 @@
   </sensitivities>
 </ThoughtDef>
 
-<ThoughtDef Class= "DreamersDream.DD_ThoughtDef">
+<ThoughtDef Class= "DreamersDream.DreamDef">
   <defName>HealingDream</defName>
   <showBubble>true</showBubble>
   <durationDays>0.8</durationDays>
@@ -98,7 +98,7 @@
   </sensitivities>
 </ThoughtDef>
 
-<ThoughtDef Class= "DreamersDream.DD_ThoughtDef">
+<ThoughtDef Class= "DreamersDream.DreamDef">
   <defName>LucidDream</defName>
   <showBubble>true</showBubble>
   <durationDays>2</durationDays>
@@ -117,7 +117,7 @@
   </sensitivities>
 </ThoughtDef>
 
-<ThoughtDef Class= "DreamersDream.DD_ThoughtDef">
+<ThoughtDef Class= "DreamersDream.DreamDef">
   <defName>ChildhoodGoodDream</defName>
   <showBubble>true</showBubble>
   <durationDays>0.8</durationDays>
@@ -136,7 +136,7 @@
   </sensitivities>
 </ThoughtDef>
 
-<ThoughtDef Class= "DreamersDream.DD_ThoughtDef">
+<ThoughtDef Class= "DreamersDream.DreamDef">
   <defName>BeachDream</defName>
   <showBubble>true</showBubble>
   <durationDays>0.8</durationDays>
@@ -155,7 +155,7 @@
   </sensitivities>
 </ThoughtDef>
 
-<ThoughtDef Class= "DreamersDream.DD_ThoughtDef">
+<ThoughtDef Class= "DreamersDream.DreamDef">
   <defName>EverestDream</defName>
   <showBubble>true</showBubble>
   <durationDays>0.8</durationDays>
@@ -173,7 +173,7 @@
   </sensitivities>
 </ThoughtDef>
 
-<ThoughtDef Class= "DreamersDream.DD_ThoughtDef">
+<ThoughtDef Class= "DreamersDream.DreamDef">
   <defName>HealthyDream</defName>
   <showBubble>true</showBubble>
   <durationDays>0.8</durationDays>
@@ -195,7 +195,7 @@
 </ThoughtDef>
 
 
-<ThoughtDef Class= "DreamersDream.DD_ThoughtDef">
+<ThoughtDef Class= "DreamersDream.DreamDef">
   <defName>GodlyArtDream</defName>
   <showBubble>true</showBubble>
   <durationDays>0.8</durationDays>
@@ -211,7 +211,7 @@
   <inspiration>Dream_Inspired_Creativity</inspiration>
 </ThoughtDef>
 
-<ThoughtDef Class= "DreamersDream.DD_ThoughtDef">
+<ThoughtDef Class= "DreamersDream.DreamDef">
   <defName>CharismaticSpeechDream</defName>
   <showBubble>true</showBubble>
   <durationDays>0.8</durationDays>
@@ -227,7 +227,7 @@
   <inspiration>Dream_Inspired_Trade</inspiration>
 </ThoughtDef>
 
-<ThoughtDef Class= "DreamersDream.DD_ThoughtDef">
+<ThoughtDef Class= "DreamersDream.DreamDef">
   <defName>WorkDream</defName>
   <showBubble>true</showBubble>
   <durationDays>0.8</durationDays>

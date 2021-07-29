@@ -11,7 +11,7 @@ namespace DreamersDream
         {
         }
 
-        private static TypeOfDream CheckTypeOfDream(DD_ThoughtDef dream)
+        private static TypeOfDream CheckTypeOfDream(DreamDef dream)
         {
             TypeOfDream typeOfDream;
             if (dream.triggers != null)
@@ -31,7 +31,7 @@ namespace DreamersDream
             }
         }
 
-        public static float CheckDreamChance(DD_ThoughtDef dream, Pawn pawn)
+        public static float CheckDreamChance(DreamDef dream, Pawn pawn)
         {
             switch (CheckTypeOfDream(dream))
             {

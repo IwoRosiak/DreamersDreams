@@ -5,13 +5,12 @@ namespace DreamersDream
 {
     public static class DD_CalcTools
     {
-        public static float EnvironmentDreamChance(DD_ThoughtDef dream, Pawn pawn)
+        public static float EnvironmentDreamChance(DreamDef dream, Pawn pawn)
         {
             float multiplier = 1;
             if (dream.sensitivities != null)
             {
-
-                foreach (DD_ThoughtDef.Sensitivities sensitivity in dream.sensitivities)
+                foreach (DreamDef.Sensitivities sensitivity in dream.sensitivities)
                 {
                     //if (dream.defName == "DebugDream" && false)
                     //{
@@ -23,7 +22,7 @@ namespace DreamersDream
                     }*/
                     switch (sensitivity)
                     {
-                        case DD_ThoughtDef.Sensitivities.ill:
+                        case DreamDef.Sensitivities.ill:
                             if (pawn.health.hediffSet.AnyHediffMakesSickThought)
                             {
                                 multiplier += (float)DD_Settings.chanceMultiplierForIlness / 100;
@@ -33,7 +32,8 @@ namespace DreamersDream
                                 }
                             }
                             break;
-                        case DD_ThoughtDef.Sensitivities.healthy:
+
+                        case DreamDef.Sensitivities.healthy:
                             if (!pawn.health.hediffSet.AnyHediffMakesSickThought && !pawn.health.hediffSet.HasTemperatureInjury(TemperatureInjuryStage.Serious))
                             {
                                 multiplier += (float)DD_Settings.chanceMultiplierForIlness / 100;
@@ -43,7 +43,8 @@ namespace DreamersDream
                                 }
                             }
                             break;
-                        case DD_ThoughtDef.Sensitivities.injured:
+
+                        case DreamDef.Sensitivities.injured:
                             if (pawn.health.hediffSet.HasTemperatureInjury(TemperatureInjuryStage.Serious))
                             {
                                 multiplier += (float)DD_Settings.chanceMultiplierForIlness / 100;
@@ -53,7 +54,8 @@ namespace DreamersDream
                                 }
                             }
                             break;
-                        case DD_ThoughtDef.Sensitivities.goodTemp:
+
+                        case DreamDef.Sensitivities.goodTemp:
                             if (pawn.AmbientTemperature > GenTemperature.ComfortableTemperatureRange(pawn).TrueMin && pawn.AmbientTemperature < GenTemperature.ComfortableTemperatureRange(pawn).TrueMax)
                             {
                                 multiplier += (float)DD_Settings.chanceMultiplierForTemperature / 100;
@@ -63,7 +65,8 @@ namespace DreamersDream
                                 }
                             }
                             break;
-                        case DD_ThoughtDef.Sensitivities.hot:
+
+                        case DreamDef.Sensitivities.hot:
                             if (pawn.AmbientTemperature > GenTemperature.ComfortableTemperatureRange(pawn).TrueMax)
                             {
                                 multiplier += (float)DD_Settings.chanceMultiplierForTemperature / 100;
@@ -73,7 +76,8 @@ namespace DreamersDream
                                 }
                             }
                             break;
-                        case DD_ThoughtDef.Sensitivities.cold:
+
+                        case DreamDef.Sensitivities.cold:
                             if (pawn.AmbientTemperature < GenTemperature.ComfortableTemperatureRange(pawn).TrueMin)
                             {
                                 multiplier += (float)DD_Settings.chanceMultiplierForTemperature / 100;
@@ -83,7 +87,8 @@ namespace DreamersDream
                                 }
                             }
                             break;
-                        case DD_ThoughtDef.Sensitivities.hungry:
+
+                        case DreamDef.Sensitivities.hungry:
                             if (pawn.needs.food.CurLevelPercentage < pawn.needs.food.PercentageThreshHungry)
                             {
                                 switch (pawn.needs.food.CurCategory)
@@ -95,6 +100,7 @@ namespace DreamersDream
                                             Log.Message("Chance increased because starving");
                                         }
                                         break;
+
                                     case HungerCategory.UrgentlyHungry:
                                         multiplier += 0.25f * (float)DD_Settings.chanceMultiplierForHunger / 100;
                                         if (DD_Settings.isDebugMode && dream.defName == "DebugDream" && pawn.NameShortColored == "TEST")
@@ -102,6 +108,7 @@ namespace DreamersDream
                                             Log.Message("Chance increased because very hungry");
                                         }
                                         break;
+
                                     case HungerCategory.Hungry:
                                         multiplier += 0.1f * (float)DD_Settings.chanceMultiplierForHunger / 100;
                                         if (DD_Settings.isDebugMode && dream.defName == "DebugDream" && pawn.NameShortColored == "TEST")
@@ -109,17 +116,18 @@ namespace DreamersDream
                                             Log.Message("Chance increased because hungry");
                                         }
                                         break;
+
                                     default:
                                         break;
                                 }
                             }
                             break;
-                        case DD_ThoughtDef.Sensitivities.malnourished:
+
+                        case DreamDef.Sensitivities.malnourished:
                             var malnutrition = pawn.health.hediffSet.GetFirstHediffOfDef(HediffDefOf.Malnutrition);
                             if (malnutrition != null)
                             {
                                 float malnourishedMultiplier = 0;
-
 
                                 foreach (var stage in HediffDefOf.Malnutrition.stages)
                                 {
@@ -134,6 +142,7 @@ namespace DreamersDream
                                                     Log.Message("Chance increased because trivial malnourished");
                                                 }
                                                 break;
+
                                             case "minor":
                                                 malnourishedMultiplier = 0.4f;
                                                 if (DD_Settings.isDebugMode && dream.defName == "DebugDream" && pawn.NameShortColored == "TEST")
@@ -141,6 +150,7 @@ namespace DreamersDream
                                                     Log.Message("Chance increased because minor malnourished");
                                                 }
                                                 break;
+
                                             case "moderate":
                                                 malnourishedMultiplier = 0.7f;
                                                 if (DD_Settings.isDebugMode && dream.defName == "DebugDream" && pawn.NameShortColored == "TEST")
@@ -148,6 +158,7 @@ namespace DreamersDream
                                                     Log.Message("Chance increased because moderate malnourished");
                                                 }
                                                 break;
+
                                             case "severe":
                                                 malnourishedMultiplier = 1.0f;
                                                 if (DD_Settings.isDebugMode && dream.defName == "DebugDream" && pawn.NameShortColored == "TEST")
@@ -155,6 +166,7 @@ namespace DreamersDream
                                                     Log.Message("Chance increased because severe malnourished");
                                                 }
                                                 break;
+
                                             case "extreme":
                                                 malnourishedMultiplier = 2.0f;
                                                 if (DD_Settings.isDebugMode && dream.defName == "DebugDream" && pawn.NameShortColored == "TEST")
@@ -162,6 +174,7 @@ namespace DreamersDream
                                                     Log.Message("Chance increased because extreme malnourished");
                                                 }
                                                 break;
+
                                             default:
                                                 break;
                                         }
@@ -171,6 +184,7 @@ namespace DreamersDream
                                 multiplier += malnourishedMultiplier * (float)DD_Settings.chanceMultiplierForMalnourished / 100;
                             }
                             break;
+
                         default:
                             break;
                     }
@@ -193,23 +207,24 @@ namespace DreamersDream
                 case 1:
                     traitMultiplier += 50f * ((float)DD_Settings.traitMultiplierForSleepwalking / 100);
                     break;
+
                 case 2:
                     traitMultiplier += 100f * ((float)DD_Settings.traitMultiplierForSleepwalking / 100);
                     break;
+
                 case 3:
                     traitMultiplier += 200.0f * ((float)DD_Settings.traitMultiplierForSleepwalking / 100);
                     break;
+
                 default:
                     break;
             }
 
             return traitMultiplier;
-
         }
 
-        public static float TraitDreamChance(DD_ThoughtDef dream, Pawn pawn)
+        public static float TraitDreamChance(DreamDef dream, Pawn pawn)
         {
-
             float traitMultiplier = 1;
             if (pawn.story.traits.HasTrait(DD_TraitDefOf.Sleepwalker))
             {
@@ -244,7 +259,6 @@ namespace DreamersDream
                         traitMultiplier = CheckSleepwalkerTrait(pawn);
                     }
                 }
-
             }
             return traitMultiplier;
         }
@@ -266,7 +280,7 @@ namespace DreamersDream
             return 0;
         }
 
-        public static float CheckSettingsSleepwalk(DD_ThoughtDef dream)
+        public static float CheckSettingsSleepwalk(DreamDef dream)
         {
             if (!DD_Settings.isSleepwalkingActive)
             {
@@ -294,7 +308,7 @@ namespace DreamersDream
             return 1 + DD_Settings.chanceForSleepwalkingDreams / 100;
         }
 
-        public static float CheckSettingsInspiration(DD_ThoughtDef dream)
+        public static float CheckSettingsInspiration(DreamDef dream)
         {
             if (!DD_Settings.isInspirationActive)
             {

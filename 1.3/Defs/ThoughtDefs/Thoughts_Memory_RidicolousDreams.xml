@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 <!--EXTRAORDINARY DREAMS -->
-<ThoughtDef Class= "DreamersDream.DD_ThoughtDef">
+<ThoughtDef Class= "DreamersDream.DreamDef">
   <defName>SpoonDream</defName>
   <showBubble>true</showBubble>
   <durationDays>0.8</durationDays>
@@ -16,7 +16,7 @@
   </stages>
 </ThoughtDef>
 
-<ThoughtDef Class= "DreamersDream.DD_ThoughtDef">
+<ThoughtDef Class= "DreamersDream.DreamDef">
   <defName>DwarfAmbushDream</defName>
   <showBubble>true</showBubble>
   <durationDays>0.8</durationDays>
@@ -31,7 +31,7 @@
   </stages>
 </ThoughtDef>
 
-<ThoughtDef Class= "DreamersDream.DD_ThoughtDef">
+<ThoughtDef Class= "DreamersDream.DreamDef">
   <defName>PizzaDream</defName>
   <showBubble>true</showBubble>
   <durationDays>0.8</durationDays>
@@ -46,7 +46,7 @@
   </stages>
 </ThoughtDef>
 
-<ThoughtDef Class= "DreamersDream.DD_ThoughtDef">
+<ThoughtDef Class= "DreamersDream.DreamDef">
   <defName>ExclusionDrugDream</defName>
   <showBubble>true</showBubble>
   <durationDays>1.6</durationDays>
@@ -62,7 +62,7 @@
 </ThoughtDef>
 
 <!--test-->
-<ThoughtDef Class= "DreamersDream.DD_ThoughtDef">
+<ThoughtDef Class= "DreamersDream.DreamDef">
   <defName>RedheadWithBeardDream</defName>
   <showBubble>true</showBubble>
   <durationDays>0.8</durationDays>
@@ -79,7 +79,7 @@
 
 
 
-<ThoughtDef Class= "DreamersDream.DD_ThoughtDef">
+<ThoughtDef Class= "DreamersDream.DreamDef">
   <defName>PileCorpsesDream</defName>
   <showBubble>true</showBubble>
   <durationDays>0.8</durationDays>
@@ -99,7 +99,7 @@
   </stages>
 </ThoughtDef>
 
-<ThoughtDef Class= "DreamersDream.DD_ThoughtDef">
+<ThoughtDef Class= "DreamersDream.DreamDef">
   <defName>MoonHitDream</defName>
   <showBubble>true</showBubble>
   <durationDays>0.8</durationDays>
@@ -114,7 +114,7 @@
   </stages>
 </ThoughtDef>
 
-<ThoughtDef Class= "DreamersDream.DD_ThoughtDef">
+<ThoughtDef Class= "DreamersDream.DreamDef">
   <defName>NakedColonyDream</defName>
   <showBubble>true</showBubble>
   <durationDays>0.8</durationDays>
@@ -129,7 +129,7 @@
   </stages>
 </ThoughtDef>
 
-<ThoughtDef Class= "DreamersDream.DD_ThoughtDef">
+<ThoughtDef Class= "DreamersDream.DreamDef">
   <defName>NakedSchoolDream</defName>
   <showBubble>true</showBubble>
   <durationDays>0.8</durationDays>
@@ -144,7 +144,7 @@
   </stages>
 </ThoughtDef>
 
-<ThoughtDef Class= "DreamersDream.DD_ThoughtDef">
+<ThoughtDef Class= "DreamersDream.DreamDef">
   <defName>AllNakedColonyDream</defName>
   <showBubble>true</showBubble>
   <durationDays>0.8</durationDays>
@@ -159,7 +159,7 @@
   </stages>
 </ThoughtDef>
 
-<ThoughtDef Class= "DreamersDream.DD_ThoughtDef">
+<ThoughtDef Class= "DreamersDream.DreamDef">
   <defName>AnimalForestDream</defName>
   <showBubble>true</showBubble>
   <durationDays>0.8</durationDays>
@@ -174,7 +174,7 @@
   </stages>
 </ThoughtDef>
 
-<ThoughtDef Class= "DreamersDream.DD_ThoughtDef">
+<ThoughtDef Class= "DreamersDream.DreamDef">
   <defName>CheeseDream</defName>
   <showBubble>true</showBubble>
   <durationDays>0.8</durationDays>

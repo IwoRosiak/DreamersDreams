@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 <!-- SLEEPWALKING TRIGGERS -->
-<ThoughtDef Class= "DreamersDream.DD_ThoughtDef">
+<ThoughtDef Class= "DreamersDream.DreamDef">
   <defName>DebugDream</defName>
   <showBubble>true</showBubble>
   <durationDays>0.8</durationDays>
@@ -26,7 +26,7 @@
   <inspiration>Dream_Inspired_Trade</inspiration>
 </ThoughtDef>
 
-<ThoughtDef Class= "DreamersDream.DD_ThoughtDef">
+<ThoughtDef Class= "DreamersDream.DreamDef">
   <defName>SleepwalkShapesDream</defName>
   <showBubble>true</showBubble>
   <durationDays>0.8</durationDays>
@@ -47,7 +47,7 @@
   </triggers>
 </ThoughtDef>
 
-<ThoughtDef Class= "DreamersDream.DD_ThoughtDef">
+<ThoughtDef Class= "DreamersDream.DreamDef">
   <defName>SleepwalkRedheadWithBeardDream</defName>
   <showBubble>true</showBubble>
   <durationDays>0.8</durationDays>
@@ -68,7 +68,7 @@
   </triggers>
 </ThoughtDef>
 
-<ThoughtDef Class= "DreamersDream.DD_ThoughtDef">
+<ThoughtDef Class= "DreamersDream.DreamDef">
   <defName>SleepwalkFurnitureDream</defName>
   <showBubble>true</showBubble>
   <durationDays>0.8</durationDays>
@@ -89,7 +89,7 @@
   </triggers>
 </ThoughtDef>
 
-<ThoughtDef Class= "DreamersDream.DD_ThoughtDef">
+<ThoughtDef Class= "DreamersDream.DreamDef">
   <defName>SleepwalkDarknessDream</defName>
   <showBubble>true</showBubble>
   <durationDays>0.8</durationDays>
@@ -110,7 +110,7 @@
   </triggers>
 </ThoughtDef>
 
-<ThoughtDef Class= "DreamersDream.DD_ThoughtDef">
+<ThoughtDef Class= "DreamersDream.DreamDef">
   <defName>SleepwalkHungerDream</defName>
   <showBubble>true</showBubble>
   <durationDays>0.8</durationDays>
@@ -132,7 +132,7 @@
   </sensitivities>
 </ThoughtDef>
 
-<ThoughtDef Class= "DreamersDream.DD_ThoughtDef">
+<ThoughtDef Class= "DreamersDream.DreamDef">
   <defName>SleepwalkStepsDream</defName>
   <showBubble>true</showBubble>
   <durationDays>0.8</durationDays>

@@ -1,4 +1,5 @@
 ﻿using RimWorld.Planet;
+using System.Collections.Generic;
 using Verse;
 
 namespace DreamersDream
@@ -6,6 +7,8 @@ namespace DreamersDream
     [StaticConstructorOnStartup]
     public static class PawnDreamTracker
     {
+        public static List<DreamDef> listOfAllDreamDefs = new List<DreamDef>();
+
         public static void Tick(Pawn curPawn)
         {
             pawn = curPawn;
@@ -23,7 +26,6 @@ namespace DreamersDream
 
         private static bool CanGetDreamNow()
         {
-            //Log.Message(IsPawnCapableOfDreaming().ToString());
             if (IsPawnCapableOfDreaming() && !IsAwake() && IsPawnRestedEnough() && !HasDreamAlready())
             {
                 return true;
@@ -51,7 +53,7 @@ namespace DreamersDream
 
         public static bool HasDreamAlready()
         {
-            foreach (DD_ThoughtDef dream in DD_ThoughtDefArray.dreams)
+            foreach (DreamDef dream in PawnDreamTracker.listOfAllDreamDefs)
             {
                 if (pawn.needs.mood.thoughts.memories.GetFirstMemoryOfDef(dream) != null)
                 {
@@ -61,7 +63,7 @@ namespace DreamersDream
             return false;
         }
 
-        public static void TriggerDreamEffects(DD_ThoughtDef dream)
+        public static void TriggerDreamEffects(DreamDef dream)
         {
             pawn.needs.mood.thoughts.memories.TryGainMemory(dream, null);
             if (dream.triggers != null)
@@ -77,14 +79,14 @@ namespace DreamersDream
 
         private static bool IsPawnCapableOfDreaming()
         {
-            return pawn.needs?.rest != null && pawn.def.defName == "Human" && !pawn.Dead && (pawn.Spawned || CaravanUtility.IsCaravanMember(pawn));
+            return pawn.needs?.rest != null && pawn.def.defName == "Human" && !pawn.Dead && (pawn.Spawned || pawn.IsCaravanMember());
         }
 
-        private static DD_ThoughtDef ChooseDream()
+        private static DreamDef ChooseDream()
         {
             float totalDreamChance = 0;
 
-            foreach (DD_ThoughtDef dream in DD_ThoughtDefArray.dreams)
+            foreach (DreamDef dream in listOfAllDreamDefs)
             {
                 totalDreamChance += DD_Utility.CheckDreamChance(dream, pawn);
             }
@@ -92,7 +94,7 @@ namespace DreamersDream
 
             var dreamChanceProgress = 0.0f;
 
-            foreach (DD_ThoughtDef dream in DD_ThoughtDefArray.dreams)
+            foreach (DreamDef dream in listOfAllDreamDefs)
             {
                 var chanceForDream = DD_Utility.CheckDreamChance(dream, pawn);
 

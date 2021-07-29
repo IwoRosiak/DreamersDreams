@@ -10,9 +10,11 @@ namespace DreamersDream
         static HarmonyPatches()
         {
             var totalDreams = 0;
-            foreach (DD_ThoughtDef dream in DD_ThoughtDefArray.dreams)
+
+            foreach (DreamDef dream in GenDefDatabase.GetAllDefsInDatabaseForDef(typeof(DreamDef)))
             {
                 totalDreams++;
+                PawnDreamTracker.listOfAllDreamDefs.AddItem(dream);
             }
             Log.Message("Dreamer's Dreams: succesfully loaded " + totalDreams + " dreams.");
 

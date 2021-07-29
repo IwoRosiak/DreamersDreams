@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 <!-- NEGATIVE DREAMS -->
-<ThoughtDef Class= "DreamersDream.DD_ThoughtDef">
+<ThoughtDef Class= "DreamersDream.DreamDef">
   <defName>KillSomeoneDream</defName>
   <showBubble>true</showBubble>
   <durationDays>0.8</durationDays>
@@ -20,7 +20,7 @@
   </stages>
 </ThoughtDef>
 
-<ThoughtDef Class= "DreamersDream.DD_ThoughtDef">
+<ThoughtDef Class= "DreamersDream.DreamDef">
   <defName>KillSomeoneCloseDream</defName>
   <showBubble>true</showBubble>
   <durationDays>0.8</durationDays>
@@ -39,7 +39,7 @@
   </stages>
 </ThoughtDef>
 
-<ThoughtDef Class= "DreamersDream.DD_ThoughtDef">
+<ThoughtDef Class= "DreamersDream.DreamDef">
   <defName>CannibalismDream</defName>
   <showBubble>true</showBubble>
   <durationDays>0.8</durationDays>
@@ -63,7 +63,7 @@
   </sensitivities>
 </ThoughtDef>
 
-<ThoughtDef Class= "DreamersDream.DD_ThoughtDef">
+<ThoughtDef Class= "DreamersDream.DreamDef">
   <defName>PrisonerDream</defName>
   <showBubble>true</showBubble>
   <durationDays>0.8</durationDays>
@@ -79,7 +79,7 @@
 
 </ThoughtDef>
 
-<ThoughtDef Class= "DreamersDream.DD_ThoughtDef">
+<ThoughtDef Class= "DreamersDream.DreamDef">
   <defName>BadDream</defName>
   <showBubble>true</showBubble>
   <durationDays>0.8</durationDays>
@@ -98,7 +98,7 @@
   </sensitivities>
 </ThoughtDef>
 
-<ThoughtDef Class= "DreamersDream.DD_ThoughtDef">
+<ThoughtDef Class= "DreamersDream.DreamDef">
   <defName>VeryBadDream</defName>
   <showBubble>true</showBubble>
   <durationDays>0.8</durationDays>
@@ -118,7 +118,7 @@
   </sensitivities>
 </ThoughtDef>
 
-<ThoughtDef Class= "DreamersDream.DD_ThoughtDef">
+<ThoughtDef Class= "DreamersDream.DreamDef">
   <defName>PTSDDream</defName>
   <showBubble>true</showBubble>
   <durationDays>0.8</durationDays>
@@ -138,7 +138,7 @@
 
 <!-- I HAD A CHILD DREAM -->
 
-<ThoughtDef Class= "DreamersDream.DD_ThoughtDef">
+<ThoughtDef Class= "DreamersDream.DreamDef">
   <defName>NightmareDream</defName>
   <showBubble>true</showBubble>
   <durationDays>0.8</durationDays>
@@ -156,7 +156,7 @@
   </sensitivities>
 </ThoughtDef>
 
-<ThoughtDef Class= "DreamersDream.DD_ThoughtDef">
+<ThoughtDef Class= "DreamersDream.DreamDef">
   <defName>SleepParalisesDream</defName>
   <showBubble>true</showBubble>
   <durationDays>0.8</durationDays>
@@ -171,7 +171,7 @@
   </stages>
 </ThoughtDef>
 
-<ThoughtDef Class= "DreamersDream.DD_ThoughtDef">
+<ThoughtDef Class= "DreamersDream.DreamDef">
   <defName>WorldApartDream</defName>
   <showBubble>true</showBubble>
   <durationDays>0.8</durationDays>
@@ -191,7 +191,7 @@
   </sensitivities>
 </ThoughtDef>
 
-<ThoughtDef Class= "DreamersDream.DD_ThoughtDef">
+<ThoughtDef Class= "DreamersDream.DreamDef">
   <defName>ChildhoodBadDream</defName>
   <showBubble>true</showBubble>
   <durationDays>0.8</durationDays>
@@ -211,7 +211,7 @@
   </sensitivities>
 </ThoughtDef>
 
-<ThoughtDef Class= "DreamersDream.DD_ThoughtDef">
+<ThoughtDef Class= "DreamersDream.DreamDef">
   <defName>ImplantGlitchDream</defName>
   <showBubble>true</showBubble>
   <durationDays>0.8</durationDays>
@@ -231,7 +231,7 @@
   </sensitivities>
 </ThoughtDef>
 
-<ThoughtDef Class= "DreamersDream.DD_ThoughtDef">
+<ThoughtDef Class= "DreamersDream.DreamDef">
   <defName>ExDream</defName>
   <showBubble>true</showBubble>
   <durationDays>0.8</durationDays>
@@ -246,7 +246,7 @@
   </stages>
 </ThoughtDef>
 
-<ThoughtDef Class= "DreamersDream.DD_ThoughtDef">
+<ThoughtDef Class= "DreamersDream.DreamDef">
   <defName>InsectsDream</defName>
   <showBubble>true</showBubble>
   <durationDays>0.8</durationDays>
@@ -268,7 +268,7 @@
 
 
 
-<ThoughtDef Class= "DreamersDream.DD_ThoughtDef">
+<ThoughtDef Class= "DreamersDream.DreamDef">
   <defName>InjuryDream</defName>
   <showBubble>true</showBubble>
   <durationDays>0.8</durationDays>
@@ -288,7 +288,7 @@
 
 
 
-<ThoughtDef Class= "DreamersDream.DD_ThoughtDef">
+<ThoughtDef Class= "DreamersDream.DreamDef">
   <defName>HoneyDream</defName>
   <showBubble>true</showBubble>
   <durationDays>0.8</durationDays>
@@ -309,7 +309,7 @@
 
 
 
-<ThoughtDef Class= "DreamersDream.DD_ThoughtDef">
+<ThoughtDef Class= "DreamersDream.DreamDef">
   <defName>LostHeadDream</defName>
   <showBubble>true</showBubble>
   <durationDays>0.8</durationDays>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 <!-- NEUTRAL DREAMS -->
-<ThoughtDef Class= "DreamersDream.DD_ThoughtDef">
+<ThoughtDef Class= "DreamersDream.DreamDef">
   <defName>NoDreams</defName>
   <showBubble>true</showBubble>
   <durationDays>0.8</durationDays>
@@ -16,7 +16,7 @@
   </stages>
 </ThoughtDef>
 
-<ThoughtDef Class= "DreamersDream.DD_ThoughtDef">
+<ThoughtDef Class= "DreamersDream.DreamDef">
   <defName>NoRememberGoodDream</defName>
   <showBubble>true</showBubble>
   <durationDays>0.8</durationDays>
@@ -31,7 +31,7 @@
   </stages>
 </ThoughtDef>
 
-<ThoughtDef Class= "DreamersDream.DD_ThoughtDef">
+<ThoughtDef Class= "DreamersDream.DreamDef">
   <defName>NoRememberBadDream</defName>
   <showBubble>true</showBubble>
   <durationDays>0.8</durationDays>
