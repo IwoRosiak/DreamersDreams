@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 <!-- SLEEPWALKING TRIGGERS -->
-<ThoughtDef Class= "DreamersDream.DreamDef">
+<DreamersDream.DreamDef ParentName = "BaseDream">
   <defName>DebugDream</defName>
-  <showBubble>true</showBubble>
-  <durationDays>0.8</durationDays>
-  <stackLimit>1</stackLimit>
   <chance>0</chance>
   <stages>
     <li>
@@ -24,13 +21,10 @@
     <li>hungry</li>
   </sensitivities>
   <inspiration>Dream_Inspired_Trade</inspiration>
-</ThoughtDef>
+</DreamersDream.DreamDef>
 
-<ThoughtDef Class= "DreamersDream.DreamDef">
+<DreamersDream.DreamDef ParentName = "BaseDream">
   <defName>SleepwalkShapesDream</defName>
-  <showBubble>true</showBubble>
-  <durationDays>0.8</durationDays>
-  <stackLimit>1</stackLimit>
   <chance>0.5</chance>
   <stages>
     <li>
@@ -45,13 +39,10 @@
   <triggers>
     <li>Sleepwalk</li>
   </triggers>
-</ThoughtDef>
+</DreamersDream.DreamDef>
 
-<ThoughtDef Class= "DreamersDream.DreamDef">
+<DreamersDream.DreamDef ParentName = "BaseDream">
   <defName>SleepwalkRedheadWithBeardDream</defName>
-  <showBubble>true</showBubble>
-  <durationDays>0.8</durationDays>
-  <stackLimit>1</stackLimit>
   <chance>0.5</chance>
   <stages>
     <li>
@@ -66,13 +57,10 @@
   <triggers>
     <li>SleepwalkBerserk</li>
   </triggers>
-</ThoughtDef>
+</DreamersDream.DreamDef>
 
-<ThoughtDef Class= "DreamersDream.DreamDef">
+<DreamersDream.DreamDef ParentName = "BaseDream">
   <defName>SleepwalkFurnitureDream</defName>
-  <showBubble>true</showBubble>
-  <durationDays>0.8</durationDays>
-  <stackLimit>1</stackLimit>
   <chance>0.5</chance>
   <stages>
     <li>
@@ -87,13 +75,10 @@
   <triggers>
     <li>SleepwalkTantrum</li>
   </triggers>
-</ThoughtDef>
+</DreamersDream.DreamDef>
 
-<ThoughtDef Class= "DreamersDream.DreamDef">
+<DreamersDream.DreamDef ParentName = "BaseDream">
   <defName>SleepwalkDarknessDream</defName>
-  <showBubble>true</showBubble>
-  <durationDays>0.8</durationDays>
-  <stackLimit>1</stackLimit>
   <chance>0.5</chance>
   <stages>
     <li>
@@ -108,13 +93,10 @@
   <triggers>
     <li>SleepwalkSafe</li>
   </triggers>
-</ThoughtDef>
+</DreamersDream.DreamDef>
 
-<ThoughtDef Class= "DreamersDream.DreamDef">
+<DreamersDream.DreamDef ParentName = "BaseDream">
   <defName>SleepwalkHungerDream</defName>
-  <showBubble>true</showBubble>
-  <durationDays>0.8</durationDays>
-  <stackLimit>1</stackLimit>
   <chance>0.5</chance>
   <stages>
     <li>
@@ -130,13 +112,10 @@
     <li>hungry</li>
     <li>malnourished</li>
   </sensitivities>
-</ThoughtDef>
+</DreamersDream.DreamDef>
 
-<ThoughtDef Class= "DreamersDream.DreamDef">
+<DreamersDream.DreamDef ParentName = "BaseDream">
   <defName>SleepwalkStepsDream</defName>
-  <showBubble>true</showBubble>
-  <durationDays>0.8</durationDays>
-  <stackLimit>1</stackLimit>
   <chance>0.5</chance>
   <stages>
     <li>
@@ -148,7 +127,7 @@
   <triggers>
     <li>Sleepwalk</li>
   </triggers>
-</ThoughtDef>
+</DreamersDream.DreamDef>
 
 
 </Defs>

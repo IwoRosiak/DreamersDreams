@@ -7,8 +7,6 @@ namespace DreamersDream
     [StaticConstructorOnStartup]
     public static class PawnDreamTracker
     {
-        public static List<DreamDef> listOfAllDreamDefs = new List<DreamDef>();
-
         public static void Tick(Pawn curPawn)
         {
             pawn = curPawn;
@@ -19,8 +17,7 @@ namespace DreamersDream
         {
             if (CanGetDreamNow())
             {
-                var chosenDream = ChooseDream();
-                TriggerDreamEffects(chosenDream);
+                ChooseDream()?.TriggerDreamEffects();
             }
         }
 
@@ -63,7 +60,7 @@ namespace DreamersDream
             return false;
         }
 
-        public static void TriggerDreamEffects(DreamDef dream)
+        public static void TriggerDreamEffects(this DreamDef dream)
         {
             pawn.needs.mood.thoughts.memories.TryGainMemory(dream, null);
             if (dream.triggers != null)
@@ -86,17 +83,20 @@ namespace DreamersDream
         {
             float totalDreamChance = 0;
 
+            var cycle = 0;
+
             foreach (DreamDef dream in listOfAllDreamDefs)
             {
-                totalDreamChance += DD_Utility.CheckDreamChance(dream, pawn);
+                cycle++;
+                totalDreamChance += dream.chance;         //DD_Utility.CheckDreamChance(dream, pawn);
             }
             var dreamChanceRoll = Rand.Range(0, totalDreamChance);
-
+            Log.Message(dreamChanceRoll.ToString());
             var dreamChanceProgress = 0.0f;
 
             foreach (DreamDef dream in listOfAllDreamDefs)
             {
-                var chanceForDream = DD_Utility.CheckDreamChance(dream, pawn);
+                var chanceForDream = dream.chance; //DD_Utility.CheckDreamChance(dream, pawn);
 
                 if (dreamChanceRoll < dreamChanceProgress + chanceForDream)
                 {
@@ -107,11 +107,20 @@ namespace DreamersDream
                     dreamChanceProgress += chanceForDream;
                 }
             }
-
             Log.Error("ChooseDream() was called but it did not select a dream.");
             return null;
         }
 
+        public static IEnumerable<DreamDef> AllAvailibleDreamsForPawn()
+        {
+            foreach (var dream in listOfAllDreamDefs)
+            {
+                yield return dream;
+            }
+        }
+
         private static Pawn pawn;
+
+        private static List<DreamDef> listOfAllDreamDefs = new List<DreamDef>();
     }
 }

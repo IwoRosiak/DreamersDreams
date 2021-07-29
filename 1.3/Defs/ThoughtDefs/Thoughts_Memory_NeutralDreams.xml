@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 <!-- NEUTRAL DREAMS -->
-<ThoughtDef Class= "DreamersDream.DreamDef">
+<DreamersDream.DreamDef ParentName = "BaseDream">
   <defName>NoDreams</defName>
-  <showBubble>true</showBubble>
-  <durationDays>0.8</durationDays>
-  <stackLimit>1</stackLimit>
   <chance>80</chance>
   <stages>
     <li>
@@ -14,13 +11,10 @@
       <baseMoodEffect>0</baseMoodEffect>
     </li>
   </stages>
-</ThoughtDef>
+</DreamersDream.DreamDef>
 
-<ThoughtDef Class= "DreamersDream.DreamDef">
+<DreamersDream.DreamDef ParentName = "BaseDream">
   <defName>NoRememberGoodDream</defName>
-  <showBubble>true</showBubble>
-  <durationDays>0.8</durationDays>
-  <stackLimit>1</stackLimit>
   <chance>60</chance>
   <stages>
     <li>
@@ -29,13 +23,10 @@
       <baseMoodEffect>1</baseMoodEffect>
     </li>
   </stages>
-</ThoughtDef>
+</DreamersDream.DreamDef>
 
-<ThoughtDef Class= "DreamersDream.DreamDef">
+<DreamersDream.DreamDef ParentName = "BaseDream">
   <defName>NoRememberBadDream</defName>
-  <showBubble>true</showBubble>
-  <durationDays>0.8</durationDays>
-  <stackLimit>1</stackLimit>
   <chance>60</chance>
   <stages>
     <li>
@@ -44,6 +35,6 @@
       <baseMoodEffect>-1</baseMoodEffect>
     </li>
   </stages>
-</ThoughtDef>
+</DreamersDream.DreamDef>
 
 </Defs>

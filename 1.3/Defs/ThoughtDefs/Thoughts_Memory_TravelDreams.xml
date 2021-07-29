@@ -2,7 +2,7 @@
 <Defs>
 <!-- TRAVEL DREAMS -->
 <!--
-<ThoughtDef Class= "DreamersDream.DreamDef">
+<DreamersDream.DreamDef ParentName = "BaseDream">
   <defName>TravelDreamUlthar</defName>
   <showBubble>true</showBubble>
   <durationDays>0.8</durationDays>
@@ -16,9 +16,9 @@
       <baseMoodEffect>6</baseMoodEffect>
     </li>
   </stages>
-</ThoughtDef>
+</DreamersDream.DreamDef>
 
-<ThoughtDef Class= "DreamersDream.DreamDef">
+<DreamersDream.DreamDef ParentName = "BaseDream">
   <defName>TravelDreamKadath</defName>
   <showBubble>true</showBubble>
   <durationDays>0.8</durationDays>
@@ -32,9 +32,9 @@
       <baseMoodEffect>-10</baseMoodEffect>
     </li>
   </stages>
-</ThoughtDef>
+</DreamersDream.DreamDef>
 
-<ThoughtDef Class= "DreamersDream.DreamDef">
+<DreamersDream.DreamDef ParentName = "BaseDream">
   <defName>TravelDreamCelephais</defName>
   <showBubble>true</showBubble>
   <durationDays>0.8</durationDays>
@@ -48,9 +48,9 @@
       <baseMoodEffect>8</baseMoodEffect>
     </li>
   </stages>
-</ThoughtDef>
+</DreamersDream.DreamDef>
 
-<ThoughtDef Class= "DreamersDream.DreamDef">
+<DreamersDream.DreamDef ParentName = "BaseDream">
   <defName>TravelDreamMoon</defName>
   <showBubble>true</showBubble>
   <durationDays>0.8</durationDays>
@@ -64,9 +64,9 @@
       <baseMoodEffect>-8</baseMoodEffect>
     </li>
   </stages>
-</ThoughtDef>
+</DreamersDream.DreamDef>
 
-<ThoughtDef Class= "DreamersDream.DreamDef">
+<DreamersDream.DreamDef ParentName = "BaseDream">
   <defName>TravelDreamLeng</defName>
   <showBubble>true</showBubble>
   <durationDays>0.8</durationDays>
@@ -80,9 +80,9 @@
       <baseMoodEffect>-8</baseMoodEffect>
     </li>
   </stages>
-</ThoughtDef>
+</DreamersDream.DreamDef>
 
-<ThoughtDef Class= "DreamersDream.DreamDef">
+<DreamersDream.DreamDef ParentName = "BaseDream">
   <defName>TravelDreamEnchantedForest</defName>
   <showBubble>true</showBubble>
   <durationDays>0.8</durationDays>
@@ -96,7 +96,7 @@
       <baseMoodEffect>-8</baseMoodEffect>
     </li>
   </stages>
-</ThoughtDef>
+</DreamersDream.DreamDef>
 
 
 

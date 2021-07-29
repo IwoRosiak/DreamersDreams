@@ -67,7 +67,6 @@
     <Compile Include="MentalStates\DD_MentalStateDefOf.cs" />
     <Compile Include="MentalStates\DD_MentalStateDef.cs" />
     <Compile Include="Dreams\DreamDef.cs" />
-    <Compile Include="Dreams\DD_ThoughtDefOf.cs" />
     <Compile Include="HarmonyPatch.cs" />
   </ItemGroup>
   <ItemGroup>

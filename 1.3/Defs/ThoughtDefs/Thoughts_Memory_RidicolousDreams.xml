@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 <!--EXTRAORDINARY DREAMS -->
-<ThoughtDef Class= "DreamersDream.DreamDef">
+<DreamersDream.DreamDef ParentName = "BaseDream">
   <defName>SpoonDream</defName>
-  <showBubble>true</showBubble>
-  <durationDays>0.8</durationDays>
-  <stackLimit>1</stackLimit>
   <chance>15</chance>
   <stages>
     <li>
@@ -14,13 +11,10 @@
       <baseMoodEffect>2</baseMoodEffect>
     </li>
   </stages>
-</ThoughtDef>
+</DreamersDream.DreamDef>
 
-<ThoughtDef Class= "DreamersDream.DreamDef">
+<DreamersDream.DreamDef ParentName = "BaseDream">
   <defName>DwarfAmbushDream</defName>
-  <showBubble>true</showBubble>
-  <durationDays>0.8</durationDays>
-  <stackLimit>1</stackLimit>
   <chance>30</chance>
   <stages>
     <li>
@@ -29,13 +23,10 @@
       <baseMoodEffect>-2</baseMoodEffect>
     </li>
   </stages>
-</ThoughtDef>
+</DreamersDream.DreamDef>
 
-<ThoughtDef Class= "DreamersDream.DreamDef">
+<DreamersDream.DreamDef ParentName = "BaseDream">
   <defName>PizzaDream</defName>
-  <showBubble>true</showBubble>
-  <durationDays>0.8</durationDays>
-  <stackLimit>1</stackLimit>
   <chance>15</chance>
   <stages>
     <li>
@@ -44,13 +35,10 @@
       <baseMoodEffect>2</baseMoodEffect>
     </li>
   </stages>
-</ThoughtDef>
+</DreamersDream.DreamDef>
 
-<ThoughtDef Class= "DreamersDream.DreamDef">
+<DreamersDream.DreamDef ParentName = "BaseDream">
   <defName>ExclusionDrugDream</defName>
-  <showBubble>true</showBubble>
-  <durationDays>1.6</durationDays>
-  <stackLimit>1</stackLimit>
   <chance>15</chance>
   <stages>
     <li>
@@ -59,14 +47,10 @@
       <baseMoodEffect>-3</baseMoodEffect>
     </li>
   </stages>
-</ThoughtDef>
+</DreamersDream.DreamDef>
 
-<!--test-->
-<ThoughtDef Class= "DreamersDream.DreamDef">
+<DreamersDream.DreamDef ParentName = "BaseDream">
   <defName>RedheadWithBeardDream</defName>
-  <showBubble>true</showBubble>
-  <durationDays>0.8</durationDays>
-  <stackLimit>1</stackLimit>
   <chance>3</chance>
   <stages>
     <li>
@@ -75,21 +59,18 @@
       <baseMoodEffect>-5</baseMoodEffect>
     </li>
   </stages>
-</ThoughtDef>
+</DreamersDream.DreamDef>
 
 
 
-<ThoughtDef Class= "DreamersDream.DreamDef">
+<DreamersDream.DreamDef ParentName = "BaseDream">
   <defName>PileCorpsesDream</defName>
-  <showBubble>true</showBubble>
-  <durationDays>0.8</durationDays>
-  <stackLimit>1</stackLimit>
+  <chance>10</chance>
     <nullifyingTraits>
       <li>Psychopath</li>
       <li>Bloodlust</li>
       <li>Cannibal</li>
     </nullifyingTraits>
-  <chance>10</chance>
   <stages>
     <li>
       <label>Dreamt about pile of corpses</label>
@@ -97,13 +78,10 @@
       <baseMoodEffect>-5</baseMoodEffect>
     </li>
   </stages>
-</ThoughtDef>
+</DreamersDream.DreamDef>
 
-<ThoughtDef Class= "DreamersDream.DreamDef">
+<DreamersDream.DreamDef ParentName = "BaseDream">
   <defName>MoonHitDream</defName>
-  <showBubble>true</showBubble>
-  <durationDays>0.8</durationDays>
-  <stackLimit>1</stackLimit>
   <chance>10</chance>
   <stages>
     <li>
@@ -112,13 +90,10 @@
       <baseMoodEffect>-5</baseMoodEffect>
     </li>
   </stages>
-</ThoughtDef>
+</DreamersDream.DreamDef>
 
-<ThoughtDef Class= "DreamersDream.DreamDef">
+<DreamersDream.DreamDef ParentName = "BaseDream">
   <defName>NakedColonyDream</defName>
-  <showBubble>true</showBubble>
-  <durationDays>0.8</durationDays>
-  <stackLimit>1</stackLimit>
   <chance>15</chance>
   <stages>
     <li>
@@ -127,13 +102,10 @@
       <baseMoodEffect>-2</baseMoodEffect>
     </li>
   </stages>
-</ThoughtDef>
+</DreamersDream.DreamDef>
 
-<ThoughtDef Class= "DreamersDream.DreamDef">
+<DreamersDream.DreamDef ParentName = "BaseDream">
   <defName>NakedSchoolDream</defName>
-  <showBubble>true</showBubble>
-  <durationDays>0.8</durationDays>
-  <stackLimit>1</stackLimit>
   <chance>30</chance>
   <stages>
     <li>
@@ -142,13 +114,10 @@
       <baseMoodEffect>-2</baseMoodEffect>
     </li>
   </stages>
-</ThoughtDef>
+</DreamersDream.DreamDef>
 
-<ThoughtDef Class= "DreamersDream.DreamDef">
+<DreamersDream.DreamDef ParentName = "BaseDream">
   <defName>AllNakedColonyDream</defName>
-  <showBubble>true</showBubble>
-  <durationDays>0.8</durationDays>
-  <stackLimit>1</stackLimit>
   <chance>15</chance>
   <stages>
     <li>
@@ -157,13 +126,10 @@
       <baseMoodEffect>3</baseMoodEffect>
     </li>
   </stages>
-</ThoughtDef>
+</DreamersDream.DreamDef>
 
-<ThoughtDef Class= "DreamersDream.DreamDef">
+<DreamersDream.DreamDef ParentName = "BaseDream">
   <defName>AnimalForestDream</defName>
-  <showBubble>true</showBubble>
-  <durationDays>0.8</durationDays>
-  <stackLimit>1</stackLimit>
   <chance>24</chance>
   <stages>
     <li>
@@ -172,13 +138,10 @@
       <baseMoodEffect>3</baseMoodEffect>
     </li>
   </stages>
-</ThoughtDef>
+</DreamersDream.DreamDef>
 
-<ThoughtDef Class= "DreamersDream.DreamDef">
+<DreamersDream.DreamDef ParentName = "BaseDream">
   <defName>CheeseDream</defName>
-  <showBubble>true</showBubble>
-  <durationDays>0.8</durationDays>
-  <stackLimit>1</stackLimit>
   <chance>10</chance>
   <stages>
     <li>
@@ -191,6 +154,6 @@
     <li>malnourished</li>
     <li>hungry</li>
   </sensitivities>
-</ThoughtDef>
+</DreamersDream.DreamDef>
 
 </Defs>
