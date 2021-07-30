@@ -3,27 +3,25 @@
 namespace DreamersDream
 {
     [StaticConstructorOnStartup]
-    public static class PawnDreamChooser
+    public static class PawnDreamProvider
     {
         public static DreamDef ProvideDream()
+        {
+            var dreamQuality = GetRandomDreamCategory();
+
+            return null;
+        }
+
+        private static DreamQualityDef GetRandomDreamCategory()
         {
             return null;
         }
 
         private static DreamDef GetRandomDream()
         {
-            float totalDreamChance = 0;
-
-            var cycle = 0;
-
-            foreach (DreamDef dream in PawnDreamTracker.listOfAllDreamDefs)
-            {
-                cycle++;
-                totalDreamChance += dream.chance;         //DD_Utility.CheckDreamChance(dream, pawn);
-            }
-            var dreamChanceRoll = Rand.Range(0, totalDreamChance);
-            Log.Message(dreamChanceRoll.ToString());
             var dreamChanceProgress = 0.0f;
+
+            float dreamChanceRoll = GetRandomNumberForThisDreamQuality();
 
             foreach (DreamDef dream in PawnDreamTracker.listOfAllDreamDefs)
             {
@@ -42,9 +40,14 @@ namespace DreamersDream
             return null;
         }
 
-        private static DreamDef GetRandomCategory()
+        private static float GetRandomNumberForThisDreamQuality()
         {
-            return null;
+            float totalDreamChance = 0;
+            foreach (DreamDef dream in PawnDreamTracker.listOfAllDreamDefs)
+            {
+                totalDreamChance += dream.chance;         //DD_Utility.CheckDreamChance(dream, pawn);
+            }
+            return Rand.Range(0, totalDreamChance);
         }
     }
 }

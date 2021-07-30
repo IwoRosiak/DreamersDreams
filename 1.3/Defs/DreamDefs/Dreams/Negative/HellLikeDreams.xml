@@ -1,5 +1,36 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
+  <DreamersDream.DreamDef Name="HellLikeDream" Abstract="True" ParentName = "BaseDream">
+    <quality>HellLike</quality>
+    <chance>1</chance>
+  </DreamersDream.DreamDef>
 
+  <DreamersDream.DreamDef ParentName = "HellLikeDream">
+    <defName>MoonHitDream</defName>
+    <stages>
+      <li>
+        <label>Dreamt about moon armageddon</label>
+        <description>I awoke in my room. Felt a bit thirsty so I went to the kitchen to drink some water. Opened a window to let some fresh air in and there was an enormous moon, everything was shaking, almost like an earthquake was terrorizing the area. Orange light iluminated the surroundings. Buildings were floating here and there, like gravity never existed. The Moon was getting closer. The shaking got stronger. I heard some screams. Then some odd force hit me and I colapsed. ~Backrevol</description>
+        <baseMoodEffect>-5</baseMoodEffect>
+      </li>
+    </stages>
+  </DreamersDream.DreamDef>
+
+  <DreamersDream.DreamDef ParentName = "HellLikeDream">
+    <defName>WorldApartDream</defName>
+    <chance>12</chance>
+    <stages>
+      <li>
+        <label>Had dream about armageddon</label>
+        <description>I dreamt that whole world fell apart. It was a disaster.</description>
+        <baseMoodEffect>-6</baseMoodEffect>
+      </li>
+    </stages>
+    <sensitivities>
+      <li>ill</li>
+      <li>hungry</li>
+      <li>malnourished</li>
+    </sensitivities>
+  </DreamersDream.DreamDef>
 
 </Defs>

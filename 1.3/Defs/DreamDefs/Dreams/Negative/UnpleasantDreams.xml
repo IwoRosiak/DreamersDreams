@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-  <DreamersDream.DreamDef Name="BoringDream" Abstract="True" ParentName = "BaseDream">
-    <quality>Boring</quality>
+  <DreamersDream.DreamDef Name="UnpleasantDream" Abstract="True" ParentName = "BaseDream">
+    <quality>Unpleasant</quality>
     <chance>45</chance>
   </DreamersDream.DreamDef>
 
-  <DreamersDream.DreamDef ParentName = "BoringDream">
+  <DreamersDream.DreamDef ParentName = "UnpleasantDream">
     <defName>BadDream</defName>
     <stages>
       <li>
@@ -20,7 +20,7 @@
     </sensitivities>
   </DreamersDream.DreamDef>
 
-  <DreamersDream.DreamDef ParentName = "BoringDream">
+  <DreamersDream.DreamDef ParentName = "UnpleasantDream">
     <defName>ExDream</defName>
     <stages>
       <li>
@@ -31,7 +31,7 @@
     </stages>
   </DreamersDream.DreamDef>
 
-  <DreamersDream.DreamDef ParentName = "BoringDream">
+  <DreamersDream.DreamDef ParentName = "UnpleasantDream">
   <defName>DwarfAmbushDream</defName>
   <stages>
     <li>
@@ -42,7 +42,7 @@
   </stages>
 </DreamersDream.DreamDef>
 
-<DreamersDream.DreamDef ParentName = "BoringDream">
+<DreamersDream.DreamDef ParentName = "UnpleasantDream">
   <defName>NakedColonyDream</defName>
   <stages>
     <li>

@@ -4,6 +4,5 @@
     <showBubble>true</showBubble>
     <durationDays>0.8</durationDays>
     <stackLimit>1</stackLimit>
-    <chance>40</chance>
   </DreamersDream.DreamDef>
 </Defs>

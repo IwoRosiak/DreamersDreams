@@ -1,24 +1,25 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-  <DreamersDream.DreamDef ParentName = "BaseDream">
-    <defName>KillSomeoneDream</defName>
-    <chance>5</chance>
-    <nullifyingTraits>
-      <li>Psychopath</li>
-      <li>Bloodlust</li>
-    </nullifyingTraits>
+  <DreamersDream.DreamDef Name="DisturbingDream" Abstract="True" ParentName = "BaseDream">
+    <quality>Disturbing</quality>
+    <chance>25</chance>
+  </DreamersDream.DreamDef>
+
+
+
+  <DreamersDream.DreamDef ParentName = "DisturbingDream">
+    <defName>NakedSchoolDream</defName>
     <stages>
       <li>
-        <label>Had a dream about killing</label>
-        <description>I was killing... But I didn't want to...</description>
+        <label>Dreamt about naked walking</label>
+        <description>I was walking around school, when I realised that I'm wearing no clothes! I felt so embarrased when all my friends were laughing at me! ~Toast</description>
         <baseMoodEffect>-2</baseMoodEffect>
       </li>
     </stages>
   </DreamersDream.DreamDef>
 
-  <DreamersDream.DreamDef ParentName = "BaseDream">
+  <DreamersDream.DreamDef ParentName = "DisturbingDream">
   <defName>PrisonerDream</defName>
-  <chance>5</chance>
   <stages>
     <li>
       <label>Had a dream about prison</label>
@@ -28,9 +29,8 @@
   </stages>
 </DreamersDream.DreamDef>
 
-<DreamersDream.DreamDef ParentName = "BaseDream">
+<DreamersDream.DreamDef ParentName = "DisturbingDream">
   <defName>VeryBadDream</defName>
-  <chance>21</chance>
   <stages>
     <li>
       <label>Had a very bad dream</label>
@@ -45,9 +45,8 @@
   </sensitivities>
 </DreamersDream.DreamDef>
 
-<DreamersDream.DreamDef ParentName = "BaseDream">
+<DreamersDream.DreamDef ParentName = "DisturbingDream">
   <defName>ChildhoodBadDream</defName>
-  <chance>18</chance>
   <stages>
     <li>
       <label>Had a dream about childhood</label>
@@ -62,9 +61,8 @@
   </sensitivities>
 </DreamersDream.DreamDef>
 
-<DreamersDream.DreamDef ParentName = "BaseDream">
+<DreamersDream.DreamDef ParentName = "DisturbingDream">
   <defName>InsectsDream</defName>
-  <chance>15</chance>
   <stages>
     <li>
       <label>Dreamt about insects</label>
@@ -79,9 +77,8 @@
   </sensitivities>
 </DreamersDream.DreamDef>
 
-<DreamersDream.DreamDef ParentName = "BaseDream">
+<DreamersDream.DreamDef ParentName = "DisturbingDream">
   <defName>InjuryDream</defName>
-  <chance>5</chance>
   <stages>
     <li>
       <label>Dreamt about injury</label>
@@ -94,9 +91,8 @@
   </sensitivities>
 </DreamersDream.DreamDef>
 
-<DreamersDream.DreamDef ParentName = "BaseDream">
+<DreamersDream.DreamDef ParentName = "DisturbingDream">
   <defName>HoneyDream</defName>
-  <chance>15</chance>
   <stages>
     <li>
       <label>Dreamt about stealing honey</label>
@@ -110,9 +106,8 @@
   </sensitivities>
 </DreamersDream.DreamDef>
 
-<DreamersDream.DreamDef ParentName = "BaseDream">
+<DreamersDream.DreamDef ParentName = "DisturbingDream">
   <defName>LostHeadDream</defName>
-  <chance>15</chance>
   <stages>
     <li>
       <label>Dreamt about distant danger</label>
@@ -125,9 +120,8 @@
   </sensitivities>
 </DreamersDream.DreamDef>
 
-<DreamersDream.DreamDef ParentName = "BaseDream">
+<DreamersDream.DreamDef ParentName = "DisturbingDream">
   <defName>ExclusionDrugDream</defName>
-  <chance>15</chance>
   <stages>
     <li>
       <label>Dreamt about social exclusion</label>

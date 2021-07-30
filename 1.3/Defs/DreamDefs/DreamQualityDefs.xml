@@ -36,8 +36,8 @@
   </DreamersDream.DreamQualityDef>
 
   <DreamersDream.DreamQualityDef>
-    <defName>Boring</defName>
-    <label>boring</label>
+    <defName>Unpleasant</defName>
+    <label>unpleasant</label>
     <isSpecial>false</isSpecial>
     <chance>50</chance>
   </DreamersDream.DreamQualityDef>
@@ -64,9 +64,23 @@
   </DreamersDream.DreamQualityDef>
 
   <DreamersDream.DreamQualityDef>
-    <defName>Helllike</defName>
+    <defName>HellLike</defName>
     <label>hell-like</label>
     <isSpecial>true</isSpecial>
     <chance>1</chance>
+  </DreamersDream.DreamQualityDef>
+
+  <DreamersDream.DreamQualityDef>
+    <defName>Divine</defName>
+    <label>divine</label>
+    <isSpecial>true</isSpecial>
+    <chance>5</chance>
+  </DreamersDream.DreamQualityDef>
+
+  <DreamersDream.DreamQualityDef>
+    <defName>Mystical</defName>
+    <label>mystical</label>
+    <isSpecial>true</isSpecial>
+    <chance>5</chance>
   </DreamersDream.DreamQualityDef>
 </Defs>

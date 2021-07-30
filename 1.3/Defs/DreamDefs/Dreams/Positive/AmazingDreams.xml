@@ -1,5 +1,74 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
+  <DreamersDream.DreamDef Name="AmazingDream" Abstract="True" ParentName = "BaseDream">
+    <quality>Amazing</quality>
+    <chance>5</chance>
+  </DreamersDream.DreamDef>
 
+  <DreamersDream.DreamDef ParentName = "AmazingDream">
+    <defName>WonderfulDream</defName>
+    <stages>
+      <li>
+        <label>Had a wonderful dream</label>
+        <description>I have dreamt about wonderful things that are hard to describe. I felt like a god!</description>
+        <baseMoodEffect>8</baseMoodEffect>
+      </li>
+    </stages>
+    <sensitivities>
+      <li>healthy</li>
+      <li>goodTemp</li>
+    </sensitivities>
+  </DreamersDream.DreamDef>
+
+  <DreamersDream.DreamDef ParentName = "AmazingDream" >
+    <defName>LucidDream</defName>
+    <stages>
+      <li>
+        <label>Had lucid dream</label>
+        <description>I realised that I'm in the dream so I could do anything I want! If only I could do it more often...</description>
+        <baseMoodEffect>8</baseMoodEffect>
+      </li>
+    </stages>
+    <sensitivities>
+      <li>healthy</li>
+      <li>goodTemp</li>
+    </sensitivities>
+  </DreamersDream.DreamDef>
+
+  <DreamersDream.DreamDef ParentName = "AmazingDream" >
+  <defName>GodlyArtDream</defName>
+  <stages>
+    <li>
+      <label>Dreamt about wonders</label>
+      <description>First, there was light... Then the most beautiful thing my eyes ever saw appeared before me...</description>
+      <baseMoodEffect>8</baseMoodEffect>
+    </li>
+  </stages>
+  <inspiration>Dream_Inspired_Creativity</inspiration>
+</DreamersDream.DreamDef>
+
+<DreamersDream.DreamDef ParentName = "AmazingDream" >
+  <defName>CharismaticSpeechDream</defName>
+  <stages>
+    <li>
+      <label>Dreamt about giving speech</label>
+      <description>Everyone looked at me but I was not stressed. I started talking about ideals and principles of life and people listened to me with interest. Before the dream ended I received standing ovations!</description>
+      <baseMoodEffect>8</baseMoodEffect>
+    </li>
+  </stages>
+  <inspiration>Dream_Inspired_Trade</inspiration>
+</DreamersDream.DreamDef>
+
+<DreamersDream.DreamDef ParentName = "AmazingDream" >
+  <defName>WorkDream</defName>
+  <stages>
+    <li>
+      <label>Dreamt about doing good job</label>
+      <description>I was tasked to build strange shapes which looked like a traingle from the side. I gathered immense amounts of stone and helped little people finish the yellow construction. The little humans were so happy with my work that they decided to place their kings there after death!</description>
+      <baseMoodEffect>8</baseMoodEffect>
+    </li>
+  </stages>
+  <inspiration>Dream_Frenzy_Work</inspiration>
+</DreamersDream.DreamDef>
 
 </Defs>

@@ -58,16 +58,20 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CommonalityDef.cs" />
+    <Compile Include="DebugLogDreams.cs" />
+    <Compile Include="DreamersDreamsInitialisation.cs" />
+    <Compile Include="Defs\DreamQualityDef.cs" />
     <Compile Include="DD_Mod_Settings.cs" />
-    <Compile Include="PawnDreamTracker.cs" />
-    <Compile Include="Inspirations\DD_InspirationDefOf.cs" />
-    <Compile Include="Traits\DD_TraitsDefOf.cs" />
+    <Compile Include="Pawn\PawnDreamProvider.cs" />
+    <Compile Include="Pawn\PawnDreamHandler.cs" />
+    <Compile Include="Pawn\PawnDreamTracker.cs" />
+    <Compile Include="Temp\Inspirations\DD_InspirationDefOf.cs" />
+    <Compile Include="Temp\Traits\DD_TraitsDefOf.cs" />
     <Compile Include="Utility\DD_CalcTools.cs" />
     <Compile Include="Utility\DD_Utility.cs" />
-    <Compile Include="MentalStates\DD_MentalStateDefOf.cs" />
-    <Compile Include="MentalStates\DD_MentalStateDef.cs" />
-    <Compile Include="DreamDef.cs" />
+    <Compile Include="Temp\MentalStates\DD_MentalStateDefOf.cs" />
+    <Compile Include="Temp\MentalStates\DD_MentalStateDef.cs" />
+    <Compile Include="Defs\DreamDef.cs" />
     <Compile Include="HarmonyPatch.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -76,7 +80,6 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Dreams\" />
     <Folder Include="Properties\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

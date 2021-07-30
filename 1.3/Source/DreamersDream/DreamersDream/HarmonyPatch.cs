@@ -9,24 +9,6 @@ namespace DreamersDream
     {
         static HarmonyPatches()
         {
-            var totalDreams = 0;
-
-            foreach (DreamDef dream in GenDefDatabase.GetAllDefsInDatabaseForDef(typeof(DreamDef)))
-            {
-                if (dream.quality != null)
-                {
-                    totalDreams++;
-                    PawnDreamTracker.listOfAllDreamDefs.Add(dream);
-                    Log.Message("Loaded " + dream.defName + ".");
-                }
-
-                //if you want to see if you dream loads correctly then uncomment that
-
-                //Log.Message("It is " + PawnDreamTracker.listOfAllDreamDefs.IndexOf(dream) + " dream on the list.");
-                //Log.Message("With chance of " + dream.chance + ".");
-            }
-            Log.Message("Dreamer's Dreams: succesfully loaded " + totalDreams + " dreams.");
-
             var harmony = new Harmony("com.company.QarsoonMeel.DreamersDreams");
 
             MethodInfo targetmethod = AccessTools.Method(typeof(Verse.Pawn), "Tick");
@@ -38,7 +20,7 @@ namespace DreamersDream
 
         public static void CheckSleep_Prefix(Pawn __instance)
         {
-            PawnDreamTracker.Tick(__instance);
+            PawnDreamHandler.Tick(__instance);
         }
     }
 }

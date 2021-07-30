@@ -1,5 +1,69 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
+  <DreamersDream.DreamDef Name="ExcitingDream" Abstract="True" ParentName = "BaseDream">
+    <quality>Exciting</quality>
+    <chance>5</chance>
+  </DreamersDream.DreamDef>
 
+  <DreamersDream.DreamDef ParentName = "ExcitingDream" >
+  <defName>VeryGoodDream</defName>
+  <stages>
+    <li>
+      <label>Had a very pleasant dream</label>
+      <description>I dreamt about my favourite food and people! It gives me hope.</description>
+      <baseMoodEffect>6</baseMoodEffect>
+    </li>
+  </stages>
+  <sensitivities>
+    <li>healthy</li>
+    <li>goodTemp</li>
+  </sensitivities>
+</DreamersDream.DreamDef>
+
+<DreamersDream.DreamDef ParentName = "ExcitingDream" >
+  <defName>FlyingDream</defName>
+  <stages>
+    <li>
+      <label>Dreamt about flying</label>
+      <description>I was flying in my dream dream! It was an amazing experience. I just wanted it to keep going...</description>
+      <baseMoodEffect>5</baseMoodEffect>
+    </li>
+  </stages>
+  <sensitivities>
+    <li>healthy</li>
+    <li>goodTemp</li>
+  </sensitivities>
+</DreamersDream.DreamDef>
+
+<DreamersDream.DreamDef ParentName = "ExcitingDream" >
+  <defName>EverestDream</defName>
+  <stages>
+    <li>
+      <label>Dreamt about snow mountain</label>
+      <description>From the mountaintop I could see the whole world. All the cities and forests. It was so cold though and I could barely breathe, yet I felt calm. I sat down and enjoyed the view...</description>
+      <baseMoodEffect>4</baseMoodEffect>
+    </li>
+  </stages>
+  <sensitivities>
+    <li>cold</li>
+  </sensitivities>
+</DreamersDream.DreamDef>
+
+<DreamersDream.DreamDef ParentName = "ExcitingDream" >
+  <defName>HealthyDream</defName>
+  <stages>
+    <li>
+      <label>Dreamt about being healthy</label>
+      <description>I could finally relax... No pain... No suffering.</description>
+      <baseMoodEffect>5</baseMoodEffect>
+    </li>
+  </stages>
+  <sensitivities>
+    <li>injured</li>
+    <li>injured</li>
+    <li>injured</li>
+    <li>injured</li>
+  </sensitivities>
+</DreamersDream.DreamDef>
 
 </Defs>

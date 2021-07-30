@@ -1,11 +1,10 @@
 ﻿using RimWorld.Planet;
-using System.Collections.Generic;
 using Verse;
 
 namespace DreamersDream
 {
     [StaticConstructorOnStartup]
-    public static class PawnDreamTracker
+    public static class PawnDreamHandler
     {
         public static void Tick(Pawn curPawn)
         {
@@ -23,7 +22,7 @@ namespace DreamersDream
 
         private static bool CanGetDreamNow()
         {
-            if (IsPawnCapableOfDreaming() && !IsAwake() && IsPawnRestedEnough() && !HasDreamAlready())
+            if (IsPawnCapableOfDreaming() && !IsAwake() && IsPawnRestedEnough() && !PawnDreamTracker.HasDreamAlready(pawn))
             {
                 return true;
             }
@@ -48,19 +47,7 @@ namespace DreamersDream
             return false;
         }
 
-        public static bool HasDreamAlready()
-        {
-            foreach (DreamDef dream in PawnDreamTracker.listOfAllDreamDefs)
-            {
-                if (pawn.needs.mood.thoughts.memories.GetFirstMemoryOfDef(dream) != null)
-                {
-                    return true;
-                }
-            }
-            return false;
-        }
-
-        public static void TriggerDreamEffects(this DreamDef dream)
+        private static void TriggerDreamEffects(this DreamDef dream)
         {
             pawn.needs.mood.thoughts.memories.TryGainMemory(dream, null);
             if (dream.triggers != null)
@@ -79,16 +66,6 @@ namespace DreamersDream
             return pawn.needs?.rest != null && pawn.def.defName == "Human" && !pawn.Dead && (pawn.Spawned || pawn.IsCaravanMember());
         }
 
-        public static IEnumerable<DreamDef> AllAvailibleDreamsForPawn()
-        {
-            foreach (var dream in listOfAllDreamDefs)
-            {
-                yield return dream;
-            }
-        }
-
         private static Pawn pawn;
-
-        internal static List<DreamDef> listOfAllDreamDefs = new List<DreamDef>();
     }
 }

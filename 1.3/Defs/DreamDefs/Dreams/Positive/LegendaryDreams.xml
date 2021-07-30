@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-
+  <DreamersDream.DreamDef Name="LegendaryDream" Abstract="True" ParentName = "BaseDream">
+    <quality>Legendary</quality>
+    <chance>1</chance>
+  </DreamersDream.DreamDef>
 
 </Defs>

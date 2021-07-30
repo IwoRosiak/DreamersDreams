@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-  <DreamersDream.DreamDef ParentName = "BaseDream">
+  <DreamersDream.DreamDef Name="FrighteningDream" Abstract="True" ParentName = "BaseDream">
+    <quality>Frightening</quality>
+    <chance>5</chance>
+  </DreamersDream.DreamDef>
+
+  <DreamersDream.DreamDef ParentName = "FrighteningDream">
     <defName>KillSomeoneCloseDream</defName>
-    <chance>4</chance>
     <nullifyingTraits>
       <li>Psychopath</li>
       <li>Bloodlust</li>
@@ -16,9 +20,23 @@
     </stages>
   </DreamersDream.DreamDef>
 
-  <DreamersDream.DreamDef ParentName = "BaseDream">
+  <DreamersDream.DreamDef ParentName = "DisturbingDream">
+    <defName>KillSomeoneDream</defName>
+    <nullifyingTraits>
+      <li>Psychopath</li>
+      <li>Bloodlust</li>
+    </nullifyingTraits>
+    <stages>
+      <li>
+        <label>Had a dream about killing</label>
+        <description>I was killing... But I didn't want to...</description>
+        <baseMoodEffect>-2</baseMoodEffect>
+      </li>
+    </stages>
+  </DreamersDream.DreamDef>
+
+  <DreamersDream.DreamDef ParentName = "FrighteningDream">
   <defName>CannibalismDream</defName>
-  <chance>4</chance>
   <nullifyingTraits>
     <li>Psychopath</li>
     <li>Bloodlust</li>
@@ -37,9 +55,8 @@
   </sensitivities>
 </DreamersDream.DreamDef>
 
-<DreamersDream.DreamDef ParentName = "BaseDream">
+<DreamersDream.DreamDef ParentName = "FrighteningDream">
   <defName>PTSDDream</defName>
-  <chance>18</chance>
   <stages>
     <li>
       <label>Had a stressful dream</label>
@@ -52,9 +69,8 @@
   </sensitivities>
 </DreamersDream.DreamDef>
 
-<DreamersDream.DreamDef ParentName = "BaseDream">
+<DreamersDream.DreamDef ParentName = "FrighteningDream">
   <defName>NightmareDream</defName>
-  <chance>15</chance>
   <stages>
     <li>
       <label>Had a nightmare</label>
@@ -67,9 +83,8 @@
   </sensitivities>
 </DreamersDream.DreamDef>
 
-<DreamersDream.DreamDef ParentName = "BaseDream">
+<DreamersDream.DreamDef ParentName = "FrighteningDream">
   <defName>RedheadWithBeardDream</defName>
-  <chance>3</chance>
   <stages>
     <li>
       <label>Dreamt about redhead with beard</label>

@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-<!-- TRAVEL DREAMS -->
-<!--
 <DreamersDream.DreamDef ParentName = "BaseDream">
   <defName>TravelDreamUlthar</defName>
-  <showBubble>true</showBubble>
-  <durationDays>0.8</durationDays>
-  <travelDream>yes</travelDream>
-  <stackLimit>1</stackLimit>
-  <chance>1</chance>
   <stages>
     <li>
       <label>ulthar dream</label>
@@ -20,10 +13,6 @@
 
 <DreamersDream.DreamDef ParentName = "BaseDream">
   <defName>TravelDreamKadath</defName>
-  <showBubble>true</showBubble>
-  <durationDays>0.8</durationDays>
-  <travelDream>yes</travelDream>
-  <stackLimit>1</stackLimit>
   <chance>0.1</chance>
   <stages>
     <li>
@@ -36,11 +25,6 @@
 
 <DreamersDream.DreamDef ParentName = "BaseDream">
   <defName>TravelDreamCelephais</defName>
-  <showBubble>true</showBubble>
-  <durationDays>0.8</durationDays>
-  <travelDream>yes</travelDream>
-  <stackLimit>1</stackLimit>
-  <chance>0.5</chance>
   <stages>
     <li>
       <label>celephais dream</label>
@@ -52,11 +36,6 @@
 
 <DreamersDream.DreamDef ParentName = "BaseDream">
   <defName>TravelDreamMoon</defName>
-  <showBubble>true</showBubble>
-  <durationDays>0.8</durationDays>
-  <travelDream>yes</travelDream>
-  <stackLimit>1</stackLimit>
-  <chance>0.2</chance>
   <stages>
     <li>
       <label>moon dream</label>
@@ -68,11 +47,6 @@
 
 <DreamersDream.DreamDef ParentName = "BaseDream">
   <defName>TravelDreamLeng</defName>
-  <showBubble>true</showBubble>
-  <durationDays>0.8</durationDays>
-  <travelDream>yes</travelDream>
-  <stackLimit>1</stackLimit>
-  <chance>0.2</chance>
   <stages>
     <li>
       <label>moon dream</label>
@@ -84,11 +58,6 @@
 
 <DreamersDream.DreamDef ParentName = "BaseDream">
   <defName>TravelDreamEnchantedForest</defName>
-  <showBubble>true</showBubble>
-  <durationDays>0.8</durationDays>
-  <travelDream>yes</travelDream>
-  <stackLimit>1</stackLimit>
-  <chance>0.2</chance>
   <stages>
     <li>
       <label>forest dream</label>
@@ -98,8 +67,20 @@
   </stages>
 </DreamersDream.DreamDef>
 
-
-
--->
+<DreamersDream.DreamDef ParentName = "BaseDream">
+  <defName>ImplantGlitchDream</defName>
+  <stages>
+    <li>
+      <label>Had a dream about childhood</label>
+      <description>I relived some of the worst moments from my childhood.</description>
+      <baseMoodEffect>-4</baseMoodEffect>
+    </li>
+  </stages>
+  <sensitivities>
+    <li>ill</li>
+    <li>hungry</li>
+    <li>malnourished</li>
+  </sensitivities>
+</DreamersDream.DreamDef>
 
 </Defs>
