@@ -64,13 +64,6 @@
   </DreamersDream.DreamQualityDef>
 
   <DreamersDream.DreamQualityDef>
-    <defName>Terrorisings</defName>
-    <label>terrorisings</label>
-    <isSpecial>true</isSpecial>
-    <chance>5000</chance>
-  </DreamersDream.DreamQualityDef>
-
-  <DreamersDream.DreamQualityDef>
     <defName>HellLike</defName>
     <label>hell-like</label>
     <isSpecial>true</isSpecial>

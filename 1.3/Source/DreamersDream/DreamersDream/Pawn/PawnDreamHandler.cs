@@ -16,7 +16,7 @@ namespace DreamersDream
         {
             if (CanGetDreamNow())
             {
-                //ChooseDream()?.TriggerDreamEffects();
+                PawnDreamRandomCalc.ChooseRandomDream()?.TriggerDreamEffects();
             }
         }
 

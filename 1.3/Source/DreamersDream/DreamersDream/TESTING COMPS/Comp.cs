@@ -15,7 +15,9 @@ namespace DreamersDream
         public override void CompTickRare()
         {
             base.CompTick();
-            Log.Message("Hi! I'm " + parent.def.defName);
+            //Log.Message("Hi! I'm " + parent.def.defName);
+
+            PawnDreamHandler.Tick((Pawn)parent);
         }
     }
 }
