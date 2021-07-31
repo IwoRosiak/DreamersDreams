@@ -1,14 +1,12 @@
-﻿using Verse;
-
-namespace DreamersDream
+﻿namespace DreamersDream
 {
     public static class DebugLogDreams
     {
         public static void DebugLogChances()
         {
-            foreach (var qualityDef in PawnDreamTracker.GetDreamQualityDict)
+            foreach (var qualityDef in PawnDreamTracker.GetDreamQualities)
             {
-                Log.Message("Chances for " + qualityDef.Key.label + " dream are " + qualityDef.Value);
+                //Log.Message("Chances for " + qualityDef.Key.label + " dream are " + qualityDef.Value);
             }
 
             /* Temporary holder for debug commands

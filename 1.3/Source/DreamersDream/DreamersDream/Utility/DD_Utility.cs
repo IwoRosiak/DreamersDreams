@@ -5,6 +5,7 @@ namespace DreamersDream
     [StaticConstructorOnStartup]
     public static class DD_Utility
     {
+        /*
         private enum TypeOfDream { sleepwalk, normal, inspiration };
 
         static DD_Utility()

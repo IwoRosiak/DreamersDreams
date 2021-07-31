@@ -9,6 +9,7 @@ namespace DreamersDream
         {
             LoadDreams();
             LoadDreamQualities();
+            Log.Message(PawnDreamRandomCalc.ChooseRandomDream().defName);
         }
 
         private static void LoadDreams()
@@ -37,7 +38,7 @@ namespace DreamersDream
             foreach (DreamQualityDef dreamQuality in GenDefDatabase.GetAllDefsInDatabaseForDef(typeof(DreamQualityDef)))
             {
                 totalQualities++;
-                PawnDreamTracker.GetDreamQualityDict.Add(dreamQuality, dreamQuality.chance);
+                PawnDreamTracker.GetDreamQualities.Add(dreamQuality);
             }
             Log.Message("Dreamer's Dreams: succesfully loaded " + totalQualities + " dream qualities.");
         }

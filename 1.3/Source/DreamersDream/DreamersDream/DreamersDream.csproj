@@ -58,10 +58,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="TESTING COMPS\Comp - Copy.cs" />
+    <Compile Include="TESTING COMPS\Comp.cs" />
     <Compile Include="DebugLogDreams.cs" />
     <Compile Include="DreamersDreamsInitialisation.cs" />
     <Compile Include="Defs\DreamQualityDef.cs" />
     <Compile Include="DD_Mod_Settings.cs" />
+    <Compile Include="Pawn\Utilities\PawnDreamChanceCalc.cs" />
+    <Compile Include="Pawn\Utilities\PawnDreamRandomCalc.cs" />
     <Compile Include="Pawn\PawnDreamProvider.cs" />
     <Compile Include="Pawn\PawnDreamHandler.cs" />
     <Compile Include="Pawn\PawnDreamTracker.cs" />

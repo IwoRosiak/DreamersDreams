@@ -6,19 +6,19 @@ namespace DreamersDream
     [StaticConstructorOnStartup]
     public static class PawnDreamTracker
     {
-        public static Dictionary<DreamQualityDef, float> GetDreamQualityDict
+        public static List<DreamQualityDef> GetDreamQualities
         {
             get
             {
-                return DreamQualityChancesDict;
+                return DreamQualityChances;
             }
         }
 
-        public static IEnumerable<DreamDef> AllAvailibleDreamsForPawn()
+        public static List<DreamDef> GetAvailibleDreamsForPawn
         {
-            foreach (var dream in listOfAllDreamDefs)
+            get
             {
-                yield return dream;
+                return listOfAllDreamDefs;
             }
         }
 
@@ -34,7 +34,7 @@ namespace DreamersDream
             return false;
         }
 
-        private static Dictionary<DreamQualityDef, float> DreamQualityChancesDict = new Dictionary<DreamQualityDef, float>();
+        private static List<DreamQualityDef> DreamQualityChances = new List<DreamQualityDef>();
 
         internal static List<DreamDef> listOfAllDreamDefs = new List<DreamDef>();
     }
