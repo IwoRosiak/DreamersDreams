@@ -52,18 +52,21 @@
       <HintPath>..\..\..\..\..\..\RimWorldWin64_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="UnityEngine.IMGUIModule">
+      <HintPath>..\..\..\..\..\..\RimWorldWin64_Data\Managed\UnityEngine.IMGUIModule.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="TESTING COMPS\Comp - Copy.cs" />
-    <Compile Include="TESTING COMPS\Comp.cs" />
+    <Compile Include="Pawn\Comps\DreamsCompProperties.cs" />
+    <Compile Include="Pawn\Comps\DreamsComp.cs" />
     <Compile Include="DebugLogDreams.cs" />
     <Compile Include="DreamersDreamsInitialisation.cs" />
     <Compile Include="Defs\DreamQualityDef.cs" />
-    <Compile Include="DD_Mod_Settings.cs" />
+    <Compile Include="DreamersDreamsModSettings.cs" />
+    <Compile Include="Temp\DD_Mod_Settings.cs" />
     <Compile Include="Pawn\Utilities\PawnDreamChanceCalc.cs" />
     <Compile Include="Pawn\Utilities\PawnDreamRandomCalc.cs" />
-    <Compile Include="Pawn\PawnDreamProvider.cs" />
-    <Compile Include="Pawn\PawnDreamHandler.cs" />
+    <Compile Include="Temp\PawnDreamProvider.cs" />
     <Compile Include="Pawn\PawnDreamTracker.cs" />
     <Compile Include="Temp\Inspirations\DD_InspirationDefOf.cs" />
     <Compile Include="Temp\Traits\DD_TraitsDefOf.cs" />
@@ -75,6 +78,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="1SettingsHelper.dll" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

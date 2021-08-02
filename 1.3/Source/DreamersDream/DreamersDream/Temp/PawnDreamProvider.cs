@@ -23,7 +23,7 @@ namespace DreamersDream
 
             float dreamChanceRoll = GetRandomNumberForThisDreamQuality();
 
-            foreach (DreamDef dream in PawnDreamTracker.listOfAllDreamDefs)
+            foreach (DreamDef dream in PawnDreamTracker.DreamDefs)
             {
                 var chanceForDream = dream.chance; //DD_Utility.CheckDreamChance(dream, pawn);
 
@@ -43,7 +43,7 @@ namespace DreamersDream
         private static float GetRandomNumberForThisDreamQuality()
         {
             float totalDreamChance = 0;
-            foreach (DreamDef dream in PawnDreamTracker.listOfAllDreamDefs)
+            foreach (DreamDef dream in PawnDreamTracker.DreamDefs)
             {
                 totalDreamChance += dream.chance;         //DD_Utility.CheckDreamChance(dream, pawn);
             }

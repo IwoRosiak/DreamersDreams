@@ -10,7 +10,7 @@ namespace DreamersDream
         {
             get
             {
-                return DreamQualityChances;
+                return DreamQualityDefs;
             }
         }
 
@@ -18,13 +18,13 @@ namespace DreamersDream
         {
             get
             {
-                return listOfAllDreamDefs;
+                return DreamDefs;
             }
         }
 
         public static bool HasDreamAlready(Pawn pawn)
         {
-            foreach (DreamDef dream in listOfAllDreamDefs)
+            foreach (DreamDef dream in DreamDefs)
             {
                 if (pawn.needs.mood.thoughts.memories.GetFirstMemoryOfDef(dream) != null)
                 {
@@ -34,8 +34,8 @@ namespace DreamersDream
             return false;
         }
 
-        private static List<DreamQualityDef> DreamQualityChances = new List<DreamQualityDef>();
+        private static List<DreamQualityDef> DreamQualityDefs = new List<DreamQualityDef>();
 
-        internal static List<DreamDef> listOfAllDreamDefs = new List<DreamDef>();
+        internal static List<DreamDef> DreamDefs = new List<DreamDef>();
     }
 }

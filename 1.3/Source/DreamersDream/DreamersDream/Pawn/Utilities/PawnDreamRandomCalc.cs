@@ -84,7 +84,7 @@ namespace DreamersDream
             return sumOfChances;
         }
 
-        private static float AddUpChancesForQualities()
+        internal static float AddUpChancesForQualities()
         {
             float sumOfCollectionChances = 0;
             foreach (var item in PawnDreamTracker.GetDreamQualities)
@@ -99,7 +99,7 @@ namespace DreamersDream
             return PawnDreamChanceCalc.CalculateChanceFor(dream);
         }
 
-        private static float ChanceInPercentages(float chance, float sumOfChances)
+        internal static float ChanceInPercentages(float chance, float sumOfChances)
         {
             return (chance / sumOfChances) * 100;
         }

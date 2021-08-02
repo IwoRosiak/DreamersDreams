@@ -9,7 +9,7 @@ namespace DreamersDream
         {
             LoadDreams();
             LoadDreamQualities();
-            Log.Message(PawnDreamRandomCalc.ChooseRandomDream().defName);
+            //Log.Message(PawnDreamRandomCalc.ChooseRandomDream().defName);
         }
 
         private static void LoadDreams()
@@ -21,14 +21,14 @@ namespace DreamersDream
                 if (dream.quality != null)
                 {
                     totalDreams++;
-                    PawnDreamTracker.listOfAllDreamDefs.Add(dream);
+                    PawnDreamTracker.DreamDefs.Add(dream);
                 }
                 else
                 {
                     Log.Warning("Dream " + dream.defName + " does not have category, so it will not be loaded.");
                 }
             }
-            Log.Message("Dreamer's Dreams: succesfully loaded " + totalDreams + " dreams.");
+            Log.Message("Dreamer's Dreams: successfully loaded " + totalDreams + " dreams.");
         }
 
         private static void LoadDreamQualities()
@@ -40,7 +40,7 @@ namespace DreamersDream
                 totalQualities++;
                 PawnDreamTracker.GetDreamQualities.Add(dreamQuality);
             }
-            Log.Message("Dreamer's Dreams: succesfully loaded " + totalQualities + " dream qualities.");
+            Log.Message("Dreamer's Dreams: successfully loaded " + totalQualities + " dream qualities.");
         }
     }
 }
