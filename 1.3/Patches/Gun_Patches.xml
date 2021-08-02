@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Patch>
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/ThingDef[defName="Human"]</xpath>
+    <value>
+      <comps>
+        <li Class="DreamersDream.DreamsCompProperties"/>
+      </comps>
+    </value>
+  </Operation>
+</Patch>

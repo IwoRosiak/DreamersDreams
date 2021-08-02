@@ -2,13 +2,13 @@
 
 namespace DreamersDream
 {
-    public class DreamComp : ThingComp
+    public class DreamsComp : ThingComp
     {
-        public Dreams_CompProperties Props
+        public DreamsCompProperties Props
         {
             get
             {
-                return (Dreams_CompProperties)this.props;
+                return (DreamsCompProperties)this.props;
             }
         }
 

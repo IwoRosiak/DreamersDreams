@@ -32,10 +32,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="0Harmony">
-      <HintPath>..\..\..\..\..\..\..\..\..\..\Users\hight\Desktop\Harmony\net472\0Harmony.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="Assembly-CSharp">
       <HintPath>..\..\..\..\..\..\RimWorldWin64_Data\Managed\Assembly-CSharp.dll</HintPath>
       <Private>False</Private>
@@ -76,12 +72,6 @@
     <Compile Include="Temp\MentalStates\DD_MentalStateDefOf.cs" />
     <Compile Include="Temp\MentalStates\DD_MentalStateDef.cs" />
     <Compile Include="Defs\DreamDef.cs" />
-    <Compile Include="HarmonyPatch.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="0Harmony.dll">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Properties\" />
