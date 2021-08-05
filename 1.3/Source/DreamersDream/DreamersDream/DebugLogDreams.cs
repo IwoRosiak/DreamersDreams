@@ -4,7 +4,7 @@
     {
         public static void DebugLogChances()
         {
-            foreach (var qualityDef in PawnDreamTracker.GetDreamQualities)
+            foreach (var qualityDef in DreamTracker.GetDreamQualities)
             {
                 //Log.Message("Chances for " + qualityDef.Key.label + " dream are " + qualityDef.Value);
             }

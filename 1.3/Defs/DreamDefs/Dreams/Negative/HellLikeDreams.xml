@@ -18,7 +18,6 @@
 
   <DreamersDream.DreamDef ParentName = "HellLikeDream">
     <defName>WorldApartDream</defName>
-    <chance>12</chance>
     <stages>
       <li>
         <label>Had dream about armageddon</label>

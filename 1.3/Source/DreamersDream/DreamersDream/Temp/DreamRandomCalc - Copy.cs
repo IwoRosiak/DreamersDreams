@@ -1,9 +1,9 @@
-﻿using System.Collections.Generic;
+﻿/*using System.Collections.Generic;
 using Verse;
 
 namespace DreamersDream
 {
-    internal static class PawnDreamRandomCalc
+    internal static class DreamRandomCalc
     {
         public static DreamDef ChooseRandomDream()
         {
@@ -19,7 +19,7 @@ namespace DreamersDream
             float roll = PerformRandomRoll();
             float rollOffset = 0;
 
-            foreach (var item in PawnDreamTracker.GetDreamQualities)
+            foreach (var item in DreamTracker.GetDreamQualities)
             {
                 if (roll <= ChanceInPercentages(item.chance + rollOffset, AddUpChancesForQualities()))
                 {
@@ -45,12 +45,12 @@ namespace DreamersDream
                 //Log.Message("Roll progress " + rollOffset);
                 //Log.Message("Chance for this dream " + ChanceInPercentages(dream.chance, sumOfChances) + " Name: " + dream.defName + " Of Quality: " + dream.quality);
 
-                if (roll <= ChanceInPercentages(dream.chance + rollOffset, sumOfChances))
+                if (roll <= ChanceInPercentages(dream.CalculateChanceFor() + rollOffset, sumOfChances))
                 {
                     return dream;
                 }
 
-                rollOffset += dream.chance;
+                rollOffset += dream.CalculateChanceFor();
             }
 
             return null;
@@ -60,7 +60,7 @@ namespace DreamersDream
         {
             List<DreamDef> MatchingDreams = new List<DreamDef>();
 
-            foreach (var dream in PawnDreamTracker.GetAvailibleDreamsForPawn)
+            foreach (var dream in DreamTracker.GetAvailibleDreamsForPawn)
             {
                 if (dream.quality == quality)
                 {
@@ -87,7 +87,7 @@ namespace DreamersDream
         internal static float AddUpChancesForQualities()
         {
             float sumOfCollectionChances = 0;
-            foreach (var item in PawnDreamTracker.GetDreamQualities)
+            foreach (var item in DreamTracker.GetDreamQualities)
             {
                 sumOfCollectionChances += item.chance;
             }
@@ -96,7 +96,7 @@ namespace DreamersDream
 
         private static float CalculateChanceFor(DreamDef dream)
         {
-            return PawnDreamChanceCalc.CalculateChanceFor(dream);
+            return DreamChanceCalc.CalculateChanceFor(dream);
         }
 
         internal static float ChanceInPercentages(float chance, float sumOfChances)
@@ -109,4 +109,4 @@ namespace DreamersDream
             return Rand.Range(0, 100);
         }
     }
-}
+}*/

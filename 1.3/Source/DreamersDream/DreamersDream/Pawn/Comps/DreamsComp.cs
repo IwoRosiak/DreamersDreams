@@ -5,6 +5,16 @@ namespace DreamersDream
 {
     public class DreamsComp : ThingComp
     {
+        private PawnDreamQualityOddsTracker QualityOddsTracker;
+
+        private PawnDreamOddsTracker OddsTracker;
+
+        public DreamsComp()
+        {
+            QualityOddsTracker = new PawnDreamQualityOddsTracker(pawn);
+            OddsTracker = new PawnDreamOddsTracker(pawn);
+        }
+
         public Pawn pawn
         {
             get
@@ -31,13 +41,28 @@ namespace DreamersDream
         {
             if (CanGetDreamNow())
             {
-                TriggerDreamEffects(PawnDreamRandomCalc.ChooseRandomDream());
+                var RandomQuality = DreamRandomCalc.ChooseRandomDreamQuality(QualityOddsTracker.GetUpdatedQualitiesWithChances());
+                var RandomDream = DreamRandomCalc.ChooseRandomDream(OddsTracker.GetUpdatedDreamsWithChances(RandomQuality));
+                TriggerDreamEffects(RandomDream);
             }
+        }
+
+        private void DebugLogAllDreamsAndQualities()
+        {
+            foreach (var quality in QualityOddsTracker.GetUpdatedQualitiesWithChances())
+            {
+                Log.Message(quality.Key.defName + " has " + quality.Value + "% chance upper threshold. And these are dreams for this quality: ");
+                foreach (var dream in OddsTracker.GetUpdatedDreamsWithChances(quality.Key))
+                {
+                    Log.Message("     -" + dream.Key.defName + " has " + dream.Value + "% chance upper threshold.");
+                }
+            }
+            Log.Message("CUTOFF");
         }
 
         private bool CanGetDreamNow()
         {
-            if (IsPawnCapableOfDreaming() && !IsAwake() && IsPawnRestedEnough() && !PawnDreamTracker.HasDreamAlready(pawn))
+            if (IsPawnCapableOfDreaming() && !IsAwake() && IsPawnRestedEnough() && !HasDreamAlready())
             {
                 return true;
             }
@@ -76,6 +101,18 @@ namespace DreamersDream
             {
                 pawn.mindState.inspirationHandler.TryStartInspiration(dream.inspiration);
             } */
+        }
+
+        private bool HasDreamAlready()
+        {
+            foreach (DreamDef dream in DreamTracker.DreamDefs)
+            {
+                if (pawn.needs.mood.thoughts.memories.GetFirstMemoryOfDef(dream) != null)
+                {
+                    return true;
+                }
+            }
+            return false;
         }
 
         private bool IsPawnCapableOfDreaming()

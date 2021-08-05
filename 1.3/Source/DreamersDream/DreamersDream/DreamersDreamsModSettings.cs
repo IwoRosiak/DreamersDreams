@@ -8,9 +8,7 @@ namespace DreamersDream
     {
         public static bool isDreamingActive = true;
 
-        public static int chanceForNoDream = 0;
-        public static int chanceForPositiveDreams = 0;
-        public static int chanceForNegativeDreams = 0;
+        public static int sleepwalkerTraitModif = 50;
 
         public static bool isDebugMode = false;
 
@@ -18,9 +16,9 @@ namespace DreamersDream
         {
             Scribe_Values.Look(ref isDreamingActive, "isDreamingActive", true);
 
-            Scribe_Values.Look(ref chanceForNoDream, "chanceForNoDream", 0);
-            Scribe_Values.Look(ref chanceForPositiveDreams, "chanceForPositiveDreams", 0);
-            Scribe_Values.Look(ref chanceForNegativeDreams, "chanceForNegativeDreams", 0);
+            Scribe_Values.Look(ref sleepwalkerTraitModif, "sleepwalkerTraitModif", 50);
+            //Scribe_Values.Look(ref chanceForPositiveDreams, "chanceForPositiveDreams", 0);
+            //Scribe_Values.Look(ref chanceForNegativeDreams, "chanceForNegativeDreams", 0);
 
             base.ExposeData();
         }
@@ -66,7 +64,7 @@ namespace DreamersDream
                 Widgets.DrawBox(columnQuality);
                 columnQuality.y += 25f;
 
-                Widgets.Label(columnChance, Math.Round(PawnDreamRandomCalc.ChanceInPercentages(dreamQuality.chance, PawnDreamRandomCalc.AddUpChancesForQualities()), 2) + "%");
+                Widgets.Label(columnChance, Math.Round(PawnDreamQualityOddsTracker.ChanceInPercentages(dreamQuality.chance, PawnDreamQualityOddsTracker.AddUpChancesForQualities()), 2) + "%");
                 Widgets.DrawBox(columnChance);
                 Widgets.ButtonInvisible(columnChance);
                 columnChance.y += 25f;

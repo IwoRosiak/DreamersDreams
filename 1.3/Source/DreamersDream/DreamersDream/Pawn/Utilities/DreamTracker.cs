@@ -1,10 +1,8 @@
 ﻿using System.Collections.Generic;
-using Verse;
 
 namespace DreamersDream
 {
-    [StaticConstructorOnStartup]
-    public static class PawnDreamTracker
+    public static class DreamTracker
     {
         public static List<DreamQualityDef> GetDreamQualities
         {
@@ -20,18 +18,6 @@ namespace DreamersDream
             {
                 return DreamDefs;
             }
-        }
-
-        public static bool HasDreamAlready(Pawn pawn)
-        {
-            foreach (DreamDef dream in DreamDefs)
-            {
-                if (pawn.needs.mood.thoughts.memories.GetFirstMemoryOfDef(dream) != null)
-                {
-                    return true;
-                }
-            }
-            return false;
         }
 
         private static List<DreamQualityDef> DreamQualityDefs = new List<DreamQualityDef>();

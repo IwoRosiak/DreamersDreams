@@ -21,7 +21,7 @@ namespace DreamersDream
                 if (dream.quality != null)
                 {
                     totalDreams++;
-                    PawnDreamTracker.DreamDefs.Add(dream);
+                    DreamTracker.DreamDefs.Add(dream);
                 }
                 else
                 {
@@ -38,7 +38,7 @@ namespace DreamersDream
             foreach (DreamQualityDef dreamQuality in GenDefDatabase.GetAllDefsInDatabaseForDef(typeof(DreamQualityDef)))
             {
                 totalQualities++;
-                PawnDreamTracker.GetDreamQualities.Add(dreamQuality);
+                DreamTracker.GetDreamQualities.Add(dreamQuality);
             }
             Log.Message("Dreamer's Dreams: successfully loaded " + totalQualities + " dream qualities.");
         }
