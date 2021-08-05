@@ -5,16 +5,16 @@ namespace DreamersDream
 {
     public class PawnDreamOddsTracker
     {
+        public PawnDreamOddsTracker(Pawn parent)
+        {
+            pawn = parent;
+        }
+
         public Dictionary<DreamDef, float> GetUpdatedDreamsWithChances(DreamQualityDef quality)
         {
             UpdateOddsForDreams(quality);
             ConvertOddsForDreamsToPercent();
             return DreamOddsPercent;
-        }
-
-        public PawnDreamOddsTracker(Pawn parent)
-        {
-            pawn = parent;
         }
 
         private Dictionary<DreamDef, float> UpdateOddsForDreams(DreamQualityDef quality)
@@ -34,11 +34,11 @@ namespace DreamersDream
         {
             DreamOddsPercent.Clear();
             float chanceForQualityPercent = 0;
-            foreach (var dreamQuality in DreamOdds)
+            foreach (var dream in DreamOdds)
             {
-                chanceForQualityPercent += ChanceInPercentages(dreamQuality.Value, AddUpChancesForDreams());
+                chanceForQualityPercent += ChanceInPercentages(dream.Value, AddUpChancesForDreams());
 
-                DreamOddsPercent.Add(dreamQuality.Key, chanceForQualityPercent);
+                DreamOddsPercent.Add(dream.Key, chanceForQualityPercent);
             }
         }
 

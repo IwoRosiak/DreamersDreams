@@ -4,9 +4,19 @@ namespace DreamersDream
 {
     internal static class DreamChanceCalc
     {
-        public static float CalculateChanceFor(this DreamDef dream, Pawn pawn = null)
+        public static float CalculateChanceFor(this DreamDef dream, Pawn pawn)
         {
-            return dream.chance;
+            float dreamChance = dream.chance;
+
+            if (dream.isSleepwalk)
+            {
+                if (pawn.story.traits.HasTrait(DD_TraitDefOf.Sleepwalker))
+                {
+                    dreamChance *= GetSleepwalkerMultiplier(pawn);
+                }
+            }
+
+            return dreamChance;
         }
 
         public static float CalculateChanceFor(this DreamQualityDef dreamQuality, Pawn pawn = null)
@@ -14,7 +24,7 @@ namespace DreamersDream
             return dreamQuality.chance;
         }
 
-        private static float CheckSleepwalkerTrait(Pawn pawn)
+        private static float GetSleepwalkerMultiplier(Pawn pawn)
         {
             float traitMultiplier = DD_Settings.sleepwalkerTraitModif;
             switch (pawn.story.traits.DegreeOfTrait(DD_TraitDefOf.Sleepwalker))
@@ -29,9 +39,6 @@ namespace DreamersDream
 
                 case 3:
                     traitMultiplier *= 100f;
-                    break;
-
-                default:
                     break;
             }
 

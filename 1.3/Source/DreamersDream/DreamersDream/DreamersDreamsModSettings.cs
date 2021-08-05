@@ -8,7 +8,7 @@ namespace DreamersDream
     {
         public static bool isDreamingActive = true;
 
-        public static int sleepwalkerTraitModif = 50;
+        public static int sleepwalkerTraitModif = 1;
 
         public static bool isDebugMode = false;
 
@@ -16,7 +16,7 @@ namespace DreamersDream
         {
             Scribe_Values.Look(ref isDreamingActive, "isDreamingActive", true);
 
-            Scribe_Values.Look(ref sleepwalkerTraitModif, "sleepwalkerTraitModif", 50);
+            Scribe_Values.Look(ref sleepwalkerTraitModif, "sleepwalkerTraitModif", 1);
             //Scribe_Values.Look(ref chanceForPositiveDreams, "chanceForPositiveDreams", 0);
             //Scribe_Values.Look(ref chanceForNegativeDreams, "chanceForNegativeDreams", 0);
 

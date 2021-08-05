@@ -5,6 +5,18 @@
     <chance>25</chance>
   </DreamersDream.DreamDef>
 
+  <DreamersDream.DreamDef ParentName = "PleasantDream">
+    <defName>SleepwalkShapesDream</defName>
+    <stages>
+      <li>
+        <label>Dreamt about abstract shapes</label>
+        <description>I saw many abstract shapes that were floating around me like planets. I thought the shapes were my family and friends. At some point a foreign shape appeared consuming my close ones and thus growing bigger. At the end it got me too... </description>
+        <baseMoodEffect>-6</baseMoodEffect>
+      </li>
+    </stages>
+    <isSleepwalk>true</isSleepwalk>
+  </DreamersDream.DreamDef>
+
   <DreamersDream.DreamDef ParentName = "PleasantDream" >
   <defName>GoodDream</defName>
   <showBubble>true</showBubble>

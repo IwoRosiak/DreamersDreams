@@ -32,7 +32,7 @@
     <defName>Pleasant</defName>
     <label>pleasant</label>
     <isSpecial>false</isSpecial>
-    <chance>50</chance>
+    <chance>10000</chance>
   </DreamersDream.DreamQualityDef>
 
   <DreamersDream.DreamQualityDef>

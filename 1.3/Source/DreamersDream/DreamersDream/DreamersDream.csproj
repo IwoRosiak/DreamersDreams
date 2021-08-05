@@ -61,7 +61,7 @@
     <Compile Include="Pawn\Comps\DreamsComp.cs" />
     <Compile Include="DebugLogDreams.cs" />
     <Compile Include="DreamersDreamsInitialisation.cs" />
-    <Compile Include="Defs\DreamQualityDef.cs" />
+    <Compile Include="Defs\Dreams\DreamQualityDef.cs" />
     <Compile Include="DreamersDreamsModSettings.cs" />
     <Compile Include="Pawn\PawnDreamOddsTracker.cs" />
     <Compile Include="Temp\DreamRandomCalc - Copy.cs" />
@@ -72,12 +72,12 @@
     <Compile Include="Temp\PawnDreamProvider.cs" />
     <Compile Include="Pawn\PawnDreamQualityOddsTracker.cs" />
     <Compile Include="Temp\Inspirations\DD_InspirationDefOf.cs" />
-    <Compile Include="Temp\Traits\DD_TraitsDefOf.cs" />
+    <Compile Include="Defs\Traits\DD_TraitsDefOf.cs" />
     <Compile Include="Utility\DD_CalcTools.cs" />
     <Compile Include="Utility\DD_Utility.cs" />
-    <Compile Include="Temp\MentalStates\DD_MentalStateDefOf.cs" />
-    <Compile Include="Temp\MentalStates\DD_MentalStateDef.cs" />
-    <Compile Include="Defs\DreamDef.cs" />
+    <Compile Include="Defs\MentalStates\DD_MentalStateDefOf.cs" />
+    <Compile Include="Defs\MentalStates\DD_MentalStateDef.cs" />
+    <Compile Include="Defs\Dreams\DreamDef.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Properties\" />

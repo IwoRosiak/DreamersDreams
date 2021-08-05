@@ -11,8 +11,6 @@ namespace DreamersDream
 
         public DreamsComp()
         {
-            QualityOddsTracker = new PawnDreamQualityOddsTracker(pawn);
-            OddsTracker = new PawnDreamOddsTracker(pawn);
         }
 
         public Pawn pawn
@@ -34,6 +32,12 @@ namespace DreamersDream
         public override void CompTickRare()
         {
             base.CompTick();
+            if (QualityOddsTracker == null || OddsTracker == null)
+            {
+                QualityOddsTracker = new PawnDreamQualityOddsTracker(pawn);
+                OddsTracker = new PawnDreamOddsTracker(pawn);
+            }
+
             TryApplyDream();
         }
 
@@ -91,12 +95,12 @@ namespace DreamersDream
         {
             pawn.needs.mood.thoughts.memories.TryGainMemory(dream, null);
 
-            /*
-            if (!dream.triggers.NullOrEmpty())
+            if (dream.isSleepwalk)
             {
-                pawn.mindState.mentalStateHandler.TryStartMentalState(dream.triggers[Rand.RangeInclusive(0, dream.triggers.Count - 1)], null, true, false, null, false);
+                //TODO CHOOSE SLEEPWALK RANDOM AND DISPLAY SMALL MESSAGE
+                pawn.mindState.mentalStateHandler.TryStartMentalState(DD_MentalStateDefOf.Sleepwalk, null, true, false, null, false);
             }
-
+            /*
             if (dream.inspiration != null)
             {
                 pawn.mindState.inspirationHandler.TryStartInspiration(dream.inspiration);
