@@ -83,6 +83,7 @@ namespace DreamersDream
 
             if (listingStandard.ButtonText("Reset settings", "Set now"))
             {
+                ResetValues();
             }
 
             listingStandard.End();
@@ -95,20 +96,30 @@ namespace DreamersDream
 
                 listingMid.GapLine();
 
-                listingMid.Label("How much sleepwalker traits affect chance for sleepwalking: " + DD_Settings.sleepwalkerTraitModif + "%");
-                DD_Settings.sleepwalkerTraitModif = (float)Math.Round(listingMid.Slider(DD_Settings.sleepwalkerTraitModif, 0, 200), 2);
+                listingMid.Label("How much sleepwalker traits affect chance for sleepwalking: " + DD_Settings.sleepwalkerTraitModif * 100 + "%");
+                DD_Settings.sleepwalkerTraitModif = (float)Math.Round(listingMid.Slider(DD_Settings.sleepwalkerTraitModif, 0, 2), 2);
 
                 // = Widgets.HorizontalSlider(new Rect(TopSettings.x, ref cur), 50f, DD_Settings.sleepwalkerTraitModif, 0, 5, false, null, "0%", "500%", 0.01f);
                 //Widgets.Label(TopSettings.x, ref ScrollPos.y, 150f, "Sleepwalker trait modifier " + DD_Settings.sleepwalkerTraitModif * 100 + "%");
-                Rect TableSettings = new Rect(masterRect.x, masterRect.y + listingMid.CurHeight * 2.1f, masterRect.width, inRect.height);
+                Rect TableSettings = new Rect(masterRect.x, masterRect.y + listingMid.CurHeight * 2.1f, 270f, inRect.height);
                 TableSettings.height = inRect.height - TableSettings.y;
 
                 listingMid.End();
 
-                listingTop.GapLine();
+                //listingTop.GapLine();
 
                 DrawQualityTable(TableSettings);
             }
+        }
+
+        private void ResetValues()
+        {
+            foreach (var dreamQuality in DreamTracker.DreamQualityDefs)
+            {
+                DD_Settings.QualityChanceModifs[dreamQuality.defName] = dreamQuality.chance;
+            }
+
+            DD_Settings.sleepwalkerTraitModif = 1;
         }
 
         private static Vector2 scrollPosi = Vector2.zero;
@@ -117,15 +128,18 @@ namespace DreamersDream
 
         private void DrawQualityTable(Rect inRect)
         {
+            Widgets.DrawBoxSolidWithOutline(inRect, new Color(), new Color(7f, 94f, 29f));
+
             ResolveScroll(new Rect(inRect.x, inRect.y, 10f, inRect.height));
 
             GUI.BeginClip(inRect, scrollPosi, scrollPosi, false);
 
-            Rect columnQuality = new Rect(inRect.x - 65f, inRect.y - scroll - 200f, 100f, 25f);
+            Rect columnQuality = new Rect(inRect.x - 68f, inRect.y - scroll - 204f, 100f, 25f);
 
             DrawTableFirstRow(ref columnQuality, "Category");
 
-            Rect columnChance = new Rect(columnQuality.x + 100, inRect.y - scroll - 200f, 146f, 25f);
+            Rect columnChance = new Rect(columnQuality.x + 100, inRect.y - scroll - 204f, 146f, 25f);
+
             DrawTableFirstRow(ref columnChance, "Chance");
 
             DrawColumnCategory(ref columnQuality);
@@ -273,7 +287,14 @@ namespace DreamersDream
 
         private void DrawTableFirstRow(ref Rect column, string label)
         {
-            Widgets.DrawTextureFitted(column, Textures.TableEntryBGCat1, 1);
+            if (label == "Category")
+            {
+                Widgets.DrawTextureFitted(column, Textures.TableEntryBGCat1, 1);
+            }
+            else if (label == "Chance")
+            {
+                Widgets.DrawTextureFitted(column, Textures.TableEntryBGChance1, 1);
+            }
 
             Widgets.Label(GetMiddleOfRectForString(column, label), label);
 
