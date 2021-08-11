@@ -39,6 +39,7 @@ namespace DreamersDream
             {
                 totalQualities++;
                 DreamTracker.GetDreamQualities.Add(dreamQuality);
+                //DreamTracker.DreamQualityDefsWithSettings.Add(dreamQuality, dreamQuality.chance);
             }
             Log.Message("Dreamer's Dreams: successfully loaded " + totalQualities + " dream qualities.");
         }

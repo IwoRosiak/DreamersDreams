@@ -37,8 +37,10 @@ namespace DreamersDream
                 QualityOddsTracker = new PawnDreamQualityOddsTracker(pawn);
                 OddsTracker = new PawnDreamOddsTracker(pawn);
             }
-
-            TryApplyDream();
+            if (DD_Settings.isDreamingActive)
+            {
+                TryApplyDream();
+            }
         }
 
         private void TryApplyDream()

@@ -20,7 +20,9 @@ namespace DreamersDream
             }
         }
 
-        private static List<DreamQualityDef> DreamQualityDefs = new List<DreamQualityDef>();
+        public static List<DreamQualityDef> DreamQualityDefs = new List<DreamQualityDef>();
+
+        public static Dictionary<DreamQualityDef, float> DreamQualityDefsWithSettings = new Dictionary<DreamQualityDef, float>();
 
         internal static List<DreamDef> DreamDefs = new List<DreamDef>();
     }

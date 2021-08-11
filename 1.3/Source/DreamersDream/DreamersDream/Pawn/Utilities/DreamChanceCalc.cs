@@ -21,7 +21,14 @@ namespace DreamersDream
 
         public static float CalculateChanceFor(this DreamQualityDef dreamQuality, Pawn pawn = null)
         {
-            return dreamQuality.chance;
+            if (DD_Settings.QualityChanceModifs.ContainsKey(dreamQuality.defName))
+            {
+                return DD_Settings.QualityChanceModifs[dreamQuality.defName];
+            }
+            else
+            {
+                return dreamQuality.chance;
+            }
         }
 
         private static float GetSleepwalkerMultiplier(Pawn pawn)

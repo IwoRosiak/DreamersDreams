@@ -32,7 +32,7 @@
     <defName>Pleasant</defName>
     <label>pleasant</label>
     <isSpecial>false</isSpecial>
-    <chance>10000</chance>
+    <chance>25</chance>
   </DreamersDream.DreamQualityDef>
 
   <DreamersDream.DreamQualityDef>
@@ -79,6 +79,69 @@
 
   <DreamersDream.DreamQualityDef>
     <defName>Mystical</defName>
+    <label>mystical</label>
+    <isSpecial>true</isSpecial>
+    <chance>5</chance>
+  </DreamersDream.DreamQualityDef>
+
+  <DreamersDream.DreamQualityDef>
+    <defName>Mystical0</defName>
+    <label>mystical</label>
+    <isSpecial>true</isSpecial>
+    <chance>5</chance>
+  </DreamersDream.DreamQualityDef>
+
+  <DreamersDream.DreamQualityDef>
+    <defName>Mystical1</defName>
+    <label>mystical</label>
+    <isSpecial>true</isSpecial>
+    <chance>5</chance>
+  </DreamersDream.DreamQualityDef>
+
+  <DreamersDream.DreamQualityDef>
+    <defName>Mystical2</defName>
+    <label>mystical</label>
+    <isSpecial>true</isSpecial>
+    <chance>5</chance>
+  </DreamersDream.DreamQualityDef>
+
+  <DreamersDream.DreamQualityDef>
+    <defName>Mystical3</defName>
+    <label>mystical</label>
+    <isSpecial>true</isSpecial>
+    <chance>5</chance>
+  </DreamersDream.DreamQualityDef>
+
+  <DreamersDream.DreamQualityDef>
+    <defName>Mystical4</defName>
+    <label>mystical</label>
+    <isSpecial>true</isSpecial>
+    <chance>5</chance>
+  </DreamersDream.DreamQualityDef>
+
+  <DreamersDream.DreamQualityDef>
+    <defName>Mysasdasdasdasdtical1</defName>
+    <label>mystical</label>
+    <isSpecial>true</isSpecial>
+    <chance>5</chance>
+  </DreamersDream.DreamQualityDef>
+
+  <DreamersDream.DreamQualityDef>
+    <defName>Mystasdasdasdical2</defName>
+    <label>mystical</label>
+    <isSpecial>true</isSpecial>
+    <chance>5</chance>
+  </DreamersDream.DreamQualityDef>
+
+  <DreamersDream.DreamQualityDef>
+    <defName>Mysticasdasdasdal3</defName>
+    <label>mystical</label>
+    <isSpecial>true</isSpecial>
+    <chance>5</chance>
+  </DreamersDream.DreamQualityDef>
+
+  <DreamersDream.DreamQualityDef>
+    <defName>Mysticalsadasdasd4</defName>
     <label>mystical</label>
     <isSpecial>true</isSpecial>
     <chance>5</chance>

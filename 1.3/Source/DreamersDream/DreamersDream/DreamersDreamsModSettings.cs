@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
 using Verse;
 
@@ -6,14 +7,24 @@ namespace DreamersDream
 {
     public class DD_Settings : ModSettings
     {
+        public DD_Settings()
+        {
+        }
+
         public static bool isDreamingActive = true;
 
-        public static int sleepwalkerTraitModif = 1;
+        public static bool isDefaultSettings = true;
+
+        public static float sleepwalkerTraitModif = 1;
 
         public static bool isDebugMode = false;
 
+        public static Dictionary<string, float> QualityChanceModifs;
+
         public override void ExposeData()
         {
+            Scribe_Collections.Look(ref QualityChanceModifs, "DreamQualityDefs", LookMode.Value, LookMode.Value);
+
             Scribe_Values.Look(ref isDreamingActive, "isDreamingActive", true);
 
             Scribe_Values.Look(ref sleepwalkerTraitModif, "sleepwalkerTraitModif", 1);
@@ -28,8 +39,6 @@ namespace DreamersDream
     {
         private DD_Settings settings;
 
-        private static Vector2 ScrollPos = Vector2.zero;
-
         public DD_Mod(ModContentPack content) : base(content)
         {
             this.settings = GetSettings<DD_Settings>();
@@ -37,60 +46,248 @@ namespace DreamersDream
 
         public override void DoSettingsWindowContents(Rect inRect)
         {
-            Listing_Tree listingTree = new Listing_Tree();
-
-            Listing_Standard listingStandard = new Listing_Standard();
-            Rect rect = new Rect(0f, 0f, inRect.width / 2, 850f);
-            rect.xMax *= 0.9f;
-            Vector2 vector = new Vector2(rect.x, rect.y + 25f);
-            listingStandard.Begin(inRect);
-            float yOffset = 0;
-
-            Rect columnQuality = new Rect(rect.x + 20f, vector.y, 100f, 25f);
-
-            Widgets.Label(columnQuality, "Category ");
-            Widgets.DrawBox(columnQuality);
-
-            Rect columnChance = new Rect(rect.x + 120f, vector.y, 100f, 25f);
-
-            Widgets.Label(columnChance, "Chance ");
-            Widgets.DrawBox(columnChance);
-
-            columnQuality.y += 25f;
-            columnChance.y += 25f;
-            foreach (DreamQualityDef dreamQuality in GenDefDatabase.GetAllDefsInDatabaseForDef(typeof(DreamQualityDef)))
+            if (DD_Settings.QualityChanceModifs.NullOrEmpty())
             {
-                Widgets.Label(columnQuality, dreamQuality.defName);
-                Widgets.DrawBox(columnQuality);
-                columnQuality.y += 25f;
-
-                Widgets.Label(columnChance, Math.Round(PawnDreamQualityOddsTracker.ChanceInPercentages(dreamQuality.chance, PawnDreamQualityOddsTracker.AddUpChancesForQualities()), 2) + "%");
-                Widgets.DrawBox(columnChance);
-                Widgets.ButtonInvisible(columnChance);
-                columnChance.y += 25f;
-
-                //yOffset += 25f;
+                DD_Settings.QualityChanceModifs = new Dictionary<string, float>();
             }
 
-            //Widgets.Label(qualityRect, "Category " + dreamQuality.defName + " chance: " + Math.Round(PawnDreamRandomCalc.ChanceInPercentages(dreamQuality.chance, PawnDreamRandomCalc.AddUpChancesForQualities()), 2) + "%");
+            Rect masterRect = new Rect(inRect.x + (0.1f * inRect.width), inRect.y + 40, 0.8f * inRect.width, 936);
 
-            //Widgets.Checkbox(new Vector2(inRect.x, listingTree.CurHeight + 25f), ref DD_Settings.isDebugMode);
+            Widgets.DrawTextureFitted(new Rect(inRect.x, inRect.y, inRect.width, inRect.height), Textures.SettingsBackGround, 1);
+
+            Listing_Standard listingStandard = new Listing_Standard();
+
+            Rect TopSettings = new Rect(masterRect.x, masterRect.y, masterRect.width, 45);
+
+            listingStandard.Begin(TopSettings);
+
+            listingStandard.ColumnWidth = TopSettings.width / 3.2f;
+
+            if (listingStandard.ButtonText("Mod active: " + DD_Settings.isDreamingActive.ToString()))
+            {
+                DD_Settings.isDreamingActive = !DD_Settings.isDreamingActive;
+            }
+
+            Rect MidSettings = new Rect(TopSettings.x, TopSettings.y + listingStandard.CurHeight, masterRect.width, 60);//936 - listingStandard.CurHeight);
+            listingStandard.NewColumn();
+
+            if (DD_Settings.isDreamingActive)
+            {
+                if (listingStandard.ButtonText("Default settings " + DD_Settings.isDefaultSettings.ToString()))
+                {
+                    DD_Settings.isDefaultSettings = !DD_Settings.isDefaultSettings;
+                }
+            }
+
+            listingStandard.NewColumn();
+
+            if (listingStandard.ButtonText("Reset settings", "Set now"))
+            {
+            }
+
             listingStandard.End();
 
-            /*listingStandard. Label("Chance modifier for no dreams: " + DD_Settings.chanceForNoDream.ToString() + "%");
-            DD_Settings.chanceForNoDream = (int)listingStandard.Slider(DD_Settings.chanceForNoDream, -100, 100);
+            Listing_Standard listingMid = new Listing_Standard();
+            Listing_Standard listingTop = new Listing_Standard();
+            if (DD_Settings.isDreamingActive && !DD_Settings.isDefaultSettings)
+            {
+                listingMid.Begin(MidSettings);
 
-            listingStandard.Label("Chance modifier for good dreams: " + DD_Settings.chanceForPositiveDreams.ToString() + "%");
-            DD_Settings.chanceForPositiveDreams = (int)listingStandard.Slider(DD_Settings.chanceForPositiveDreams, -100, 100);
+                listingMid.GapLine();
 
-            listingStandard.Label("Chance modifier for bad dreams: " + DD_Settings.chanceForNegativeDreams.ToString() + "%");
-            DD_Settings.chanceForNegativeDreams = (int)listingStandard.Slider(DD_Settings.chanceForNegativeDreams, -100, 100);
+                listingMid.Label("How much sleepwalker traits affect chance for sleepwalking: " + DD_Settings.sleepwalkerTraitModif + "%");
+                DD_Settings.sleepwalkerTraitModif = (float)Math.Round(listingMid.Slider(DD_Settings.sleepwalkerTraitModif, 0, 200), 2);
 
-            listingStandard.AddLabeledCheckbox("Debug mode: ", ref DD_Settings.isDebugMode);
+                // = Widgets.HorizontalSlider(new Rect(TopSettings.x, ref cur), 50f, DD_Settings.sleepwalkerTraitModif, 0, 5, false, null, "0%", "500%", 0.01f);
+                //Widgets.Label(TopSettings.x, ref ScrollPos.y, 150f, "Sleepwalker trait modifier " + DD_Settings.sleepwalkerTraitModif * 100 + "%");
+                Rect TableSettings = new Rect(masterRect.x, masterRect.y + listingMid.CurHeight * 2.1f, masterRect.width, inRect.height);
+                TableSettings.height = inRect.height - TableSettings.y;
 
-            listingStandard.CheckboxLabeled("Debug mode: ", ref DD_Settings.isDebugMode, "Turns on Debug Mode. It will automatically turn off when you reload the game.");
-            listingStandard.End();*/
-            //listingStandard.EndScrollView(ref rect);
+                listingMid.End();
+
+                listingTop.GapLine();
+
+                DrawQualityTable(TableSettings);
+            }
+        }
+
+        private static Vector2 scrollPosi = Vector2.zero;
+
+        private float scroll = 0;
+
+        private void DrawQualityTable(Rect inRect)
+        {
+            ResolveScroll(new Rect(inRect.x, inRect.y, 10f, inRect.height));
+
+            GUI.BeginClip(inRect, scrollPosi, scrollPosi, false);
+
+            Rect columnQuality = new Rect(inRect.x - 65f, inRect.y - scroll - 200f, 100f, 25f);
+
+            DrawTableFirstRow(ref columnQuality, "Category");
+
+            Rect columnChance = new Rect(columnQuality.x + 100, inRect.y - scroll - 200f, 146f, 25f);
+            DrawTableFirstRow(ref columnChance, "Chance");
+
+            DrawColumnCategory(ref columnQuality);
+
+            DrawColumnChance(ref columnChance);
+
+            GUI.EndClip();
+        }
+
+        private void ResolveScroll(Rect inRect)
+        {
+            float numberOfRows = DreamTracker.DreamQualityDefs.Count + 1;
+
+            float tableRowCapacity = inRect.height / 25f;
+
+            if (numberOfRows > tableRowCapacity)
+            {
+                scroll = GUI.VerticalScrollbar(inRect, scroll, inRect.height, 0, numberOfRows * 25f);
+            }
+        }
+
+        private void DrawColumnCategory(ref Rect column)
+        {
+            float count = 0;
+            foreach (var dreamQuality in DreamTracker.DreamQualityDefs)
+            {
+                count++;
+                switch (count % 2)
+                {
+                    case 0:
+                        Widgets.DrawTextureFitted(column, Textures.TableEntryBGCat1, 1);
+                        break;
+
+                    case 1:
+                        Widgets.DrawTextureFitted(column, Textures.TableEntryBGCat2, 1);
+                        break;
+
+                    default:
+                        break;
+                }
+                Widgets.Label(GetMiddleOfRectForString(column, dreamQuality.defName), dreamQuality.defName);
+
+                //Widgets.DrawBox(column);
+                column.y += 25f;
+            }
+        }
+
+        private void DrawColumnChance(ref Rect column)
+        {
+            float count = 0;
+
+            foreach (var dreamQuality in DreamTracker.DreamQualityDefs)
+            {
+                count++;
+                switch (count % 2)
+                {
+                    case 0:
+                        Widgets.DrawTextureFitted(column, Textures.TableEntryBGChance1, 1);
+                        break;
+
+                    case 1:
+                        Widgets.DrawTextureFitted(column, Textures.TableEntryBGChance2, 1);
+                        break;
+
+                    default:
+                        break;
+                }
+
+                float chance = dreamQuality.chance;
+                CheckIfMasterListContainsAddIfNot(dreamQuality, ref chance);
+
+                DrawChanceButtons(column, ref chance);
+
+                string label = Math.Round(PawnDreamQualityOddsTracker.ChanceInPercentages(DD_Settings.QualityChanceModifs[dreamQuality.defName], AddUpChancesForQualities()), 2) + "%";
+
+                Widgets.Label(GetMiddleOfRectForString(column, label), label);
+
+                column.y += 25f;
+
+                DD_Settings.QualityChanceModifs[dreamQuality.defName] = chance;
+            }
+        }
+
+        private Rect GetMiddleOfRectForString(Rect rect, string text)
+        {
+            return new Rect(rect.x + (rect.width / 2) - CenteredStringPos(text), rect.y, rect.width, rect.height);
+        }
+
+        private float CenteredStringPos(string text)
+        {
+            return (Text.CalcSize(text).x / 2);
+        }
+
+        private void CheckIfMasterListContainsAddIfNot(DreamQualityDef thingToCheck, ref float chance)
+        {
+            if (DD_Settings.QualityChanceModifs.ContainsKey(thingToCheck.defName))
+            {
+                chance = DD_Settings.QualityChanceModifs[thingToCheck.defName];
+            }
+            else
+            {
+                DD_Settings.QualityChanceModifs.Add(thingToCheck.defName, chance);
+                chance = DD_Settings.QualityChanceModifs[thingToCheck.defName];
+            }
+        }
+
+        private void DrawChanceButtons(Rect column, ref float chance)
+        {
+            column.width = 24f;
+
+            if (Widgets.ButtonText(column, "--", true, true, new Color(30, 30, 26), true))   //Widgets.ButtonImage(columnChance, Textures.IncrementButton, true)) //(columnChance, button.MatSingle.GetMaskTexture(), true);
+            {
+                if (chance > 0)
+                {
+                    chance -= 5;
+                }
+                if (chance < 0)
+                {
+                    chance = 0;
+                }
+            }
+            column.x += 24f;
+            if (Widgets.ButtonText(column, "-", true, true, new Color(30, 30, 26), true)) //(columnChance, button.MatSingle.GetMaskTexture(), true);
+            {
+                if (chance > 0)
+                {
+                    chance--;
+                }
+                if (chance < 0)
+                {
+                    chance = 0;
+                }
+            }
+            column.x += 74f;
+            if (Widgets.ButtonText(column, "+", true, true, new Color(30, 30, 26), true)) //(columnChance, button.MatSingle.GetMaskTexture(), true);
+            {
+                chance++;
+            }
+            column.x += 24f;
+            if (Widgets.ButtonText(column, "++", true, true, new Color(30, 30, 26), true)) //(columnChance, button.MatSingle.GetMaskTexture(), true);
+            {
+                chance += 5;
+            }
+        }
+
+        private void DrawTableFirstRow(ref Rect column, string label)
+        {
+            Widgets.DrawTextureFitted(column, Textures.TableEntryBGCat1, 1);
+
+            Widgets.Label(GetMiddleOfRectForString(column, label), label);
+
+            column.y += 25;
+        }
+
+        private float AddUpChancesForQualities()
+        {
+            float sumOfCollectionChances = 0;
+            foreach (var item in DD_Settings.QualityChanceModifs) //DreamTracker.GetDreamQualities)
+            {
+                sumOfCollectionChances += item.Value;
+            }
+            return sumOfCollectionChances;
         }
 
         public override string SettingsCategory()

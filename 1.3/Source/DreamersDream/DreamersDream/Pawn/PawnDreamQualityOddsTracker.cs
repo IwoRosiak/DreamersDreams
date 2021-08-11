@@ -23,7 +23,7 @@ namespace DreamersDream
         private Dictionary<DreamQualityDef, float> UpdateOddsForDreamQualities()
         {
             Dictionary<DreamQualityDef, float> DreamQualityOdds = new Dictionary<DreamQualityDef, float>();
-            foreach (var dreamQuality in DreamTracker.GetDreamQualities)
+            foreach (var dreamQuality in DreamTracker.DreamQualityDefs)
             {
                 float chanceForQuality = dreamQuality.CalculateChanceFor(pawn);
 
@@ -44,12 +44,12 @@ namespace DreamersDream
             }
         }
 
-        public static float AddUpChancesForQualities()
+        public float AddUpChancesForQualities()
         {
             float sumOfCollectionChances = 0;
-            foreach (var item in DreamTracker.GetDreamQualities)
+            foreach (var item in UpdateOddsForDreamQualities()) //DreamTracker.GetDreamQualities)
             {
-                sumOfCollectionChances += item.chance;
+                sumOfCollectionChances += item.Value;
             }
             return sumOfCollectionChances;
         }
