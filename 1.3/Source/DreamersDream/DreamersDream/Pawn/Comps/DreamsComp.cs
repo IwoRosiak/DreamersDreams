@@ -115,6 +115,7 @@ namespace DreamersDream
 
                     case SleepwalkingType.rage:
                         pawn.mindState.mentalStateHandler.TryStartMentalState(DD_MentalStateDefOf.SleepwalkBerserk, null, true, false, null, false);
+                        Messages.Message(pawn.Name.ToStringShort + " stood up from " + pawn.gender.GetPossessive() + " bed and started to attack others in murderous rage!", pawn, MessageTypeDefOf.NeutralEvent);
                         break;
 
                     case SleepwalkingType.tantrum:

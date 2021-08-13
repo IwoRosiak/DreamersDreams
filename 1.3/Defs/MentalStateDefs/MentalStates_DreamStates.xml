@@ -8,10 +8,8 @@
           <blockNormalThoughts>true</blockNormalThoughts>
           <blockRandomInteraction>true</blockRandomInteraction>
           <nameColor>(0.65, 0.9, 0.93)</nameColor>
-          <beginLetterLabel>Sleepwalking</beginLetterLabel>
-          <beginLetterDef>NegativeEvent</beginLetterDef>
           <recoveryMessage>{0} no longer sleepwalks.</recoveryMessage>
-          <baseInspectLine>Mental state: Sleepwalking</baseInspectLine>
+          <baseInspectLine>Sleepwalking...</baseInspectLine>
           <recoverFromSleep>false</recoverFromSleep>
           <recoverFromDowned>false</recoverFromDowned>
           <recoverFromCollapsingExhausted>false</recoverFromCollapsingExhausted>
@@ -29,7 +27,6 @@
           <defName>Sleepwalk</defName>
           <label>sleepwalking</label>
           <stateClass>MentalState_WanderConfused</stateClass>
-          <beginLetter>{0} stood up from bed and started to wander around while asleep.</beginLetter>
         </MentalStateDef>
 
         <MentalBreakDef>
@@ -44,7 +41,6 @@
           <label>sleepwalking berserk</label>
           <category>Aggro</category>
           <stateClass>MentalState_Berserk</stateClass>
-          <beginLetter>{0} stood up from bed and started to attack everyone!</beginLetter>
         </MentalStateDef>
 
         <MentalBreakDef>
@@ -58,7 +54,6 @@
           <defName>SleepwalkSafe</defName>
           <label>sleepwalking</label>
           <stateClass>MentalState_WanderConfused</stateClass>
-          <beginLetter>{0} stood up from bed and started to wander around the colony.</beginLetter>
         </MentalStateDef>
 
 
@@ -75,7 +70,6 @@
           <category>Aggro</category>
           <stateClass>MentalState_TantrumAll</stateClass>
           <workerClass>MentalStateWorker_TantrumAll</workerClass>
-          <beginLetter>{0} stood up from bed and started to destroy its surroundings!</beginLetter>
         </MentalStateDef>
 
 
@@ -90,7 +84,6 @@
           <defName>SleepwalkOwnRoom</defName>
           <label>sleepwalking in own room</label>
           <stateClass>MentalState_WanderConfused</stateClass>
-          <beginLetter>{0} stood up from bed and started to wander around the room.</beginLetter>
         </MentalStateDef>
 
         <MentalBreakDef>
@@ -104,7 +97,6 @@
           <defName>SleepwalkBingingFood</defName>
           <label>Sleepwalk Binging Food</label>
           <stateClass>MentalState_Binging</stateClass>
-          <beginLetter>{0} stood up from bed and started to eat...</beginLetter>
         </MentalStateDef>
 
 
