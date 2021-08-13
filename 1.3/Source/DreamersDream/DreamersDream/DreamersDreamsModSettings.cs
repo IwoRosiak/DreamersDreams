@@ -75,7 +75,7 @@ namespace DreamersDream
 
             if (DD_Settings.isDreamingActive)
             {
-                if (listingStandard.ButtonText("Default settings " + DD_Settings.isDefaultSettings.ToString()))
+                if (listingStandard.ButtonText("Default settings: " + DD_Settings.isDefaultSettings.ToString()))
                 {
                     DD_Settings.isDefaultSettings = !DD_Settings.isDefaultSettings;
                 }
@@ -100,7 +100,7 @@ namespace DreamersDream
 
                 if (DD_Settings.sleepwalkerTraitModif == 0)
                 {
-                    listingMid.Label("How much sleepwalker traits affect chance for sleepwalking: " + "OFF");
+                    listingMid.Label("How much sleepwalker traits affect chance for sleepwalking: " + "off");
                 }
                 else
                 {
@@ -138,8 +138,6 @@ namespace DreamersDream
 
         private void DrawQualityTable(Rect inRect)
         {
-            Widgets.DrawBoxSolidWithOutline(inRect, new Color(), new Color(7f, 94f, 29f));
-
             ResolveScroll(new Rect(inRect.x, inRect.y, 10f, inRect.height));
 
             GUI.BeginClip(inRect, scrollPosi, scrollPosi, false);
@@ -190,6 +188,7 @@ namespace DreamersDream
                     default:
                         break;
                 }
+
                 Widgets.Label(GetMiddleOfRectForString(column, dreamQuality.defName), dreamQuality.defName);
 
                 column.y += 25f;
@@ -222,7 +221,7 @@ namespace DreamersDream
 
                 DrawChanceButtons(column, ref chance);
 
-                string label = Math.Round(PawnDreamQualityOddsTracker.ChanceInPercentages(DD_Settings.QualityChanceModifs[dreamQuality.defName], AddUpChancesForQualities()), 2) + "%";
+                string label = Math.Round(PawnDreamQualityOddsTracker.ChanceInPercentages(chance, AddUpChancesForQualities()), 2) + "%";
 
                 Widgets.Label(GetMiddleOfRectForString(column, label), label);
 
