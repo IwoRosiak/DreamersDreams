@@ -98,7 +98,15 @@ namespace DreamersDream
 
                 listingMid.GapLine();
 
-                listingMid.Label("How much sleepwalker traits affect chance for sleepwalking: " + DD_Settings.sleepwalkerTraitModif * 100 + "%");
+                if (DD_Settings.sleepwalkerTraitModif == 0)
+                {
+                    listingMid.Label("How much sleepwalker traits affect chance for sleepwalking: " + "OFF");
+                }
+                else
+                {
+                    listingMid.Label("How much sleepwalker traits affect chance for sleepwalking: " + DD_Settings.sleepwalkerTraitModif * 100 + "%");
+                }
+
                 DD_Settings.sleepwalkerTraitModif = (float)Math.Round(listingMid.Slider(DD_Settings.sleepwalkerTraitModif, 0, 2), 2);
 
                 // = Widgets.HorizontalSlider(new Rect(TopSettings.x, ref cur), 50f, DD_Settings.sleepwalkerTraitModif, 0, 5, false, null, "0%", "500%", 0.01f);

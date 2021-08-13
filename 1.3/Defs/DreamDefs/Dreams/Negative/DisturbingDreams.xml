@@ -5,8 +5,6 @@
     <chance>25</chance>
   </DreamersDream.DreamDef>
 
-
-
   <DreamersDream.DreamDef ParentName = "DisturbingDream">
     <defName>NakedSchoolDream</defName>
     <stages>
@@ -27,22 +25,6 @@
       <baseMoodEffect>-2</baseMoodEffect>
     </li>
   </stages>
-</DreamersDream.DreamDef>
-
-<DreamersDream.DreamDef ParentName = "DisturbingDream">
-  <defName>VeryBadDream</defName>
-  <stages>
-    <li>
-      <label>Had a very bad dream</label>
-      <description>I had a dreamt about losing things I love...</description>
-      <baseMoodEffect>-4</baseMoodEffect>
-    </li>
-  </stages>
-  <sensitivities>
-    <li>ill</li>
-    <li>hungry</li>
-    <li>malnourished</li>
-  </sensitivities>
 </DreamersDream.DreamDef>
 
 <DreamersDream.DreamDef ParentName = "DisturbingDream">

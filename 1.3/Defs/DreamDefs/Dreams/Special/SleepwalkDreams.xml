@@ -1,30 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Defs>
-  <!-- SLEEPWALKING TRIGGERS -->
-  <DreamersDream.DreamDef ParentName = "BaseDream">
-    <defName>DebugDream</defName>
+
+  <DreamersDream.DreamDef ParentName = "DisturbingDream">
+    <defName>SleepwalkShapesDream</defName>
     <stages>
       <li>
-        <label>Debug dream</label>
-        <description>If you see this then it means I forgot to change the chance for that dream. If you report it to me I will fix it asap :D ~~Qarsoon Meel, Dreamer's Dreams</description>
-        <baseMoodEffect>1</baseMoodEffect>
+        <label>Dreamt about abstract shapes</label>
+        <description>I saw many abstract shapes that were floating around me like planets. I thought the shapes were my family and friends. At some point a foreign shape appeared consuming my close ones and thus growing bigger. At the end it got me too... </description>
+        <baseMoodEffect>-4</baseMoodEffect>
       </li>
     </stages>
-    <sensitivities>
-      <li>ill</li>
-      <li>healthy</li>
-      <li>injured</li>
-      <li>goodTemp</li>
-      <li>hot</li>
-      <li>cold</li>
-      <li>hungry</li>
-    </sensitivities>
-    <inspiration>Dream_Inspired_Trade</inspiration>
+    <isSleepwalk>true</isSleepwalk>
   </DreamersDream.DreamDef>
 
-
-
-  <DreamersDream.DreamDef ParentName = "BaseDream">
+  <DreamersDream.DreamDef ParentName = "UnpleasantDream">
     <defName>SleepwalkRedheadWithBeardDream</defName>
     <stages>
       <li>
@@ -33,14 +22,11 @@
         <baseMoodEffect>-7</baseMoodEffect>
       </li>
     </stages>
-    <sensitivities>
-      <li>ill</li>
-    </sensitivities>
-    <triggers>
-      <li>SleepwalkBerserk</li>
-    </triggers>
+    <isSleepwalk>true</isSleepwalk>
   </DreamersDream.DreamDef>
-  <DreamersDream.DreamDef ParentName = "BaseDream">
+
+
+  <DreamersDream.DreamDef ParentName = "HellLikeDream">
     <defName>SleepwalkFurnitureDream</defName>
     <stages>
       <li>
@@ -49,14 +35,11 @@
         <baseMoodEffect>-4</baseMoodEffect>
       </li>
     </stages>
-    <sensitivities>
-      <li>ill</li>
-    </sensitivities>
-    <triggers>
-      <li>SleepwalkTantrum</li>
-    </triggers>
+    <isSleepwalk>true</isSleepwalk>
   </DreamersDream.DreamDef>
-  <DreamersDream.DreamDef ParentName = "BaseDream">
+
+
+  <DreamersDream.DreamDef ParentName = "TerrorisingDream">
     <defName>SleepwalkDarknessDream</defName>
     <stages>
       <li>
@@ -65,14 +48,11 @@
         <baseMoodEffect>-4</baseMoodEffect>
       </li>
     </stages>
-    <sensitivities>
-      <li>ill</li>
-    </sensitivities>
-    <triggers>
-      <li>SleepwalkSafe</li>
-    </triggers>
+    <isSleepwalk>true</isSleepwalk>
   </DreamersDream.DreamDef>
-  <DreamersDream.DreamDef ParentName = "BaseDream">
+
+
+  <DreamersDream.DreamDef ParentName = "TerrorisingDream">
     <defName>SleepwalkHungerDream</defName>
     <stages>
       <li>
@@ -81,15 +61,11 @@
         <baseMoodEffect>-4</baseMoodEffect>
       </li>
     </stages>
-    <triggers>
-      <li>SleepwalkBingingFood</li>
-    </triggers>
-    <sensitivities>
-      <li>hungry</li>
-      <li>malnourished</li>
-    </sensitivities>
+    <isSleepwalk>true</isSleepwalk>
   </DreamersDream.DreamDef>
-  <DreamersDream.DreamDef ParentName = "BaseDream">
+
+
+  <DreamersDream.DreamDef ParentName = "FrighteningDream">
     <defName>SleepwalkStepsDream</defName>
     <stages>
       <li>
@@ -98,8 +74,6 @@
         <baseMoodEffect>-2</baseMoodEffect>
       </li>
     </stages>
-    <triggers>
-      <li>Sleepwalk</li>
-    </triggers>
+    <isSleepwalk>true</isSleepwalk>
   </DreamersDream.DreamDef>
 </Defs>

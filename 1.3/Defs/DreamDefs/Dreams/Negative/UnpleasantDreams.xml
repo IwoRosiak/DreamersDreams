@@ -6,21 +6,6 @@
   </DreamersDream.DreamDef>
 
   <DreamersDream.DreamDef ParentName = "UnpleasantDream">
-    <defName>BadDream</defName>
-    <stages>
-      <li>
-        <label>Had a bad dream</label>
-        <description>I've dreamt about sad things...</description>
-        <baseMoodEffect>-2</baseMoodEffect>
-      </li>
-    </stages>
-    <sensitivities>
-      <li>ill</li>
-      <li>hungry</li>
-    </sensitivities>
-  </DreamersDream.DreamDef>
-
-  <DreamersDream.DreamDef ParentName = "UnpleasantDream">
     <defName>ExDream</defName>
     <stages>
       <li>

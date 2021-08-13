@@ -14,10 +14,6 @@
         <baseMoodEffect>8</baseMoodEffect>
       </li>
     </stages>
-    <sensitivities>
-      <li>healthy</li>
-      <li>goodTemp</li>
-    </sensitivities>
   </DreamersDream.DreamDef>
 
   <DreamersDream.DreamDef ParentName = "AmazingDream" >
@@ -29,10 +25,6 @@
         <baseMoodEffect>8</baseMoodEffect>
       </li>
     </stages>
-    <sensitivities>
-      <li>healthy</li>
-      <li>goodTemp</li>
-    </sensitivities>
   </DreamersDream.DreamDef>
 
   <DreamersDream.DreamDef ParentName = "AmazingDream" >
@@ -44,7 +36,6 @@
       <baseMoodEffect>8</baseMoodEffect>
     </li>
   </stages>
-  <inspiration>Dream_Inspired_Creativity</inspiration>
 </DreamersDream.DreamDef>
 
 <DreamersDream.DreamDef ParentName = "AmazingDream" >
@@ -56,7 +47,6 @@
       <baseMoodEffect>8</baseMoodEffect>
     </li>
   </stages>
-  <inspiration>Dream_Inspired_Trade</inspiration>
 </DreamersDream.DreamDef>
 
 <DreamersDream.DreamDef ParentName = "AmazingDream" >
@@ -68,7 +58,6 @@
       <baseMoodEffect>8</baseMoodEffect>
     </li>
   </stages>
-  <inspiration>Dream_Frenzy_Work</inspiration>
 </DreamersDream.DreamDef>
 
 </Defs>

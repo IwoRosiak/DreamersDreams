@@ -5,36 +5,6 @@
     <chance>25</chance>
   </DreamersDream.DreamDef>
 
-  <DreamersDream.DreamDef ParentName = "PleasantDream">
-    <defName>SleepwalkShapesDream</defName>
-    <stages>
-      <li>
-        <label>Dreamt about abstract shapes</label>
-        <description>I saw many abstract shapes that were floating around me like planets. I thought the shapes were my family and friends. At some point a foreign shape appeared consuming my close ones and thus growing bigger. At the end it got me too... </description>
-        <baseMoodEffect>-6</baseMoodEffect>
-      </li>
-    </stages>
-    <isSleepwalk>true</isSleepwalk>
-  </DreamersDream.DreamDef>
-
-  <DreamersDream.DreamDef ParentName = "PleasantDream" >
-  <defName>GoodDream</defName>
-  <showBubble>true</showBubble>
-  <durationDays>0.8</durationDays>
-  <stackLimit>1</stackLimit>
-  <stages>
-    <li>
-      <label>Had a pleasant dream</label>
-      <description>I dreamt about calm places and kind people.</description>
-      <baseMoodEffect>3</baseMoodEffect>
-    </li>
-  </stages>
-  <sensitivities>
-    <li>healthy</li>
-    <li>goodTemp</li>
-  </sensitivities>
-</DreamersDream.DreamDef>
-
 <DreamersDream.DreamDef ParentName = "PleasantDream" >
   <defName>ChildhoodGoodDream</defName>
   <stages>
@@ -44,10 +14,6 @@
       <baseMoodEffect>5</baseMoodEffect>
     </li>
   </stages>
-  <sensitivities>
-    <li>ill</li>
-    <li>goodTemp</li>
-  </sensitivities>
 </DreamersDream.DreamDef>
 
 <DreamersDream.DreamDef ParentName = "PleasantDream" >
@@ -59,10 +25,6 @@
       <baseMoodEffect>4</baseMoodEffect>
     </li>
   </stages>
-  <sensitivities>
-    <li>hot</li>
-    <li>goodTemp</li>
-  </sensitivities>
 </DreamersDream.DreamDef>
 
 <DreamersDream.DreamDef ParentName = "PleasantDream">
@@ -140,10 +102,6 @@
       <baseMoodEffect>3</baseMoodEffect>
     </li>
   </stages>
-  <sensitivities>
-    <li>malnourished</li>
-    <li>hungry</li>
-  </sensitivities>
 </DreamersDream.DreamDef>
 
 </Defs>

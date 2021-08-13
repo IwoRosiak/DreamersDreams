@@ -5,6 +5,8 @@
     <chance>5</chance>
   </DreamersDream.DreamDef>
 
+
+
   <DreamersDream.DreamDef ParentName = "FrighteningDream">
     <defName>KillSomeoneCloseDream</defName>
     <nullifyingTraits>
