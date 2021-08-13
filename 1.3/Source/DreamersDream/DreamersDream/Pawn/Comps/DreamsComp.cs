@@ -1,16 +1,17 @@
-﻿using RimWorld.Planet;
+﻿using RimWorld;
+using RimWorld.Planet;
 using Verse;
 
 namespace DreamersDream
 {
     public class DreamsComp : ThingComp
     {
-        private PawnDreamQualityOddsTracker QualityOddsTracker;
-
-        private PawnDreamOddsTracker OddsTracker;
-
-        public DreamsComp()
+        public DreamsCompProperties Props
         {
+            get
+            {
+                return (DreamsCompProperties)this.props;
+            }
         }
 
         public Pawn pawn
@@ -21,17 +22,17 @@ namespace DreamersDream
             }
         }
 
-        public DreamsCompProperties Props
+        public float getPawnAggressiveness
         {
             get
             {
-                return (DreamsCompProperties)this.props;
+                return CalculateAggressiveness();
             }
         }
 
         public override void CompTickRare()
         {
-            base.CompTick();
+            base.CompTickRare();
             if (QualityOddsTracker == null || OddsTracker == null)
             {
                 QualityOddsTracker = new PawnDreamQualityOddsTracker(pawn);
@@ -99,8 +100,29 @@ namespace DreamersDream
 
             if (dream.isSleepwalk)
             {
-                //TODO CHOOSE SLEEPWALK RANDOM AND DISPLAY SMALL MESSAGE
-                pawn.mindState.mentalStateHandler.TryStartMentalState(DD_MentalStateDefOf.Sleepwalk, null, true, false, null, false);
+                switch (this.ChooseSleepwalkingType())
+                {
+                    case SleepwalkingType.calm:
+                        pawn.mindState.mentalStateHandler.TryStartMentalState(DD_MentalStateDefOf.Sleepwalk, null, true, false, null, false);
+                        Messages.Message(pawn.Name.ToStringShort + " stood up from " + pawn.gender.GetPossessive() + " bed and started to wander around...", pawn, MessageTypeDefOf.NeutralEvent);
+                        break;
+
+                    case SleepwalkingType.food:
+                        break;
+
+                    case SleepwalkingType.drugs:
+                        break;
+
+                    case SleepwalkingType.rage:
+                        pawn.mindState.mentalStateHandler.TryStartMentalState(DD_MentalStateDefOf.SleepwalkBerserk, null, true, false, null, false);
+                        break;
+
+                    case SleepwalkingType.tantrum:
+                        break;
+
+                    default:
+                        break;
+                }
             }
             /*
             if (dream.inspiration != null)
@@ -121,9 +143,47 @@ namespace DreamersDream
             return false;
         }
 
+        private float CalculateAggressiveness()
+        {
+            float aggressiveness = 0;
+
+            foreach (var trait in pawn.story.traits.allTraits)
+            {
+                switch (trait.def.defName)
+                {
+                    case "Bloodlust":
+                        aggressiveness++;
+                        break;
+
+                    case "Psychopath":
+                        aggressiveness++;
+                        break;
+
+                    case "Cannibal":
+                        aggressiveness += 0.5f;
+                        break;
+
+                    default:
+                        break;
+                }
+            }
+
+            return aggressiveness;
+        }
+
         private bool IsPawnCapableOfDreaming()
         {
             return pawn.needs?.rest != null && !pawn.Dead && (pawn.Spawned || pawn.IsCaravanMember());
         }
+
+        private PawnDreamQualityOddsTracker QualityOddsTracker;
+
+        private PawnDreamOddsTracker OddsTracker;
+
+        private float aggressiveness = 0;
+
+        private float foodAttraction = 0;
+
+        private float drugAttraction = 0;
     }
 }

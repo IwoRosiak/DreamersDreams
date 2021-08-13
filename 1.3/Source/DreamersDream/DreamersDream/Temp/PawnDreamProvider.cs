@@ -1,4 +1,4 @@
-﻿using Verse;
+﻿/*using Verse;
 
 namespace DreamersDream
 {
@@ -52,7 +52,6 @@ namespace DreamersDream
     }
 }
 
-/*
 private void DrawQualityTable(Rect inRect)
         {
             Rect columnQuality = new Rect(inRect.x + 45, inRect.y, 100f, 25f);
