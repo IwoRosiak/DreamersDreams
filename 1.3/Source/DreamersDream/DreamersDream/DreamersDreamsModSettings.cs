@@ -17,6 +17,8 @@ namespace DreamersDream
 
         public static float sleepwalkerTraitModif = 1;
 
+        public static bool canNonSleepwalkerSleepwalk = false;
+
         public static bool isDebugMode = false;
 
         public static Dictionary<string, float> QualityChanceModifs;

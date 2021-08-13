@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Defs>
 
-  <DreamersDream.DreamDef ParentName = "DisturbingDream">
+  <DreamersDream.DreamDef ParentName = "TerrorisingDream">
     <defName>SleepwalkShapesDream</defName>
     <stages>
       <li>
@@ -13,7 +13,7 @@
     <isSleepwalk>true</isSleepwalk>
   </DreamersDream.DreamDef>
 
-  <DreamersDream.DreamDef ParentName = "UnpleasantDream">
+  <DreamersDream.DreamDef ParentName = "TerrorisingDream">
     <defName>SleepwalkRedheadWithBeardDream</defName>
     <stages>
       <li>
@@ -61,11 +61,12 @@
         <baseMoodEffect>-4</baseMoodEffect>
       </li>
     </stages>
+    <chance>10000</chance>
     <isSleepwalk>true</isSleepwalk>
   </DreamersDream.DreamDef>
 
 
-  <DreamersDream.DreamDef ParentName = "FrighteningDream">
+  <DreamersDream.DreamDef ParentName = "TerrorisingDream">
     <defName>SleepwalkStepsDream</defName>
     <stages>
       <li>

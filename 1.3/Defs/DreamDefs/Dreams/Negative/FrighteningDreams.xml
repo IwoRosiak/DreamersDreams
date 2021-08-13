@@ -5,6 +5,17 @@
   </DreamersDream.DreamDef>
 
   <DreamersDream.DreamDef ParentName = "FrighteningDream">
+    <defName>HungerDream</defName>
+    <stages>
+      <li>
+        <label>Dreamt about starvation</label>
+        <description>I was starving... I was begging people to help me... But they wouldn't!</description>
+        <baseMoodEffect>-5</baseMoodEffect>
+      </li>
+    </stages>
+  </DreamersDream.DreamDef>
+
+  <DreamersDream.DreamDef ParentName = "FrighteningDream">
     <defName>LostHeadDream</defName>
     <stages>
       <li>

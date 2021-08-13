@@ -14,6 +14,14 @@ namespace DreamersDream
                 {
                     dreamChance *= GetSleepwalkerMultiplier(pawn);
                 }
+                else if (DD_Settings.canNonSleepwalkerSleepwalk)
+                {
+                    dreamChance = 0.01f;
+                }
+                else
+                {
+                    dreamChance = 0;
+                }
             }
 
             return dreamChance;
