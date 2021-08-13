@@ -2,7 +2,17 @@
 <Defs>
   <DreamersDream.DreamDef Name="LegendaryDream" Abstract="True" ParentName = "BaseDream">
     <quality>Legendary</quality>
-    <chance>1</chance>
+  </DreamersDream.DreamDef>
+
+  <DreamersDream.DreamDef ParentName = "LegendaryDream" >
+    <defName>SuccubusDream</defName>
+    <stages>
+      <li>
+        <label>Dreamt about godhood</label>
+        <description>Everything was to my command. Mountains and oceans, birds and fish, good people and bad people... Yet, I did not want to disturb that chaos. I watched and laughed.</description>
+        <baseMoodEffect>5</baseMoodEffect>
+      </li>
+    </stages>
   </DreamersDream.DreamDef>
 
 </Defs>

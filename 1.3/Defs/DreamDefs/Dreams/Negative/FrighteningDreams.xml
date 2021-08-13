@@ -2,10 +2,18 @@
 <Defs>
   <DreamersDream.DreamDef Name="FrighteningDream" Abstract="True" ParentName = "BaseDream">
     <quality>Frightening</quality>
-    <chance>5</chance>
   </DreamersDream.DreamDef>
 
-
+  <DreamersDream.DreamDef ParentName = "FrighteningDream">
+    <defName>LostHeadDream</defName>
+    <stages>
+      <li>
+        <label>Dreamt about distant danger</label>
+        <description>I had a dream in which I walked around the colony. After a few moments I realised that my head was rolling down the hill away from our home. I chased it until it stopped. After finally regaining my precious head, I looked around. Everything was burned to the ground and the only sounds were coming from strange machinery spitting out mechanoids...</description>
+        <baseMoodEffect>-5</baseMoodEffect>
+      </li>
+    </stages>
+  </DreamersDream.DreamDef>
 
   <DreamersDream.DreamDef ParentName = "FrighteningDream">
     <defName>KillSomeoneCloseDream</defName>
@@ -17,12 +25,12 @@
       <li>
         <label>Had a dream about killing someone close</label>
         <description>I killed a person close to me in my dream.</description>
-        <baseMoodEffect>-3</baseMoodEffect>
+        <baseMoodEffect>-5</baseMoodEffect>
       </li>
     </stages>
   </DreamersDream.DreamDef>
 
-  <DreamersDream.DreamDef ParentName = "DisturbingDream">
+  <DreamersDream.DreamDef ParentName = "FrighteningDream">
     <defName>KillSomeoneDream</defName>
     <nullifyingTraits>
       <li>Psychopath</li>
@@ -32,7 +40,7 @@
       <li>
         <label>Had a dream about killing</label>
         <description>I was killing... But I didn't want to...</description>
-        <baseMoodEffect>-2</baseMoodEffect>
+        <baseMoodEffect>-5</baseMoodEffect>
       </li>
     </stages>
   </DreamersDream.DreamDef>
@@ -48,13 +56,9 @@
     <li>
       <label>Had a dream about eating someone</label>
       <description>I was forced to eat someone in my dream. It was an awful experience...</description>
-      <baseMoodEffect>-3</baseMoodEffect>
+      <baseMoodEffect>-5</baseMoodEffect>
     </li>
   </stages>
-  <sensitivities>
-    <li>hungry</li>
-    <li>malnourished</li>
-  </sensitivities>
 </DreamersDream.DreamDef>
 
 <DreamersDream.DreamDef ParentName = "FrighteningDream">
@@ -63,26 +67,20 @@
     <li>
       <label>Had a stressful dream</label>
       <description>I had a dream about a stressful event from my past...</description>
-      <baseMoodEffect>-2</baseMoodEffect>
+      <baseMoodEffect>-5</baseMoodEffect>
     </li>
   </stages>
-  <sensitivities>
-    <li>ill</li>
-  </sensitivities>
 </DreamersDream.DreamDef>
 
 <DreamersDream.DreamDef ParentName = "FrighteningDream">
   <defName>NightmareDream</defName>
   <stages>
     <li>
-      <label>Had a nightmare</label>
+      <label>Had a dream about being chased</label>
       <description>Something was chasing me but I couldn't run!</description>
       <baseMoodEffect>-5</baseMoodEffect>
     </li>
   </stages>
-  <sensitivities>
-    <li>ill</li>
-  </sensitivities>
 </DreamersDream.DreamDef>
 
 <DreamersDream.DreamDef ParentName = "FrighteningDream">

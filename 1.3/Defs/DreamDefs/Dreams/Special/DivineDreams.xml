@@ -2,7 +2,6 @@
 <Defs>
   <DreamersDream.DreamDef Name="DivineDream" Abstract="True" ParentName = "BaseDream">
     <quality>Divine</quality>
-    <chance>0</chance>
   </DreamersDream.DreamDef>
 
   <DreamersDream.DreamDef ParentName = "DivineDream" >

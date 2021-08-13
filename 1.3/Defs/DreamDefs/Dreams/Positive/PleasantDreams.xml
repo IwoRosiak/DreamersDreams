@@ -2,7 +2,6 @@
 <Defs>
   <DreamersDream.DreamDef Name="PleasantDream" Abstract="True" ParentName = "BaseDream">
     <quality>Pleasant</quality>
-    <chance>25</chance>
   </DreamersDream.DreamDef>
 
 <DreamersDream.DreamDef ParentName = "PleasantDream" >
@@ -11,7 +10,7 @@
     <li>
       <label>Dreamt about childhood</label>
       <description>I was back in my childhood house! I've regained connection with some of my the best memories.</description>
-      <baseMoodEffect>5</baseMoodEffect>
+      <baseMoodEffect>2</baseMoodEffect>
     </li>
   </stages>
 </DreamersDream.DreamDef>
@@ -22,7 +21,7 @@
     <li>
       <label>Dreamt about ocean beach</label>
       <description>Cold drinks and sand. Yep, I could stay there forever.</description>
-      <baseMoodEffect>4</baseMoodEffect>
+      <baseMoodEffect>2</baseMoodEffect>
     </li>
   </stages>
 </DreamersDream.DreamDef>
@@ -34,17 +33,6 @@
       <label>Can't recall a pleasant dream</label>
       <description>I had a pleasant dream but I forgot it the moment I woke up...</description>
       <baseMoodEffect>1</baseMoodEffect>
-    </li>
-  </stages>
-</DreamersDream.DreamDef>
-
-<DreamersDream.DreamDef ParentName = "PleasantDream">
-  <defName>NoRememberBadDream</defName>
-  <stages>
-    <li>
-      <label>Can't recall a bad dream</label>
-      <description>I dreamt about something upsetting but I don't really remember what it was...</description>
-      <baseMoodEffect>-1</baseMoodEffect>
     </li>
   </stages>
 </DreamersDream.DreamDef>
@@ -72,34 +60,12 @@
 </DreamersDream.DreamDef>
 
 <DreamersDream.DreamDef ParentName = "PleasantDream">
-  <defName>AllNakedColonyDream</defName>
-  <stages>
-    <li>
-      <label>Dreamt about partying naked</label>
-      <description>I was walking around colony, when I realised that I'm wearing no clothes! I looked around and noticed that everyone took off their clothes as they saw me! We started to drink and dance around our home naked.</description>
-      <baseMoodEffect>3</baseMoodEffect>
-    </li>
-  </stages>
-</DreamersDream.DreamDef>
-
-<DreamersDream.DreamDef ParentName = "PleasantDream">
-  <defName>AnimalForestDream</defName>
-  <stages>
-    <li>
-      <label>Dreamt about being a racoon</label>
-      <description>I was a small animal (I think it was a raccoon?) in a random windy forest. It was pretty nice even if all I did was wander around and occasionally see other creatures, and at some point I think I befriended a groundhog. I'm not too sure on how it ended but the last thing I vaguely remember was seeing buildings over a hill. ~~okoyum</description>
-      <baseMoodEffect>3</baseMoodEffect>
-    </li>
-  </stages>
-</DreamersDream.DreamDef>
-
-<DreamersDream.DreamDef ParentName = "PleasantDream">
   <defName>CheeseDream</defName>
   <stages>
     <li>
       <label>Dreamt about cheese</label>
       <description>Cheese.... Cheese everywhere! By Male_07</description>
-      <baseMoodEffect>3</baseMoodEffect>
+      <baseMoodEffect>2</baseMoodEffect>
     </li>
   </stages>
 </DreamersDream.DreamDef>

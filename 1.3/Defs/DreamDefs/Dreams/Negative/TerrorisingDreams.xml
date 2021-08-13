@@ -2,17 +2,15 @@
 <Defs>
   <DreamersDream.DreamDef Name="TerrorisingDream" Abstract="True" ParentName = "BaseDream">
     <quality>Terrorising</quality>
-    <chance>3</chance>
   </DreamersDream.DreamDef>
 
   <DreamersDream.DreamDef ParentName = "TerrorisingDream">
     <defName>SleepParalisesDream</defName>
-    <chance>3</chance>
     <stages>
       <li>
         <label>Dark figure attacked during sleep</label>
         <description>Some dark figure was sitting on my chest while I slept and I couldn't move!</description>
-        <baseMoodEffect>-10</baseMoodEffect>
+        <baseMoodEffect>-8</baseMoodEffect>
       </li>
     </stages>
   </DreamersDream.DreamDef>
@@ -28,7 +26,7 @@
       <li>
         <label>Dreamt about pile of corpses</label>
         <description>I way lying on a huge pile of human corpses, some rotten, some fresh. I couldn't move. It was some kind of cargo section inside of a ship in the sea. From the pile crawled a rotten corpse and he grabbed my feet and bit off some toes. He crawled closer and tried to bite... well... that place... I woke up with pain in that place... ~Backrevol</description>
-        <baseMoodEffect>-5</baseMoodEffect>
+        <baseMoodEffect>-7</baseMoodEffect>
       </li>
     </stages>
   </DreamersDream.DreamDef>

@@ -2,7 +2,28 @@
 <Defs>
   <DreamersDream.DreamDef Name="UnpleasantDream" Abstract="True" ParentName = "BaseDream">
     <quality>Unpleasant</quality>
-    <chance>45</chance>
+  </DreamersDream.DreamDef>
+
+  <DreamersDream.DreamDef ParentName = "UnpleasantDream">
+    <defName>NoRememberBadDream</defName>
+    <stages>
+      <li>
+        <label>Can't recall a bad dream</label>
+        <description>I dreamt about something upsetting but I don't really remember what it was...</description>
+        <baseMoodEffect>-1</baseMoodEffect>
+      </li>
+    </stages>
+  </DreamersDream.DreamDef>
+
+  <DreamersDream.DreamDef ParentName = "UnpleasantDream">
+    <defName>NakedSchoolDream</defName>
+    <stages>
+      <li>
+        <label>Dreamt about naked walking</label>
+        <description>I was walking around school, when I realised that I'm wearing no clothes! I felt so embarrased when all my friends were laughing at me! ~Toast</description>
+        <baseMoodEffect>-2</baseMoodEffect>
+      </li>
+    </stages>
   </DreamersDream.DreamDef>
 
   <DreamersDream.DreamDef ParentName = "UnpleasantDream">

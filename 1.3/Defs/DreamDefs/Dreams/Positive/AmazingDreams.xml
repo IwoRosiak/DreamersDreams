@@ -2,18 +2,6 @@
 <Defs>
   <DreamersDream.DreamDef Name="AmazingDream" Abstract="True" ParentName = "BaseDream">
     <quality>Amazing</quality>
-    <chance>5</chance>
-  </DreamersDream.DreamDef>
-
-  <DreamersDream.DreamDef ParentName = "AmazingDream">
-    <defName>WonderfulDream</defName>
-    <stages>
-      <li>
-        <label>Had a wonderful dream</label>
-        <description>I have dreamt about wonderful things that are hard to describe. I felt like a god!</description>
-        <baseMoodEffect>8</baseMoodEffect>
-      </li>
-    </stages>
   </DreamersDream.DreamDef>
 
   <DreamersDream.DreamDef ParentName = "AmazingDream" >

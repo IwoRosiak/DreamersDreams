@@ -2,19 +2,9 @@
 <Defs>
   <DreamersDream.DreamDef Name="DisturbingDream" Abstract="True" ParentName = "BaseDream">
     <quality>Disturbing</quality>
-    <chance>25</chance>
   </DreamersDream.DreamDef>
 
-  <DreamersDream.DreamDef ParentName = "DisturbingDream">
-    <defName>NakedSchoolDream</defName>
-    <stages>
-      <li>
-        <label>Dreamt about naked walking</label>
-        <description>I was walking around school, when I realised that I'm wearing no clothes! I felt so embarrased when all my friends were laughing at me! ~Toast</description>
-        <baseMoodEffect>-2</baseMoodEffect>
-      </li>
-    </stages>
-  </DreamersDream.DreamDef>
+
 
   <DreamersDream.DreamDef ParentName = "DisturbingDream">
   <defName>PrisonerDream</defName>
@@ -22,7 +12,7 @@
     <li>
       <label>Had a dream about prison</label>
       <description>I was asking them to let me out... I was innocent...</description>
-      <baseMoodEffect>-2</baseMoodEffect>
+      <baseMoodEffect>-3</baseMoodEffect>
     </li>
   </stages>
 </DreamersDream.DreamDef>
@@ -33,14 +23,9 @@
     <li>
       <label>Had a dream about childhood</label>
       <description>I relived some of the worst moments from my childhood.</description>
-      <baseMoodEffect>-4</baseMoodEffect>
+      <baseMoodEffect>-3</baseMoodEffect>
     </li>
   </stages>
-  <sensitivities>
-    <li>ill</li>
-    <li>hungry</li>
-    <li>malnourished</li>
-  </sensitivities>
 </DreamersDream.DreamDef>
 
 <DreamersDream.DreamDef ParentName = "DisturbingDream">
@@ -52,11 +37,6 @@
       <baseMoodEffect>-3</baseMoodEffect>
     </li>
   </stages>
-  <sensitivities>
-    <li>hungry</li>
-    <li>malnourished</li>
-    <li>hot</li>
-  </sensitivities>
 </DreamersDream.DreamDef>
 
 <DreamersDream.DreamDef ParentName = "DisturbingDream">
@@ -65,12 +45,9 @@
     <li>
       <label>Dreamt about injury</label>
       <description>I had wounds all over my body. Someone hurt me pretty badly but I managed to escape.</description>
-      <baseMoodEffect>-2</baseMoodEffect>
+      <baseMoodEffect>-3</baseMoodEffect>
     </li>
   </stages>
-  <sensitivities>
-    <li>healthy</li>
-  </sensitivities>
 </DreamersDream.DreamDef>
 
 <DreamersDream.DreamDef ParentName = "DisturbingDream">
@@ -79,27 +56,9 @@
     <li>
       <label>Dreamt about stealing honey</label>
       <description>I was in some kind of magical forest. After walking a few miles I noticed big bee hive. I was hungry, so I put my hand in it to snatch some honey but when I took it out there was no honey... but maggots.</description>
-      <baseMoodEffect>-4</baseMoodEffect>
+      <baseMoodEffect>-3</baseMoodEffect>
     </li>
   </stages>
-  <sensitivities>
-    <li>hungry</li>
-    <li>malnourished</li>
-  </sensitivities>
-</DreamersDream.DreamDef>
-
-<DreamersDream.DreamDef ParentName = "DisturbingDream">
-  <defName>LostHeadDream</defName>
-  <stages>
-    <li>
-      <label>Dreamt about distant danger</label>
-      <description>I had a dream in which I walked around the colony. After a few moments I realised that my head was rolling down the hill away from our home. I chased it until it stopped. After finally regaining my precious head, I looked around. Everything was burned to the ground and the only sounds were coming from strange machinery spitting out mechanoids...</description>
-      <baseMoodEffect>-5</baseMoodEffect>
-    </li>
-  </stages>
-  <sensitivities>
-    <li>ill</li>
-  </sensitivities>
 </DreamersDream.DreamDef>
 
 <DreamersDream.DreamDef ParentName = "DisturbingDream">

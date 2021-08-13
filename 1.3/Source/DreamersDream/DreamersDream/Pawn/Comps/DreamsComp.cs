@@ -96,6 +96,11 @@ namespace DreamersDream
 
         private void TriggerDreamEffects(DreamDef dream)
         {
+            if (dream.quality.isSpecial)
+            {
+                Messages.Message(pawn.Name.ToStringShort + " is experiencing " + dream.quality.defName.ToLower() + " dreams!", pawn, MessageTypeDefOf.NeutralEvent);
+            }
+
             pawn.needs.mood.thoughts.memories.TryGainMemory(dream, null);
 
             if (dream.isSleepwalk)

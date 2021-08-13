@@ -2,15 +2,25 @@
 <Defs>
   <DreamersDream.DreamDef Name="EpicDream" Abstract="True" ParentName = "BaseDream">
     <quality>Epic</quality>
-    <chance>2</chance>
   </DreamersDream.DreamDef>
 
-  <DreamersDream.DreamDef ParentName = "EpicDream" >
-    <defName>CharismaticSpeechDreams</defName>
+  <DreamersDream.DreamDef ParentName = "EpicDream">
+    <defName>AllNakedColonyDream</defName>
     <stages>
       <li>
-        <label>Dreamt about giving speech</label>
-        <description>Everyone looked at me but I was not stressed. I started talking about ideals and principles of life and people listened to me with interest. Before the dream ended I received standing ovations!</description>
+        <label>Dreamt about partying naked</label>
+        <description>I was walking around colony, when I realised that I'm wearing no clothes! I looked around and noticed that everyone took off their clothes as they saw me! We started to drink and dance around our home naked.</description>
+        <baseMoodEffect>8</baseMoodEffect>
+      </li>
+    </stages>
+  </DreamersDream.DreamDef>
+
+  <DreamersDream.DreamDef ParentName = "EpicDream">
+    <defName>AnimalForestDream</defName>
+    <stages>
+      <li>
+        <label>Dreamt about being a racoon</label>
+        <description>I was a small animal (I think it was a raccoon?) in a random windy forest. It was pretty nice even if all I did was wander around and occasionally see other creatures, and at some point I think I befriended a groundhog. I'm not too sure on how it ended but the last thing I vaguely remember was seeing buildings over a hill. ~~okoyum</description>
         <baseMoodEffect>8</baseMoodEffect>
       </li>
     </stages>
