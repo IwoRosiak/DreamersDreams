@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
+  <!--
   <DreamersDream.DreamDef Name="DivineDream" Abstract="True" ParentName = "BaseDream">
     <quality>Divine</quality>
   </DreamersDream.DreamDef>
@@ -13,5 +14,5 @@
         <baseMoodEffect>2</baseMoodEffect>
       </li>
     </stages>
-  </DreamersDream.DreamDef>
+  </DreamersDream.DreamDef> -->
 </Defs>

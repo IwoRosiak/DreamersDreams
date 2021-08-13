@@ -5,35 +5,35 @@
     <defName>Legendary</defName>
     <label>legendary</label>
     <isSpecial>true</isSpecial>
-    <chance>1</chance>
+    <chance>5</chance>
   </DreamersDream.DreamQualityDef>
 
   <DreamersDream.DreamQualityDef>
     <defName>Epic</defName>
     <label>epic</label>
     <isSpecial>true</isSpecial>
-    <chance>3</chance>
+    <chance>40</chance>
   </DreamersDream.DreamQualityDef>
 
   <DreamersDream.DreamQualityDef>
     <defName>Amazing</defName>
     <label>amazing</label>
     <isSpecial>false</isSpecial>
-    <chance>6</chance>
+    <chance>90</chance>
   </DreamersDream.DreamQualityDef>
 
   <DreamersDream.DreamQualityDef>
     <defName>Exciting</defName>
     <label>exciting</label>
     <isSpecial>false</isSpecial>
-    <chance>15</chance>
+    <chance>200</chance>
   </DreamersDream.DreamQualityDef>
 
   <DreamersDream.DreamQualityDef>
     <defName>Pleasant</defName>
     <label>pleasant</label>
     <isSpecial>false</isSpecial>
-    <chance>40</chance>
+    <chance>500</chance>
   </DreamersDream.DreamQualityDef>
 
   <!--NEGATIVE-->
@@ -41,38 +41,38 @@
     <defName>HellLike</defName>
     <label>hell-like</label>
     <isSpecial>true</isSpecial>
-    <chance>1</chance>
+    <chance>5</chance>
   </DreamersDream.DreamQualityDef>
 
   <DreamersDream.DreamQualityDef>
     <defName>Terrorising</defName>
     <label>terrorising</label>
     <isSpecial>true</isSpecial>
-    <chance>3</chance>
+    <chance>40</chance>
   </DreamersDream.DreamQualityDef>
 
   <DreamersDream.DreamQualityDef>
     <defName>Frightening</defName>
     <label>frightnening</label>
     <isSpecial>false</isSpecial>
-    <chance>6</chance>
+    <chance>90</chance>
   </DreamersDream.DreamQualityDef>
 
   <DreamersDream.DreamQualityDef>
     <defName>Disturbing</defName>
     <label>disturbing</label>
     <isSpecial>false</isSpecial>
-    <chance>15</chance>
+    <chance>200</chance>
   </DreamersDream.DreamQualityDef>
 
   <DreamersDream.DreamQualityDef>
     <defName>Unpleasant</defName>
     <label>unpleasant</label>
     <isSpecial>false</isSpecial>
-    <chance>40</chance>
+    <chance>500</chance>
   </DreamersDream.DreamQualityDef>
 
-<!-- SPECIAL -->
+<!-- SPECIAL
   <DreamersDream.DreamQualityDef>
     <defName>Divine</defName>
     <label>divine</label>
@@ -85,5 +85,5 @@
     <label>mystical</label>
     <isSpecial>true</isSpecial>
     <chance>0</chance>
-  </DreamersDream.DreamQualityDef>
+  </DreamersDream.DreamQualityDef>-->
 </Defs>

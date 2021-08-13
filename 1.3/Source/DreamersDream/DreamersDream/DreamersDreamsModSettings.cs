@@ -132,7 +132,7 @@ namespace DreamersDream
             DD_Settings.sleepwalkerTraitModif = 1;
         }
 
-        private static Vector2 scrollPosi = Vector2.zero;
+        private static Vector2 scrollPos = Vector2.zero;
 
         private float scroll = 0;
 
@@ -140,7 +140,7 @@ namespace DreamersDream
         {
             ResolveScroll(new Rect(inRect.x, inRect.y, 10f, inRect.height));
 
-            GUI.BeginClip(inRect, scrollPosi, scrollPosi, false);
+            GUI.BeginClip(inRect, scrollPos, scrollPos, false);
 
             Rect columnQuality = new Rect(inRect.x - 68f, inRect.y - scroll - 204f, 100f, 25f);
 
@@ -262,7 +262,7 @@ namespace DreamersDream
             {
                 if (chance > 0)
                 {
-                    chance -= 5;
+                    chance -= 10;
                 }
                 if (chance < 0)
                 {
@@ -289,7 +289,7 @@ namespace DreamersDream
             column.x += 24f;
             if (Widgets.ButtonText(column, "++", true, true, new Color(30, 30, 26), true)) //(columnChance, button.MatSingle.GetMaskTexture(), true);
             {
-                chance += 5;
+                chance += 10;
             }
         }
 
