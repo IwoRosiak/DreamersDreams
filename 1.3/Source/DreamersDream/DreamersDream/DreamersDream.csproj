@@ -59,23 +59,18 @@
   <ItemGroup>
     <Compile Include="Pawn\Comps\DreamsCompProperties.cs" />
     <Compile Include="Pawn\Comps\DreamsComp.cs" />
-    <Compile Include="DebugLogDreams.cs" />
     <Compile Include="DreamersDreamsInitialisation.cs" />
     <Compile Include="Defs\Dreams\DreamQualityDef.cs" />
     <Compile Include="DreamersDreamsModSettings.cs" />
     <Compile Include="Pawn\PawnDreamOddsTracker.cs" />
     <Compile Include="Pawn\Sleepwalking\SleepwalkingChanceCalc.cs" />
     <Compile Include="Pawn\Sleepwalking\SleepwalkingTypes.cs" />
-    <Compile Include="Temp\DreamRandomCalc - Copy.cs" />
     <Compile Include="Pawn\Utilities\DreamTracker.cs" />
     <Compile Include="Pawn\Utilities\DreamChanceCalc.cs" />
     <Compile Include="Pawn\Utilities\DreamRandomCalc.cs" />
-    <Compile Include="Temp\PawnDreamProvider.cs" />
     <Compile Include="Pawn\PawnDreamQualityOddsTracker.cs" />
-    <Compile Include="Temp\Inspirations\DD_InspirationDefOf.cs" />
     <Compile Include="Defs\Traits\DD_TraitsDefOf.cs" />
     <Compile Include="Textures.cs" />
-    <Compile Include="Temp\DD_Utility.cs" />
     <Compile Include="Defs\MentalStates\DD_MentalStateDefOf.cs" />
     <Compile Include="Defs\MentalStates\DD_MentalStateDef.cs" />
     <Compile Include="Defs\Dreams\DreamDef.cs" />
