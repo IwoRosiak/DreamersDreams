@@ -5,40 +5,6 @@ using Verse;
 
 namespace DreamersDream
 {
-    public class DD_Settings : ModSettings
-    {
-        public DD_Settings()
-        {
-        }
-
-        public static bool isDreamingActive = true;
-
-        public static bool isDefaultSettings = true;
-
-        public static float sleepwalkerTraitModif = 1;
-
-        public static bool canNonSleepwalkerSleepwalk = false;
-
-        public static bool isDebugMode = false;
-
-        public static Dictionary<string, float> QualityChanceModifs;
-
-        public override void ExposeData()
-        {
-            Scribe_Collections.Look(ref QualityChanceModifs, "DreamQualityDefs", LookMode.Value, LookMode.Value);
-
-            Scribe_Values.Look(ref isDreamingActive, "isDreamingActive", true);
-
-            Scribe_Values.Look(ref isDefaultSettings, "isDefaultSettings", true);
-
-            Scribe_Values.Look(ref sleepwalkerTraitModif, "sleepwalkerTraitModif", 1);
-            //Scribe_Values.Look(ref chanceForPositiveDreams, "chanceForPositiveDreams", 0);
-            //Scribe_Values.Look(ref chanceForNegativeDreams, "chanceForNegativeDreams", 0);
-
-            base.ExposeData();
-        }
-    }
-
     public class DD_Mod : Mod
     {
         private DD_Settings settings;
@@ -50,9 +16,9 @@ namespace DreamersDream
 
         public override void DoSettingsWindowContents(Rect inRect)
         {
-            if (DD_Settings.QualityChanceModifs.NullOrEmpty())
+            if (DD_Settings.TagsChanceModifs.NullOrEmpty())
             {
-                DD_Settings.QualityChanceModifs = new Dictionary<string, float>();
+                DD_Settings.TagsChanceModifs = new Dictionary<string, float>();
             }
 
             Rect masterRect = new Rect(inRect.x + (0.1f * inRect.width), inRect.y + 40, 0.8f * inRect.width, 936);
@@ -126,9 +92,9 @@ namespace DreamersDream
 
         private void ResetValues()
         {
-            foreach (var dreamQuality in DreamTracker.DreamQualityDefs)
+            foreach (var dreamQuality in DreamTracker.DreamTagsDefs)
             {
-                DD_Settings.QualityChanceModifs[dreamQuality.defName] = dreamQuality.chance;
+                DD_Settings.TagsChanceModifs[dreamQuality.defName] = dreamQuality.chance;
             }
 
             DD_Settings.sleepwalkerTraitModif = 1;
@@ -144,15 +110,15 @@ namespace DreamersDream
 
             GUI.BeginClip(inRect, scrollPos, scrollPos, false);
 
-            Rect columnQuality = new Rect(inRect.x - 68f, inRect.y - scroll - 204f, 100f, 25f);
+            Rect columnTags = new Rect(inRect.x - 68f, inRect.y - scroll - 204f, 100f, 25f);
 
-            DrawTableFirstRow(ref columnQuality, "Category");
+            ModSettingsUtility.DrawTableFirstRow(ref columnTags, "Tags");
 
-            Rect columnChance = new Rect(columnQuality.x + 100, inRect.y - scroll - 204f, 146f, 25f);
+            Rect columnChance = new Rect(columnTags.x + 100, inRect.y - scroll - 204f, 146f, 25f);
 
-            DrawTableFirstRow(ref columnChance, "Chance");
+            ModSettingsUtility.DrawTableFirstRow(ref columnChance, "Chance");
 
-            DrawColumnCategory(ref columnQuality);
+            DrawColumnCategory(ref columnTags);
 
             DrawColumnChance(ref columnChance);
 
@@ -161,7 +127,7 @@ namespace DreamersDream
 
         private void ResolveScroll(Rect inRect)
         {
-            float numberOfRows = DreamTracker.DreamQualityDefs.Count + 1;
+            float numberOfRows = DreamTracker.DreamTagsDefs.Count + 1;
 
             float tableRowCapacity = inRect.height / 25f;
 
@@ -174,7 +140,7 @@ namespace DreamersDream
         private void DrawColumnCategory(ref Rect column)
         {
             float count = 0;
-            foreach (var dreamQuality in DreamTracker.DreamQualityDefs)
+            foreach (var dreamTag in DreamTracker.DreamTagsDefs)
             {
                 count++;
                 switch (count % 2)
@@ -191,7 +157,7 @@ namespace DreamersDream
                         break;
                 }
 
-                Widgets.Label(GetMiddleOfRectForString(column, dreamQuality.defName), dreamQuality.defName);
+                Widgets.Label(ModSettingsUtility.GetMiddleOfRectForString(column, dreamTag.defName), dreamTag.defName);
 
                 column.y += 25f;
             }
@@ -201,7 +167,7 @@ namespace DreamersDream
         {
             float count = 0;
 
-            foreach (var dreamQuality in DreamTracker.DreamQualityDefs)
+            foreach (var dreamQuality in DreamTracker.DreamTagsDefs)
             {
                 count++;
                 switch (count % 2)
@@ -219,106 +185,18 @@ namespace DreamersDream
                 }
 
                 float chance = dreamQuality.chance;
-                CheckIfMasterListContainsAddIfNot(dreamQuality, ref chance);
+                ModSettingsUtility.CheckIfMasterListContainsAddIfNot(dreamQuality, ref chance);
 
-                DrawChanceButtons(column, ref chance);
+                ModSettingsUtility.DrawChanceButtons(column, ref chance);
 
-                string label = Math.Round(PawnDreamQualityOddsTracker.ChanceInPercentages(chance, AddUpChancesForQualities()), 2) + "%";
+                string label = Math.Round(PawnDreamTagsOddsTracker.ChanceInPercentages(chance, ModSettingsUtility.AddUpChancesForQualities()), 2) + "%";
 
-                Widgets.Label(GetMiddleOfRectForString(column, label), label);
+                Widgets.Label(ModSettingsUtility.GetMiddleOfRectForString(column, label), label);
 
                 column.y += 25f;
 
-                DD_Settings.QualityChanceModifs[dreamQuality.defName] = chance;
+                DD_Settings.TagsChanceModifs[dreamQuality.defName] = chance;
             }
-        }
-
-        private Rect GetMiddleOfRectForString(Rect rect, string text)
-        {
-            return new Rect(rect.x + (rect.width / 2) - CenteredStringPos(text), rect.y, rect.width, rect.height);
-        }
-
-        private float CenteredStringPos(string text)
-        {
-            return (Text.CalcSize(text).x / 2);
-        }
-
-        private void CheckIfMasterListContainsAddIfNot(DreamQualityDef thingToCheck, ref float chance)
-        {
-            if (DD_Settings.QualityChanceModifs.ContainsKey(thingToCheck.defName))
-            {
-                chance = DD_Settings.QualityChanceModifs[thingToCheck.defName];
-            }
-            else
-            {
-                DD_Settings.QualityChanceModifs.Add(thingToCheck.defName, chance);
-                chance = DD_Settings.QualityChanceModifs[thingToCheck.defName];
-            }
-        }
-
-        private void DrawChanceButtons(Rect column, ref float chance)
-        {
-            column.width = 24f;
-
-            if (Widgets.ButtonText(column, "--", true, true, new Color(30, 30, 26), true))   //Widgets.ButtonImage(columnChance, Textures.IncrementButton, true)) //(columnChance, button.MatSingle.GetMaskTexture(), true);
-            {
-                if (chance > 0)
-                {
-                    chance -= 10;
-                }
-                if (chance < 0)
-                {
-                    chance = 0;
-                }
-            }
-            column.x += 24f;
-            if (Widgets.ButtonText(column, "-", true, true, new Color(30, 30, 26), true)) //(columnChance, button.MatSingle.GetMaskTexture(), true);
-            {
-                if (chance > 0)
-                {
-                    chance--;
-                }
-                if (chance < 0)
-                {
-                    chance = 0;
-                }
-            }
-            column.x += 74f;
-            if (Widgets.ButtonText(column, "+", true, true, new Color(30, 30, 26), true)) //(columnChance, button.MatSingle.GetMaskTexture(), true);
-            {
-                chance++;
-            }
-            column.x += 24f;
-            if (Widgets.ButtonText(column, "++", true, true, new Color(30, 30, 26), true)) //(columnChance, button.MatSingle.GetMaskTexture(), true);
-            {
-                chance += 10;
-            }
-        }
-
-        private void DrawTableFirstRow(ref Rect column, string label)
-        {
-            if (label == "Category")
-            {
-                Widgets.DrawTextureFitted(column, Textures.TableEntryBGCat1, 1);
-            }
-            else if (label == "Chance")
-            {
-                Widgets.DrawTextureFitted(column, Textures.TableEntryBGChance1, 1);
-            }
-
-            Widgets.Label(GetMiddleOfRectForString(column, label), label);
-
-            column.y += 25;
-        }
-
-        private float AddUpChancesForQualities()
-        {
-            float sumOfCollectionChances = 0;
-            foreach (var item in DD_Settings.QualityChanceModifs)
-            {
-                sumOfCollectionChances += item.Value;
-            }
-            return sumOfCollectionChances;
         }
 
         public override string SettingsCategory()

@@ -4,7 +4,7 @@ using Verse;
 namespace DreamersDream
 {
     [DefOf]
-    public class DreamQualityDef : Def
+    public class DreamTagDef : Def
     {
         public float chance = 0;
 

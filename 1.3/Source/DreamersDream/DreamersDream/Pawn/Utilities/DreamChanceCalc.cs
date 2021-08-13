@@ -27,11 +27,11 @@ namespace DreamersDream
             return dreamChance;
         }
 
-        public static float CalculateChanceFor(this DreamQualityDef dreamQuality, Pawn pawn = null)
+        public static float CalculateChanceFor(this DreamTagDef dreamQuality, Pawn pawn = null)
         {
-            if (DD_Settings.QualityChanceModifs.ContainsKey(dreamQuality.defName) && !DD_Settings.isDefaultSettings)
+            if (DD_Settings.TagsChanceModifs.ContainsKey(dreamQuality.defName) && !DD_Settings.isDefaultSettings)
             {
-                return DD_Settings.QualityChanceModifs[dreamQuality.defName];
+                return DD_Settings.TagsChanceModifs[dreamQuality.defName];
             }
             else
             {

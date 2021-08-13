@@ -3,9 +3,9 @@ using Verse;
 
 namespace DreamersDream
 {
-    public class PawnDreamQualityOddsTracker
+    public class PawnDreamTagsOddsTracker
     {
-        public Dictionary<DreamQualityDef, float> GetUpdatedQualitiesWithChances()
+        public Dictionary<DreamTagDef, float> GetUpdatedQualitiesWithChances()
         {
             ConvertOddsForDreamQualitiesToPercent();
             return DreamQualityOddsPercent;
@@ -13,17 +13,17 @@ namespace DreamersDream
 
         private Pawn pawn;
 
-        private Dictionary<DreamQualityDef, float> DreamQualityOddsPercent = new Dictionary<DreamQualityDef, float>();
+        private Dictionary<DreamTagDef, float> DreamQualityOddsPercent = new Dictionary<DreamTagDef, float>();
 
-        public PawnDreamQualityOddsTracker(Pawn parent)
+        public PawnDreamTagsOddsTracker(Pawn parent)
         {
             pawn = parent;
         }
 
-        private Dictionary<DreamQualityDef, float> UpdateOddsForDreamQualities()
+        private Dictionary<DreamTagDef, float> UpdateOddsForDreamQualities()
         {
-            Dictionary<DreamQualityDef, float> DreamQualityOdds = new Dictionary<DreamQualityDef, float>();
-            foreach (var dreamQuality in DreamTracker.DreamQualityDefs)
+            Dictionary<DreamTagDef, float> DreamQualityOdds = new Dictionary<DreamTagDef, float>();
+            foreach (var dreamQuality in DreamTracker.DreamTagsDefs)
             {
                 float chanceForQuality = dreamQuality.CalculateChanceFor(pawn);
 

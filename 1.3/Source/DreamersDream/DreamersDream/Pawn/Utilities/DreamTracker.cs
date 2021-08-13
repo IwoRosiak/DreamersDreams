@@ -4,11 +4,11 @@ namespace DreamersDream
 {
     public static class DreamTracker
     {
-        public static List<DreamQualityDef> GetDreamQualities
+        public static List<DreamTagDef> GetDreamTags
         {
             get
             {
-                return DreamQualityDefs;
+                return DreamTagsDefs;
             }
         }
 
@@ -20,9 +20,9 @@ namespace DreamersDream
             }
         }
 
-        public static List<DreamQualityDef> DreamQualityDefs = new List<DreamQualityDef>();
+        public static List<DreamTagDef> DreamTagsDefs = new List<DreamTagDef>();
 
-        public static Dictionary<DreamQualityDef, float> DreamQualityDefsWithSettings = new Dictionary<DreamQualityDef, float>();
+        public static Dictionary<DreamTagDef, float> DreamTagsDefsWithSettings = new Dictionary<DreamTagDef, float>();
 
         internal static List<DreamDef> DreamDefs = new List<DreamDef>();
     }

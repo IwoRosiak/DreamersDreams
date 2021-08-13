@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
   <DreamersDream.DreamDef Name="PleasantDream" Abstract="True" ParentName = "BaseDream">
-    <quality>Pleasant</quality>
+    <tags><li>Pleasant</li></tags>
   </DreamersDream.DreamDef>
 
 <DreamersDream.DreamDef ParentName = "PleasantDream" >

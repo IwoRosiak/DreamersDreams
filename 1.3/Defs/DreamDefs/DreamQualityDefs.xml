@@ -1,89 +1,99 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Defs>
+  <!-- MAIN TAGS -->
   <!-- POSITIVE -->
-  <DreamersDream.DreamQualityDef>
+  <DreamersDream.DreamTagDef>
     <defName>Legendary</defName>
     <label>legendary</label>
     <isSpecial>true</isSpecial>
     <chance>5</chance>
-  </DreamersDream.DreamQualityDef>
+  </DreamersDream.DreamTagDef>
 
-  <DreamersDream.DreamQualityDef>
+  <DreamersDream.DreamTagDef>
     <defName>Epic</defName>
     <label>epic</label>
     <isSpecial>true</isSpecial>
     <chance>40</chance>
-  </DreamersDream.DreamQualityDef>
+  </DreamersDream.DreamTagDef>
 
-  <DreamersDream.DreamQualityDef>
+  <DreamersDream.DreamTagDef>
     <defName>Amazing</defName>
     <label>amazing</label>
     <isSpecial>false</isSpecial>
     <chance>90</chance>
-  </DreamersDream.DreamQualityDef>
+  </DreamersDream.DreamTagDef>
 
-  <DreamersDream.DreamQualityDef>
+  <DreamersDream.DreamTagDef>
     <defName>Exciting</defName>
     <label>exciting</label>
     <isSpecial>false</isSpecial>
     <chance>200</chance>
-  </DreamersDream.DreamQualityDef>
+  </DreamersDream.DreamTagDef>
 
-  <DreamersDream.DreamQualityDef>
+  <DreamersDream.DreamTagDef>
     <defName>Pleasant</defName>
     <label>pleasant</label>
     <isSpecial>false</isSpecial>
     <chance>500</chance>
-  </DreamersDream.DreamQualityDef>
+  </DreamersDream.DreamTagDef>
 
   <!--NEGATIVE-->
-  <DreamersDream.DreamQualityDef>
+  <DreamersDream.DreamTagDef>
     <defName>HellLike</defName>
     <label>hell-like</label>
     <isSpecial>true</isSpecial>
     <chance>5</chance>
-  </DreamersDream.DreamQualityDef>
+  </DreamersDream.DreamTagDef>
 
-  <DreamersDream.DreamQualityDef>
+  <DreamersDream.DreamTagDef>
     <defName>Terrorising</defName>
     <label>terrorising</label>
     <isSpecial>true</isSpecial>
     <chance>40</chance>
-  </DreamersDream.DreamQualityDef>
+  </DreamersDream.DreamTagDef>
 
-  <DreamersDream.DreamQualityDef>
+  <DreamersDream.DreamTagDef>
     <defName>Frightening</defName>
     <label>frightnening</label>
     <isSpecial>false</isSpecial>
     <chance>90</chance>
-  </DreamersDream.DreamQualityDef>
+  </DreamersDream.DreamTagDef>
 
-  <DreamersDream.DreamQualityDef>
+  <DreamersDream.DreamTagDef>
     <defName>Disturbing</defName>
     <label>disturbing</label>
     <isSpecial>false</isSpecial>
     <chance>200</chance>
-  </DreamersDream.DreamQualityDef>
+  </DreamersDream.DreamTagDef>
 
-  <DreamersDream.DreamQualityDef>
+  <DreamersDream.DreamTagDef>
     <defName>Unpleasant</defName>
     <label>unpleasant</label>
     <isSpecial>false</isSpecial>
     <chance>500</chance>
-  </DreamersDream.DreamQualityDef>
+  </DreamersDream.DreamTagDef>
+
+
+<!-- SIDE TAGS -->
+  <DreamersDream.DreamTagDef>
+    <defName>Sleepwalk</defName>
+    <label>sleepwalk</label>
+    <isSpecial>false</isSpecial>
+    <chance>1</chance>
+  </DreamersDream.DreamTagDef>
 
 <!-- SPECIAL
-  <DreamersDream.DreamQualityDef>
+  <DreamersDream.DreamTagDef>
     <defName>Divine</defName>
     <label>divine</label>
     <isSpecial>true</isSpecial>
     <chance>0</chance>
-  </DreamersDream.DreamQualityDef>
+  </DreamersDream.DreamTagDef>
 
-  <DreamersDream.DreamQualityDef>
+  <DreamersDream.DreamTagDef>
     <defName>Mystical</defName>
     <label>mystical</label>
     <isSpecial>true</isSpecial>
     <chance>0</chance>
-  </DreamersDream.DreamQualityDef>-->
+  </DreamersDream.DreamTagDef>-->
 </Defs>

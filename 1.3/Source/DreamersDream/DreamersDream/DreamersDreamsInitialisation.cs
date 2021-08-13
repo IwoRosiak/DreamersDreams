@@ -18,7 +18,7 @@ namespace DreamersDream
 
             foreach (DreamDef dream in GenDefDatabase.GetAllDefsInDatabaseForDef(typeof(DreamDef)))
             {
-                if (dream.quality != null)
+                if (!dream.tags.NullOrEmpty())
                 {
                     totalDreams++;
                     DreamTracker.DreamDefs.Add(dream);
@@ -35,10 +35,10 @@ namespace DreamersDream
         {
             var totalQualities = 0;
 
-            foreach (DreamQualityDef dreamQuality in GenDefDatabase.GetAllDefsInDatabaseForDef(typeof(DreamQualityDef)))
+            foreach (DreamTagDef dreamQuality in GenDefDatabase.GetAllDefsInDatabaseForDef(typeof(DreamTagDef)))
             {
                 totalQualities++;
-                DreamTracker.GetDreamQualities.Add(dreamQuality);
+                DreamTracker.GetDreamTags.Add(dreamQuality);
                 //DreamTracker.DreamQualityDefsWithSettings.Add(dreamQuality, dreamQuality.chance);
             }
             Log.Message("Dreamer's Dreams: successfully loaded " + totalQualities + " dream qualities.");

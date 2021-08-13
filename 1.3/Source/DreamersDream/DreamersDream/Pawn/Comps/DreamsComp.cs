@@ -33,9 +33,9 @@ namespace DreamersDream
         public override void CompTickRare()
         {
             base.CompTickRare();
-            if (QualityOddsTracker == null || OddsTracker == null)
+            if (TagsOddsTracker == null || OddsTracker == null)
             {
-                QualityOddsTracker = new PawnDreamQualityOddsTracker(pawn);
+                TagsOddsTracker = new PawnDreamTagsOddsTracker(pawn);
                 OddsTracker = new PawnDreamOddsTracker(pawn);
             }
             if (DD_Settings.isDreamingActive)
@@ -48,18 +48,25 @@ namespace DreamersDream
         {
             if (CanGetDreamNow())
             {
-                var RandomQuality = DreamRandomCalc.ChooseRandomDreamQuality(QualityOddsTracker.GetUpdatedQualitiesWithChances());
-                var RandomDream = DreamRandomCalc.ChooseRandomDream(OddsTracker.GetUpdatedDreamsWithChances(RandomQuality));
+                var RandomTag = DreamRandomCalc.ChooseRandomDreamTag(TagsOddsTracker.GetUpdatedQualitiesWithChances());
+
+                var RandomDream = DreamRandomCalc.ChooseRandomDream(OddsTracker.GetUpdatedDreamsWithChances(RandomTag));
+
+                if (RandomTag.isSpecial)
+                {
+                    Messages.Message(pawn.Name.ToStringShort + " is experiencing " + RandomTag.defName.ToLower() + " dream!", pawn, MessageTypeDefOf.NeutralEvent);
+                }
+
                 TriggerDreamEffects(RandomDream);
             }
         }
 
         private void DebugLogAllDreamsAndQualities()
         {
-            foreach (var quality in QualityOddsTracker.GetUpdatedQualitiesWithChances())
+            foreach (var tag in TagsOddsTracker.GetUpdatedQualitiesWithChances())
             {
-                Log.Message(quality.Key.defName + " has " + quality.Value + "% chance upper threshold. And these are dreams for this quality: ");
-                foreach (var dream in OddsTracker.GetUpdatedDreamsWithChances(quality.Key))
+                Log.Message(tag.Key.defName + " has " + tag.Value + "% chance upper threshold. And these are dreams for this quality: ");
+                foreach (var dream in OddsTracker.GetUpdatedDreamsWithChances(tag.Key))
                 {
                     Log.Message("     -" + dream.Key.defName + " has " + dream.Value + "% chance upper threshold.");
                 }
@@ -96,11 +103,6 @@ namespace DreamersDream
 
         private void TriggerDreamEffects(DreamDef dream)
         {
-            if (dream.quality.isSpecial)
-            {
-                Messages.Message(pawn.Name.ToStringShort + " is experiencing " + dream.quality.defName.ToLower() + " dreams!", pawn, MessageTypeDefOf.NeutralEvent);
-            }
-
             pawn.needs.mood.thoughts.memories.TryGainMemory(dream, null);
 
             if (dream.isSleepwalk)
@@ -182,7 +184,7 @@ namespace DreamersDream
             return pawn.needs?.rest != null && !pawn.Dead && (pawn.Spawned || pawn.IsCaravanMember());
         }
 
-        private PawnDreamQualityOddsTracker QualityOddsTracker;
+        private PawnDreamTagsOddsTracker TagsOddsTracker;
 
         private PawnDreamOddsTracker OddsTracker;
 

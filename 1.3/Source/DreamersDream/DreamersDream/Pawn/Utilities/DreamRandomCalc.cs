@@ -5,9 +5,9 @@ namespace DreamersDream
 {
     internal static class DreamRandomCalc
     {
-        public static DreamQualityDef ChooseRandomDreamQuality(Dictionary<DreamQualityDef, float> Qualities)
+        public static DreamTagDef ChooseRandomDreamTag(Dictionary<DreamTagDef, float> Tags)
         {
-            return RollRandomDreamQuality(Qualities);
+            return RollRandomDreamTags(Tags);
         }
 
         public static DreamDef ChooseRandomDream(Dictionary<DreamDef, float> Dreams)
@@ -29,7 +29,7 @@ namespace DreamersDream
             return null;
         }
 
-        private static DreamQualityDef RollRandomDreamQuality(Dictionary<DreamQualityDef, float> Qualities)
+        private static DreamTagDef RollRandomDreamTags(Dictionary<DreamTagDef, float> Qualities)
         {
             float roll = PerformRandomRoll();
 

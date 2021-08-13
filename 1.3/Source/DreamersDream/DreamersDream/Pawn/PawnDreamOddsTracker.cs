@@ -10,18 +10,18 @@ namespace DreamersDream
             pawn = parent;
         }
 
-        public Dictionary<DreamDef, float> GetUpdatedDreamsWithChances(DreamQualityDef quality)
+        public Dictionary<DreamDef, float> GetUpdatedDreamsWithChances(DreamTagDef tag)
         {
-            UpdateOddsForDreams(quality);
+            UpdateOddsForDreams(tag);
             ConvertOddsForDreamsToPercent();
             return DreamOddsPercent;
         }
 
-        private Dictionary<DreamDef, float> UpdateOddsForDreams(DreamQualityDef quality)
+        private Dictionary<DreamDef, float> UpdateOddsForDreams(DreamTagDef tag)
         {
             DreamOdds.Clear();
 
-            foreach (var dream in IsolateDreamsOfQuality(quality))
+            foreach (var dream in IsolateDreamsOfTag(tag))
             {
                 float chanceForDream = dream.CalculateChanceFor(pawn);
 
@@ -33,12 +33,12 @@ namespace DreamersDream
         private void ConvertOddsForDreamsToPercent()
         {
             DreamOddsPercent.Clear();
-            float chanceForQualityPercent = 0;
+            float chanceForTagPercent = 0;
             foreach (var dream in DreamOdds)
             {
-                chanceForQualityPercent += ChanceInPercentages(dream.Value, AddUpChancesForDreams());
+                chanceForTagPercent += ChanceInPercentages(dream.Value, AddUpChancesForDreams());
 
-                DreamOddsPercent.Add(dream.Key, chanceForQualityPercent);
+                DreamOddsPercent.Add(dream.Key, chanceForTagPercent);
             }
         }
 
@@ -52,20 +52,20 @@ namespace DreamersDream
             return sumOfCollectionChances;
         }
 
-        private List<DreamDef> IsolateDreamsOfQuality(DreamQualityDef quality)
+        private List<DreamDef> IsolateDreamsOfTag(DreamTagDef tag)
         {
             List<DreamDef> MatchingDreams = new List<DreamDef>();
 
             foreach (var dream in DreamTracker.GetAvailibleDreamsForPawn)
             {
-                if (dream.quality == quality)
+                if (dream.tags.Contains(tag))
                 {
                     MatchingDreams.Add(dream);
                 }
             }
             if (MatchingDreams.NullOrEmpty())
             {
-                Log.Error(quality.defName + " has no compatible dreams for this pawn or is empty.");
+                Log.Error(tag.defName + " has no compatible dreams for this pawn or is empty.");
             }
             return MatchingDreams;
         }

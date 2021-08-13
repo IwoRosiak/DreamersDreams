@@ -1,4 +1,5 @@
 ﻿using RimWorld;
+using System.Collections.Generic;
 
 namespace DreamersDream
 {
@@ -9,7 +10,9 @@ namespace DreamersDream
 
         public float chance = 1;
 
-        public DreamQualityDef quality;
+        public List<DreamTagDef> tags = new List<DreamTagDef>();
+
+        //public DreamTagDef tag;
 
         //public bool isSpecial = false;
     }
