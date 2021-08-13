@@ -13,14 +13,11 @@ To report any issues please refer to the mod page which I check every minute : )
 
 &lt;size=22&gt;Notes:&lt;/size&gt;
 - Doesn't require a new save
-- On a fresh install, currently resting pawns will not get dreams. Dreams will only be applied on rests which started when this mod was installed.
 
 &lt;size=22&gt;Features:&lt;/size&gt;
 - Pawns will dream while they rest.
 - Pawns with the sleepwalker trait will occassionally sleepwalk, causing a bit of disturbances among the colony...
 - Mod settings that allow you to customise your experience.
-- Dreams are affected by multiple different factors such as hunger or pain.
-- Dreams sometimes provide pawns with minor inspirations.
 
 &lt;size=22&gt;Propose a dream!&lt;/size&gt;
 Tell us about your favourite dreams (from your life :> ) and I will try to implement it into the mod :D
@@ -29,12 +26,4 @@ Tell us about your favourite dreams (from your life :> ) and I will try to imple
 
 
 </description>
-	<modDependencies>
-		<li>
-			<packageId>brrainz.harmony</packageId>
-			<displayName>Harmony</displayName>
-			<steamWorkshopUrl>steam://url/CommunityFilePage/2009463077</steamWorkshopUrl>
-			<downloadUrl>https://github.com/pardeike/HarmonyRimWorld/releases/latest</downloadUrl>
-		</li>
-	</modDependencies>
 </ModMetaData>
