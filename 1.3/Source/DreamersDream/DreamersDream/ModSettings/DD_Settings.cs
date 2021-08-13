@@ -15,7 +15,7 @@ namespace DreamersDream
 
         public static float sleepwalkerTraitModif = 1;
 
-        public static bool canNonSleepwalkerSleepwalk = false;
+        public static bool canNonSleepwalkerSleepwalk = true;
 
         public static bool isDebugMode = false;
 

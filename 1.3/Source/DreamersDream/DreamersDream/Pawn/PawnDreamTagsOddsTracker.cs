@@ -5,9 +5,9 @@ namespace DreamersDream
 {
     public class PawnDreamTagsOddsTracker
     {
-        public Dictionary<DreamTagDef, float> GetUpdatedQualitiesWithChances()
+        public Dictionary<DreamTagDef, float> GetUpdatedTagsWithChances()
         {
-            ConvertOddsForDreamQualitiesToPercent();
+            ConvertOddsForDreamTagsToPercent();
             return DreamQualityOddsPercent;
         }
 
@@ -20,34 +20,34 @@ namespace DreamersDream
             pawn = parent;
         }
 
-        private Dictionary<DreamTagDef, float> UpdateOddsForDreamQualities()
+        private Dictionary<DreamTagDef, float> UpdateOddsForDreamTags()
         {
-            Dictionary<DreamTagDef, float> DreamQualityOdds = new Dictionary<DreamTagDef, float>();
-            foreach (var dreamQuality in DreamTracker.DreamTagsDefs)
+            Dictionary<DreamTagDef, float> DreamTagOdds = new Dictionary<DreamTagDef, float>();
+            foreach (var dreamTag in DreamTracker.DreamTagsDefs)
             {
-                float chanceForQuality = dreamQuality.CalculateChanceFor(pawn);
+                float chanceForTag = dreamTag.CalculateChanceFor(pawn);
 
-                DreamQualityOdds.Add(dreamQuality, chanceForQuality);
+                DreamTagOdds.Add(dreamTag, chanceForTag);
             }
-            return DreamQualityOdds;
+            return DreamTagOdds;
         }
 
-        private void ConvertOddsForDreamQualitiesToPercent()
+        private void ConvertOddsForDreamTagsToPercent()
         {
             float chanceForQualityPercent = 0;
             DreamQualityOddsPercent.Clear();
-            foreach (var dreamQuality in UpdateOddsForDreamQualities())
+            foreach (var dreamQuality in UpdateOddsForDreamTags())
             {
-                chanceForQualityPercent += ChanceInPercentages(dreamQuality.Value, AddUpChancesForQualities());
+                chanceForQualityPercent += ChanceInPercentages(dreamQuality.Value, AddUpChancesForTags());
 
                 DreamQualityOddsPercent.Add(dreamQuality.Key, chanceForQualityPercent);
             }
         }
 
-        public float AddUpChancesForQualities()
+        public float AddUpChancesForTags()
         {
             float sumOfCollectionChances = 0;
-            foreach (var item in UpdateOddsForDreamQualities()) //DreamTracker.GetDreamQualities)
+            foreach (var item in UpdateOddsForDreamTags()) //DreamTracker.GetDreamQualities)
             {
                 sumOfCollectionChances += item.Value;
             }

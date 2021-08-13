@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Defs>
-
-  <DreamersDream.DreamDef ParentName = "TerrorisingDream">
+  <DreamersDream.DreamDef ParentName = "BaseDream">
     <defName>SleepwalkShapesDream</defName>
+    <tags>
+      <li>Terrorising</li>
+      <li>Sleepwalk</li>
+    </tags>
     <stages>
       <li>
         <label>Dreamt about abstract shapes</label>
@@ -10,11 +13,14 @@
         <baseMoodEffect>-4</baseMoodEffect>
       </li>
     </stages>
-    <isSleepwalk>true</isSleepwalk>
   </DreamersDream.DreamDef>
 
-  <DreamersDream.DreamDef ParentName = "TerrorisingDream">
+  <DreamersDream.DreamDef ParentName = "BaseDream">
     <defName>SleepwalkRedheadWithBeardDream</defName>
+    <tags>
+      <li>Terrorising</li>
+      <li>Sleepwalk</li>
+    </tags>
     <stages>
       <li>
         <label>Dreamt about redhead with beard</label>
@@ -22,12 +28,14 @@
         <baseMoodEffect>-5</baseMoodEffect>
       </li>
     </stages>
-    <isSleepwalk>true</isSleepwalk>
   </DreamersDream.DreamDef>
 
-
-  <DreamersDream.DreamDef ParentName = "HellLikeDream">
+  <DreamersDream.DreamDef ParentName = "BaseDream">
     <defName>SleepwalkFurnitureDream</defName>
+    <tags>
+      <li>Terrorising</li>
+      <li>Sleepwalk</li>
+    </tags>
     <stages>
       <li>
         <label>Dreamt about furniture</label>
@@ -35,12 +43,14 @@
         <baseMoodEffect>-4</baseMoodEffect>
       </li>
     </stages>
-    <isSleepwalk>true</isSleepwalk>
   </DreamersDream.DreamDef>
 
-
-  <DreamersDream.DreamDef ParentName = "TerrorisingDream">
+  <DreamersDream.DreamDef ParentName = "BaseDream">
     <defName>SleepwalkDarknessDream</defName>
+    <tags>
+      <li>Terrorising</li>
+      <li>Sleepwalk</li>
+    </tags>
     <stages>
       <li>
         <label>Dreamt about darkness</label>
@@ -48,26 +58,14 @@
         <baseMoodEffect>-4</baseMoodEffect>
       </li>
     </stages>
-    <isSleepwalk>true</isSleepwalk>
   </DreamersDream.DreamDef>
 
-
-  <DreamersDream.DreamDef ParentName = "TerrorisingDream">
-    <defName>SleepwalkHungerDream</defName>
-    <stages>
-      <li>
-        <label>Dreamt about starvation</label>
-        <description>I was starving... I was begging people to help me... But they wouldn't!</description>
-        <baseMoodEffect>-4</baseMoodEffect>
-      </li>
-    </stages>
-    <chance>10000</chance>
-    <isSleepwalk>true</isSleepwalk>
-  </DreamersDream.DreamDef>
-
-
-  <DreamersDream.DreamDef ParentName = "TerrorisingDream">
+  <DreamersDream.DreamDef ParentName = "BaseDream">
     <defName>SleepwalkStepsDream</defName>
+    <tags>
+      <li>Terrorising</li>
+      <li>Sleepwalk</li>
+    </tags>
     <stages>
       <li>
         <label>Dreamt about strange steps</label>
@@ -75,6 +73,5 @@
         <baseMoodEffect>-2</baseMoodEffect>
       </li>
     </stages>
-    <isSleepwalk>true</isSleepwalk>
   </DreamersDream.DreamDef>
 </Defs>

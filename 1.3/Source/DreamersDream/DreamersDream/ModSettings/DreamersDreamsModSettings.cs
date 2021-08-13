@@ -142,6 +142,10 @@ namespace DreamersDream
             float count = 0;
             foreach (var dreamTag in DreamTracker.DreamTagsDefs)
             {
+                if (dreamTag.isSideTag)
+                {
+                    continue;
+                }
                 count++;
                 switch (count % 2)
                 {
@@ -157,7 +161,7 @@ namespace DreamersDream
                         break;
                 }
 
-                Widgets.Label(ModSettingsUtility.GetMiddleOfRectForString(column, dreamTag.defName), dreamTag.defName);
+                Widgets.Label(ModSettingsUtility.GetMiddleOfRectForString(column, dreamTag.label), dreamTag.defName);
 
                 column.y += 25f;
             }
@@ -167,8 +171,12 @@ namespace DreamersDream
         {
             float count = 0;
 
-            foreach (var dreamQuality in DreamTracker.DreamTagsDefs)
+            foreach (var dreamTag in DreamTracker.DreamTagsDefs)
             {
+                if (dreamTag.isSideTag)
+                {
+                    continue;
+                }
                 count++;
                 switch (count % 2)
                 {
@@ -184,8 +192,8 @@ namespace DreamersDream
                         break;
                 }
 
-                float chance = dreamQuality.chance;
-                ModSettingsUtility.CheckIfMasterListContainsAddIfNot(dreamQuality, ref chance);
+                float chance = dreamTag.chance;
+                ModSettingsUtility.CheckIfMasterListContainsAddIfNot(dreamTag, ref chance);
 
                 ModSettingsUtility.DrawChanceButtons(column, ref chance);
 
@@ -195,7 +203,7 @@ namespace DreamersDream
 
                 column.y += 25f;
 
-                DD_Settings.TagsChanceModifs[dreamQuality.defName] = chance;
+                DD_Settings.TagsChanceModifs[dreamTag.defName] = chance;
             }
         }
 

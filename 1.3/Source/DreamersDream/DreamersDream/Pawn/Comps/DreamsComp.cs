@@ -48,7 +48,7 @@ namespace DreamersDream
         {
             if (CanGetDreamNow())
             {
-                var RandomTag = DreamRandomCalc.ChooseRandomDreamTag(TagsOddsTracker.GetUpdatedQualitiesWithChances());
+                var RandomTag = DreamRandomCalc.ChooseRandomDreamTag(TagsOddsTracker.GetUpdatedTagsWithChances());
 
                 var RandomDream = DreamRandomCalc.ChooseRandomDream(OddsTracker.GetUpdatedDreamsWithChances(RandomTag));
 
@@ -59,19 +59,6 @@ namespace DreamersDream
 
                 TriggerDreamEffects(RandomDream);
             }
-        }
-
-        private void DebugLogAllDreamsAndQualities()
-        {
-            foreach (var tag in TagsOddsTracker.GetUpdatedQualitiesWithChances())
-            {
-                Log.Message(tag.Key.defName + " has " + tag.Value + "% chance upper threshold. And these are dreams for this quality: ");
-                foreach (var dream in OddsTracker.GetUpdatedDreamsWithChances(tag.Key))
-                {
-                    Log.Message("     -" + dream.Key.defName + " has " + dream.Value + "% chance upper threshold.");
-                }
-            }
-            Log.Message("CUTOFF");
         }
 
         private bool CanGetDreamNow()
@@ -105,38 +92,36 @@ namespace DreamersDream
         {
             pawn.needs.mood.thoughts.memories.TryGainMemory(dream, null);
 
-            if (dream.isSleepwalk)
+            foreach (var dreamTag in dream.tags)
             {
-                switch (this.ChooseSleepwalkingType())
+                if (dreamTag.defName == "Sleepwalk")
                 {
-                    case SleepwalkingType.calm:
-                        pawn.mindState.mentalStateHandler.TryStartMentalState(DD_MentalStateDefOf.Sleepwalk, null, true, false, null, false);
-                        Messages.Message(pawn.Name.ToStringShort + " stood up from " + pawn.gender.GetPossessive() + " bed and started to wander around...", pawn, MessageTypeDefOf.NeutralEvent);
-                        break;
+                    switch (this.ChooseSleepwalkingType())
+                    {
+                        case SleepwalkingType.calm:
+                            pawn.mindState.mentalStateHandler.TryStartMentalState(DD_MentalStateDefOf.Sleepwalk, null, true, false, null, false);
+                            Messages.Message(pawn.Name.ToStringShort + " stood up from " + pawn.gender.GetPossessive() + " bed and started to wander around...", pawn, MessageTypeDefOf.NeutralEvent);
+                            break;
 
-                    case SleepwalkingType.food:
-                        break;
+                        case SleepwalkingType.food:
+                            break;
 
-                    case SleepwalkingType.drugs:
-                        break;
+                        case SleepwalkingType.drugs:
+                            break;
 
-                    case SleepwalkingType.rage:
-                        pawn.mindState.mentalStateHandler.TryStartMentalState(DD_MentalStateDefOf.SleepwalkBerserk, null, true, false, null, false);
-                        Messages.Message(pawn.Name.ToStringShort + " stood up from " + pawn.gender.GetPossessive() + " bed and started to attack others in murderous rage!", pawn, MessageTypeDefOf.NeutralEvent);
-                        break;
+                        case SleepwalkingType.rage:
+                            pawn.mindState.mentalStateHandler.TryStartMentalState(DD_MentalStateDefOf.SleepwalkBerserk, null, true, false, null, false);
+                            Messages.Message(pawn.Name.ToStringShort + " stood up from " + pawn.gender.GetPossessive() + " bed and started to attack others in murderous rage!", pawn, MessageTypeDefOf.NeutralEvent);
+                            break;
 
-                    case SleepwalkingType.tantrum:
-                        break;
+                        case SleepwalkingType.tantrum:
+                            break;
 
-                    default:
-                        break;
+                        default:
+                            break;
+                    }
                 }
             }
-            /*
-            if (dream.inspiration != null)
-            {
-                pawn.mindState.inspirationHandler.TryStartInspiration(dream.inspiration);
-            } */
         }
 
         private bool HasDreamAlready()
@@ -179,6 +164,19 @@ namespace DreamersDream
             return aggressiveness;
         }
 
+        private void DebugLogAllDreamsAndQualities()
+        {
+            foreach (var tag in TagsOddsTracker.GetUpdatedTagsWithChances())
+            {
+                Log.Message(tag.Key.defName + " has " + tag.Value + "% chance upper threshold. And these are dreams for those tags: ");
+                foreach (var dream in OddsTracker.GetUpdatedDreamsWithChances(tag.Key))
+                {
+                    Log.Message("     -" + dream.Key.defName + " has " + dream.Value + "% chance upper threshold.");
+                }
+            }
+            Log.Message("CUTOFF");
+        }
+
         private bool IsPawnCapableOfDreaming()
         {
             return pawn.needs?.rest != null && !pawn.Dead && (pawn.Spawned || pawn.IsCaravanMember());
@@ -187,11 +185,5 @@ namespace DreamersDream
         private PawnDreamTagsOddsTracker TagsOddsTracker;
 
         private PawnDreamOddsTracker OddsTracker;
-
-        private float aggressiveness = 0;
-
-        private float foodAttraction = 0;
-
-        private float drugAttraction = 0;
     }
 }
