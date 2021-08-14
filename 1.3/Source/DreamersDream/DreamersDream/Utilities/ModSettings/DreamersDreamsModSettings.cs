@@ -74,7 +74,7 @@ namespace DreamersDream
                 DD_Settings.sleepwalkerTraitModif = (float)Math.Round(listingMid.Slider(DD_Settings.sleepwalkerTraitModif, 0, 2), 2);
                 listingMid.GapLine();
 
-                Rect TableSettings = new Rect(masterRect.x, MidSettings.y + listingMid.CurHeight, 270f, inRect.height);
+                Rect TableSettings = new Rect(masterRect.x, MidSettings.y + listingMid.CurHeight, 300f, inRect.height);
                 TableSettings.height = inRect.height - TableSettings.y;
 
                 listingMid.End();
@@ -102,16 +102,16 @@ namespace DreamersDream
 
             foreach (var dreamTag in DreamTracker.GetAllDreamTags)
             {
-                if (dreamTag.isSideTag)
+                /*if (dreamTag.isSideTag)
                 {
                     continue;
-                }
+                }*/
 
                 ResolveAlternatingBG(count, columnTags, Textures.TableEntryBGCat1, Textures.TableEntryBGCat2);
-                DrawColumnCategory(ref columnTags, dreamTag);
+                DrawColumnCategory(columnTags, dreamTag);
 
                 ResolveAlternatingBG(count, columnChance, Textures.TableEntryBGChance1, Textures.TableEntryBGChance2);
-                DrawColumnChance(ref columnChance, dreamTag);
+                DrawColumnChance(columnChance, dreamTag);
 
                 count++;
 
@@ -120,12 +120,12 @@ namespace DreamersDream
             }
         }
 
-        private void DrawColumnCategory(ref Rect column, DreamTagDef tag)
+        private void DrawColumnCategory(Rect column, DreamTagDef tag)
         {
             Widgets.Label(ModSettingsUtility.GetMiddleOfRectForString(column, tag.label), tag.defName);
         }
 
-        private void DrawColumnChance(ref Rect column, DreamTagDef tag)
+        private void DrawColumnChance(Rect column, DreamTagDef tag)
         {
             float chance = tag.chance;
             ModSettingsUtility.CheckIfMasterListContainsAddIfNot(tag, ref chance);
@@ -140,10 +140,7 @@ namespace DreamersDream
 
         private void ResetValues()
         {
-            foreach (var dreamTag in DreamTracker.GetAllDreamTags)
-            {
-                DD_Settings.TagsCustomChances[dreamTag.defName] = dreamTag.chance;
-            }
+            DD_Settings.TagsCustomChances.Clear();
 
             DD_Settings.sleepwalkerTraitModif = 1;
         }

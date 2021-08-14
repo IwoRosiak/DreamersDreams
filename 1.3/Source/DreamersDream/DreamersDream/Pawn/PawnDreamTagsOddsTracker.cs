@@ -47,7 +47,7 @@ namespace DreamersDream
         public float AddUpChancesForTags()
         {
             float sumOfCollectionChances = 0;
-            foreach (var item in UpdateOddsForDreamTags()) //DreamTracker.GetDreamQualities)
+            foreach (var item in UpdateOddsForDreamTags())
             {
                 sumOfCollectionChances += item.Value;
             }
@@ -58,18 +58,5 @@ namespace DreamersDream
         {
             return (chance / sumOfChances) * 100;
         }
-
-        /*
-        public void CalculateOddsForDreams()
-        {
-            DreamTagOdds.Clear();
-            foreach (var dream in DreamTracker.GetAvailibleDreamsForPawn)
-            {
-                float chanceForTag = dream.CalculateChanceFor(pawn);
-
-                DreamTagOdds.Add(dream, chanceForTag);
-            }
-        }
-*/
     }
 }
