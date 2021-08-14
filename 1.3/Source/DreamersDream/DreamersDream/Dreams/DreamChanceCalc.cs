@@ -8,9 +8,9 @@ namespace DreamersDream
         {
             float dreamChance = 0;
 
-            if (DD_Settings.TagsChanceModifs.ContainsKey(dream.tags[0].defName) && !DD_Settings.isDefaultSettings)
+            if (DD_Settings.TagsCustomChances.ContainsKey(dream.tags[0].defName) && !DD_Settings.isDefaultSettings)
             {
-                dreamChance = DD_Settings.TagsChanceModifs[dream.tags[0].defName];
+                dreamChance = DD_Settings.TagsCustomChances[dream.tags[0].defName];
             }
             else
             {
@@ -23,9 +23,9 @@ namespace DreamersDream
         public static float CalculateChanceFor(this DreamTagDef dreamTag, Pawn pawn = null)
         {
             float chance = 0;
-            if (DD_Settings.TagsChanceModifs.ContainsKey(dreamTag.defName) && !DD_Settings.isDefaultSettings)
+            if (DD_Settings.TagsCustomChances.ContainsKey(dreamTag.defName) && !DD_Settings.isDefaultSettings)
             {
-                chance = DD_Settings.TagsChanceModifs[dreamTag.defName];
+                chance = DD_Settings.TagsCustomChances[dreamTag.defName];
             }
             else
             {

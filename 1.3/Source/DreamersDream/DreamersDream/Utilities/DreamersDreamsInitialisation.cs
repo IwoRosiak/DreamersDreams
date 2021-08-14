@@ -9,7 +9,6 @@ namespace DreamersDream
         {
             LoadDreams();
             LoadDreamTags();
-            //Log.Message(PawnDreamRandomCalc.ChooseRandomDream().defName);
         }
 
         private static void LoadDreams()

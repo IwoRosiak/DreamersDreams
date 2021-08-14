@@ -16,21 +16,19 @@ namespace DreamersDream
 
         public override void DoSettingsWindowContents(Rect inRect)
         {
-            if (DD_Settings.TagsChanceModifs.NullOrEmpty())
+            if (DD_Settings.TagsCustomChances.NullOrEmpty())
             {
-                DD_Settings.TagsChanceModifs = new Dictionary<string, float>();
+                DD_Settings.TagsCustomChances = new Dictionary<string, float>();
             }
-
-            Rect masterRect = new Rect(inRect.x + (0.1f * inRect.width), inRect.y + 40, 0.8f * inRect.width, 936);
 
             Widgets.DrawTextureFitted(new Rect(inRect.x, inRect.y, inRect.width, inRect.height), Textures.SettingsBackGround, 1);
 
-            Listing_Standard listingStandard = new Listing_Standard();
+            Rect masterRect = new Rect(inRect.x + (0.1f * inRect.width), inRect.y + 40, 0.8f * inRect.width, 936);
 
+            Listing_Standard listingStandard = new Listing_Standard();
             Rect TopSettings = new Rect(masterRect.x, masterRect.y, masterRect.width, 45);
 
-            listingStandard.Begin(TopSettings);
-
+            listingStandard.Begin(TopSettings); //column 1
             listingStandard.ColumnWidth = TopSettings.width / 3.2f;
 
             if (listingStandard.ButtonText("Mod active: " + DD_Settings.isDreamingActive.ToString()))
@@ -38,9 +36,9 @@ namespace DreamersDream
                 DD_Settings.isDreamingActive = !DD_Settings.isDreamingActive;
             }
 
-            Rect MidSettings = new Rect(TopSettings.x, TopSettings.y + listingStandard.CurHeight, masterRect.width, 60);//936 - listingStandard.CurHeight);
-            listingStandard.NewColumn();
+            Rect MidSettings = new Rect(TopSettings.x, TopSettings.y + listingStandard.CurHeight, masterRect.width, 60);
 
+            listingStandard.NewColumn(); // column 2
             if (DD_Settings.isDreamingActive)
             {
                 if (listingStandard.ButtonText("Default settings: " + DD_Settings.isDefaultSettings.ToString()))
@@ -49,8 +47,7 @@ namespace DreamersDream
                 }
             }
 
-            listingStandard.NewColumn();
-
+            listingStandard.NewColumn(); //column 3
             if (listingStandard.ButtonText("Reset settings", "Set now"))
             {
                 ResetValues();
@@ -59,7 +56,6 @@ namespace DreamersDream
             listingStandard.End();
 
             Listing_Standard listingMid = new Listing_Standard();
-            Listing_Standard listingTop = new Listing_Standard();
             if (DD_Settings.isDreamingActive && !DD_Settings.isDefaultSettings)
             {
                 listingMid.Begin(MidSettings);
@@ -76,33 +72,16 @@ namespace DreamersDream
                 }
 
                 DD_Settings.sleepwalkerTraitModif = (float)Math.Round(listingMid.Slider(DD_Settings.sleepwalkerTraitModif, 0, 2), 2);
+                listingMid.GapLine();
 
-                // = Widgets.HorizontalSlider(new Rect(TopSettings.x, ref cur), 50f, DD_Settings.sleepwalkerTraitModif, 0, 5, false, null, "0%", "500%", 0.01f);
-                //Widgets.Label(TopSettings.x, ref ScrollPos.y, 150f, "Sleepwalker trait modifier " + DD_Settings.sleepwalkerTraitModif * 100 + "%");
-                Rect TableSettings = new Rect(masterRect.x, masterRect.y + listingMid.CurHeight * 2.1f, 270f, inRect.height);
+                Rect TableSettings = new Rect(masterRect.x, MidSettings.y + listingMid.CurHeight, 270f, inRect.height);
                 TableSettings.height = inRect.height - TableSettings.y;
 
                 listingMid.End();
 
-                //listingTop.GapLine();
-
                 DrawTagsTable(TableSettings);
             }
         }
-
-        private void ResetValues()
-        {
-            foreach (var dreamTag in DreamTracker.GetAllDreamTags)
-            {
-                DD_Settings.TagsChanceModifs[dreamTag.defName] = dreamTag.chance;
-            }
-
-            DD_Settings.sleepwalkerTraitModif = 1;
-        }
-
-        private static Vector2 scrollPos = Vector2.zero;
-
-        private float scroll = 0;
 
         private void DrawTagsTable(Rect inRect)
         {
@@ -125,41 +104,20 @@ namespace DreamersDream
             GUI.EndClip();
         }
 
-        private void ResolveScroll(Rect inRect)
+        private void DrawRow(ref Rect row)
         {
-            float numberOfRows = DreamTracker.GetAllDreamTags.Count + 1;
-
-            float tableRowCapacity = inRect.height / 25f;
-
-            if (numberOfRows > tableRowCapacity)
-            {
-                scroll = GUI.VerticalScrollbar(inRect, scroll, inRect.height, 0, numberOfRows * 25f);
-            }
         }
 
         private void DrawColumnCategory(ref Rect column)
         {
-            float count = 0;
+            float alternatingBGCount = 0;
             foreach (var dreamTag in DreamTracker.GetAllDreamTags)
             {
                 if (dreamTag.isSideTag)
                 {
                     continue;
                 }
-                count++;
-                switch (count % 2)
-                {
-                    case 0:
-                        Widgets.DrawTextureFitted(column, Textures.TableEntryBGCat1, 1);
-                        break;
-
-                    case 1:
-                        Widgets.DrawTextureFitted(column, Textures.TableEntryBGCat2, 1);
-                        break;
-
-                    default:
-                        break;
-                }
+                ResolveAlternatingBG(ref alternatingBGCount, column, Textures.TableEntryBGCat1, Textures.TableEntryBGCat2);
 
                 Widgets.Label(ModSettingsUtility.GetMiddleOfRectForString(column, dreamTag.label), dreamTag.defName);
 
@@ -169,7 +127,7 @@ namespace DreamersDream
 
         private void DrawColumnChance(ref Rect column)
         {
-            float count = 0;
+            float alternatingBGCount = 0;
 
             foreach (var dreamTag in DreamTracker.GetAllDreamTags)
             {
@@ -177,20 +135,7 @@ namespace DreamersDream
                 {
                     continue;
                 }
-                count++;
-                switch (count % 2)
-                {
-                    case 0:
-                        Widgets.DrawTextureFitted(column, Textures.TableEntryBGChance1, 1);
-                        break;
-
-                    case 1:
-                        Widgets.DrawTextureFitted(column, Textures.TableEntryBGChance2, 1);
-                        break;
-
-                    default:
-                        break;
-                }
+                ResolveAlternatingBG(ref alternatingBGCount, column, Textures.TableEntryBGChance1, Textures.TableEntryBGChance2);
 
                 float chance = dreamTag.chance;
                 ModSettingsUtility.CheckIfMasterListContainsAddIfNot(dreamTag, ref chance);
@@ -203,7 +148,44 @@ namespace DreamersDream
 
                 column.y += 25f;
 
-                DD_Settings.TagsChanceModifs[dreamTag.defName] = chance;
+                DD_Settings.TagsCustomChances[dreamTag.defName] = chance;
+            }
+        }
+
+        private void ResetValues()
+        {
+            foreach (var dreamTag in DreamTracker.GetAllDreamTags)
+            {
+                DD_Settings.TagsCustomChances[dreamTag.defName] = dreamTag.chance;
+            }
+
+            DD_Settings.sleepwalkerTraitModif = 1;
+        }
+
+        private void ResolveAlternatingBG(ref float alternatingBGCount, Rect column, Texture texture1, Texture texture2)
+        {
+            alternatingBGCount++;
+            switch (alternatingBGCount % 2)
+            {
+                case 0:
+                    Widgets.DrawTextureFitted(column, texture1, 1);
+                    break;
+
+                case 1:
+                    Widgets.DrawTextureFitted(column, texture2, 1);
+                    break;
+            }
+        }
+
+        private void ResolveScroll(Rect inRect)
+        {
+            float numberOfRows = DreamTracker.GetAllDreamTags.Count + 1;
+
+            float tableRowCapacity = inRect.height / 25f;
+
+            if (numberOfRows > tableRowCapacity)
+            {
+                scroll = GUI.VerticalScrollbar(inRect, scroll, inRect.height, 0, numberOfRows * 25f);
             }
         }
 
@@ -211,5 +193,9 @@ namespace DreamersDream
         {
             return "Dreamer's Dreams";
         }
+
+        private static Vector2 scrollPos = Vector2.zero;
+
+        private float scroll = 0;
     }
 }

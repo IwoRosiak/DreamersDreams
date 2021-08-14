@@ -17,14 +17,14 @@ namespace DreamersDream
 
         public static void CheckIfMasterListContainsAddIfNot(DreamTagDef thingToCheck, ref float chance)
         {
-            if (DD_Settings.TagsChanceModifs.ContainsKey(thingToCheck.defName))
+            if (DD_Settings.TagsCustomChances.ContainsKey(thingToCheck.defName))
             {
-                chance = DD_Settings.TagsChanceModifs[thingToCheck.defName];
+                chance = DD_Settings.TagsCustomChances[thingToCheck.defName];
             }
             else
             {
-                DD_Settings.TagsChanceModifs.Add(thingToCheck.defName, chance);
-                chance = DD_Settings.TagsChanceModifs[thingToCheck.defName];
+                DD_Settings.TagsCustomChances.Add(thingToCheck.defName, chance);
+                chance = DD_Settings.TagsCustomChances[thingToCheck.defName];
             }
         }
 
@@ -86,7 +86,7 @@ namespace DreamersDream
         public static float AddUpChancesForQualities()
         {
             float sumOfCollectionChances = 0;
-            foreach (var item in DD_Settings.TagsChanceModifs)
+            foreach (var item in DD_Settings.TagsCustomChances)
             {
                 sumOfCollectionChances += item.Value;
             }
