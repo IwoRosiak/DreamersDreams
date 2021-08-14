@@ -25,35 +25,35 @@ namespace DreamersDream
 
             Rect masterRect = new Rect(inRect.x + (0.1f * inRect.width), inRect.y + 40, 0.8f * inRect.width, 936);
 
-            Listing_Standard listingStandard = new Listing_Standard();
+            Listing_Standard listingTop = new Listing_Standard();
             Rect TopSettings = new Rect(masterRect.x, masterRect.y, masterRect.width, 45);
 
-            listingStandard.Begin(TopSettings); //column 1
-            listingStandard.ColumnWidth = TopSettings.width / 3.2f;
+            listingTop.Begin(TopSettings); //column 1
+            listingTop.ColumnWidth = TopSettings.width / 3.2f;
 
-            if (listingStandard.ButtonText("Mod active: " + DD_Settings.isDreamingActive.ToString()))
+            if (listingTop.ButtonText("Mod active: " + DD_Settings.isDreamingActive.ToString()))
             {
                 DD_Settings.isDreamingActive = !DD_Settings.isDreamingActive;
             }
 
-            Rect MidSettings = new Rect(TopSettings.x, TopSettings.y + listingStandard.CurHeight, masterRect.width, 60);
+            Rect MidSettings = new Rect(TopSettings.x, TopSettings.y + listingTop.CurHeight, masterRect.width, 60);
 
-            listingStandard.NewColumn(); // column 2
+            listingTop.NewColumn(); // column 2
             if (DD_Settings.isDreamingActive)
             {
-                if (listingStandard.ButtonText("Default settings: " + DD_Settings.isDefaultSettings.ToString()))
+                if (listingTop.ButtonText("Default settings: " + DD_Settings.isDefaultSettings.ToString()))
                 {
                     DD_Settings.isDefaultSettings = !DD_Settings.isDefaultSettings;
                 }
             }
 
-            listingStandard.NewColumn(); //column 3
-            if (listingStandard.ButtonText("Reset settings", "Set now"))
+            listingTop.NewColumn(); //column 3
+            if (listingTop.ButtonText("Reset settings", "Set now"))
             {
                 ResetValues();
             }
 
-            listingStandard.End();
+            listingTop.End();
 
             Listing_Standard listingMid = new Listing_Standard();
             if (DD_Settings.isDreamingActive && !DD_Settings.isDefaultSettings)
@@ -79,77 +79,63 @@ namespace DreamersDream
 
                 listingMid.End();
 
-                DrawTagsTable(TableSettings);
+                Rect TagTable = new Rect(TableSettings.x, TableSettings.y, TableSettings.width, columnHeight * CountDisplayableTags());
+                Widgets.BeginScrollView(TableSettings, ref scrollPos, TagTable, true);
+
+                DrawTagsRows(TagTable);
+
+                Widgets.EndScrollView();
             }
         }
 
-        private void DrawTagsTable(Rect inRect)
+        private void DrawTagsRows(Rect TableRect)
         {
-            ResolveScroll(new Rect(inRect.x, inRect.y, 10f, inRect.height));
+            float count = 0;
 
-            GUI.BeginClip(inRect, scrollPos, scrollPos, false);
+            float ScrollYPos = TableRect.y;
 
-            Rect columnTags = new Rect(inRect.x - 68f, inRect.y - scroll - 204f, 100f, 25f);
-
+            Rect columnTags = new Rect(TableRect.x, ScrollYPos, 100f, columnHeight);
             ModSettingsUtility.DrawTableFirstRow(ref columnTags, "Tags");
 
-            Rect columnChance = new Rect(columnTags.x + 100, inRect.y - scroll - 204f, 146f, 25f);
-
+            Rect columnChance = new Rect(columnTags.x + columnTags.width, ScrollYPos, 146f, columnHeight);
             ModSettingsUtility.DrawTableFirstRow(ref columnChance, "Chance");
 
-            DrawColumnCategory(ref columnTags);
-
-            DrawColumnChance(ref columnChance);
-
-            GUI.EndClip();
-        }
-
-        private void DrawRow(ref Rect row)
-        {
-        }
-
-        private void DrawColumnCategory(ref Rect column)
-        {
-            float alternatingBGCount = 0;
             foreach (var dreamTag in DreamTracker.GetAllDreamTags)
             {
                 if (dreamTag.isSideTag)
                 {
                     continue;
                 }
-                ResolveAlternatingBG(ref alternatingBGCount, column, Textures.TableEntryBGCat1, Textures.TableEntryBGCat2);
 
-                Widgets.Label(ModSettingsUtility.GetMiddleOfRectForString(column, dreamTag.label), dreamTag.defName);
+                ResolveAlternatingBG(count, columnTags, Textures.TableEntryBGCat1, Textures.TableEntryBGCat2);
+                DrawColumnCategory(ref columnTags, dreamTag);
 
-                column.y += 25f;
+                ResolveAlternatingBG(count, columnChance, Textures.TableEntryBGChance1, Textures.TableEntryBGChance2);
+                DrawColumnChance(ref columnChance, dreamTag);
+
+                count++;
+
+                columnTags.y += columnHeight;
+                columnChance.y += columnHeight;
             }
         }
 
-        private void DrawColumnChance(ref Rect column)
+        private void DrawColumnCategory(ref Rect column, DreamTagDef tag)
         {
-            float alternatingBGCount = 0;
+            Widgets.Label(ModSettingsUtility.GetMiddleOfRectForString(column, tag.label), tag.defName);
+        }
 
-            foreach (var dreamTag in DreamTracker.GetAllDreamTags)
-            {
-                if (dreamTag.isSideTag)
-                {
-                    continue;
-                }
-                ResolveAlternatingBG(ref alternatingBGCount, column, Textures.TableEntryBGChance1, Textures.TableEntryBGChance2);
+        private void DrawColumnChance(ref Rect column, DreamTagDef tag)
+        {
+            float chance = tag.chance;
+            ModSettingsUtility.CheckIfMasterListContainsAddIfNot(tag, ref chance);
 
-                float chance = dreamTag.chance;
-                ModSettingsUtility.CheckIfMasterListContainsAddIfNot(dreamTag, ref chance);
+            ModSettingsUtility.DrawChanceButtons(column, ref chance);
 
-                ModSettingsUtility.DrawChanceButtons(column, ref chance);
+            string label = Math.Round(PawnDreamTagsOddsTracker.ChanceInPercentages(chance, ModSettingsUtility.AddUpChancesForQualities()), 2) + "%";
+            Widgets.Label(ModSettingsUtility.GetMiddleOfRectForString(column, label), label);
 
-                string label = Math.Round(PawnDreamTagsOddsTracker.ChanceInPercentages(chance, ModSettingsUtility.AddUpChancesForQualities()), 2) + "%";
-
-                Widgets.Label(ModSettingsUtility.GetMiddleOfRectForString(column, label), label);
-
-                column.y += 25f;
-
-                DD_Settings.TagsCustomChances[dreamTag.defName] = chance;
-            }
+            DD_Settings.TagsCustomChances[tag.defName] = chance;
         }
 
         private void ResetValues()
@@ -162,9 +148,8 @@ namespace DreamersDream
             DD_Settings.sleepwalkerTraitModif = 1;
         }
 
-        private void ResolveAlternatingBG(ref float alternatingBGCount, Rect column, Texture texture1, Texture texture2)
+        private void ResolveAlternatingBG(float alternatingBGCount, Rect column, Texture texture1, Texture texture2)
         {
-            alternatingBGCount++;
             switch (alternatingBGCount % 2)
             {
                 case 0:
@@ -177,16 +162,19 @@ namespace DreamersDream
             }
         }
 
-        private void ResolveScroll(Rect inRect)
+        private float CountDisplayableTags()
         {
-            float numberOfRows = DreamTracker.GetAllDreamTags.Count + 1;
+            float numberOfRows = 1;
 
-            float tableRowCapacity = inRect.height / 25f;
-
-            if (numberOfRows > tableRowCapacity)
+            foreach (var tag in DreamTracker.GetAllDreamTags)
             {
-                scroll = GUI.VerticalScrollbar(inRect, scroll, inRect.height, 0, numberOfRows * 25f);
+                if (!tag.isSideTag)
+                {
+                    numberOfRows++;
+                }
             }
+
+            return numberOfRows;
         }
 
         public override string SettingsCategory()
@@ -196,6 +184,6 @@ namespace DreamersDream
 
         private static Vector2 scrollPos = Vector2.zero;
 
-        private float scroll = 0;
+        private static float columnHeight = 25f;
     }
 }

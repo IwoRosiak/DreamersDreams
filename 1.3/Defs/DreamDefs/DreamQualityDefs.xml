@@ -73,6 +73,72 @@
     <chance>500</chance>
   </DreamersDream.DreamTagDef>
 
+  <DreamersDream.DreamTagDef>
+    <defName>Unpasdasdleasant</defName>
+    <label>unpleasant</label>
+    <isSpecial>false</isSpecial>
+    <chance>500</chance>
+  </DreamersDream.DreamTagDef>
+
+  <DreamersDream.DreamTagDef>
+    <defName>Unpleasdasdasant</defName>
+    <label>unpleasant</label>
+    <isSpecial>false</isSpecial>
+    <chance>500</chance>
+  </DreamersDream.DreamTagDef>
+
+  <DreamersDream.DreamTagDef>
+    <defName>Unpleassadasdant</defName>
+    <label>unpleasant</label>
+    <isSpecial>false</isSpecial>
+    <chance>500</chance>
+  </DreamersDream.DreamTagDef>
+
+  <DreamersDream.DreamTagDef>
+    <defName>Unsadasdpleasant</defName>
+    <label>unpleasant</label>
+    <isSpecial>false</isSpecial>
+    <chance>500</chance>
+  </DreamersDream.DreamTagDef>
+
+  <DreamersDream.DreamTagDef>
+    <defName>Unsadasdadsasdpleasant</defName>
+    <label>unpleasant</label>
+    <isSpecial>false</isSpecial>
+    <chance>500</chance>
+  </DreamersDream.DreamTagDef>  <DreamersDream.DreamTagDef>
+      <defName>Unsadasasdasddpleasant</defName>
+      <label>unpleasant</label>
+      <isSpecial>false</isSpecial>
+      <chance>500</chance>
+    </DreamersDream.DreamTagDef>  <DreamersDream.DreamTagDef>
+        <defName>Unsadasasdasddpleasant</defName>
+        <label>unpleasant</label>
+        <isSpecial>false</isSpecial>
+        <chance>500</chance>
+      </DreamersDream.DreamTagDef>
+
+      <DreamersDream.DreamTagDef>
+          <defName>Unsadasasdasddpleasdasasant</defName>
+          <label>unpleasant</label>
+          <isSpecial>false</isSpecial>
+          <chance>500</chance>
+        </DreamersDream.DreamTagDef>
+
+        <DreamersDream.DreamTagDef>
+            <defName>Unsadaasasdaasdasdsddplesasant</defName>
+            <label>unpleasant</label>
+            <isSpecial>false</isSpecial>
+            <chance>500</chance>
+          </DreamersDream.DreamTagDef>
+
+          <DreamersDream.DreamTagDef>
+              <defName>Unsadasasdassadsaddpleasssant</defName>
+              <label>unpleasant</label>
+              <isSpecial>false</isSpecial>
+              <chance>500</chance>
+            </DreamersDream.DreamTagDef>
+
 
 <!-- SIDE TAGS -->
   <DreamersDream.DreamTagDef>
