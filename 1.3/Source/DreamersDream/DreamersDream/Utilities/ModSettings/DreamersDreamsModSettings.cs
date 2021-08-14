@@ -86,15 +86,15 @@ namespace DreamersDream
 
                 //listingTop.GapLine();
 
-                DrawQualityTable(TableSettings);
+                DrawTagsTable(TableSettings);
             }
         }
 
         private void ResetValues()
         {
-            foreach (var dreamQuality in DreamTracker.DreamTagsDefs)
+            foreach (var dreamTag in DreamTracker.GetAllDreamTags)
             {
-                DD_Settings.TagsChanceModifs[dreamQuality.defName] = dreamQuality.chance;
+                DD_Settings.TagsChanceModifs[dreamTag.defName] = dreamTag.chance;
             }
 
             DD_Settings.sleepwalkerTraitModif = 1;
@@ -104,7 +104,7 @@ namespace DreamersDream
 
         private float scroll = 0;
 
-        private void DrawQualityTable(Rect inRect)
+        private void DrawTagsTable(Rect inRect)
         {
             ResolveScroll(new Rect(inRect.x, inRect.y, 10f, inRect.height));
 
@@ -127,7 +127,7 @@ namespace DreamersDream
 
         private void ResolveScroll(Rect inRect)
         {
-            float numberOfRows = DreamTracker.DreamTagsDefs.Count + 1;
+            float numberOfRows = DreamTracker.GetAllDreamTags.Count + 1;
 
             float tableRowCapacity = inRect.height / 25f;
 
@@ -140,7 +140,7 @@ namespace DreamersDream
         private void DrawColumnCategory(ref Rect column)
         {
             float count = 0;
-            foreach (var dreamTag in DreamTracker.DreamTagsDefs)
+            foreach (var dreamTag in DreamTracker.GetAllDreamTags)
             {
                 if (dreamTag.isSideTag)
                 {
@@ -171,7 +171,7 @@ namespace DreamersDream
         {
             float count = 0;
 
-            foreach (var dreamTag in DreamTracker.DreamTagsDefs)
+            foreach (var dreamTag in DreamTracker.GetAllDreamTags)
             {
                 if (dreamTag.isSideTag)
                 {

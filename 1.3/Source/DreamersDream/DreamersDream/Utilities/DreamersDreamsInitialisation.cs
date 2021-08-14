@@ -8,7 +8,7 @@ namespace DreamersDream
         static DreamersDreamsInitialisation()
         {
             LoadDreams();
-            LoadDreamQualities();
+            LoadDreamTags();
             //Log.Message(PawnDreamRandomCalc.ChooseRandomDream().defName);
         }
 
@@ -21,7 +21,7 @@ namespace DreamersDream
                 if (!dream.tags.NullOrEmpty())
                 {
                     totalDreams++;
-                    DreamTracker.DreamDefs.Add(dream);
+                    DreamTracker.GetAllDreams.Add(dream);
                 }
                 else
                 {
@@ -31,17 +31,16 @@ namespace DreamersDream
             Log.Message("Dreamer's Dreams: successfully loaded " + totalDreams + " dreams.");
         }
 
-        private static void LoadDreamQualities()
+        private static void LoadDreamTags()
         {
-            var totalQualities = 0;
+            var totalTags = 0;
 
-            foreach (DreamTagDef dreamQuality in GenDefDatabase.GetAllDefsInDatabaseForDef(typeof(DreamTagDef)))
+            foreach (DreamTagDef tag in GenDefDatabase.GetAllDefsInDatabaseForDef(typeof(DreamTagDef)))
             {
-                totalQualities++;
-                DreamTracker.GetDreamTags.Add(dreamQuality);
-                //DreamTracker.DreamQualityDefsWithSettings.Add(dreamQuality, dreamQuality.chance);
+                totalTags++;
+                DreamTracker.GetAllDreamTags.Add(tag);
             }
-            Log.Message("Dreamer's Dreams: successfully loaded " + totalQualities + " dream qualities.");
+            Log.Message("Dreamer's Dreams: successfully loaded " + totalTags + " dream tags.");
         }
     }
 }

@@ -4,7 +4,7 @@ using Verse;
 namespace DreamersDream
 {
     [StaticConstructorOnStartup]
-    public static class Textures
+    internal static class Textures
     {
         public static readonly Texture2D SettingsBackGround = ContentFinder<Texture2D>.Get("UI/ModSettings/background", true);
 

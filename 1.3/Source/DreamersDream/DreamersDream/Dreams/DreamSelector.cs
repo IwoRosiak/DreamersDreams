@@ -3,14 +3,14 @@ using Verse;
 
 namespace DreamersDream
 {
-    internal static class DreamRandomCalc
+    internal static class DreamSelector
     {
-        public static DreamTagDef ChooseRandomDreamTag(Dictionary<DreamTagDef, float> Tags)
+        internal static DreamTagDef ChooseRandomDreamTag(Dictionary<DreamTagDef, float> Tags)
         {
             return RollRandomDreamTags(Tags);
         }
 
-        public static DreamDef ChooseRandomDream(Dictionary<DreamDef, float> Dreams)
+        internal static DreamDef ChooseRandomDream(Dictionary<DreamDef, float> Dreams)
         {
             return RollRandomDream(Dreams);
         }

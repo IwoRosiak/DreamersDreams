@@ -56,7 +56,7 @@ namespace DreamersDream
         {
             List<DreamDef> MatchingDreams = new List<DreamDef>();
 
-            foreach (var dream in DreamTracker.GetAvailibleDreamsForPawn)
+            foreach (var dream in DreamTracker.GetAllDreams)
             {
                 if (dream.tags.Contains(tag))
                 {

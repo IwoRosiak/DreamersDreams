@@ -50,8 +50,13 @@ namespace DreamersDream
 
         private static float GetSleepwalkerMultiplier(Pawn pawn)
         {
+            if (pawn == null)
+            {
+                return 1;
+            }
+
             float traitMultiplier = 1;
-            if (pawn.story.traits.HasTrait(DD_TraitDefOf.Sleepwalker))
+            if (pawn?.story.traits.HasTrait(DD_TraitDefOf.Sleepwalker) == true)
             {
                 traitMultiplier = DD_Settings.sleepwalkerTraitModif;
                 switch (pawn.story.traits.DegreeOfTrait(DD_TraitDefOf.Sleepwalker))

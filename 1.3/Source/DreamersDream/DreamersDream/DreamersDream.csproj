@@ -59,22 +59,22 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ModSettings\DD_Settings.cs" />
-    <Compile Include="ModSettings\ModSettingsUtility.cs" />
-    <Compile Include="Pawn\Comps\DreamsCompProperties.cs" />
-    <Compile Include="Pawn\Comps\DreamsComp.cs" />
-    <Compile Include="DreamersDreamsInitialisation.cs" />
+    <Compile Include="Utilities\ModSettings\DD_Settings.cs" />
+    <Compile Include="Utilities\ModSettings\ModSettingsUtility.cs" />
+    <Compile Include="Pawn\DreamsCompProperties.cs" />
+    <Compile Include="Pawn\DreamsComp.cs" />
+    <Compile Include="Utilities\DreamersDreamsInitialisation.cs" />
     <Compile Include="Defs\Dreams\DreamTagDef.cs" />
-    <Compile Include="ModSettings\DreamersDreamsModSettings.cs" />
+    <Compile Include="Utilities\ModSettings\DreamersDreamsModSettings.cs" />
     <Compile Include="Pawn\PawnDreamOddsTracker.cs" />
-    <Compile Include="Pawn\Sleepwalking\SleepwalkingChanceCalc.cs" />
-    <Compile Include="Pawn\Sleepwalking\SleepwalkingTypes.cs" />
-    <Compile Include="Pawn\Utilities\DreamTracker.cs" />
-    <Compile Include="Pawn\Utilities\DreamChanceCalc.cs" />
-    <Compile Include="Pawn\Utilities\DreamRandomCalc.cs" />
+    <Compile Include="Dreams\SleepwalkingChanceCalc.cs" />
+    <Compile Include="Dreams\SleepwalkingTypes.cs" />
+    <Compile Include="Dreams\DreamTracker.cs" />
+    <Compile Include="Dreams\DreamChanceCalc.cs" />
+    <Compile Include="Dreams\DreamSelector.cs" />
     <Compile Include="Pawn\PawnDreamTagsOddsTracker.cs" />
     <Compile Include="Defs\Traits\DD_TraitsDefOf.cs" />
-    <Compile Include="Textures.cs" />
+    <Compile Include="Utilities\Textures.cs" />
     <Compile Include="Defs\MentalStates\DD_MentalStateDefOf.cs" />
     <Compile Include="Defs\MentalStates\DD_MentalStateDef.cs" />
     <Compile Include="Defs\Dreams\DreamDef.cs" />

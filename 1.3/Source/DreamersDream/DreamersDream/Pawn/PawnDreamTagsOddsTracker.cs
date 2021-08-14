@@ -8,12 +8,12 @@ namespace DreamersDream
         public Dictionary<DreamTagDef, float> GetUpdatedTagsWithChances()
         {
             ConvertOddsForDreamTagsToPercent();
-            return DreamQualityOddsPercent;
+            return DreamTagOddsPercent;
         }
 
         private Pawn pawn;
 
-        private Dictionary<DreamTagDef, float> DreamQualityOddsPercent = new Dictionary<DreamTagDef, float>();
+        private Dictionary<DreamTagDef, float> DreamTagOddsPercent = new Dictionary<DreamTagDef, float>();
 
         public PawnDreamTagsOddsTracker(Pawn parent)
         {
@@ -23,7 +23,7 @@ namespace DreamersDream
         private Dictionary<DreamTagDef, float> UpdateOddsForDreamTags()
         {
             Dictionary<DreamTagDef, float> DreamTagOdds = new Dictionary<DreamTagDef, float>();
-            foreach (var dreamTag in DreamTracker.DreamTagsDefs)
+            foreach (var dreamTag in DreamTracker.GetAllDreamTags)
             {
                 float chanceForTag = dreamTag.CalculateChanceFor(pawn);
 
@@ -34,13 +34,13 @@ namespace DreamersDream
 
         private void ConvertOddsForDreamTagsToPercent()
         {
-            float chanceForQualityPercent = 0;
-            DreamQualityOddsPercent.Clear();
-            foreach (var dreamQuality in UpdateOddsForDreamTags())
+            float chanceForTagPercent = 0;
+            DreamTagOddsPercent.Clear();
+            foreach (var dreamTag in UpdateOddsForDreamTags())
             {
-                chanceForQualityPercent += ChanceInPercentages(dreamQuality.Value, AddUpChancesForTags());
+                chanceForTagPercent += ChanceInPercentages(dreamTag.Value, AddUpChancesForTags());
 
-                DreamQualityOddsPercent.Add(dreamQuality.Key, chanceForQualityPercent);
+                DreamTagOddsPercent.Add(dreamTag.Key, chanceForTagPercent);
             }
         }
 
@@ -62,12 +62,12 @@ namespace DreamersDream
         /*
         public void CalculateOddsForDreams()
         {
-            DreamQualityOdds.Clear();
+            DreamTagOdds.Clear();
             foreach (var dream in DreamTracker.GetAvailibleDreamsForPawn)
             {
-                float chanceForQuality = dream.CalculateChanceFor(pawn);
+                float chanceForTag = dream.CalculateChanceFor(pawn);
 
-                DreamQualityOdds.Add(dream, chanceForQuality);
+                DreamTagOdds.Add(dream, chanceForTag);
             }
         }
 */

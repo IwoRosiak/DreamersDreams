@@ -48,9 +48,9 @@ namespace DreamersDream
         {
             if (CanGetDreamNow())
             {
-                var RandomTag = DreamRandomCalc.ChooseRandomDreamTag(TagsOddsTracker.GetUpdatedTagsWithChances());
+                var RandomTag = DreamSelector.ChooseRandomDreamTag(TagsOddsTracker.GetUpdatedTagsWithChances());
 
-                var RandomDream = DreamRandomCalc.ChooseRandomDream(OddsTracker.GetUpdatedDreamsWithChances(RandomTag));
+                var RandomDream = DreamSelector.ChooseRandomDream(OddsTracker.GetUpdatedDreamsWithChances(RandomTag));
 
                 if (RandomTag.isSpecial)
                 {
@@ -126,7 +126,7 @@ namespace DreamersDream
 
         private bool HasDreamAlready()
         {
-            foreach (DreamDef dream in DreamTracker.DreamDefs)
+            foreach (DreamDef dream in DreamTracker.GetAllDreams)
             {
                 if (pawn.needs.mood.thoughts.memories.GetFirstMemoryOfDef(dream) != null)
                 {
