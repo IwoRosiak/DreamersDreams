@@ -9,6 +9,8 @@ namespace DreamersDream
         {
             LoadDreams();
             LoadDreamTags();
+
+            DD_Mod.PurgeDict();
         }
 
         private static void LoadDreams()

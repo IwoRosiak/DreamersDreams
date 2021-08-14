@@ -102,10 +102,10 @@ namespace DreamersDream
 
             foreach (var dreamTag in DreamTracker.GetAllDreamTags)
             {
-                /*if (dreamTag.isSideTag)
+                if (dreamTag.isSideTag)
                 {
                     continue;
-                }*/
+                }
 
                 ResolveAlternatingBG(count, columnTags, Textures.TableEntryBGCat1, Textures.TableEntryBGCat2);
                 DrawColumnCategory(columnTags, dreamTag);
@@ -172,6 +172,23 @@ namespace DreamersDream
             }
 
             return numberOfRows;
+        }
+
+        public static void PurgeDict()
+        {
+            Dictionary<string, float> tempDict = new Dictionary<string, float>();
+
+            foreach (var tag in DreamTracker.GetAllDreamTags)
+            {
+                if (DD_Settings.TagsCustomChances.ContainsKey(tag.defName))
+                {
+                    tempDict.Add(tag.defName, DD_Settings.TagsCustomChances[tag.defName]);
+                }
+            }
+
+            DD_Settings.TagsCustomChances.Clear();
+
+            DD_Settings.TagsCustomChances = tempDict;
         }
 
         public override string SettingsCategory()
