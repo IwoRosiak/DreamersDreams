@@ -36,7 +36,7 @@ namespace DreamersDream
                 DD_Settings.isDreamingActive = !DD_Settings.isDreamingActive;
             }
 
-            Rect MidSettings = new Rect(TopSettings.x, TopSettings.y + listingTop.CurHeight, masterRect.width, 60);
+            Rect MidSettings = new Rect(TopSettings.x, TopSettings.y + listingTop.CurHeight, masterRect.width, 180f);
 
             listingTop.NewColumn(); // column 2
             if (DD_Settings.isDreamingActive)
@@ -64,14 +64,17 @@ namespace DreamersDream
 
                 if (DD_Settings.sleepwalkerTraitModif == 0)
                 {
-                    listingMid.Label("How much sleepwalker traits affect chance for sleepwalking: " + "off");
+                    listingMid.Label("Sleepwalking is turned off.");
                 }
                 else
                 {
-                    listingMid.Label("How much sleepwalker traits affect chance for sleepwalking: " + DD_Settings.sleepwalkerTraitModif * 100 + "%");
+                    listingMid.Label("Occasional sleepwalker will sleepwalk around " + DD_Settings.occasionalSleepwalkerTraitModif * DD_Settings.sleepwalkerTraitModif + " times a year.");
+                    listingMid.Label("Sleepwalker will sleepwalk around " + DD_Settings.normalSleepwalkerTraitModif * DD_Settings.sleepwalkerTraitModif + " times a year.");
+                    listingMid.Label("Usual sleepwalker will sleepwalk around " + DD_Settings.usualSleepwalkerTraitModif * DD_Settings.sleepwalkerTraitModif + " times a year.");
                 }
 
                 DD_Settings.sleepwalkerTraitModif = (float)Math.Round(listingMid.Slider(DD_Settings.sleepwalkerTraitModif, 0, 2), 2);
+
                 listingMid.GapLine();
 
                 Rect TableSettings = new Rect(masterRect.x, MidSettings.y + listingMid.CurHeight, 300f, inRect.height);

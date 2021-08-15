@@ -38,8 +38,15 @@ namespace DreamersDream
 
             foreach (DreamTagDef tag in GenDefDatabase.GetAllDefsInDatabaseForDef(typeof(DreamTagDef)))
             {
-                totalTags++;
-                DreamTracker.GetAllDreamTags.Add(tag);
+                if (tag.chance > 0)
+                {
+                    totalTags++;
+                    DreamTracker.GetAllDreamTags.Add(tag);
+                }
+                else
+                {
+                    Log.Message("Skipping " + tag.defName + " with chance below zero.");
+                }
             }
             Log.Message("Dreamer's Dreams: successfully loaded " + totalTags + " dream tags.");
         }

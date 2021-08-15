@@ -13,13 +13,18 @@ namespace DreamersDream
 
         public static bool isDefaultSettings = true;
 
-        public static float sleepwalkerTraitModif = 1;
-
         public static bool canNonSleepwalkerSleepwalk = true;
 
         public static bool isDebugMode = false;
 
         public static Dictionary<string, float> TagsCustomChances;
+
+        //sleepwalk
+        public static float sleepwalkerTraitModif = 1;
+
+        public static float occasionalSleepwalkerTraitModif = 1.5f;
+        public static float normalSleepwalkerTraitModif = 8.0f;
+        public static float usualSleepwalkerTraitModif = 30.0f;
 
         public override void ExposeData()
         {
@@ -29,7 +34,13 @@ namespace DreamersDream
 
             Scribe_Values.Look(ref isDefaultSettings, "isDefaultSettings", true);
 
+            //sleepwalking
+
             Scribe_Values.Look(ref sleepwalkerTraitModif, "sleepwalkerTraitModif", 1);
+
+            Scribe_Values.Look(ref occasionalSleepwalkerTraitModif, "occasionalSleepwalkerTraitModif", 1.5f);
+            Scribe_Values.Look(ref normalSleepwalkerTraitModif, "normalSleepwalkerTraitModif", 8.0f);
+            Scribe_Values.Look(ref usualSleepwalkerTraitModif, "usualSleepwalkerTraitModif", 30.0f);
 
             base.ExposeData();
         }

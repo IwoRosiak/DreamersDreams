@@ -40,25 +40,37 @@ namespace DreamersDream
             }
             if (DD_Settings.isDreamingActive)
             {
-                TryApplyDream();
+                if (CanGetDreamNow())
+                {
+                    if (ShouldSleepwalk())
+                    {
+                        ApplyDreamOfSpecificTag(DreamTagDefOf.Sleepwalk);
+                    }
+                    else
+                    {
+                        ApplyRandomDream();
+                    }
+                }
             }
         }
 
-        private void TryApplyDream()
+        private void ApplyRandomDream()
         {
-            if (CanGetDreamNow())
+            var RandomTag = DreamSelector.ChooseRandomDreamTag(TagsOddsTracker.GetUpdatedTagsWithChances());
+
+            ApplyDreamOfSpecificTag(RandomTag);
+        }
+
+        private void ApplyDreamOfSpecificTag(DreamTagDef randomTag)
+        {
+            var RandomDream = DreamSelector.ChooseRandomDream(OddsTracker.GetUpdatedDreamsWithChances(randomTag));
+
+            if (randomTag.isSpecial)
             {
-                var RandomTag = DreamSelector.ChooseRandomDreamTag(TagsOddsTracker.GetUpdatedTagsWithChances());
-
-                var RandomDream = DreamSelector.ChooseRandomDream(OddsTracker.GetUpdatedDreamsWithChances(RandomTag));
-
-                if (RandomTag.isSpecial)
-                {
-                    Messages.Message(pawn.Name.ToStringShort + " is experiencing " + RandomTag.defName.ToLower() + " dream!", pawn, MessageTypeDefOf.NeutralEvent);
-                }
-
-                TriggerDreamEffects(RandomDream);
+                Messages.Message(pawn.Name.ToStringShort + " is experiencing " + randomTag.defName.ToLower() + " dream!", pawn, MessageTypeDefOf.NeutralEvent);
             }
+
+            TriggerDreamEffects(RandomDream);
         }
 
         private bool CanGetDreamNow()
@@ -164,6 +176,48 @@ namespace DreamersDream
             return aggressiveness;
         }
 
+        private bool ShouldSleepwalk()
+        {
+            if (pawn?.story.traits.HasTrait(DD_TraitDefOf.Sleepwalker) == true)
+            {
+                UpdatePawnSleepwalkingChance();
+
+                if (PawnSleepwalkingChance != 0)
+                {
+                    float roll = Rand.RangeInclusive(0, 60);
+
+                    if (roll <= PawnSleepwalkingChance)
+                    {
+                        return true;
+                    }
+                }
+            }
+
+            return false;
+        }
+
+        private void UpdatePawnSleepwalkingChance()
+        {
+            if (pawn?.story.traits.HasTrait(DD_TraitDefOf.Sleepwalker) == true)
+            {
+                PawnSleepwalkingChance = DD_Settings.sleepwalkerTraitModif;
+                switch (pawn.story.traits.DegreeOfTrait(DD_TraitDefOf.Sleepwalker))
+                {
+                    case 1:
+                        PawnSleepwalkingChance *= DD_Settings.occasionalSleepwalkerTraitModif;
+                        break;
+
+                    case 2:
+                        PawnSleepwalkingChance *= DD_Settings.sleepwalkerTraitModif;
+                        break;
+
+                    case 3:
+                        PawnSleepwalkingChance *= DD_Settings.usualSleepwalkerTraitModif;
+                        break;
+                }
+            }
+        }
+
         private void DebugLogAllDreamsAndQualities()
         {
             foreach (var tag in TagsOddsTracker.GetUpdatedTagsWithChances())
@@ -185,5 +239,7 @@ namespace DreamersDream
         private PawnDreamTagsOddsTracker TagsOddsTracker;
 
         private PawnDreamOddsTracker OddsTracker;
+
+        private float PawnSleepwalkingChance;
     }
 }

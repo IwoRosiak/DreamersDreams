@@ -31,7 +31,7 @@ namespace DreamersDream
             {
                 chance = dreamTag.chance;
             }
-
+            /*
             foreach (var booster in dreamTag.ChanceBoosters)
             {
                 switch (booster)
@@ -44,7 +44,7 @@ namespace DreamersDream
                         break;
                 }
             }
-
+            */
             return chance;
         }
 
@@ -62,15 +62,15 @@ namespace DreamersDream
                 switch (pawn.story.traits.DegreeOfTrait(DD_TraitDefOf.Sleepwalker))
                 {
                     case 1:
-                        traitMultiplier *= 100f;
+                        traitMultiplier *= DD_Settings.occasionalSleepwalkerTraitModif;
                         break;
 
                     case 2:
-                        traitMultiplier *= 250f;
+                        traitMultiplier *= DD_Settings.sleepwalkerTraitModif;
                         break;
 
                     case 3:
-                        traitMultiplier *= 500f;
+                        traitMultiplier *= DD_Settings.usualSleepwalkerTraitModif;
                         break;
                 }
             }
