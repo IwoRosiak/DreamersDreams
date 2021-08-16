@@ -27,7 +27,7 @@
   </DreamersDream.DreamDef>
 
   <DreamersDream.DreamDef ParentName = "HellLikeDream">
-    <defName>WorldApartDream</defName>
+    <defName>DreamTragicLivesAndDeaths</defName>
     <stages>
       <li>
         <label>Dreamt about tragic lives and deaths</label>

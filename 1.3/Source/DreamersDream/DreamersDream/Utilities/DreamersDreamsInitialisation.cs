@@ -45,7 +45,7 @@ namespace DreamersDream
                 }
                 else
                 {
-                    Log.Message("Skipping " + tag.defName + " with chance below zero.");
+                    //Log.Message("Skipping " + tag.defName + " with chance below zero.");
                 }
             }
             Log.Message("Dreamer's Dreams: successfully loaded " + totalTags + " dream tags.");
