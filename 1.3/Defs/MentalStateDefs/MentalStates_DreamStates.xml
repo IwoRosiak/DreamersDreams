@@ -11,7 +11,7 @@
           <recoveryMessage>{0} no longer sleepwalks.</recoveryMessage>
           <baseInspectLine>Sleepwalking...</baseInspectLine>
           <recoverFromSleep>false</recoverFromSleep>
-          <recoverFromDowned>false</recoverFromDowned>
+          <recoverFromDowned>true</recoverFromDowned>
           <recoverFromCollapsingExhausted>false</recoverFromCollapsingExhausted>
           <unspawnedCanDo>false</unspawnedCanDo>
         </MentalStateDef>

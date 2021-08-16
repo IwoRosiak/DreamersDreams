@@ -34,7 +34,7 @@
     </nullifyingTraits>
     <stages>
       <li>
-        <label>Had a dream about killing someone close</label>
+        <label>Dreamt about killing a close one</label>
         <description>I killed a person close to me in my dream.</description>
         <baseMoodEffect>-5</baseMoodEffect>
       </li>
@@ -49,7 +49,7 @@
     </nullifyingTraits>
     <stages>
       <li>
-        <label>Had a dream about killing</label>
+        <label>Dreamt about killing</label>
         <description>I was killing... But I didn't want to...</description>
         <baseMoodEffect>-5</baseMoodEffect>
       </li>
@@ -65,7 +65,7 @@
   </nullifyingTraits>
   <stages>
     <li>
-      <label>Had a dream about eating someone</label>
+      <label>Dreamt about eating humans</label>
       <description>I was forced to eat someone in my dream. It was an awful experience...</description>
       <baseMoodEffect>-5</baseMoodEffect>
     </li>
@@ -76,7 +76,7 @@
   <defName>PTSDDream</defName>
   <stages>
     <li>
-      <label>Had a stressful dream</label>
+      <label>Dreamt about event from the past</label>
       <description>I had a dream about a stressful event from my past...</description>
       <baseMoodEffect>-5</baseMoodEffect>
     </li>
@@ -87,22 +87,50 @@
   <defName>NightmareDream</defName>
   <stages>
     <li>
-      <label>Had a dream about being chased</label>
+      <label>Dreamt about being chased</label>
       <description>Something was chasing me but I couldn't run!</description>
       <baseMoodEffect>-5</baseMoodEffect>
     </li>
   </stages>
 </DreamersDream.DreamDef>
 
+
 <DreamersDream.DreamDef ParentName = "FrighteningDream">
-  <defName>RedheadWithBeardDream</defName>
+  <defName>DreamZombieFight</defName>
   <stages>
     <li>
-      <label>Dreamt about redhead with beard</label>
-      <description>It started off at school, where I began to realize something was wrong. Everyone I saw looked like they could barely contain themselves from instantly becoming violent, and they had this look in their eyes like they had just spotted the best prey they had ever seen, but were held back by something. I remember thinking "No way, I'm out", and ran home as fast as I could. Some of it is blurry, but I remember coming across people that I knew, either friends or family, or people from the neighborhood, telling me to get home, that it's not safe. Finally I make it there, put the key in the front door, open it, and I am literally surrounded by all of those same people, only now they look like the ones at school, and there stands the redhead with the beard. Without saying a word she lunges at me and pierces my neck with her fangs. ~Rinzler0001</description>
+      <label>Dreamt about fighting zombies</label>
+      <description>Our colony had to defend against zombies using some ancient non-lethal weaponry. Why would you even use non-lethal weapons?!</description>
       <baseMoodEffect>-5</baseMoodEffect>
     </li>
   </stages>
+  <dreamedBy>Maru1i</dreamedBy>
 </DreamersDream.DreamDef>
+
+<DreamersDream.DreamDef ParentName = "FrighteningDream">
+  <defName>DreamSpider</defName>
+  <stages>
+    <li>
+      <label>Dreamt about tiki-spider</label>
+      <description>I was in a humid, foreign jungle, trapped in a long ancient stone temple hallway. I turned around, and a spider with a tiki mask started chasing me. I woke up just before it pounced...</description>
+      <baseMoodEffect>-5</baseMoodEffect>
+    </li>
+  </stages>
+  <dreamedBy>ryanizawsum</dreamedBy>
+</DreamersDream.DreamDef>
+
+<DreamersDream.DreamDef ParentName = "FrighteningDream">
+  <defName>DreamSnake</defName>
+  <stages>
+    <li>
+      <label>Dreamt about being devoured by snake</label>
+      <description>I was slowly being devoured by a gigantic snake!</description>
+      <baseMoodEffect>-5</baseMoodEffect>
+    </li>
+  </stages>
+  <dreamedBy>Djura</dreamedBy>
+</DreamersDream.DreamDef>
+
+
 
 </Defs>

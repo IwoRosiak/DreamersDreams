@@ -7,5 +7,7 @@ namespace DreamersDream
     public class DreamDef : ThoughtDef
     {
         public List<DreamTagDef> tags = new List<DreamTagDef>();
+
+        public string dreamedBy = "no one";
     }
 }

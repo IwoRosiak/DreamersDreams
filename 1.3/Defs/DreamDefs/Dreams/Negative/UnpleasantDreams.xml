@@ -58,4 +58,45 @@
     </li>
   </stages>
 </DreamersDream.DreamDef>
+
+<DreamersDream.DreamDef ParentName = "UnpleasantDream">
+  <defName>DreamFlamingoInvasion</defName>
+  <stages>
+    <li>
+      <label>Dreamt about flamingos invasion</label>
+      <description>The world got invaded by flamingos. The flamingos had kevlar helmets, assault rifles, demonic red eyes, and they were sometimes doing drill movements.</description>
+      <baseMoodEffect>-2</baseMoodEffect>
+    </li>
+  </stages>
+  <dreamedBy>CaucasianMalaysian</dreamedBy>
+</DreamersDream.DreamDef>
+
+
+<DreamersDream.DreamDef ParentName = "UnpleasantDream">
+  <defName>DreamMindControl</defName>
+  <stages>
+    <li>
+      <label>Dreamt about being mind controlled</label>
+      <description>People around me were getting injected with mind control drugs forcefully.</description>
+      <baseMoodEffect>-2</baseMoodEffect>
+    </li>
+  </stages>
+  <dreamedBy>Denneisk</dreamedBy>
+</DreamersDream.DreamDef>
+
+<DreamersDream.DreamDef ParentName = "UnpleasantDream">
+  <defName>DreamZombieTrucks</defName>
+  <stages>
+    <li>
+      <label>Dreamt about zombie trucks</label>
+      <description>I was chased across an arid shrubland by zombified monster trucks that had emerged from a cave in a mountain.</description>
+      <baseMoodEffect>-2</baseMoodEffect>
+    </li>
+  </stages>
+  <dreamedBy>ManaVeil</dreamedBy>
+</DreamersDream.DreamDef>
+
+
+
+
 </Defs>

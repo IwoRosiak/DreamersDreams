@@ -4,26 +4,54 @@
     <tags><li>Epic</li></tags>
   </DreamersDream.DreamDef>
 
-  <DreamersDream.DreamDef ParentName = "EpicDream">
-    <defName>AllNakedColonyDream</defName>
+  <DreamersDream.DreamDef ParentName = "EpicDream" >
+    <defName>LucidDream</defName>
     <stages>
       <li>
-        <label>Dreamt about partying naked</label>
-        <description>I was walking around colony, when I realised that I'm wearing no clothes! I looked around and noticed that everyone took off their clothes as they saw me! We started to drink and dance around our home naked.</description>
+        <label>Had lucid dream</label>
+        <description>I realised that I'm in the dream so I could do anything I want! If only I could do it more often...</description>
         <baseMoodEffect>8</baseMoodEffect>
       </li>
     </stages>
   </DreamersDream.DreamDef>
 
-  <DreamersDream.DreamDef ParentName = "EpicDream">
-    <defName>AnimalForestDream</defName>
+  <DreamersDream.DreamDef ParentName = "EpicDream" >
+    <defName>DreamAnimalCompetition</defName>
     <stages>
       <li>
-        <label>Dreamt about being a racoon</label>
-        <description>I was a small animal (I think it was a raccoon?) in a random windy forest. It was pretty nice even if all I did was wander around and occasionally see other creatures, and at some point I think I befriended a groundhog. I'm not too sure on how it ended but the last thing I vaguely remember was seeing buildings over a hill. ~~okoyum</description>
+        <label>Dreamt about animal competition</label>
+        <description>I joined a dog-sledding competition, which was a racetrack where the dogs ski around a track for several laps. I cheated by putting on my dog's uniform and entering the race as my dog (and giving my dog my clothes so he can look like me cheering him on). I went through the whole race, skiing stiffly to look like a dog skiing, but at the very end I felt guilty about cheating and bumped into a pole so I'd get second place. 7' tall Bruce Willis knew that I cheated and got back at me by standing very close to me and making me look short.</description>
+        <baseMoodEffect>8</baseMoodEffect>
+      </li>
+    </stages>
+    <dreamedBy>Mitroll</dreamedBy>
+  </DreamersDream.DreamDef>
+
+  <DreamersDream.DreamDef ParentName = "EpicDream" >
+    <defName>DreamAliensFight</defName>
+    <stages>
+      <li>
+        <label>Dreamt about fighting with aliens</label>
+        <description>I was part of an elite team, defending against the Aliens. I would love to say that my special power was a grappling hook, but alas my mind construed it as gum. The function was the same, anyhow.
+So there I was, zipping through the city towards one of the crashed ships. When me and my comrade got there, it opened.
+And I felt the most bone chilling sense of fear.
+I ran, and my comrades ran away. Then I stopped and instead of being on the run, I slung myself to the highest point nearby, an old construction crane. And I sat. And I watched.</description>
         <baseMoodEffect>8</baseMoodEffect>
       </li>
     </stages>
   </DreamersDream.DreamDef>
+
+  <DreamersDream.DreamDef ParentName = "EpicDream" >
+    <defName>DreamFireTornado</defName>
+    <stages>
+      <li>
+        <label>Dreamt about fire tornado</label>
+        <description>I was wandering through a jungle until I noticed a giant fire tornado. It simply stood there, not burning anything - the ground around it was burnt and barren but around it was a lush wild, rain forest. There were some locals worshipping it. They told me that it was The Element and explained the lore of Elementals. Elements are aspects of reality that humanity sees as important and symbolic - they can be as basic as "fire" or as complicated as "chaos" or "jealousy". They are simultaneously Gods, Worlds and Hive Minds of living beings - smaller elementals that might think that they act of free will. But elementals are not free - they act as the Element as a whole wills them. This tornado of fire is a high level Elemental and it needs constant worship which the locals do in shifts. If they stop, it will spread fire all around and feed on our fear of it.</description>
+        <baseMoodEffect>8</baseMoodEffect>
+      </li>
+    </stages>
+    <dreamedBy>dambuk1</dreamedBy>
+  </DreamersDream.DreamDef>
+
 
 </Defs>

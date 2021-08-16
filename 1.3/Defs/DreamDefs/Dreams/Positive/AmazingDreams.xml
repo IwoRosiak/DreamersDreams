@@ -5,12 +5,23 @@
   </DreamersDream.DreamDef>
 
   <DreamersDream.DreamDef ParentName = "AmazingDream" >
-    <defName>LucidDream</defName>
+    <defName>EverestDream</defName>
     <stages>
       <li>
-        <label>Had lucid dream</label>
-        <description>I realised that I'm in the dream so I could do anything I want! If only I could do it more often...</description>
-        <baseMoodEffect>8</baseMoodEffect>
+        <label>Dreamt about snow mountain</label>
+        <description>From the mountaintop I could see the whole world. All the cities and forests. It was so cold though and I could barely breathe, yet I felt calm. I sat down and enjoyed the view...</description>
+        <baseMoodEffect>5</baseMoodEffect>
+      </li>
+    </stages>
+  </DreamersDream.DreamDef>
+
+  <DreamersDream.DreamDef ParentName = "AmazingDream" >
+    <defName>HealthyDream</defName>
+    <stages>
+      <li>
+        <label>Dreamt about being healthy</label>
+        <description>I could finally relax... No pain... No suffering.</description>
+        <baseMoodEffect>5</baseMoodEffect>
       </li>
     </stages>
   </DreamersDream.DreamDef>
@@ -21,7 +32,7 @@
     <li>
       <label>Dreamt about wonders</label>
       <description>First, there was light... Then the most beautiful thing my eyes ever saw appeared before me...</description>
-      <baseMoodEffect>8</baseMoodEffect>
+      <baseMoodEffect>6</baseMoodEffect>
     </li>
   </stages>
 </DreamersDream.DreamDef>
@@ -32,7 +43,7 @@
     <li>
       <label>Dreamt about giving speech</label>
       <description>Everyone looked at me but I was not stressed. I started talking about ideals and principles of life and people listened to me with interest. Before the dream ended I received standing ovations!</description>
-      <baseMoodEffect>8</baseMoodEffect>
+      <baseMoodEffect>6</baseMoodEffect>
     </li>
   </stages>
 </DreamersDream.DreamDef>
@@ -42,8 +53,8 @@
   <stages>
     <li>
       <label>Dreamt about doing good job</label>
-      <description>I was tasked to build strange shapes which looked like a traingle from the side. I gathered immense amounts of stone and helped little people finish the yellow construction. The little humans were so happy with my work that they decided to place their kings there after death!</description>
-      <baseMoodEffect>8</baseMoodEffect>
+      <description>I was tasked to build strange shapes which looked like a four triangles connected side by side. I gathered immense amounts of stone and helped little people finish the yellow construction. The little humans were so happy with my work that they decided to place their kings there after death!</description>
+      <baseMoodEffect>6</baseMoodEffect>
     </li>
   </stages>
 </DreamersDream.DreamDef>

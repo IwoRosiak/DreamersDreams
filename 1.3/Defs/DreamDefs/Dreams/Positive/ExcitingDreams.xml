@@ -1,40 +1,65 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="UTF-8"?>
 <Defs>
   <DreamersDream.DreamDef Name="ExcitingDream" Abstract="True" ParentName = "BaseDream">
-    <tags><li>Exciting</li></tags>
+    <tags>
+      <li>Exciting</li>
+    </tags>
+  </DreamersDream.DreamDef>
+  
+  <DreamersDream.DreamDef ParentName = "ExcitingDream">
+    <defName>DreamRaceGame</defName>
+    <stages>
+      <li>
+        <label>Dreamt about playing racing game</label>
+        <description>The archotech computer lab was cool and dark, but had a circular track around the perimeter inside. Somebody challenged me to a race, and I won!</description>
+        <baseMoodEffect>5</baseMoodEffect>
+      </li>
+    </stages>
+    <dreamedBy>ryanizawsum</dreamedBy>
   </DreamersDream.DreamDef>
 
-<DreamersDream.DreamDef ParentName = "ExcitingDream" >
-  <defName>FlyingDream</defName>
-  <stages>
-    <li>
-      <label>Dreamt about flying</label>
-      <description>I was flying in my dream dream! It was an amazing experience. I just wanted it to keep going...</description>
-      <baseMoodEffect>5</baseMoodEffect>
-    </li>
-  </stages>
-</DreamersDream.DreamDef>
+  <DreamersDream.DreamDef ParentName = "ExcitingDream">
+    <defName>DreamNoodleBath</defName>
+    <stages>
+      <li>
+        <label>Dreamt about bathing in noodles</label>
+        <description>Noodles! Noodles everywhere! The best meal in the whole universe!</description>
+        <baseMoodEffect>5</baseMoodEffect>
+      </li>
+    </stages>
+    <dreamedBy>Maru1i</dreamedBy>
+  </DreamersDream.DreamDef>
 
-<DreamersDream.DreamDef ParentName = "ExcitingDream" >
-  <defName>EverestDream</defName>
-  <stages>
-    <li>
-      <label>Dreamt about snow mountain</label>
-      <description>From the mountaintop I could see the whole world. All the cities and forests. It was so cold though and I could barely breathe, yet I felt calm. I sat down and enjoyed the view...</description>
-      <baseMoodEffect>4</baseMoodEffect>
-    </li>
-  </stages>
-</DreamersDream.DreamDef>
+  <DreamersDream.DreamDef ParentName = "ExcitingDream">
+    <defName>AllNakedColonyDream</defName>
+    <stages>
+      <li>
+        <label>Dreamt about partying naked</label>
+        <description>I was walking around colony, when I realised that I'm wearing no clothes! I looked around and noticed that everyone took off their clothes as they saw me! We started to drink and dance around our home naked.</description>
+        <baseMoodEffect>5</baseMoodEffect>
+      </li>
+    </stages>
+  </DreamersDream.DreamDef>
 
-<DreamersDream.DreamDef ParentName = "ExcitingDream" >
-  <defName>HealthyDream</defName>
-  <stages>
-    <li>
-      <label>Dreamt about being healthy</label>
-      <description>I could finally relax... No pain... No suffering.</description>
-      <baseMoodEffect>5</baseMoodEffect>
-    </li>
-  </stages>
-</DreamersDream.DreamDef>
+  <DreamersDream.DreamDef ParentName = "ExcitingDream">
+    <defName>AnimalForestDream</defName>
+    <stages>
+      <li>
+        <label>Dreamt about being a racoon</label>
+        <description>I was a small animal (I think it was a raccoon?) in a random windy forest. It was pretty nice even if all I did was wander around and occasionally see other creatures, and at some point I think I befriended a groundhog. I'm not too sure on how it ended but the last thing I vaguely remember was seeing buildings over a hill. ~~okoyum</description>
+        <baseMoodEffect>5</baseMoodEffect>
+      </li>
+    </stages>
+  </DreamersDream.DreamDef>
 
+  <DreamersDream.DreamDef ParentName = "ExcitingDream" >
+    <defName>FlyingDream</defName>
+    <stages>
+      <li>
+        <label>Dreamt about flying</label>
+        <description>I was flying in my dream dream! It was an amazing experience. I just wanted it to keep going...</description>
+        <baseMoodEffect>5</baseMoodEffect>
+      </li>
+    </stages>
+  </DreamersDream.DreamDef>
 </Defs>

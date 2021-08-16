@@ -5,7 +5,7 @@
   </DreamersDream.DreamDef>
 
   <DreamersDream.DreamDef ParentName = "TerrorisingDream">
-    <defName>SleepParalisesDream</defName>
+    <defName>SleepParalysisDream</defName>
     <stages>
       <li>
         <label>Dark figure attacked during sleep</label>
@@ -30,5 +30,41 @@
       </li>
     </stages>
   </DreamersDream.DreamDef>
+
+  <DreamersDream.DreamDef ParentName = "TerrorisingDream">
+    <defName>DreamBrainJars</defName>
+    <stages>
+      <li>
+        <label>Dreamt about a brains in a glass jar</label>
+        <description>I was in the middle of some kind of secret archotech laboratory. All floors and walls were sterile. I explored the place for a while until I reached a warehouse which looked like it was hundreds of miles long. On every shelf there was a jar with brain with connected screen to it. I watched what was happening on those screens... someone was cooking meal... someone else was chased by some gangsters... someone else had sex... but then I saw truly extraordinary screen. Screen that was showing perspective of a man in a huge warehouse filled with jars with brains... </description>
+        <baseMoodEffect>-8</baseMoodEffect>
+      </li>
+    </stages>
+  </DreamersDream.DreamDef>
+
+  <DreamersDream.DreamDef ParentName = "TerrorisingDream">
+    <defName>DreamKillingPet</defName>
+    <stages>
+      <li>
+        <label>Dreamt about killing my favourite animal</label>
+        <description>I had to kill my pet by strangling it, I was squeezing its little throat with both hands and it wouldn't die and just kept looking at me with its big green eyes. I was sobbing uncontrollably in the dream but I had to just keep trying to kill it.</description>
+        <baseMoodEffect>-8</baseMoodEffect>
+      </li>
+    </stages>
+    <dreamedBy>Slavidor</dreamedBy>
+  </DreamersDream.DreamDef>
+
+  <DreamersDream.DreamDef ParentName = "TerrorisingDream">
+    <defName>DreamMeatLocker</defName>
+    <stages>
+      <li>
+        <label>Dreamt about meat locker</label>
+        <description>I was exploring our colony in the dark when I stumbled into the freezer. I saw shapes in the heavy mist hanging on meat hooks, and when I drew close I saw they were human bodies. They reached for me and I tried to turn away but there were more behind me, possessing the faces of people we've killed. They grabbed me and lift me onto a hook to stay there with them for all eternity...</description>
+        <baseMoodEffect>-8</baseMoodEffect>
+      </li>
+    </stages>
+    <dreamedBy>Jack_Hazardous</dreamedBy>
+  </DreamersDream.DreamDef>
+
 
 </Defs>

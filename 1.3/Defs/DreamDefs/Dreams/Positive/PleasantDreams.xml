@@ -64,10 +64,23 @@
   <stages>
     <li>
       <label>Dreamt about cheese</label>
-      <description>Cheese.... Cheese everywhere! By Male_07</description>
+      <description>Cheese.... Cheese everywhere!</description>
       <baseMoodEffect>2</baseMoodEffect>
     </li>
   </stages>
+  <dreamedBy>Male_07</dreamedBy>
+</DreamersDream.DreamDef>
+
+<DreamersDream.DreamDef ParentName = "PleasantDream">
+  <defName>DreamGuitar</defName>
+  <stages>
+    <li>
+      <label>Dreamt about playing guitar</label>
+      <description>I was playing a beautiful song on guitar in a sun room with bright light coming from above. I was alone, but it was peaceful. I've never even played guitar.</description>
+      <baseMoodEffect>2</baseMoodEffect>
+    </li>
+  </stages>
+  <dreamedBy>ryanizawsum</dreamedBy>
 </DreamersDream.DreamDef>
 
 </Defs>

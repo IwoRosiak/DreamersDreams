@@ -8,7 +8,7 @@
     <defName>MoonHitDream</defName>
     <stages>
       <li>
-        <label>Dreamt about moon armageddon</label>
+        <label>Dreamt about moon Armageddon</label>
         <description>I awoke in my room. Felt a bit thirsty so I went to the kitchen to drink some water. Opened a window to let some fresh air in and there was an enormous moon, everything was shaking, almost like an earthquake was terrorizing the area. Orange light iluminated the surroundings. Buildings were floating here and there, like gravity never existed. The Moon was getting closer. The shaking got stronger. I heard some screams. Then some odd force hit me and I colapsed. ~Backrevol</description>
         <baseMoodEffect>-11</baseMoodEffect>
       </li>
@@ -19,11 +19,23 @@
     <defName>WorldApartDream</defName>
     <stages>
       <li>
-        <label>Had a dream about armageddon</label>
+        <label>Had a dream about Armageddon</label>
         <description>I dreamt that whole world fell apart. It was a disaster.</description>
         <baseMoodEffect>-11</baseMoodEffect>
       </li>
     </stages>
+  </DreamersDream.DreamDef>
+
+  <DreamersDream.DreamDef ParentName = "HellLikeDream">
+    <defName>WorldApartDream</defName>
+    <stages>
+      <li>
+        <label>Dreamt about tragic lives and deaths</label>
+        <description>I had to enter 7 tragical lives of people who had 7 tragical deaths. I lived 7 tragic lives and died 7 tragic deaths. 7... 7... 7..</description>
+        <baseMoodEffect>-11</baseMoodEffect>
+      </li>
+    </stages>
+    <dreamedBy>dambuk1</dreamedBy>
   </DreamersDream.DreamDef>
 
 </Defs>
