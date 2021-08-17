@@ -85,6 +85,9 @@
     <ChanceBoosters>
       <li>sleepwalker</li>
     </ChanceBoosters>
+    <requirements>
+      <li>sleepwalker</li>
+    </requirements>
   </DreamersDream.DreamTagDef>
 
 <!-- SPECIAL

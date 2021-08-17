@@ -6,80 +6,74 @@ namespace DreamersDream
     {
         public static float CalculateChanceFor(this DreamDef dream, Pawn pawn)
         {
-            float dreamChance = 0;
+            float chance = dream.tags[0].CalculateChanceFor(pawn);
 
-            if (DD_Settings.TagsCustomChances?.ContainsKey(dream.tags[0].defName) == true && !DD_Settings.isDefaultSettings)
+            if (!dream.isMeetingRequirements(pawn))
             {
-                dreamChance = DD_Settings.TagsCustomChances[dream.tags[0].defName];
-            }
-            else
-            {
-                dreamChance = dream.tags[0].chance;
+                chance = 0;
             }
 
-            return dreamChance;
-        }
-
-        public static float CalculateChanceFor(this DreamTagDef dreamTag, Pawn pawn = null)
-        {
-            float chance = 0;
-            if (DD_Settings.TagsCustomChances?.ContainsKey(dreamTag.defName) == true && !DD_Settings.isDefaultSettings)
-            {
-                chance = DD_Settings.TagsCustomChances[dreamTag.defName];
-            }
-            else
-            {
-                chance = dreamTag.chance;
-            }
-            /*
-            foreach (var booster in dreamTag.ChanceBoosters)
-            {
-                switch (booster)
-                {
-                    case ChanceBoosters.sleepwalker:
-                        chance *= GetSleepwalkerMultiplier(pawn);
-                        break;
-
-                    default:
-                        break;
-                }
-            }
-            */
             return chance;
         }
 
-        private static float GetSleepwalkerMultiplier(Pawn pawn)
+        public static float CalculateChanceFor(this DreamTagDef dreamTag)
         {
-            if (pawn == null)
+            return GetCustomChance(dreamTag);
+        }
+
+        public static float CalculateChanceFor(this DreamTagDef dreamTag, Pawn pawn)
+        {
+            float chance = GetCustomChance(dreamTag);
+
+            if (!dreamTag.isMeetingRequirements(pawn))
             {
-                return 1;
+                chance = 0;
             }
 
-            float traitMultiplier = 1;
-            if (pawn?.story.traits.HasTrait(DD_TraitDefOf.Sleepwalker) == true)
+            return chance;
+        }
+
+        private static float GetCustomChance(DreamTagDef tag)
+        {
+            if (DD_Settings.TagsCustomChances?.ContainsKey(tag.defName) == true && !DD_Settings.isDefaultSettings)
             {
-                traitMultiplier = DD_Settings.sleepwalkerTraitModif;
-                switch (pawn.story.traits.DegreeOfTrait(DD_TraitDefOf.Sleepwalker))
-                {
-                    case 1:
-                        traitMultiplier *= DD_Settings.occasionalSleepwalkerTraitModif;
-                        break;
-
-                    case 2:
-                        traitMultiplier *= DD_Settings.sleepwalkerTraitModif;
-                        break;
-
-                    case 3:
-                        traitMultiplier *= DD_Settings.usualSleepwalkerTraitModif;
-                        break;
-                }
+                return DD_Settings.TagsCustomChances[tag.defName];
             }
             else
             {
-                traitMultiplier = 0;
+                return tag.chance;
+            }
+        }
+
+        private static bool isMeetingRequirements(this DreamDef dream, Pawn pawn)
+        {
+            foreach (var tag in dream.tags)
+            {
+                if (!isMeetingRequirements(tag, pawn))
+                {
+                    return false;
+                }
             }
 
-            return traitMultiplier;
+            return true;
+        }
+
+        private static bool isMeetingRequirements(this DreamTagDef tag, Pawn pawn)
+        {
+            foreach (var requirement in tag.requirements)
+            {
+                switch (requirement)
+                {
+                    case Requirement.sleepwalker:
+                        if (!pawn.isSleepwalker())
+                        {
+                            return false;
+                        }
+                        break;
+                }
+            }
+
+            return true;
         }
     }
 }

@@ -60,6 +60,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Defs\Dreams\DreamTagDefOf.cs" />
+    <Compile Include="Pawn\Pawn\DreamsPawnHelper.cs" />
     <Compile Include="Utilities\ModSettings\DD_Settings.cs" />
     <Compile Include="Utilities\ModSettings\ModSettingsUtility.cs" />
     <Compile Include="Pawn\DreamsCompProperties.cs" />

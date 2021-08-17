@@ -33,11 +33,13 @@ namespace DreamersDream
         public override void CompTickRare()
         {
             base.CompTickRare();
+
             if (TagsOddsTracker == null || OddsTracker == null)
             {
                 TagsOddsTracker = new PawnDreamTagsOddsTracker(pawn);
                 OddsTracker = new PawnDreamOddsTracker(pawn);
             }
+
             if (DD_Settings.isDreamingActive)
             {
                 if (CanGetDreamNow())
@@ -51,6 +53,11 @@ namespace DreamersDream
                         ApplyRandomDream();
                     }
                 }
+            }
+
+            if (DD_Settings.isDebugMode)
+            {
+                DebugLogAllDreamsAndQualities();
             }
         }
 
