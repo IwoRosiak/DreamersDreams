@@ -69,13 +69,12 @@
     <Compile Include="Utilities\DreamersDreamsInitialisation.cs" />
     <Compile Include="Defs\Dreams\DreamTagDef.cs" />
     <Compile Include="Utilities\ModSettings\DreamersDreamsModSettings.cs" />
-    <Compile Include="Pawn\PawnDreamOddsTracker.cs" />
-    <Compile Include="Dreams\SleepwalkingChanceCalc.cs" />
+    <Compile Include="Pawn\Trackers\PawnDreamOddsTracker.cs" />
     <Compile Include="Dreams\SleepwalkingTypes.cs" />
     <Compile Include="Dreams\DreamTracker.cs" />
     <Compile Include="Dreams\DreamChanceCalc.cs" />
     <Compile Include="Dreams\DreamSelector.cs" />
-    <Compile Include="Pawn\PawnDreamTagsOddsTracker.cs" />
+    <Compile Include="Pawn\Trackers\PawnDreamTagsOddsTracker.cs" />
     <Compile Include="Defs\Traits\DD_TraitsDefOf.cs" />
     <Compile Include="Utilities\Textures.cs" />
     <Compile Include="Defs\MentalStates\DD_MentalStateDefOf.cs" />

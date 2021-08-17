@@ -15,12 +15,12 @@ namespace DreamersDream
 
         public bool isSideTag = false;
 
-        public List<ChanceBoosters> ChanceBoosters = new List<ChanceBoosters>();
+        public List<ChanceBooster> ChanceBoosters = new List<ChanceBooster>();
 
         public List<Requirement> requirements = new List<Requirement>();
     }
 
-    public enum ChanceBoosters
+    public enum ChanceBooster
     {
         sleepwalker
     }
