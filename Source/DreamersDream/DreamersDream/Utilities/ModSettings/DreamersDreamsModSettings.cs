@@ -16,7 +16,7 @@ namespace DreamersDream
 
         public override void DoSettingsWindowContents(Rect inRect)
         {
-            if (DD_Settings.TagsCustomChances.NullOrEmpty())
+            if (DD_Settings.TagsCustomChances.EnumerableNullOrEmpty())
             {
                 DD_Settings.TagsCustomChances = new Dictionary<string, float>();
             }
