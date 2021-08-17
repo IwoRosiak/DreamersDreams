@@ -21,6 +21,8 @@ namespace DreamersDream
                 DD_Settings.TagsCustomChances = new Dictionary<string, float>();
             }
 
+            PurgeDict();
+
             Widgets.DrawTextureFitted(new Rect(inRect.x, inRect.y, inRect.width, inRect.height), Textures.SettingsBackGround, 1);
 
             Rect masterRect = new Rect(inRect.x + (0.1f * inRect.width), inRect.y + 40, 0.8f * inRect.width, 936);

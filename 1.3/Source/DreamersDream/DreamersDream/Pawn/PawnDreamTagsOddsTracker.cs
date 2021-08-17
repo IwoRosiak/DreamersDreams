@@ -25,7 +25,7 @@ namespace DreamersDream
             Dictionary<DreamTagDef, float> DreamTagOdds = new Dictionary<DreamTagDef, float>();
             foreach (var dreamTag in DreamTracker.GetAllDreamTags)
             {
-                float chanceForTag = dreamTag.CalculateChanceFor(pawn);
+                float chanceForTag = dreamTag?.CalculateChanceFor(pawn) ?? 0;
 
                 DreamTagOdds.Add(dreamTag, chanceForTag);
             }
