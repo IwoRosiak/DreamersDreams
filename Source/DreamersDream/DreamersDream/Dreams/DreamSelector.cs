@@ -23,6 +23,11 @@ namespace DreamersDream
             {
                 if (roll <= item.Value)
                 {
+                    if (DD_Settings.isDebugMode)
+                    {
+                        Log.Message("Rolled dream: " + item.Key.defName + " with upper chance threshold of " + item.Value + "% with roll of " + roll + ".");
+                    }
+
                     return item.Key;
                 }
             }
@@ -37,6 +42,12 @@ namespace DreamersDream
             {
                 if (roll <= item.Value)
                 {
+                    if (DD_Settings.isDebugMode)
+                    {
+                        Log.Message(" ");
+                        Log.Message("Rolled tag: " + item.Key.label + " with standard chance of " + item.Value + "% and def chance of " + item.Key.CalculateChanceFor() + " with roll of " + roll + ".");
+                    }
+
                     return item.Key;
                 }
             }
@@ -45,7 +56,7 @@ namespace DreamersDream
 
         private static float PerformRandomRoll()
         {
-            return Rand.Range(0, 100);
+            return Rand.Range(0f, 100f);
         }
     }
 }

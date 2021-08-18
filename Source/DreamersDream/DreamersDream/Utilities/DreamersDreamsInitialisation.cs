@@ -24,7 +24,7 @@ namespace DreamersDream
                 }
                 else
                 {
-                    Log.Warning("Dream " + dream.defName + " does not have category, so it will not be loaded.");
+                    Log.Warning("Dream " + dream.defName + " does not have a tag, so it will not be loaded.");
                 }
             }
             Log.Message("Dreamer's Dreams: successfully loaded " + totalDreams + " dreams.");
@@ -46,6 +46,9 @@ namespace DreamersDream
                     //Log.Message("Skipping " + tag.defName + " with chance below zero.");
                 }
             }
+
+            DD_Settings.PurgeDict();
+
             Log.Message("Dreamer's Dreams: successfully loaded " + totalTags + " dream tags.");
         }
     }

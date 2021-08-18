@@ -53,7 +53,7 @@ namespace DreamersDream
 
             if (DD_Settings.isDebugMode)
             {
-                DebugLogAllDreamsAndQualities();
+                //DebugLogAllDreamsAndQualities();
             }
         }
 
@@ -70,7 +70,7 @@ namespace DreamersDream
 
             if (randomTag.isSpecial)
             {
-                Messages.Message(pawn.Name.ToStringShort + " is experiencing " + randomTag.defName.ToLower() + " dream!", pawn, MessageTypeDefOf.NeutralEvent);
+                Messages.Message(pawn.Name.ToStringShort + " is experiencing " + randomTag.defName.ToLower() + " dream!", pawn, MessageTypeDefOf.NeutralEvent, false);
             }
 
             TriggerDreamEffects(RandomDream);
@@ -78,7 +78,7 @@ namespace DreamersDream
 
         private void TriggerDreamEffects(DreamDef dream)
         {
-            pawn.needs.mood.thoughts.memories.TryGainMemory(dream, null);
+            pawn.needs.mood.thoughts.memories.TryGainMemory(dream);
 
             foreach (var dreamTag in dream.tags)
             {

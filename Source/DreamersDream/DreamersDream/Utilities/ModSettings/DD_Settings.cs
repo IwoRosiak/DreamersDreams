@@ -17,7 +17,7 @@ namespace DreamersDream
 
         public static bool isDebugMode = false;
 
-        public static Dictionary<string, float> TagsCustomChances;
+        public static Dictionary<string, float> TagsCustomChances = new Dictionary<string, float>();
 
         //sleepwalk
         public static float sleepwalkerTraitModif = 1;
@@ -43,6 +43,28 @@ namespace DreamersDream
             //Scribe_Values.Look(ref usualSleepwalkerTraitModif, "usualSleepwalkerTraitModif", 30.0f);
 
             base.ExposeData();
+        }
+
+        public static void PurgeDict()
+        {
+            if (TagsCustomChances.EnumerableNullOrEmpty())
+            {
+                TagsCustomChances = new Dictionary<string, float>();
+            }
+
+            Dictionary<string, float> tempDict = new Dictionary<string, float>();
+
+            foreach (var tag in DreamTracker.GetAllDreamTags)
+            {
+                if (TagsCustomChances.ContainsKey(tag.defName))
+                {
+                    tempDict.Add(tag.defName, TagsCustomChances[tag.defName]);
+                }
+            }
+
+            TagsCustomChances.Clear();
+
+            TagsCustomChances = tempDict;
         }
     }
 }
