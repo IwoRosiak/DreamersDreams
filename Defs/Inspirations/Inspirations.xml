@@ -11,6 +11,7 @@
     <statFactors>
       <WorkSpeedGlobal>1.8</WorkSpeedGlobal>
     </statFactors>
+    <baseCommonality>0</baseCommonality>
   </InspirationDef>
 
     <InspirationDef>
@@ -21,6 +22,7 @@
       <beginLetterDef>PositiveEvent</beginLetterDef>
       <endMessage>{0} is no longer inspired (inspired trade).</endMessage>
       <baseInspectLine>Dream: Inspired trade</baseInspectLine>
+      <baseCommonality>0</baseCommonality>
       <requiredNonDisabledStats>
         <li>TradePriceImprovement</li>
       </requiredNonDisabledStats>
@@ -61,6 +63,7 @@
       <requiredCapacities>
         <li>Manipulation</li>
       </requiredCapacities>
+      <baseCommonality>0</baseCommonality>
     </InspirationDef>
-
+ -->
 </Defs>

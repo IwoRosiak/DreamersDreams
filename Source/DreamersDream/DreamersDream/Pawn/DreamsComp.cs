@@ -82,7 +82,7 @@ namespace DreamersDream
 
             foreach (var dreamTag in dream.tags)
             {
-                if (dreamTag.defName == "Sleepwalk")
+                if (dreamTag.defName == "Sleepwalk" && pawn.isSleepwalker())
                 {
                     pawn.mindState.mentalStateHandler.TryStartMentalState(pawn.ChooseSleepwalkState(), null, true, false, null, false);
                 }
