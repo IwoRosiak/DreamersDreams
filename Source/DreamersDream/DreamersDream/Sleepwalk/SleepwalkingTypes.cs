@@ -1,6 +1,6 @@
 ﻿namespace DreamersDream
 {
-    public enum SleepwalkingType
+    public enum SleepwalkingTypes
     {
         food,
         drugs,

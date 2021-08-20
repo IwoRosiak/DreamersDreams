@@ -26,6 +26,8 @@ namespace DreamersDream
         public static float normalSleepwalkerTraitModif = 12.0f;
         public static float usualSleepwalkerTraitModif = 30.0f;
 
+        public static float calmSleepwalkBaseChance = 1.0f;
+
         public override void ExposeData()
         {
             Scribe_Collections.Look(ref TagsCustomChances, "TagsCustomChances", LookMode.Value, LookMode.Value);

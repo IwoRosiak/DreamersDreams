@@ -21,14 +21,6 @@ namespace DreamersDream
             }
         }
 
-        public float getPawnAggressiveness
-        {
-            get
-            {
-                return pawn.CalculateAggressiveness();
-            }
-        }
-
         public override void CompTickRare()
         {
             base.CompTickRare();

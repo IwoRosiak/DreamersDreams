@@ -60,8 +60,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Defs\Dreams\DreamTagDefOf.cs" />
-    <Compile Include="Pawn\PawnHelper\DreamsPawnPersonality.cs" />
-    <Compile Include="Pawn\PawnHelper\DreamsPawnHelper.cs" />
+    <Compile Include="Sleepwalk\SleepwalkSelector.cs" />
+    <Compile Include="Dreams\DreamPawnEligibilityChecker.cs" />
     <Compile Include="Utilities\ModSettings\DD_Settings.cs" />
     <Compile Include="Utilities\ModSettings\ModSettingsUtility.cs" />
     <Compile Include="Pawn\DreamsCompProperties.cs" />
@@ -70,7 +70,7 @@
     <Compile Include="Defs\Dreams\DreamTagDef.cs" />
     <Compile Include="Utilities\ModSettings\DreamersDreamsModSettings.cs" />
     <Compile Include="Pawn\Trackers\PawnDreamOddsTracker.cs" />
-    <Compile Include="Dreams\SleepwalkingTypes.cs" />
+    <Compile Include="Sleepwalk\SleepwalkingTypes.cs" />
     <Compile Include="Dreams\DreamTracker.cs" />
     <Compile Include="Dreams\DreamChanceCalc.cs" />
     <Compile Include="Dreams\DreamSelector.cs" />

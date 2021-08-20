@@ -82,9 +82,9 @@
     <isSpecial>false</isSpecial>
     <isSleepwalk>true</isSleepwalk>
     <chance>0</chance>
-    <ChanceBoosters>
+    <chanceBoosters>
       <li>sleepwalker</li>
-    </ChanceBoosters>
+    </chanceBoosters>
     <requirements>
       <li>sleepwalker</li>
     </requirements>

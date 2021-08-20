@@ -64,7 +64,7 @@ namespace DreamersDream
             {
                 switch (requirement)
                 {
-                    case Requirement.sleepwalker:
+                    case Requirements.sleepwalker:
                         if (!pawn.isSleepwalker())
                         {
                             return false;
