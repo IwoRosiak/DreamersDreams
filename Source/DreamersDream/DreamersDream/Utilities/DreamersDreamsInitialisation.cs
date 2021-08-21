@@ -47,7 +47,7 @@ namespace DreamersDream
                 }
             }
 
-            DD_Settings.PurgeDict();
+            DD_Settings.PurgeDicts();
 
             Log.Message("Dreamer's Dreams: successfully loaded " + totalTags + " dream tags.");
         }

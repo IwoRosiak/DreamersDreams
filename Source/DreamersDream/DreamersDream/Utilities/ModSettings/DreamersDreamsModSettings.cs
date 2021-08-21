@@ -97,6 +97,9 @@ namespace DreamersDream
             Rect columnChance = new Rect(columnTags.x + columnTags.width, ScrollYPos, 146f, columnHeight);
             ModSettingsUtility.DrawTableFirstRow(ref columnChance, "Chance");
 
+            Rect columnNotify = new Rect(columnChance.x + columnChance.width, ScrollYPos, 50f, columnHeight);
+            ModSettingsUtility.DrawTableFirstRow(ref columnNotify, "Notify");
+
             foreach (var dreamTag in DreamTracker.GetAllDreamTags)
             {
                 if (dreamTag.isSideTag)
@@ -110,10 +113,14 @@ namespace DreamersDream
                 ResolveAlternatingBG(count, columnChance, Textures.TableEntryBGChance1, Textures.TableEntryBGChance2);
                 DrawColumnChance(columnChance, dreamTag);
 
+                //ResolveAlternatingBG(count, columnChance, Textures.TableEntryBGChance1, Textures.TableEntryBGChance2);
+                DrawColumnNotify(columnNotify, dreamTag);
+
                 count++;
 
                 columnTags.y += columnHeight;
                 columnChance.y += columnHeight;
+                columnNotify.y += columnHeight;
             }
         }
 
@@ -125,7 +132,7 @@ namespace DreamersDream
         private void DrawColumnChance(Rect column, DreamTagDef tag)
         {
             float chance = tag.chance;
-            ModSettingsUtility.CheckIfMasterListContainsAddIfNot(tag, ref chance);
+            ModSettingsUtility.CheckIfHasCustomChanceAndAddIfNot(tag, ref chance);
 
             ModSettingsUtility.DrawChanceButtons(column, ref chance);
 
@@ -135,9 +142,24 @@ namespace DreamersDream
             DD_Settings.TagsCustomChances[tag.defName] = chance;
         }
 
+        private void DrawColumnNotify(Rect column, DreamTagDef tag)
+        {
+            bool notify = tag.isSpecial;
+            ModSettingsUtility.CheckIfHasCustomNotifyAndAddIfNot(tag, ref notify);
+
+            if (Widgets.ButtonText(column, notify.ToString().CapitalizeFirst()))
+            {
+                notify = !notify;
+            }
+
+            DD_Settings.TagsCustomNotify[tag.defName] = notify;
+        }
+
         private void ResetValues()
         {
             DD_Settings.TagsCustomChances.Clear();
+
+            DD_Settings.TagsCustomNotify.Clear();
 
             DD_Settings.sleepwalkerTraitModif = 1;
         }

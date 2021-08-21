@@ -62,8 +62,8 @@ namespace DreamersDream
 
             if (randomTag.isSpecial)
             {
-                Messages.Message(pawn.Name.ToStringShort + " is experiencing " + randomTag.defName.ToLower() + " dream!", pawn, MessageTypeDefOf.NeutralEvent, false);
             }
+            TriggerNotification(randomTag);
 
             TriggerDreamEffects(RandomDream);
         }
@@ -77,6 +77,24 @@ namespace DreamersDream
                 if (dreamTag.defName == "Sleepwalk" && pawn.isSleepwalker())
                 {
                     pawn.mindState.mentalStateHandler.TryStartMentalState(pawn.ChooseSleepwalkState(), null, true, false, null, false);
+                }
+            }
+        }
+
+        private void TriggerNotification(DreamTagDef tag)
+        {
+            if (DD_Settings.TagsCustomNotify?.ContainsKey(tag.defName) == true && !DD_Settings.isDefaultSettings)
+            {
+                if (DD_Settings.TagsCustomNotify[tag.defName])
+                {
+                    Messages.Message(pawn.Name.ToStringShort + " is experiencing " + tag.defName.ToLower() + " dream!", pawn, MessageTypeDefOf.NeutralEvent, false);
+                }
+            }
+            else
+            {
+                if (tag.isSpecial)
+                {
+                    Messages.Message(pawn.Name.ToStringShort + " is experiencing " + tag.defName.ToLower() + " dream!", pawn, MessageTypeDefOf.NeutralEvent, false);
                 }
             }
         }

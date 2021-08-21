@@ -15,7 +15,7 @@ namespace DreamersDream
             return (Text.CalcSize(text).x / 2);
         }
 
-        public static void CheckIfMasterListContainsAddIfNot(DreamTagDef thingToCheck, ref float chance)
+        public static void CheckIfHasCustomChanceAndAddIfNot(DreamTagDef thingToCheck, ref float chance)
         {
             if (DD_Settings.TagsCustomChances.ContainsKey(thingToCheck.defName))
             {
@@ -25,6 +25,19 @@ namespace DreamersDream
             {
                 DD_Settings.TagsCustomChances.Add(thingToCheck.defName, chance);
                 chance = DD_Settings.TagsCustomChances[thingToCheck.defName];
+            }
+        }
+
+        public static void CheckIfHasCustomNotifyAndAddIfNot(DreamTagDef thingToCheck, ref bool notify)
+        {
+            if (DD_Settings.TagsCustomNotify.ContainsKey(thingToCheck.defName))
+            {
+                notify = DD_Settings.TagsCustomNotify[thingToCheck.defName];
+            }
+            else
+            {
+                DD_Settings.TagsCustomNotify.Add(thingToCheck.defName, notify);
+                notify = DD_Settings.TagsCustomNotify[thingToCheck.defName];
             }
         }
 

@@ -19,6 +19,8 @@ namespace DreamersDream
 
         public static Dictionary<string, float> TagsCustomChances = new Dictionary<string, float>();
 
+        public static Dictionary<string, bool> TagsCustomNotify = new Dictionary<string, bool>();
+
         //sleepwalk
         public static float sleepwalkerTraitModif = 1;
 
@@ -31,6 +33,7 @@ namespace DreamersDream
         public override void ExposeData()
         {
             Scribe_Collections.Look(ref TagsCustomChances, "TagsCustomChances", LookMode.Value, LookMode.Value);
+            Scribe_Collections.Look(ref TagsCustomNotify, "TagsCustomNotify", LookMode.Value, LookMode.Value);
 
             Scribe_Values.Look(ref isDreamingActive, "isDreamingActive", true);
 
@@ -47,26 +50,45 @@ namespace DreamersDream
             base.ExposeData();
         }
 
-        public static void PurgeDict()
+        public static void PurgeDicts()
         {
+            //chances
             if (TagsCustomChances.EnumerableNullOrEmpty())
             {
                 TagsCustomChances = new Dictionary<string, float>();
             }
 
-            Dictionary<string, float> tempDict = new Dictionary<string, float>();
+            Dictionary<string, float> tempDictChances = new Dictionary<string, float>();
 
             foreach (var tag in DreamTracker.GetAllDreamTags)
             {
                 if (TagsCustomChances.ContainsKey(tag.defName))
                 {
-                    tempDict.Add(tag.defName, TagsCustomChances[tag.defName]);
+                    tempDictChances.Add(tag.defName, TagsCustomChances[tag.defName]);
                 }
             }
 
             TagsCustomChances.Clear();
+            TagsCustomChances = tempDictChances;
 
-            TagsCustomChances = tempDict;
+            //notifications
+            if (TagsCustomNotify.EnumerableNullOrEmpty())
+            {
+                TagsCustomNotify = new Dictionary<string, bool>();
+            }
+
+            Dictionary<string, bool> tempDictNotify = new Dictionary<string, bool>();
+
+            foreach (var tag in DreamTracker.GetAllDreamTags)
+            {
+                if (TagsCustomNotify.ContainsKey(tag.defName))
+                {
+                    tempDictNotify.Add(tag.defName, TagsCustomNotify[tag.defName]);
+                }
+            }
+
+            TagsCustomNotify.Clear();
+            TagsCustomNotify = tempDictNotify;
         }
     }
 }
