@@ -5,33 +5,7 @@ namespace DreamersDream
 {
     internal static class DreamRequirementsChecker
     {
-        public static bool IsMeetingRequirements(this DreamDef dream, Pawn pawn)
-        {
-            foreach (var tag in dream.tags)
-            {
-                if (!IsMeetingRequirements(tag, pawn))
-                {
-                    return false;
-                }
-            }
-
-            return true;
-        }
-
-        public static bool IsMeetingRequirements(this DreamTagDef tag, Pawn pawn)
-        {
-            foreach (var requirement in tag.requirements)
-            {
-                if (!requirement.CheckRequirementForPawn(pawn))
-                {
-                    return false;
-                }
-            }
-
-            return true;
-        }
-
-        private static bool CheckRequirementForPawn(this Requirements requirement, Pawn pawn)
+        internal static bool CheckRequirementForPawn(this Requirements requirement, Pawn pawn)
         {
             switch (requirement)
             {
@@ -57,14 +31,18 @@ namespace DreamersDream
                     break;
 
                 case Requirements.gourmand:
+                    bool hasTrait = false;
                     foreach (var trait in pawn.story.traits.allTraits)
                     {
                         if (trait.def.defName == "Gourmand")
                         {
-                            break;
+                            hasTrait = true;
                         }
                     }
-                    return false;
+                    if (!hasTrait)
+                    {
+                        return false;
+                    }
 
                     break;
 
@@ -83,14 +61,24 @@ namespace DreamersDream
                     break;
 
                 case Requirements.happy:
-                    if (!(pawn.needs.mood.CurLevel > 0.9f))
+                    if (pawn.needs.mood.CurLevel < 0.9f)
+                    {
+                        return false;
+                    }
+                    break;
+
+                case Requirements.stressed:
+                    if (pawn.needs.mood.CurLevel > pawn.mindState.mentalBreaker.BreakThresholdMinor)
                     {
                         return false;
                     }
                     break;
 
                 case Requirements.aboutToBreak:
-                    //this.CurLevel < this.pawn.mindState.mentalBreaker.BreakThresholdMinor
+                    if (pawn.needs.mood.CurLevel > pawn.mindState.mentalBreaker.BreakThresholdExtreme)
+                    {
+                        return false;
+                    }
                     break;
 
                 case Requirements.wounded:
@@ -135,11 +123,9 @@ namespace DreamersDream
                 case Requirements.stressedOrMore:
                     break;
 
-                case Requirements.stressed:
-                    break;
-
                 case Requirements.ill:
-                    break;
+                    if (pawn.needs.mood.thoughts.)
+                        break;
 
                 case Requirements.hungry:
                     break;

@@ -60,6 +60,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Defs\Dreams\DreamTagDefOf.cs" />
+    <Compile Include="Dreams\Requirements\DreamRequirements.cs" />
     <Compile Include="Dreams\Requirements\DreamRequirementsChecker.cs" />
     <Compile Include="Dreams\Requirements\Requirements.cs" />
     <Compile Include="Sleepwalk\SleepwalkSelector.cs" />
