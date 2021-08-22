@@ -60,9 +60,6 @@ namespace DreamersDream
         {
             var RandomDream = DreamSelector.ChooseRandomDream(OddsTracker.GetUpdatedDreamsWithChances(randomTag));
 
-            if (randomTag.isSpecial)
-            {
-            }
             TriggerNotification(randomTag);
 
             TriggerDreamEffects(RandomDream);
@@ -70,14 +67,21 @@ namespace DreamersDream
 
         private void TriggerDreamEffects(DreamDef dream)
         {
-            pawn.needs.mood.thoughts.memories.TryGainMemory(dream);
-
-            foreach (var dreamTag in dream.tags)
+            if (dream != null)
             {
-                if (dreamTag.defName == "Sleepwalk" && pawn.IsSleepwalker())
+                pawn.needs.mood.thoughts.memories.TryGainMemory(dream);
+
+                foreach (var dreamTag in dream.tags)
                 {
-                    pawn.mindState.mentalStateHandler.TryStartMentalState(pawn.ChooseSleepwalkState(), null, true, false, null, false);
+                    if (dreamTag.defName == "Sleepwalk" && pawn.IsSleepwalker())
+                    {
+                        pawn.mindState.mentalStateHandler.TryStartMentalState(pawn.ChooseSleepwalkState(), null, true, false, null, false);
+                    }
                 }
+            }
+            else
+            {
+                Log.Error("Dreamer's Dreams: Failed to choose a dream. Provided dream is null.");
             }
         }
 

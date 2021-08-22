@@ -73,23 +73,6 @@
     <chance>500</chance>
   </DreamersDream.DreamTagDef>
 
-
-<!-- SIDE TAGS -->
-  <DreamersDream.DreamTagDef>
-    <defName>Sleepwalk</defName>
-    <label>sleepwalk</label>
-    <isSideTag>true</isSideTag>
-    <isSpecial>false</isSpecial>
-    <isSleepwalk>true</isSleepwalk>
-    <chance>0</chance>
-    <chanceBoosters>
-      <li>sleepwalker</li>
-    </chanceBoosters>
-    <requirements>
-      <li>sleepwalker</li>
-    </requirements>
-  </DreamersDream.DreamTagDef>
-
 <!-- SPECIAL
   <DreamersDream.DreamTagDef>
     <defName>Divine</defName>

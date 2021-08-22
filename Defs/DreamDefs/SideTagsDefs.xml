@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+  <!-- MAIN TAGS -->
+<!-- SIDE TAGS -->
+  <DreamersDream.DreamTagDef>
+    <defName>Sleepwalk</defName>
+    <label>sleepwalk</label>
+    <isSideTag>true</isSideTag>
+    <isSpecial>false</isSpecial>
+    <isSleepwalk>true</isSleepwalk>
+    <chance>0</chance>
+    <chanceBoosters>
+      <li>sleepwalker</li>
+    </chanceBoosters>
+    <requirements>
+      <li>sleepwalker</li>
+    </requirements>
+  </DreamersDream.DreamTagDef>
+
+  <DreamersDream.DreamTagDef>
+    <defName>Psychopath</defName>
+    <label>psychopath</label>
+    <isSideTag>true</isSideTag>
+    <requirements>
+      <li>psychopath</li>
+    </requirements>
+  </DreamersDream.DreamTagDef>
+
+  <DreamersDream.DreamTagDef>
+    <defName>Cannibal</defName>
+    <label>cannibal</label>
+    <isSideTag>true</isSideTag>
+    <requirements>
+      <li>cannibal</li>
+    </requirements>
+  </DreamersDream.DreamTagDef>
+
+<!-- SPECIAL
+  <DreamersDream.DreamTagDef>
+    <defName>Divine</defName>
+    <label>divine</label>
+    <isSpecial>true</isSpecial>
+    <chance>0</chance>
+  </DreamersDream.DreamTagDef>
+
+  <DreamersDream.DreamTagDef>
+    <defName>Mystical</defName>
+    <label>mystical</label>
+    <isSpecial>true</isSpecial>
+    <chance>0</chance>
+  </DreamersDream.DreamTagDef>-->
+</Defs>

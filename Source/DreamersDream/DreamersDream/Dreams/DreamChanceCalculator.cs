@@ -2,7 +2,7 @@
 
 namespace DreamersDream
 {
-    internal static class DreamChanceCalc
+    internal static class DreamChanceCalculator
     {
         public static float CalculateChanceFor(this DreamDef dream, Pawn pawn)
         {

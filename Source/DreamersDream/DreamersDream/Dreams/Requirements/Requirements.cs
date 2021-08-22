@@ -48,5 +48,9 @@
         killer,
         guilty
         //wimp
+
+        //missingLimbs
+        //divorced
+        //rebuffed
     }
 }

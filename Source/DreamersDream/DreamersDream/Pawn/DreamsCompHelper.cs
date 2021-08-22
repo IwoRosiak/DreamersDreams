@@ -3,7 +3,7 @@ using Verse;
 
 namespace DreamersDream
 {
-    internal static class DreamPawnEligibilityChecker
+    internal static class DreamsCompHelper
     {
         public static bool CanGetDreamNow(this Pawn pawn)
         {

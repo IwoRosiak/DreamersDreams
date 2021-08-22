@@ -64,7 +64,7 @@
     <Compile Include="Dreams\Requirements\DreamRequirementsChecker.cs" />
     <Compile Include="Dreams\Requirements\Requirements.cs" />
     <Compile Include="Sleepwalk\SleepwalkSelector.cs" />
-    <Compile Include="Dreams\DreamPawnEligibilityChecker.cs" />
+    <Compile Include="Pawn\DreamsCompHelper.cs" />
     <Compile Include="Utilities\ModSettings\DD_Settings.cs" />
     <Compile Include="Utilities\ModSettings\ModSettingsUtility.cs" />
     <Compile Include="Pawn\DreamsCompProperties.cs" />
@@ -75,7 +75,7 @@
     <Compile Include="Pawn\Trackers\PawnDreamOddsTracker.cs" />
     <Compile Include="Sleepwalk\SleepwalkingTypes.cs" />
     <Compile Include="Dreams\DreamTracker.cs" />
-    <Compile Include="Dreams\DreamChanceCalc.cs" />
+    <Compile Include="Dreams\DreamChanceCalculator.cs" />
     <Compile Include="Dreams\DreamSelector.cs" />
     <Compile Include="Pawn\Trackers\PawnDreamTagsOddsTracker.cs" />
     <Compile Include="Defs\Traits\DD_TraitsDefOf.cs" />

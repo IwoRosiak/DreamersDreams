@@ -82,12 +82,31 @@ namespace DreamersDream
                     break;
 
                 case Requirements.wounded:
+                    if (!pawn.health.hediffSet.HasNaturallyHealingInjury())
+                    {
+                        return false;
+                    }
                     break;
 
                 case Requirements.healthy:
+                    if (pawn.health.hediffSet.HasNaturallyHealingInjury())
+                    {
+                        return false;
+                    }
+                    break;
+
+                case Requirements.ill:
+                    if (!pawn.health.hediffSet.AnyHediffMakesSickThought)
+                    {
+                        return false;
+                    }
                     break;
 
                 case Requirements.starving:
+                    if (!pawn.health.hediffSet.HasHediff(HediffDefOf.Malnutrition))
+                    {
+                        return false;
+                    }
                     break;
 
                 case Requirements.prisoner:
@@ -105,6 +124,10 @@ namespace DreamersDream
                     break;
 
                 case Requirements.killer:
+                    if (pawn.records.GetValue(RecordDefOf.KillsHumanlikes) <= 0)
+                    {
+                        return false;
+                    }
                     break;
 
                 case Requirements.guilty:
@@ -123,11 +146,11 @@ namespace DreamersDream
                 case Requirements.stressedOrMore:
                     break;
 
-                case Requirements.ill:
-                    if (pawn.needs.mood.thoughts.)
-                        break;
-
-                case Requirements.hungry:
+                case Requirements.hungry: //TODO
+                    if (!pawn.health.hediffSet.HasHediff(HediffDefOf.Malnutrition))
+                    {
+                        return false;
+                    }
                     break;
             }
 
