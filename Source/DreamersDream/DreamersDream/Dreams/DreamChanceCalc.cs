@@ -8,9 +8,9 @@ namespace DreamersDream
         {
             float chance = dream.tags[0].CalculateChanceFor(pawn);
 
-            if (!dream.isMeetingRequirements(pawn))
+            if (!dream.IsMeetingRequirements(pawn))
             {
-                chance = 0;
+                return 0;
             }
 
             return chance;
@@ -25,9 +25,9 @@ namespace DreamersDream
         {
             float chance = GetCustomChance(dreamTag);
 
-            if (!dreamTag.isMeetingRequirements(pawn))
+            if (!dreamTag.IsMeetingRequirements(pawn))
             {
-                chance = 0;
+                return 0;
             }
 
             return chance;
@@ -43,37 +43,6 @@ namespace DreamersDream
             {
                 return tag.chance;
             }
-        }
-
-        private static bool isMeetingRequirements(this DreamDef dream, Pawn pawn)
-        {
-            foreach (var tag in dream.tags)
-            {
-                if (!isMeetingRequirements(tag, pawn))
-                {
-                    return false;
-                }
-            }
-
-            return true;
-        }
-
-        private static bool isMeetingRequirements(this DreamTagDef tag, Pawn pawn)
-        {
-            foreach (var requirement in tag.requirements)
-            {
-                switch (requirement)
-                {
-                    case Requirements.sleepwalker:
-                        if (!pawn.isSleepwalker())
-                        {
-                            return false;
-                        }
-                        break;
-                }
-            }
-
-            return true;
         }
     }
 }

@@ -131,15 +131,14 @@ namespace DreamersDream
 
         private void DrawColumnChance(Rect column, DreamTagDef tag)
         {
-            float chance = tag.chance;
-            ModSettingsUtility.CheckIfHasCustomChanceAndAddIfNot(tag, ref chance);
+            float chance = ModSettingsUtility.ResolveCustomChanceForTag(tag);
 
             ModSettingsUtility.DrawChanceButtons(column, ref chance);
 
             string label = Math.Round(PawnDreamTagsOddsTracker.ChanceInPercentages(chance, ModSettingsUtility.AddUpChancesForQualities()), 2) + "%";
             Widgets.Label(ModSettingsUtility.GetMiddleOfRectForString(column, label), label);
 
-            DD_Settings.TagsCustomChances[tag.defName] = chance;
+            ModSettingsUtility.UpdateCustomChanceForTag(tag, chance);
         }
 
         private void DrawColumnNotify(Rect column, DreamTagDef tag)

@@ -6,7 +6,7 @@ namespace DreamersDream
 {
     internal static class SleepwalkSelector
     {
-        public static bool isSleepwalker(this Pawn pawn)
+        public static bool IsSleepwalker(this Pawn pawn)
         {
             return pawn.story.traits.HasTrait(DD_TraitDefOf.Sleepwalker);
         }

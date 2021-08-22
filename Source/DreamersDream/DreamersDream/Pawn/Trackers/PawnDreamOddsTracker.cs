@@ -23,9 +23,12 @@ namespace DreamersDream
 
             foreach (var dream in IsolateDreamsOfTag(tag))
             {
-                float chanceForDream = dream.CalculateChanceFor(pawn);
+                float chanceForDream = dream?.CalculateChanceFor(pawn) ?? 0;
 
-                DreamOdds.Add(dream, chanceForDream);
+                if (chanceForDream != 0)
+                {
+                    DreamOdds.Add(dream, chanceForDream);
+                }
             }
             return DreamOdds;
         }

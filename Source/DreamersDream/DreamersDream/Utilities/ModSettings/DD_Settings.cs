@@ -62,7 +62,7 @@ namespace DreamersDream
 
             foreach (var tag in DreamTracker.GetAllDreamTags)
             {
-                if (TagsCustomChances.ContainsKey(tag.defName))
+                if (TagsCustomChances.ContainsKey(tag.defName) && TagsCustomChances[tag.defName] != tag.chance)
                 {
                     tempDictChances.Add(tag.defName, TagsCustomChances[tag.defName]);
                 }

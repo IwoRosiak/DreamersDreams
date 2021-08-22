@@ -27,7 +27,10 @@ namespace DreamersDream
             {
                 float chanceForTag = dreamTag?.CalculateChanceFor(pawn) ?? 0;
 
-                DreamTagOdds.Add(dreamTag, chanceForTag);
+                if (chanceForTag != 0)
+                {
+                    DreamTagOdds.Add(dreamTag, chanceForTag);
+                }
             }
             return DreamTagOdds;
         }

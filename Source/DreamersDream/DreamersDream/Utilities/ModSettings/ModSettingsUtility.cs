@@ -15,16 +15,36 @@ namespace DreamersDream
             return (Text.CalcSize(text).x / 2);
         }
 
-        public static void CheckIfHasCustomChanceAndAddIfNot(DreamTagDef thingToCheck, ref float chance)
+        public static float ResolveCustomChanceForTag(DreamTagDef tag)
         {
-            if (DD_Settings.TagsCustomChances.ContainsKey(thingToCheck.defName))
+            if (DD_Settings.TagsCustomChances.ContainsKey(tag.defName) && DD_Settings.TagsCustomChances[tag.defName] != tag.chance)
             {
-                chance = DD_Settings.TagsCustomChances[thingToCheck.defName];
+                return DD_Settings.TagsCustomChances[tag.defName];
+            }
+            else if (DD_Settings.TagsCustomChances.ContainsKey(tag.defName) && DD_Settings.TagsCustomChances[tag.defName] == tag.chance)
+            {
+                DD_Settings.TagsCustomChances.Remove(tag.defName);
+                return tag.chance;
             }
             else
             {
-                DD_Settings.TagsCustomChances.Add(thingToCheck.defName, chance);
-                chance = DD_Settings.TagsCustomChances[thingToCheck.defName];
+                return tag.chance;
+            }
+        }
+
+        public static void UpdateCustomChanceForTag(DreamTagDef tag, float chance)
+        {
+            if (!DD_Settings.TagsCustomChances.ContainsKey(tag.defName) && chance != tag.chance)
+            {
+                DD_Settings.TagsCustomChances.Add(tag.defName, chance);
+            }
+            else if (DD_Settings.TagsCustomChances.ContainsKey(tag.defName) && chance != tag.chance)
+            {
+                DD_Settings.TagsCustomChances[tag.defName] = chance;
+            }
+            else if (DD_Settings.TagsCustomChances.ContainsKey(tag.defName) && chance == tag.chance)
+            {
+                DD_Settings.TagsCustomChances.Remove(tag.defName);
             }
         }
 
@@ -99,9 +119,11 @@ namespace DreamersDream
         public static float AddUpChancesForQualities()
         {
             float sumOfCollectionChances = 0;
-            foreach (var item in DD_Settings.TagsCustomChances)
+            foreach (var dreamTag in DreamTracker.GetAllDreamTags)
             {
-                sumOfCollectionChances += item.Value;
+                float chanceForTag = dreamTag?.CalculateChanceFor() ?? 0;
+
+                sumOfCollectionChances += chanceForTag;
             }
             return sumOfCollectionChances;
         }

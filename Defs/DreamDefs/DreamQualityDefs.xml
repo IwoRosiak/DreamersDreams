@@ -13,7 +13,7 @@
     <defName>Epic</defName>
     <label>epic</label>
     <isSpecial>true</isSpecial>
-    <chance>40</chance>
+    <chance>25</chance>
   </DreamersDream.DreamTagDef>
 
   <DreamersDream.DreamTagDef>
@@ -49,7 +49,7 @@
     <defName>Terrorising</defName>
     <label>terrorising</label>
     <isSpecial>true</isSpecial>
-    <chance>40</chance>
+    <chance>25</chance>
   </DreamersDream.DreamTagDef>
 
   <DreamersDream.DreamTagDef>

@@ -24,9 +24,4 @@ namespace DreamersDream
     {
         sleepwalker
     }
-
-    public enum Requirements
-    {
-        sleepwalker
-    }
 }

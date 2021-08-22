@@ -53,7 +53,7 @@ namespace DreamersDream
 
         public static bool ShouldSleepwalkNow(this Pawn pawn)
         {
-            if (pawn.isSleepwalker())
+            if (pawn.IsSleepwalker())
             {
                 float sleepwalkChance = pawn.GetPawnSleepwalkingChance();
 
