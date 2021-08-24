@@ -17,11 +17,6 @@
 
   <DreamersDream.DreamDef ParentName = "TerrorisingDream">
     <defName>PileCorpsesDream</defName>
-      <nullifyingTraits>
-        <li>Psychopath</li>
-        <li>Bloodlust</li>
-        <li>Cannibal</li>
-      </nullifyingTraits>
     <stages>
       <li>
         <label>Dreamt about pile of corpses</label>
@@ -29,6 +24,11 @@
         <baseMoodEffect>-7</baseMoodEffect>
       </li>
     </stages>
+    <requirements>
+      <li>nonbloodlust</li>
+      <li>nonpsychopath</li>
+      <li>noncannibal</li>
+    </requirements>
   </DreamersDream.DreamDef>
 
   <DreamersDream.DreamDef ParentName = "TerrorisingDream">
@@ -51,6 +51,10 @@
         <baseMoodEffect>-8</baseMoodEffect>
       </li>
     </stages>
+    <requirements>
+      <li>nonbloodlust</li>
+      <li>nonpsychopath</li>
+    </requirements>
     <dreamedBy>Slavidor</dreamedBy>
   </DreamersDream.DreamDef>
 
@@ -63,6 +67,11 @@
         <baseMoodEffect>-8</baseMoodEffect>
       </li>
     </stages>
+    <requirements>
+      <li>nonbloodlust</li>
+      <li>nonpsychopath</li>
+      <li>noncannibal</li>
+    </requirements>
     <dreamedBy>Jack_Hazardous</dreamedBy>
   </DreamersDream.DreamDef>
 

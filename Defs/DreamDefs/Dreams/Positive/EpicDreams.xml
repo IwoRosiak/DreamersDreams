@@ -54,4 +54,35 @@ I ran, and my comrades ran away. Then I stopped and instead of being on the run,
   </DreamersDream.DreamDef>
 
 
+    <DreamersDream.DreamDef ParentName = "EpicDream">
+      <defName>KillingEveryoneDream</defName>
+      <stages>
+        <li>
+          <label>Dreamt about murder spree</label>
+          <description>Nothing could stop me. Murder. Everyone.</description>
+          <baseMoodEffect>8</baseMoodEffect>
+        </li>
+      </stages>
+      <requirements>
+        <li>psycho</li>
+      </requirements>
+    </DreamersDream.DreamDef>
+
+    <DreamersDream.DreamDef ParentName = "EpicDream">
+      <defName>EatingRivalDream</defName>
+      <stages>
+        <li>
+          <label>Dreamt about eating my rival</label>
+          <description>I laughed while tying him over the fire pit. I laughed while heat was charring his face. I laughed while consuming his body...</description>
+          <baseMoodEffect>8</baseMoodEffect>
+        </li>
+      </stages>
+      <requirements>
+        <li>cannibal</li>
+      </requirements>
+    </DreamersDream.DreamDef>
+
+
+
+
 </Defs>

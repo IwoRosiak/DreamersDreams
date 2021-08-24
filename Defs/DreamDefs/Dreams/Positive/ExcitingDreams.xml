@@ -5,7 +5,7 @@
       <li>Exciting</li>
     </tags>
   </DreamersDream.DreamDef>
-  
+
   <DreamersDream.DreamDef ParentName = "ExcitingDream">
     <defName>DreamRaceGame</defName>
     <stages>
@@ -15,6 +15,9 @@
         <baseMoodEffect>5</baseMoodEffect>
       </li>
     </stages>
+    <requirements>
+      <li>nonpsychopath</li>
+    </requirements>
     <dreamedBy>ryanizawsum</dreamedBy>
   </DreamersDream.DreamDef>
 
@@ -39,6 +42,9 @@
         <baseMoodEffect>5</baseMoodEffect>
       </li>
     </stages>
+    <requirements>
+      <li>colonist</li>
+    </requirements>
   </DreamersDream.DreamDef>
 
   <DreamersDream.DreamDef ParentName = "ExcitingDream">
@@ -50,6 +56,10 @@
         <baseMoodEffect>5</baseMoodEffect>
       </li>
     </stages>
+    <requirements>
+      <li>nonbloodlust</li>
+      <li>nonpsychopath</li>
+    </requirements>
   </DreamersDream.DreamDef>
 
   <DreamersDream.DreamDef ParentName = "ExcitingDream" >
@@ -61,5 +71,35 @@
         <baseMoodEffect>5</baseMoodEffect>
       </li>
     </stages>
+  </DreamersDream.DreamDef>
+
+
+
+  <DreamersDream.DreamDef ParentName = "ExcitingDream">
+    <defName>MurderDream</defName>
+    <stages>
+      <li>
+        <label>Dreamt about murder</label>
+        <description>Motionless body lays in front of me and I watch it. The blood pool keeps getting bigger. I don't remember why I killed this person but it feels so damn good.</description>
+        <baseMoodEffect>5</baseMoodEffect>
+      </li>
+    </stages>
+    <requirements>
+      <li>psycho</li>
+    </requirements>
+  </DreamersDream.DreamDef>
+
+  <DreamersDream.DreamDef ParentName = "ExcitingDream">
+    <defName>EatingStrangerDream</defName>
+    <stages>
+      <li>
+        <label>Dreamt about eating someone</label>
+        <description>Eating a human being is simple. I used to think of it as a disgusting thing, but simply trying this delicacy proved me wrong!</description>
+        <baseMoodEffect>5</baseMoodEffect>
+      </li>
+    </stages>
+    <requirements>
+      <li>cannibal</li>
+    </requirements>
   </DreamersDream.DreamDef>
 </Defs>

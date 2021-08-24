@@ -16,6 +16,13 @@ namespace DreamersDream
                     }
                     break;
 
+                case Requirements.psycho:
+                    if (!pawn.story.traits.HasTrait(TraitDefOf.Psychopath) && !pawn.story.traits.HasTrait(TraitDefOf.Bloodlust))
+                    {
+                        return false;
+                    }
+                    break;
+
                 case Requirements.psychopath:
                     if (!pawn.story.traits.HasTrait(TraitDefOf.Psychopath))
                     {
@@ -44,6 +51,27 @@ namespace DreamersDream
                         return false;
                     }
 
+                    break;
+
+                case Requirements.bloodlust:
+                    if (!pawn.story.traits.HasTrait(TraitDefOf.Bloodlust))
+                    {
+                        return false;
+                    }
+                    break;
+
+                case Requirements.nonpsycho:
+                    if (pawn.story.traits.HasTrait(TraitDefOf.Psychopath) && pawn.story.traits.HasTrait(TraitDefOf.Bloodlust))
+                    {
+                        return false;
+                    }
+                    break;
+
+                case Requirements.nonbloodlust:
+                    if (pawn.story.traits.HasTrait(TraitDefOf.Bloodlust))
+                    {
+                        return false;
+                    }
                     break;
 
                 case Requirements.noncannibal:
@@ -103,7 +131,7 @@ namespace DreamersDream
                     break;
 
                 case Requirements.starving:
-                    if (!pawn.health.hediffSet.HasHediff(HediffDefOf.Malnutrition))
+                    if (!pawn.needs.food.Starving)
                     {
                         return false;
                     }
@@ -146,8 +174,8 @@ namespace DreamersDream
                 case Requirements.stressedOrMore:
                     break;
 
-                case Requirements.hungry: //TODO
-                    if (!pawn.health.hediffSet.HasHediff(HediffDefOf.Malnutrition))
+                case Requirements.full:
+                    if (pawn.needs.food.Starving)
                     {
                         return false;
                     }

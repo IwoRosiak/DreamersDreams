@@ -13,6 +13,23 @@
         <baseMoodEffect>-5</baseMoodEffect>
       </li>
     </stages>
+    <requirements>
+      <li>full</li>
+    </requirements>
+  </DreamersDream.DreamDef>
+
+  <DreamersDream.DreamDef ParentName = "FrighteningDream">
+    <defName>DisturbedSleepStarvation</defName>
+    <stages>
+      <li>
+        <label>Disturbed sleep (starvation)</label>
+        <description>My growling stomach kept me awake in the night...</description>
+        <baseMoodEffect>-5</baseMoodEffect>
+      </li>
+    </stages>
+    <requirements>
+      <li>starving</li>
+    </requirements>
   </DreamersDream.DreamDef>
 
   <DreamersDream.DreamDef ParentName = "FrighteningDream">
@@ -28,10 +45,6 @@
 
   <DreamersDream.DreamDef ParentName = "FrighteningDream">
     <defName>KillSomeoneCloseDream</defName>
-    <nullifyingTraits>
-      <li>Psychopath</li>
-      <li>Bloodlust</li>
-    </nullifyingTraits>
     <stages>
       <li>
         <label>Dreamt about killing a close one</label>
@@ -39,14 +52,14 @@
         <baseMoodEffect>-5</baseMoodEffect>
       </li>
     </stages>
+    <requirements>
+      <li>nonbloodlust</li>
+      <li>nonpsychopath</li>
+    </requirements>
   </DreamersDream.DreamDef>
 
   <DreamersDream.DreamDef ParentName = "FrighteningDream">
     <defName>KillSomeoneDream</defName>
-    <nullifyingTraits>
-      <li>Psychopath</li>
-      <li>Bloodlust</li>
-    </nullifyingTraits>
     <stages>
       <li>
         <label>Dreamt about killing</label>
@@ -54,15 +67,14 @@
         <baseMoodEffect>-5</baseMoodEffect>
       </li>
     </stages>
+    <requirements>
+      <li>nonbloodlust</li>
+      <li>nonpsychopath</li>
+    </requirements>
   </DreamersDream.DreamDef>
 
   <DreamersDream.DreamDef ParentName = "FrighteningDream">
   <defName>CannibalismDream</defName>
-  <nullifyingTraits>
-    <li>Psychopath</li>
-    <li>Bloodlust</li>
-    <li>Cannibal</li>
-  </nullifyingTraits>
   <stages>
     <li>
       <label>Dreamt about eating humans</label>
@@ -70,6 +82,11 @@
       <baseMoodEffect>-5</baseMoodEffect>
     </li>
   </stages>
+  <requirements>
+    <li>nonbloodlust</li>
+    <li>nonpsychopath</li>
+    <li>noncannibal</li>
+  </requirements>
 </DreamersDream.DreamDef>
 
 <DreamersDream.DreamDef ParentName = "FrighteningDream">

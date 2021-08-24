@@ -6,6 +6,14 @@ namespace DreamersDream
     {
         public static bool IsMeetingRequirements(this DreamDef dream, Pawn pawn)
         {
+            foreach (var requirement in dream.requirements)
+            {
+                if (!requirement.CheckRequirementForPawn(pawn))
+                {
+                    return false;
+                }
+            }
+
             foreach (var tag in dream.tags)
             {
                 if (!IsMeetingRequirements(tag, pawn))

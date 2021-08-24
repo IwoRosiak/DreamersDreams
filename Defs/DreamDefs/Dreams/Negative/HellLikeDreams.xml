@@ -35,6 +35,10 @@
         <baseMoodEffect>-11</baseMoodEffect>
       </li>
     </stages>
+    <requirements>
+      <li>nonbloodlust</li>
+      <li>nonpsychopath</li>
+    </requirements>
     <dreamedBy>dambuk1</dreamedBy>
   </DreamersDream.DreamDef>
 

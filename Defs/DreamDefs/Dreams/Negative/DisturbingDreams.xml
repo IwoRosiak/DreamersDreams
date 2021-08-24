@@ -57,6 +57,9 @@
       <baseMoodEffect>-3</baseMoodEffect>
     </li>
   </stages>
+  <requirements>
+    <li>stressed</li>
+  </requirements>
 </DreamersDream.DreamDef>
 
 <DreamersDream.DreamDef ParentName = "DisturbingDream">
@@ -108,6 +111,9 @@ Only then, as the antigrain warhead went off did I understand why I felt that ur
       <baseMoodEffect>-4</baseMoodEffect>
     </li>
   </stages>
+  <requirements>
+    <li>colonist</li>
+  </requirements>
   <dreamedBy>Wight</dreamedBy>
 </DreamersDream.DreamDef>
 

@@ -24,6 +24,9 @@
         <baseMoodEffect>5</baseMoodEffect>
       </li>
     </stages>
+    <requirements>
+      <li>wounded</li>
+    </requirements>
   </DreamersDream.DreamDef>
 
   <DreamersDream.DreamDef ParentName = "AmazingDream" >
@@ -57,6 +60,34 @@
       <baseMoodEffect>6</baseMoodEffect>
     </li>
   </stages>
+</DreamersDream.DreamDef>
+
+<DreamersDream.DreamDef ParentName = "AmazingDream">
+  <defName>TorturingStrangersDream</defName>
+  <stages>
+    <li>
+      <label>Dreamt about torturing</label>
+      <description>Stranger tied up in front of me. Set of shiny and sharp tools on the table. I grabbed one of the knifes and I couldn't stop. Even when strangers body stopped shivering and screaming, I was still taking pleasure in the simple act of torture...</description>
+      <baseMoodEffect>6</baseMoodEffect>
+    </li>
+  </stages>
+  <requirements>
+    <li>psycho</li>
+  </requirements>
+</DreamersDream.DreamDef>
+
+<DreamersDream.DreamDef ParentName = "AmazingDream">
+  <defName>HumanMeatFeastDream</defName>
+  <stages>
+    <li>
+      <label>Dreamt about human feast</label>
+      <description>Legs, arms, eyes and brains. Cooked to perfection. I can eat my fill and no one will judge me!</description>
+      <baseMoodEffect>6</baseMoodEffect>
+    </li>
+  </stages>
+  <requirements>
+    <li>cannibal</li>
+  </requirements>
 </DreamersDream.DreamDef>
 
 </Defs>

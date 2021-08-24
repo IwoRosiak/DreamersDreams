@@ -46,6 +46,10 @@
       <baseMoodEffect>-2</baseMoodEffect>
     </li>
   </stages>
+  <requirements>
+    <li>nonbloodlust</li>
+    <li>nonpsychopath</li>
+  </requirements>
 </DreamersDream.DreamDef>
 
 <DreamersDream.DreamDef ParentName = "UnpleasantDream">
@@ -57,6 +61,9 @@
       <baseMoodEffect>-2</baseMoodEffect>
     </li>
   </stages>
+  <requirements>
+    <li>colonist</li>
+  </requirements>
 </DreamersDream.DreamDef>
 
 <DreamersDream.DreamDef ParentName = "UnpleasantDream">

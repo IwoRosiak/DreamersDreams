@@ -57,6 +57,10 @@
       <baseMoodEffect>2</baseMoodEffect>
     </li>
   </stages>
+  <requirements>
+    <li>nonpsychopath</li>
+    <li>noncannibal</li>
+  </requirements>
 </DreamersDream.DreamDef>
 
 <DreamersDream.DreamDef ParentName = "PleasantDream">
@@ -68,6 +72,9 @@
       <baseMoodEffect>2</baseMoodEffect>
     </li>
   </stages>
+  <requirements>
+    <li>noncannibal</li>
+  </requirements>
   <dreamedBy>Male_07</dreamedBy>
 </DreamersDream.DreamDef>
 
@@ -82,5 +89,22 @@
   </stages>
   <dreamedBy>ryanizawsum</dreamedBy>
 </DreamersDream.DreamDef>
+
+
+
+<DreamersDream.DreamDef ParentName = "PleasantDream">
+  <defName>FistFightDream</defName>
+  <stages>
+    <li>
+      <label>Dreamt about fighting</label>
+      <description>Breaking their bones is not enough! Let the blood spill!</description>
+      <baseMoodEffect>2</baseMoodEffect>
+    </li>
+  </stages>
+  <requirements>
+    <li>psycho</li>
+  </requirements>
+</DreamersDream.DreamDef>
+
 
 </Defs>

@@ -5,16 +5,15 @@
         //personality
 
         sleepwalker,
-
-        //violent,
+        psycho,
         psychopath,
-
+        bloodlust,
         cannibal,
         gourmand,
 
-        //nonviolent,
+        nonpsycho,
         noncannibal,
-
+        nonbloodlust,
         nonpsychopath,
 
         //mood
@@ -37,6 +36,7 @@
 
         ill,
         hungry,
+        full,
 
         //hungryOrWorse,
         starving,
