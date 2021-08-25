@@ -180,6 +180,10 @@ namespace DreamersDream
                         return false;
                     }
                     break;
+
+                default:
+                    Log.Warning("Dreamer's Dreams: For some reason " + requirement.ToString() + " does not have implementation. If you see that please do report that on mod page :) It is just a warning, not error. It is not game breaking in any way.");
+                    return false;
             }
 
             return true;

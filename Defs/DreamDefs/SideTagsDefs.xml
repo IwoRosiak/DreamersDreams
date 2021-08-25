@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Defs>
-  <!-- MAIN TAGS -->
-<!-- SIDE TAGS -->
+  <!--TRAIT-->
+
   <DreamersDream.DreamTagDef>
     <defName>Sleepwalk</defName>
     <isSideTag>true</isSideTag>
-    <isSpecial>false</isSpecial>
     <isSleepwalk>true</isSleepwalk>
     <chance>0</chance>
     <chanceBoosters>
@@ -16,9 +15,178 @@
     </requirements>
   </DreamersDream.DreamTagDef>
 
+  <DreamersDream.DreamTagDef>
+    <defName>Psycho</defName>
+    <isSideTag>true</isSideTag>
+    <chance>0</chance>
+    <requirements>
+      <li>psycho</li>
+    </requirements>
+  </DreamersDream.DreamTagDef>
+  <DreamersDream.DreamTagDef>
+    <defName>Cannibal</defName>
+    <isSideTag>true</isSideTag>
+    <chance>0</chance>
+    <requirements>
+      <li>cannibal</li>
+    </requirements>
+  </DreamersDream.DreamTagDef>
+  <DreamersDream.DreamTagDef>
+    <defName>Bloodlust</defName>
+    <isSideTag>true</isSideTag>
+    <chance>0</chance>
+    <requirements>
+      <li>bloodlust</li>
+    </requirements>
+  </DreamersDream.DreamTagDef>
+  <DreamersDream.DreamTagDef>
+    <defName>Psychopath</defName>
+    <isSideTag>true</isSideTag>
+    <chance>0</chance>
+    <requirements>
+      <li>psychopath</li>
+    </requirements>
+  </DreamersDream.DreamTagDef>
+  <!--NO TRAIT-->
+  <DreamersDream.DreamTagDef>
+    <defName>Nonpsychopath</defName>
+    <isSideTag>true</isSideTag>
+    <chance>0</chance>
+    <requirements>
+      <li>nonpsychopath</li>
+    </requirements>
+  </DreamersDream.DreamTagDef>
+
+  <DreamersDream.DreamTagDef>
+    <defName>Nonpsycho</defName>
+    <isSideTag>true</isSideTag>
+    <chance>0</chance>
+    <requirements>
+      <li>nonpsycho</li>
+    </requirements>
+  </DreamersDream.DreamTagDef>
 
 
-<!-- SPECIAL
+  <DreamersDream.DreamTagDef>
+    <defName>Noncannibal</defName>
+    <isSideTag>true</isSideTag>
+    <chance>0</chance>
+    <requirements>
+      <li>noncannibal</li>
+    </requirements>
+  </DreamersDream.DreamTagDef>
+
+
+  <DreamersDream.DreamTagDef>
+    <defName>Nonbloodlust</defName>
+    <isSideTag>true</isSideTag>
+    <chance>0</chance>
+    <requirements>
+      <li>nonbloodlust</li>
+    </requirements>
+  </DreamersDream.DreamTagDef>
+  <!--MIND STATE-->
+  <DreamersDream.DreamTagDef>
+    <defName>Happy</defName>
+    <isSideTag>true</isSideTag>
+    <chance>0</chance>
+    <requirements>
+      <li>happy</li>
+    </requirements>
+  </DreamersDream.DreamTagDef>
+
+  <DreamersDream.DreamTagDef>
+    <defName>Stressed</defName>
+    <isSideTag>true</isSideTag>
+    <chance>0</chance>
+    <requirements>
+      <li>stressed</li>
+    </requirements>
+  </DreamersDream.DreamTagDef>
+  <!-- BODY STATE -->
+  <DreamersDream.DreamTagDef>
+    <defName>Full</defName>
+    <isSideTag>true</isSideTag>
+    <chance>0</chance>
+    <requirements>
+      <li>full</li>
+    </requirements>
+  </DreamersDream.DreamTagDef>
+
+  <DreamersDream.DreamTagDef>
+    <defName>Starving</defName>
+    <isSideTag>true</isSideTag>
+    <chance>0</chance>
+    <requirements>
+      <li>starving</li>
+    </requirements>
+  </DreamersDream.DreamTagDef>
+
+  <DreamersDream.DreamTagDef>
+    <defName>Wounded</defName>
+    <isSideTag>true</isSideTag>
+    <chance>0</chance>
+    <requirements>
+      <li>wounded</li>
+    </requirements>
+  </DreamersDream.DreamTagDef>
+
+  <DreamersDream.DreamTagDef>
+    <defName>Healthy</defName>
+    <isSideTag>true</isSideTag>
+    <chance>0</chance>
+    <requirements>
+      <li>healthy</li>
+    </requirements>
+  </DreamersDream.DreamTagDef>
+
+  <!-- SOCIAL STATE -->
+  <DreamersDream.DreamTagDef>
+    <defName>Prisoner</defName>
+    <isSideTag>true</isSideTag>
+    <chance>0</chance>
+    <requirements>
+      <li>prisoner</li>
+    </requirements>
+  </DreamersDream.DreamTagDef>
+
+  <DreamersDream.DreamTagDef>
+    <defName>Colonist</defName>
+    <isSideTag>true</isSideTag>
+    <chance>0</chance>
+    <requirements>
+      <li>colonist</li>
+    </requirements>
+  </DreamersDream.DreamTagDef>
+
+  <DreamersDream.DreamTagDef>
+    <defName>Married</defName>
+    <isSideTag>true</isSideTag>
+    <chance>0</chance>
+    <requirements>
+      <li>married</li>
+    </requirements>
+  </DreamersDream.DreamTagDef>
+
+  <DreamersDream.DreamTagDef>
+    <defName>Bonded</defName>
+    <isSideTag>true</isSideTag>
+    <chance>0</chance>
+    <requirements>
+      <li>bonded</li>
+    </requirements>
+  </DreamersDream.DreamTagDef>
+
+  <DreamersDream.DreamTagDef>
+    <defName>Befriended</defName>
+    <isSideTag>true</isSideTag>
+    <chance>0</chance>
+    <requirements>
+      <li>befriended</li>
+    </requirements>
+  </DreamersDream.DreamTagDef>
+
+  <!-- SPECIAL
   <DreamersDream.DreamTagDef>
     <defName>Divine</defName>
     <label>divine</label>

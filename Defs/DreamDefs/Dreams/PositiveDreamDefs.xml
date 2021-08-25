@@ -1,0 +1,508 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+    <!--Legendary-->
+    <DreamersDream.DreamDef ParentName="LegendaryDream">
+        <defName>DreamGod</defName>
+        <stages>
+            <li>
+                <label>Dreamt about godhood</label>
+                <description>Everything was to my command. Mountains and oceans, birds and fish,
+                    good people and bad people... Yet, I did not want to disturb that chaos. I
+                    watched and laughed.</description>
+                <baseMoodEffect>12</baseMoodEffect>
+            </li>
+        </stages>
+    </DreamersDream.DreamDef>
+
+    <DreamersDream.DreamDef ParentName="LegendaryDream">
+        <defName>DreamValhalla</defName>
+        <stages>
+            <li>
+                <label>Dreamt about meeting ancient god</label>
+                <description>I was sitting on a grassy hill surrounded by mountains full of trees
+                    and green white grass. After a while, tall old man with round hat and staff
+                    approached me. There were two crows sitting on the staff. He said "look" and
+                    pointed to the horizon and then a old viking came up right next to me leaning on
+                    a tree with a battered shield and said to me "Grunts would be pigs if they knew
+                    what the old boar was suffering". Out of nowhere trees and hills are on fire.
+                    The old man looked at me and said "Valhalla is coming for you. Don't forget
+                    me."</description>
+                <baseMoodEffect>12</baseMoodEffect>
+            </li>
+        </stages>
+        <dreamedBy>SghHanzMullerSW</dreamedBy>
+    </DreamersDream.DreamDef>
+
+    <!--Epic-->
+    <DreamersDream.DreamDef ParentName="EpicDream">
+        <defName>LucidDream</defName>
+        <stages>
+            <li>
+                <label>Had lucid dream</label>
+                <description>I realised that I'm in the dream so I could do anything I want! If only
+                    I could do it more often...</description>
+                <baseMoodEffect>8</baseMoodEffect>
+            </li>
+        </stages>
+    </DreamersDream.DreamDef>
+
+    <DreamersDream.DreamDef ParentName="EpicDream">
+        <defName>DreamAnimalCompetition</defName>
+        <stages>
+            <li>
+                <label>Dreamt about animal competition</label>
+                <description>I joined a dog-sledding competition, which was a racetrack where the
+                    dogs ski around a track for several laps. I cheated by putting on my dog's
+                    uniform and entering the race as my dog (and giving my dog my clothes so he can
+                    look like me cheering him on). I went through the whole race, skiing stiffly to
+                    look like a dog skiing, but at the very end I felt guilty about cheating and
+                    bumped into a pole so I'd get second place. 7' tall Bruce Willis knew that I
+                    cheated and got back at me by standing very close to me and making me look
+                    short.</description>
+                <baseMoodEffect>8</baseMoodEffect>
+            </li>
+        </stages>
+        <dreamedBy>Mitroll</dreamedBy>
+    </DreamersDream.DreamDef>
+
+    <DreamersDream.DreamDef ParentName="EpicDream">
+        <defName>DreamAliensFight</defName>
+        <stages>
+            <li>
+                <label>Dreamt about fighting with aliens</label>
+                <description>I was part of an elite team, defending against the Aliens. I would love
+                    to say that my special power was a grappling hook, but alas my mind construed it
+                    as gum. The function was the same, anyhow. So there I was, zipping through the
+                    city towards one of the crashed ships. When me and my comrade got there, it
+                    opened. And I felt the most bone chilling sense of fear. I ran, and my comrades
+                    ran away. Then I stopped and instead of being on the run, I slung myself to the
+                    highest point nearby, an old construction crane. And I sat. And I
+                    watched.</description>
+                <baseMoodEffect>8</baseMoodEffect>
+            </li>
+        </stages>
+    </DreamersDream.DreamDef>
+
+    <DreamersDream.DreamDef ParentName="EpicDream">
+        <defName>DreamFireTornado</defName>
+        <stages>
+            <li>
+                <label>Dreamt about fire tornado</label>
+                <description>I was wandering through a jungle until I noticed a giant fire tornado.
+                    It simply stood there, not burning anything - the ground around it was burnt and
+                    barren but around it was a lush wild, rain forest. There were some locals
+                    worshipping it. They told me that it was The Element and explained the lore of
+                    Elementals. Elements are aspects of reality that humanity sees as important and
+                    symbolic - they can be as basic as "fire" or as complicated as "chaos" or
+                    "jealousy". They are simultaneously Gods, Worlds and Hive Minds of living beings
+                    - smaller elementals that might think that they act of free will. But elementals
+                    are not free - they act as the Element as a whole wills them. This tornado of
+                    fire is a high level Elemental and it needs constant worship which the locals do
+                    in shifts. If they stop, it will spread fire all around and feed on our fear of
+                    it.</description>
+                <baseMoodEffect>8</baseMoodEffect>
+            </li>
+        </stages>
+        <dreamedBy>dambuk1</dreamedBy>
+    </DreamersDream.DreamDef>
+
+
+
+    <!--Amazing-->
+    <DreamersDream.DreamDef ParentName="AmazingDream">
+        <defName>AnimalForestDream</defName>
+        <stages>
+            <li>
+                <label>Dreamt about being a racoon</label>
+                <description>I was a small animal (I think it was a raccoon?) in a random windy
+                    forest. It was pretty nice even if all I did was wander around and occasionally
+                    see other creatures, and at some point I think I befriended a groundhog. I'm not
+                    too sure on how it ended but the last thing I vaguely remember was seeing
+                    buildings over a hill. ~~okoyum</description>
+                <baseMoodEffect>6</baseMoodEffect>
+            </li>
+        </stages>
+        <tags>
+            <li>Nonpsycho</li>
+        </tags>
+    </DreamersDream.DreamDef>
+    <DreamersDream.DreamDef ParentName="AmazingDream">
+        <defName>EverestDream</defName>
+        <stages>
+            <li>
+                <label>Dreamt about snow mountain</label>
+                <description>From the mountaintop I could see the whole world. All the cities and
+                    forests. It was so cold though and I could barely breathe, yet I felt calm. I
+                    sat down and enjoyed the view...</description>
+                <baseMoodEffect>6</baseMoodEffect>
+            </li>
+        </stages>
+    </DreamersDream.DreamDef>
+
+
+    <DreamersDream.DreamDef ParentName="AmazingDream">
+        <defName>GodlyArtDream</defName>
+        <stages>
+            <li>
+                <label>Dreamt about wonders</label>
+                <description>First, there was light... Then the most beautiful thing my eyes ever
+                    saw appeared before me...</description>
+                <baseMoodEffect>6</baseMoodEffect>
+            </li>
+        </stages>
+    </DreamersDream.DreamDef>
+
+    <DreamersDream.DreamDef ParentName="AmazingDream">
+        <defName>CharismaticSpeechDream</defName>
+        <stages>
+            <li>
+                <label>Dreamt about giving speech</label>
+                <description>Everyone looked at me but I was not stressed. I started talking about
+                    ideals and principles of life and people listened to me with interest. Before
+                    the dream ended I received standing ovations!</description>
+                <baseMoodEffect>6</baseMoodEffect>
+            </li>
+        </stages>
+    </DreamersDream.DreamDef>
+
+    <DreamersDream.DreamDef ParentName="AmazingDream">
+        <defName>WorkDream</defName>
+        <stages>
+            <li>
+                <label>Dreamt about doing good job</label>
+                <description>I was tasked to build strange shapes which looked like a four triangles
+                    connected side by side. I gathered immense amounts of stone and helped little
+                    people finish the yellow construction. The little humans were so happy with my
+                    work that they decided to place their kings there after death!</description>
+                <baseMoodEffect>6</baseMoodEffect>
+            </li>
+        </stages>
+    </DreamersDream.DreamDef>
+    <DreamersDream.DreamDef ParentName="AmazingDream">
+        <defName>DreamRaceGame</defName>
+        <stages>
+            <li>
+                <label>Dreamt about playing racing game</label>
+                <description>The archotech computer lab was cool and dark, but had a circular track
+                    around the perimeter inside. Somebody challenged me to a race, and I
+                    won!</description>
+                <baseMoodEffect>6</baseMoodEffect>
+            </li>
+        </stages>
+        <tags>
+            <li>Nonpsychopath</li>
+        </tags>
+        <dreamedBy>ryanizawsum</dreamedBy>
+    </DreamersDream.DreamDef>
+
+
+    <!--Exciting-->
+    <DreamersDream.DreamDef ParentName="ExcitingDream">
+        <defName>HealthyDream</defName>
+        <stages>
+            <li>
+                <label>Dreamt about being healthy</label>
+                <description>I could finally relax... No pain... No suffering.</description>
+                <baseMoodEffect>5</baseMoodEffect>
+            </li>
+        </stages>
+        <tags>
+            <li>Wounded</li>
+        </tags>
+    </DreamersDream.DreamDef>
+
+
+    <DreamersDream.DreamDef ParentName="ExcitingDream">
+        <defName>DreamNoodleBath</defName>
+        <stages>
+            <li>
+                <label>Dreamt about bathing in noodles</label>
+                <description>Noodles! Noodles everywhere! The best meal in the whole
+                    universe!</description>
+                <baseMoodEffect>5</baseMoodEffect>
+            </li>
+        </stages>
+        <dreamedBy>Maru1i</dreamedBy>
+    </DreamersDream.DreamDef>
+
+    <DreamersDream.DreamDef ParentName="ExcitingDream">
+        <defName>AllNakedColonyDream</defName>
+        <stages>
+            <li>
+                <label>Dreamt about partying naked</label>
+                <description>I was walking around colony, when I realised that I'm wearing no
+                    clothes! I looked around and noticed that everyone took off their clothes as
+                    they saw me! We started to drink and dance around our home naked.</description>
+                <baseMoodEffect>5</baseMoodEffect>
+            </li>
+        </stages>
+        <tags>
+            <li>Colonist</li>
+        </tags>
+    </DreamersDream.DreamDef>
+
+
+    <DreamersDream.DreamDef ParentName="ExcitingDream">
+        <defName>FlyingDream</defName>
+        <stages>
+            <li>
+                <label>Dreamt about flying</label>
+                <description>I was flying in my dream dream! It was an amazing experience. I just
+                    wanted it to keep going...</description>
+                <baseMoodEffect>5</baseMoodEffect>
+            </li>
+        </stages>
+    </DreamersDream.DreamDef>
+    <DreamersDream.DreamDef ParentName="ExcitingDream">
+        <defName>SpoonDream</defName>
+        <stages>
+            <li>
+                <label>Dreamt about spoons</label>
+                <description>I had a ridicoulus dream where I was drinking water using only
+                    spoons!</description>
+                <baseMoodEffect>4</baseMoodEffect>
+            </li>
+        </stages>
+    </DreamersDream.DreamDef>
+
+
+
+
+    <!--Pleasent-->
+
+
+    <DreamersDream.DreamDef ParentName="PleasantDream">
+        <defName>ChildhoodGoodDream</defName>
+        <stages>
+            <li>
+                <label>Dreamt about childhood</label>
+                <description>I was back in my childhood house! I've regained connection with some of
+                    my the best memories.</description>
+                <baseMoodEffect>2</baseMoodEffect>
+            </li>
+        </stages>
+    </DreamersDream.DreamDef>
+
+    <DreamersDream.DreamDef ParentName="PleasantDream">
+        <defName>BeachDream</defName>
+        <stages>
+            <li>
+                <label>Dreamt about ocean beach</label>
+                <description>Cold drinks and sand. Yep, I could stay there forever.</description>
+                <baseMoodEffect>2</baseMoodEffect>
+            </li>
+        </stages>
+    </DreamersDream.DreamDef>
+
+    <DreamersDream.DreamDef ParentName="PleasantDream">
+        <defName>NoRememberGoodDream</defName>
+        <stages>
+            <li>
+                <label>Can't recall a pleasant dream</label>
+                <description>I had a pleasant dream but I forgot it the moment I woke
+                    up...</description>
+                <baseMoodEffect>1</baseMoodEffect>
+            </li>
+        </stages>
+    </DreamersDream.DreamDef>
+
+    <DreamersDream.DreamDef ParentName="PleasantDream">
+        <defName>DreamPleasentThings</defName>
+        <stages>
+            <li>
+                <label>Dreamt about pleasent things</label>
+                <description>I don't really remember my dreams from tonight, but when I awoke I
+                    simply felt better.</description>
+                <baseMoodEffect>2</baseMoodEffect>
+            </li>
+        </stages>
+    </DreamersDream.DreamDef>
+
+
+    <DreamersDream.DreamDef ParentName="PleasantDream">
+        <defName>PizzaDream</defName>
+        <stages>
+            <li>
+                <label>Dreamt about pizza</label>
+                <description>I dreamt I was making pizza with my friends and then having it
+                    together!</description>
+                <baseMoodEffect>2</baseMoodEffect>
+            </li>
+        </stages>
+        <tags>
+            <li>Nonpsychopath</li>
+            <li>Noncannibal</li>
+        </tags>
+    </DreamersDream.DreamDef>
+
+    <DreamersDream.DreamDef ParentName="PleasantDream">
+        <defName>CheeseDream</defName>
+        <stages>
+            <li>
+                <label>Dreamt about cheese</label>
+                <description>Cheese.... Cheese everywhere!</description>
+                <baseMoodEffect>2</baseMoodEffect>
+            </li>
+        </stages>
+        <tags>
+            <li>Noncannibal</li>
+        </tags>
+        <dreamedBy>Male_07</dreamedBy>
+    </DreamersDream.DreamDef>
+
+    <DreamersDream.DreamDef ParentName="PleasantDream">
+        <defName>DreamGuitar</defName>
+        <stages>
+            <li>
+                <label>Dreamt about playing guitar</label>
+                <description>I was playing a beautiful song on guitar in a sun room with bright
+                    light coming from above. I was alone, but it was peaceful. I've never even
+                    played guitar.</description>
+                <baseMoodEffect>2</baseMoodEffect>
+            </li>
+        </stages>
+        <dreamedBy>ryanizawsum</dreamedBy>
+    </DreamersDream.DreamDef>
+
+
+
+
+
+    <!--PSYCHO -->
+    <DreamersDream.DreamDef ParentName="EpicDream">
+        <defName>DreamMurderingRival</defName>
+        <stages>
+            <li>
+                <label>Dreamt about murdering rival</label>
+                <description>I wish we could still be here. To see how much I'm enjoying now, after
+                    ending his miserable life...</description>
+                <baseMoodEffect>8</baseMoodEffect>
+            </li>
+        </stages>
+        <tags>
+            <li>Psycho</li>
+        </tags>
+    </DreamersDream.DreamDef>
+
+    <DreamersDream.DreamDef ParentName="AmazingDream">
+        <defName>KillingEveryoneDream</defName>
+        <stages>
+            <li>
+                <label>Dreamt about murder spree</label>
+                <description>Nothing could stop me. Murder. Everyone.</description>
+                <baseMoodEffect>6</baseMoodEffect>
+            </li>
+        </stages>
+        <tags>
+            <li>Psycho</li>
+        </tags>
+    </DreamersDream.DreamDef>
+    <DreamersDream.DreamDef ParentName="AmazingDream">
+        <defName>TorturingStrangersDream</defName>
+        <stages>
+            <li>
+                <label>Dreamt about torturing</label>
+                <description>Stranger tied up in front of me. Set of shiny and sharp tools on the
+                    table. I grabbed one of the knifes and I couldn't stop. Even when strangers body
+                    stopped shivering and screaming, I was still taking pleasure in the simple act
+                    of torture...</description>
+                <baseMoodEffect>6</baseMoodEffect>
+            </li>
+        </stages>
+        <tags>
+            <li>Psycho</li>
+        </tags>
+    </DreamersDream.DreamDef>
+    <DreamersDream.DreamDef ParentName="ExcitingDream">
+        <defName>MurderDream</defName>
+        <stages>
+            <li>
+                <label>Dreamt about murder</label>
+                <description>Motionless body lays in front of me and I watch it. The blood pool
+                    keeps getting bigger. I don't remember why I killed this person but it feels so
+                    damn good.</description>
+                <baseMoodEffect>5</baseMoodEffect>
+            </li>
+        </stages>
+        <tags>
+            <li>Psycho</li>
+        </tags>
+    </DreamersDream.DreamDef>
+
+    <DreamersDream.DreamDef ParentName="PleasantDream">
+        <defName>DreamFistFightt</defName>
+        <stages>
+            <li>
+                <label>Dreamt about fighting</label>
+                <description>Breaking their bones is not enough! Let the blood spill!</description>
+                <baseMoodEffect>2</baseMoodEffect>
+            </li>
+        </stages>
+        <tags>
+            <li>Psycho</li>
+        </tags>
+    </DreamersDream.DreamDef>
+
+
+
+    <!--CANNIBAL-->
+    <DreamersDream.DreamDef ParentName="EpicDream">
+        <defName>EatingRivalDream</defName>
+        <stages>
+            <li>
+                <label>Dreamt about eating my rival</label>
+                <description>I laughed while tying him over the fire pit. I laughed while heat was
+                    charring his face. I laughed while consuming his body...</description>
+                <baseMoodEffect>8</baseMoodEffect>
+            </li>
+        </stages>
+        <tags>
+            <li>Cannibal</li>
+        </tags>
+    </DreamersDream.DreamDef>
+    <DreamersDream.DreamDef ParentName="AmazingDream">
+        <defName>HumanMeatFeastDream</defName>
+        <stages>
+            <li>
+                <label>Dreamt about human feast</label>
+                <description>Legs, arms, eyes and brains. Cooked to perfection. I can eat my fill
+                    and no one will judge me!</description>
+                <baseMoodEffect>6</baseMoodEffect>
+            </li>
+        </stages>
+        <tags>
+            <li>Cannibal</li>
+        </tags>
+    </DreamersDream.DreamDef>
+    <DreamersDream.DreamDef ParentName="ExcitingDream">
+        <defName>DreamEatingStranger</defName>
+        <stages>
+            <li>
+                <label>Dreamt about eating someone</label>
+                <description>Eating a human being is simple. I used to think of it as a disgusting
+                    thing, but simply trying this delicacy proved me wrong!</description>
+                <baseMoodEffect>5</baseMoodEffect>
+            </li>
+        </stages>
+        <tags>
+            <li>Cannibal</li>
+        </tags>
+    </DreamersDream.DreamDef>
+
+
+</Defs>
+<!--
+  <DreamersDream.DreamDef Name="DivineDream" Abstract="True" ParentName = "BaseDream">
+    <quality>Divine</quality>
+  </DreamersDream.DreamDef>
+
+  <DreamersDream.DreamDef ParentName = "DivineDream" >
+    <defName>HealingDream</defName>
+    <stages>
+      <li>
+        <label>Had a miraculus healing dream</label>
+        <description>I dreamt that my wounds closed up and when I woke up I felt so much better!</description>
+        <baseMoodEffect>2</baseMoodEffect>
+      </li>
+    </stages>
+  </DreamersDream.DreamDef> -->

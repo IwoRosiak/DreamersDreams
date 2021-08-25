@@ -43,6 +43,9 @@
 
         //social status
 
+        married,
+        bonded,
+        befriended,
         prisoner,
         colonist,
         killer,
