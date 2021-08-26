@@ -110,6 +110,10 @@ namespace DreamersDream
             {
                 Widgets.DrawTextureFitted(column, Textures.TableEntryBGChance1, 1);
             }
+            else if (label == "Notify")
+            {
+                Widgets.DrawTextureFitted(column, Textures.TableEntryBGNotify1, 1);
+            }
 
             Widgets.Label(GetMiddleOfRectForString(column, label), label);
 

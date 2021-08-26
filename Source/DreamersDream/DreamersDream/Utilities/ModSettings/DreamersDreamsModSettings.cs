@@ -113,7 +113,7 @@ namespace DreamersDream
                 ResolveAlternatingBG(count, columnChance, Textures.TableEntryBGChance1, Textures.TableEntryBGChance2);
                 DrawColumnChance(columnChance, dreamTag);
 
-                //ResolveAlternatingBG(count, columnChance, Textures.TableEntryBGChance1, Textures.TableEntryBGChance2);
+                ResolveAlternatingBG(count, columnNotify, Textures.TableEntryBGNotify1, Textures.TableEntryBGNotify1);
                 DrawColumnNotify(columnNotify, dreamTag);
 
                 count++;

@@ -15,5 +15,9 @@ namespace DreamersDream
         public static readonly Texture2D TableEntryBGCat1 = ContentFinder<Texture2D>.Get("UI/ModSettings/TableEntryBGCat1", true);
 
         public static readonly Texture2D TableEntryBGCat2 = ContentFinder<Texture2D>.Get("UI/ModSettings/TableEntryBGCat2", true);
+
+        public static readonly Texture2D TableEntryBGNotify1 = ContentFinder<Texture2D>.Get("UI/ModSettings/TableEntryBGNotify1", true);
+
+        public static readonly Texture2D TableEntryBGNotify2 = ContentFinder<Texture2D>.Get("UI/ModSettings/TableEntryBGNotify2", true);
     }
 }
