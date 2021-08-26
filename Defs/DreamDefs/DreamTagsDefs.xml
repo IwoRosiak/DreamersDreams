@@ -74,7 +74,14 @@
   </DreamersDream.DreamTagDef>
 
 <!-- SPECIAL 
+  <DreamersDream.DreamTagDef>
+    <defName>Lucid</defName>
+    <label>lucid</label>
+    <isSpecial>true</isSpecial>
+    <chance>0</chance>
+  </DreamersDream.DreamTagDef>
 
+ LUCID Today i had a lucid dream. But not the fun type - i was lucid enough to know that i was in a nightmare but not mentally strong enough to use my usual method of waking up from those. I felt all sluggish while the nightmare symbolically pointed out all the failures of my life. At times i felt at the cusp of awakening, only to be pulled back in. It was hell.
   
   <DreamersDream.DreamTagDef>
     <defName>Divine</defName>

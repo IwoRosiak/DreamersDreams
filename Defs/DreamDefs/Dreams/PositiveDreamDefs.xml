@@ -2,6 +2,67 @@
 <Defs>
     <!--Legendary-->
     <DreamersDream.DreamDef ParentName="LegendaryDream">
+        <defName>DreamSpaceship</defName>
+        <tags>
+            <li>Nonpsychopath</li>
+        </tags>
+        <stages>
+            <li>
+                <label>Dreamt about tourist spaceship</label>
+                <description>I was one of the high-ranking officers in white uniform. Me, and some
+                    others were on a cubical, tourist, 2 miles long spaceship. The command center
+                    was located in a tower in the middle of the ship, deep within instead of the
+                    outer shell of spacecraft. The weirdest thing was that the ship captain was a 3
+                    feet tall rat in white uniform. Everyone respected him. One time, a canadian
+                    hockey player in his hockey uniform with the helmet on decided to visit our
+                    ship. We welcomed him aboard, and everyone was happy. While we were walking
+                    along side the footbal field, we saw a tank, and the rat was controlling it. Our
+                    rat captain pointed the tank's barrel towards the hockey player, and I had to
+                    run in front of the hockey player for it to cease fire and not shoot the hockey
+                    player. The tank stopped, and then started driving away. As it started moving
+                    backwards, we were cheering. I showed the hockey player inside the ship, where
+                    there was a ton of supermarket-like shops, one of them was hanging on the ropes.
+                    After that in some time I lost the hockey player, but then he came back, thanked
+                    me for my service and left. After a while we got news that the captain was
+                    killed in an explosion. I rushed to the top of the tower with the command
+                    center, and I entered a luxury apartament on the very top of the tower. I saw
+                    through a courner that the rat was indeed killed, but not by an explosion. We
+                    mourned his death for a while, and one of the officers of equivalent rank to
+                    mine took control, and decided to stop the tour. I told him repetitevly to bring
+                    me to my hometown because we were close to it, but he wouldn't
+                    listen.</description>
+                <baseMoodEffect>3</baseMoodEffect>
+            </li>
+        </stages>
+        <dreamedBy>fan</dreamedBy>
+    </DreamersDream.DreamDef>
+
+    <DreamersDream.DreamDef ParentName="LegendaryDream">
+        <defName>DreamHeroicDefence</defName>
+        <tags>
+            <li>Colonist</li>
+            <li>Nonpsychopath</li>
+        </tags>
+        <stages>
+            <li>
+                <label>Dreamt about heroic defence</label>
+                <description>I had to defend our colony against waves and waves of upcoming
+                    serpent-like monsters while also sending units to enable some form of passage.
+                    It took place on a fiery planet, lots of lava, lots of fire and the sky was red.
+                    It goes on for quite a while but in the end units manage to open the passage. I
+                    board a shuttle and head towards strange gate which allows for connection of our
+                    world to abyss. While trying to do that I meet my friend who was apparently
+                    trapped on this shuttle. I free him and go close the gate. I succeed. Everyone
+                    is cheering, calling me a hero, we have a party and I can recognize most of my
+                    friends, old friends who I have lost contact with long ago. Everyone is dancing,
+                    music is playing and I get to dance with someone I love... </description>
+                <baseMoodEffect>12</baseMoodEffect>
+            </li>
+        </stages>
+        <dreamedBy>Smelly Fish</dreamedBy>
+    </DreamersDream.DreamDef>
+
+    <DreamersDream.DreamDef ParentName="LegendaryDream">
         <defName>DreamGod</defName>
         <stages>
             <li>
@@ -269,6 +330,19 @@
 
 
     <!--Pleasent-->
+    <DreamersDream.DreamDef ParentName="PleasantDream">
+        <defName>DreamYoghurt</defName>
+        <stages>
+            <li>
+                <label>Dreamt about yoghurt</label>
+                <description>I was in swimming pool park but instead of water there was yoghurt,
+                    specifically strawberry yogurt with no chunks. There was a huge bucket with
+                    yogurt in it and it splashed people with yoghurt!</description>
+                <baseMoodEffect>2</baseMoodEffect>
+            </li>
+        </stages>
+        <dreamedBy>Rift</dreamedBy>
+    </DreamersDream.DreamDef>
 
 
     <DreamersDream.DreamDef ParentName="PleasantDream">
@@ -489,9 +563,17 @@
         </tags>
     </DreamersDream.DreamDef>
 
+    <!-- New Dreams -->
+
+
+
+
 
 </Defs>
 <!--
+    I woke up at a dark neon hotel, and was greeted by staff right off the bed. The hotel had only mixtures of dark blue and black in it. The hotel was located on a small island in the middle of nowhere. As i continued my day in the hotel, i noticed that the staff was disrespectful to it's visitors in actions, but provided a lot of words for their actions. Soon i realised that nobody was saying anything about that because all of the hotel's guests were introverts, and they kept being abused. Soon, as i walked outside, the hotel staff greeted me, and took above. They said that there was another, much nicer island right next to us, it was a white hotel on a white island. They took me across the sky, and explained that if you never complain about some things, you will never get anyone to reform. They said that if i said a word about their behaviour, they would let me on the white island, where a much nicer hotel is. Then they took me to their ritual room, and said that the first cycle has finished (Cycle of guests not giving any attention to the staff, i suppose), and then they pressed a blue button, from where i transcended somewhere.
+    
+    
   <DreamersDream.DreamDef Name="DivineDream" Abstract="True" ParentName = "BaseDream">
     <quality>Divine</quality>
   </DreamersDream.DreamDef>

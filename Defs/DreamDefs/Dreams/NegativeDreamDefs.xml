@@ -2,22 +2,37 @@
 <Defs>
     <!--Hell-Like -->
     <DreamersDream.DreamDef ParentName="HellLikeDream">
+        <defName>DreamDarkFigures</defName>
+        <stages>
+            <li>
+                <label>Dreamt about dark figures</label>
+                <description>I was wandering around my place, when I saw shadowy figure coming out
+                    of the courner of the room. I asked it what it wants but it didn't respond. The
+                    figure was approaching me, being closer and closer with each second. I was
+                    panicking, the fear paralysed me. Then another figure appeared behind me. After
+                    that the figures grabbed me by my legs and arms. I screamed.</description>
+                <baseMoodEffect>-11</baseMoodEffect>
+            </li>
+        </stages>
+        <dreamedBy>fan</dreamedBy>
+    </DreamersDream.DreamDef>
+    <DreamersDream.DreamDef ParentName="HellLikeDream">
         <defName>DreamMoonHit</defName>
         <stages>
             <li>
-                <label>Dreamt about moon Armageddon</label>
+                <label>Dreamt about moon crash</label>
                 <description>I awoke in my room. Felt a bit thirsty so I went to the kitchen to
                     drink some water. Opened a window to let some fresh air in and there was an
                     enormous moon, everything was shaking, almost like an earthquake was terrorizing
                     the area. Orange light illuminated the surroundings. Buildings were floating
                     here and there, like gravity never existed. The Moon was getting closer. The
                     shaking got stronger. I heard some screams. Then some odd force hit me and I
-                    collapsed. ~Backrevol</description>
+                    collapsed.</description>
                 <baseMoodEffect>-11</baseMoodEffect>
             </li>
         </stages>
+        <dreamedBy>Backrevol</dreamedBy>
     </DreamersDream.DreamDef>
-
     <DreamersDream.DreamDef ParentName="HellLikeDream">
         <defName>DreamTragicLivesAndDeaths</defName>
         <stages>
@@ -44,8 +59,6 @@
             </li>
         </stages>
     </DreamersDream.DreamDef>
-
-
     <DreamersDream.DreamDef ParentName="TerrorisingDream">
         <defName>DreamSleepParalysis</defName>
         <stages>
@@ -57,7 +70,6 @@
             </li>
         </stages>
     </DreamersDream.DreamDef>
-
     <DreamersDream.DreamDef ParentName="TerrorisingDream">
         <defName>PileCorpsesDream</defName>
         <stages>
@@ -76,7 +88,6 @@
             <li>Noncannibal</li>
         </tags>
     </DreamersDream.DreamDef>
-
     <DreamersDream.DreamDef ParentName="TerrorisingDream">
         <defName>DreamBrainJars</defName>
         <stages>
@@ -94,8 +105,6 @@
             </li>
         </stages>
     </DreamersDream.DreamDef>
-
-
     <DreamersDream.DreamDef ParentName="TerrorisingDream">
         <defName>DreamMeatLocker</defName>
         <stages>
@@ -190,6 +199,45 @@
     </DreamersDream.DreamDef>
     <!--Frightening-->
     <DreamersDream.DreamDef ParentName="FrighteningDream">
+        <defName>DreamPolishVillage</defName>
+        <tags>
+            <li>Colonist</li>
+        </tags>
+        <stages>
+            <li>
+                <label>Dreamt about polish town</label>
+                <description>I was a teenager in a town of Zakątek. My father was an owner of a
+                    japanese-style inn, built many years ago by a man who was obsessed with Japan.
+                    It was summer and the usual fog rolled in - the fog that made all of our powers
+                    stronger. My power of reinforcement magic helped in many incidents around town.
+                    Many youths go wild with their boosted powers so fights, petty theft or even
+                    small fires are to be expected. But this time, people were disappearing.
+                    Specifically, people who stayed at our inn. Strangers. We don't use magic on
+                    strangers. We try to hide it from strangers. But someone was kidnapping them.
+                    And we found the corpses. Mutilated except for their faces. Then not just the
+                    strangers went missing. Our girls too. All of them pretty. Their faces still
+                    preserved in their beauty when they were found.</description>
+                <baseMoodEffect>-5</baseMoodEffect>
+            </li>
+        </stages>
+        <dreamedBy>dambuk1</dreamedBy>
+    </DreamersDream.DreamDef>
+    <DreamersDream.DreamDef ParentName="FrighteningDream">
+        <defName>DreamMazeChildhood</defName>
+        <stages>
+            <li>
+                <label>Dreamt about abandoned maze</label>
+                <description>I wandered around a labyrinth of rooms and hallways made up of my
+                    childhood home and locations I had previously visited, like my school and my
+                    friend's and family's houses. Everything was in black and white, and I had the
+                    feeling of being followed, or even chased at times. The rooms always looked run
+                    down, like they had been abandoned...</description>
+                <baseMoodEffect>-5</baseMoodEffect>
+            </li>
+        </stages>
+        <dreamedBy>GHOST</dreamedBy>
+    </DreamersDream.DreamDef>
+    <DreamersDream.DreamDef ParentName="FrighteningDream">
         <defName>DwarfAmbushDream</defName>
         <tags>
             <li>Nonpsycho</li>
@@ -239,8 +287,6 @@
         </tags>
         <dreamedBy>Slavidor</dreamedBy>
     </DreamersDream.DreamDef>
-
-
     <DreamersDream.DreamDef ParentName="FrighteningDream">
         <defName>LostHeadDream</defName>
         <stages>
@@ -255,7 +301,6 @@
             </li>
         </stages>
     </DreamersDream.DreamDef>
-
     <DreamersDream.DreamDef ParentName="FrighteningDream">
         <defName>KillSomeoneCloseDream</defName>
         <stages>
@@ -269,8 +314,6 @@
             <li>Nonpsycho</li>
         </tags>
     </DreamersDream.DreamDef>
-
-
     <DreamersDream.DreamDef ParentName="FrighteningDream">
         <defName>CannibalismDream</defName>
         <stages>
@@ -286,8 +329,6 @@
             <li>Noncannibal</li>
         </tags>
     </DreamersDream.DreamDef>
-
-
     <DreamersDream.DreamDef ParentName="FrighteningDream">
         <defName>NightmareDream</defName>
         <stages>
@@ -298,8 +339,6 @@
             </li>
         </stages>
     </DreamersDream.DreamDef>
-
-
     <DreamersDream.DreamDef ParentName="FrighteningDream">
         <defName>DreamZombieFight</defName>
         <tags>
@@ -329,11 +368,30 @@
                 <baseMoodEffect>-5</baseMoodEffect>
             </li>
         </stages>
-
     </DreamersDream.DreamDef>
 
-
     <!--Disturbing -->
+    <DreamersDream.DreamDef ParentName="DisturbingDream">
+        <defName>DreamBanditCowboy</defName>
+        <tags>
+            <li>Colonist</li>
+        </tags>
+        <stages>
+            <li>
+                <label>Dreamt about bandit cowboy</label>
+                <description> A cowboy was calling on a radio. The entire colony gathered to chat
+                    with him. Half were charmed by his outlandish tales, half felt he was sketchy.
+                    He wanted to join, together with his giant boomalope. After a long discussion,
+                    he was refused, but he still insisted on passing through the colony. He led the
+                    boomalope through our fields and when he was in the middle of our crops, near
+                    the windmills... he released the 'lope and ran like hell. Then came the bandits.
+                    He was part of the bandits... and the boomalope exploding was the sign for the
+                    attack. </description>
+                <baseMoodEffect>-3</baseMoodEffect>
+            </li>
+        </stages>
+        <dreamedBy>dambuk1</dreamedBy>
+    </DreamersDream.DreamDef>
     <DreamersDream.DreamDef ParentName="DisturbingDream">
         <defName>PTSDDream</defName>
         <stages>
@@ -408,7 +466,6 @@
             </li>
         </stages>
     </DreamersDream.DreamDef>
-
     <DreamersDream.DreamDef ParentName="DisturbingDream">
         <defName>ChildhoodBadDream</defName>
         <stages>
@@ -419,7 +476,6 @@
             </li>
         </stages>
     </DreamersDream.DreamDef>
-
     <DreamersDream.DreamDef ParentName="DisturbingDream">
         <defName>InsectsDream</defName>
         <stages>
@@ -431,7 +487,6 @@
             </li>
         </stages>
     </DreamersDream.DreamDef>
-
     <DreamersDream.DreamDef ParentName="DisturbingDream">
         <defName>InjuryDream</defName>
         <tags>
@@ -446,8 +501,6 @@
             </li>
         </stages>
     </DreamersDream.DreamDef>
-
-
     <DreamersDream.DreamDef ParentName="DisturbingDream">
         <defName>ExclusionDrugDream</defName>
         <stages>
@@ -471,7 +524,6 @@
         </stages>
         <dreamedBy>ManaVeil</dreamedBy>
     </DreamersDream.DreamDef>
-
     <DreamersDream.DreamDef ParentName="DisturbingDream">
         <defName>DreamExecution</defName>
         <tags>
@@ -487,11 +539,20 @@
         </stages>
         <dreamedBy>Denneisk</dreamedBy>
     </DreamersDream.DreamDef>
-
-
-
-
     <!--Unpleasent-->
+    <DreamersDream.DreamDef ParentName="UnpleasantDream">
+        <defName>DreamTornado</defName>
+        <stages>
+            <li>
+                <label>Dreamt about tornado</label>
+                <description>I had a dream where I was in a brick building and it got hit by a
+                    tornado. It pulled the building apart and picked me up into the
+                    air!</description>
+                <baseMoodEffect>-2</baseMoodEffect>
+            </li>
+        </stages>
+        <dreamedBy>Gallivant</dreamedBy>
+    </DreamersDream.DreamDef>
     <DreamersDream.DreamDef ParentName="UnpleasantDream">
         <defName>NoRememberBadDream</defName>
         <stages>
@@ -503,7 +564,6 @@
             </li>
         </stages>
     </DreamersDream.DreamDef>
-
     <DreamersDream.DreamDef ParentName="UnpleasantDream">
         <defName>GibberishDream</defName>
         <stages>
@@ -515,7 +575,6 @@
             </li>
         </stages>
     </DreamersDream.DreamDef>
-
     <DreamersDream.DreamDef ParentName="UnpleasantDream">
         <defName>NakedSchoolDream</defName>
         <stages>
@@ -528,7 +587,6 @@
             </li>
         </stages>
     </DreamersDream.DreamDef>
-
     <DreamersDream.DreamDef ParentName="UnpleasantDream">
         <defName>ExDream</defName>
         <stages>
@@ -540,8 +598,6 @@
             </li>
         </stages>
     </DreamersDream.DreamDef>
-
-
     <DreamersDream.DreamDef ParentName="UnpleasantDream">
         <defName>NakedColonyDream</defName>
         <stages>
@@ -557,7 +613,6 @@
             <li>Colonist</li>
         </tags>
     </DreamersDream.DreamDef>
-
     <DreamersDream.DreamDef ParentName="UnpleasantDream">
         <defName>DreamFlamingoInvasion</defName>
         <stages>
@@ -571,8 +626,6 @@
         </stages>
         <dreamedBy>CaucasianMalaysian</dreamedBy>
     </DreamersDream.DreamDef>
-
-
     <DreamersDream.DreamDef ParentName="UnpleasantDream">
         <defName>DreamMindControl</defName>
         <stages>
@@ -585,7 +638,6 @@
         </stages>
         <dreamedBy>Denneisk</dreamedBy>
     </DreamersDream.DreamDef>
-
     <DreamersDream.DreamDef ParentName="UnpleasantDream">
         <defName>DreamAnxiety</defName>
         <tags>
@@ -601,9 +653,7 @@
         </stages>
         <dreamedBy>Denneisk</dreamedBy>
     </DreamersDream.DreamDef>
-
     <!--Sleepwalks -->
-
     <DreamersDream.DreamDef ParentName="TerrorisingDream">
         <defName>SleepwalkRedheadWithBeard</defName>
         <tags>
@@ -660,7 +710,6 @@
             </li>
         </stages>
     </DreamersDream.DreamDef>
-
     <DreamersDream.DreamDef ParentName="FrighteningDream">
         <defName>SleepwalkFurniture</defName>
         <tags>
@@ -676,7 +725,6 @@
             </li>
         </stages>
     </DreamersDream.DreamDef>
-
     <DreamersDream.DreamDef ParentName="DisturbingDream">
         <defName>SleepwalkDarkness</defName>
         <tags>
@@ -693,7 +741,32 @@
         </stages>
     </DreamersDream.DreamDef>
 
+    <!-- New Dreams -->
 </Defs>
+<!--     
+    <DreamersDream.DreamDef ParentName="BaseDream">
+        <defName>DreamGeneric</defName>
+        <tags>
+            <li>Colonist</li>
+        </tags>
+        <stages>
+            <li>
+                <label>Dreamt about darkness</label>
+                <description> A cowboy was calling on a radio. The entire colony gathered to chat
+                    with him. Half were charmed by his outlandish tales, half felt he was sketchy.
+                    He wanted to join, together with his giant boomalope. After a long discussion,
+                    he was refused, but he still insisted on passing through the colony. He led the
+                    boomalope through our fields and when he was in the middle of our crops, near
+                    the windmills... he released the 'lope and ran like hell. Then came the bandits.
+                    He was part of the bandits... and the boomalope exploding was the sign for the
+                    attack. </description>
+                <baseMoodEffect>-3</baseMoodEffect>
+            </li>
+        </stages>
+    </DreamersDream.DreamDef> 
+
+
+-->
 <!--
 <DreamersDream.DreamDef ParentName = "BaseDream">
   <defName>TravelDreamUlthar</defName>
