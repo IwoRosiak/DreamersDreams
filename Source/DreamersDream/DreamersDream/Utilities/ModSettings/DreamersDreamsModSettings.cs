@@ -71,13 +71,13 @@ namespace DreamersDream
 
                 listingMid.GapLine();
 
-                Rect TableSettings = new Rect(masterRect.x, MidSettings.y + listingMid.CurHeight, 300f, inRect.height);
+                Rect TableSettings = new Rect(masterRect.x, MidSettings.y + listingMid.CurHeight, 320f, inRect.height);
                 TableSettings.height = inRect.height - TableSettings.y;
 
                 listingMid.End();
 
-                Rect TagTable = new Rect(TableSettings.x, TableSettings.y, TableSettings.width, columnHeight * CountDisplayableTags());
-                Widgets.BeginScrollView(TableSettings, ref scrollPos, TagTable, true);
+                Rect TagTable = new Rect(TableSettings.x, TableSettings.y, TableSettings.width - 10f, columnHeight * CountDisplayableTags());
+                Widgets.BeginScrollView(TableSettings, ref scrollPos, TagTable);
 
                 DrawTagsRows(TagTable);
 
