@@ -69,7 +69,7 @@ namespace DreamersDream
         {
             if (dream != null)
             {
-                pawn.needs.mood.thoughts.memories.TryGainMemory(dream);
+                pawn.TryApplyThought(dream);
 
                 foreach (var dreamTag in dream.tags)
                 {

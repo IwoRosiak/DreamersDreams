@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Defs>
   <!-- MAIN TAGS -->
-  <!-- POSITIVE -->
+  <!-- POSITIVE 
   <DreamersDream.DreamTagDef>
     <defName>Legendary</defName>
     <label>legendary</label>
@@ -35,9 +35,17 @@
     <label>pleasant</label>
     <isSpecial>false</isSpecial>
     <chance>500</chance>
+  </DreamersDream.DreamTagDef> -->
+  
+  
+  <DreamersDream.DreamTagDef>
+    <defName>Debug</defName>
+    <label>debug</label>
+    <isSpecial>true</isSpecial>
+    <chance>500</chance>
   </DreamersDream.DreamTagDef>
 
-  <!--NEGATIVE-->
+  <!--NEGATIVE
   <DreamersDream.DreamTagDef>
     <defName>HellLike</defName>
     <label>hell-like</label>
@@ -71,7 +79,7 @@
     <label>unpleasant</label>
     <isSpecial>false</isSpecial>
     <chance>500</chance>
-  </DreamersDream.DreamTagDef>
+  </DreamersDream.DreamTagDef>-->
 
 <!-- SPECIAL 
   <DreamersDream.DreamTagDef>
