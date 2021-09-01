@@ -40,21 +40,21 @@
   <!--NEGATIVE-->
   <DreamersDream.DreamTagDef>
     <defName>HellLike</defName>
-    <label>hell-like</label>
+    <label>hellish</label>
     <isSpecial>true</isSpecial>
     <chance>5</chance>
   </DreamersDream.DreamTagDef>
 
   <DreamersDream.DreamTagDef>
     <defName>Terrorising</defName>
-    <label>terrorising</label>
+    <label>terrifying</label>
     <isSpecial>true</isSpecial>
     <chance>25</chance>
   </DreamersDream.DreamTagDef>
 
   <DreamersDream.DreamTagDef>
     <defName>Frightening</defName>
-    <label>frightnening</label>
+    <label>frightening</label>
     <isSpecial>false</isSpecial>
     <chance>90</chance>
   </DreamersDream.DreamTagDef>
