@@ -2,19 +2,8 @@
 {
     public enum Requirements
     {
-        //personality
-
+        //traits
         sleepwalker,
-        psycho,
-        psychopath,
-        bloodlust,
-        cannibal,
-        gourmand,
-
-        nonpsycho,
-        noncannibal,
-        nonbloodlust,
-        nonpsychopath,
 
         //mood
 
@@ -47,7 +36,6 @@
         bonded,
         befriended,
         prisoner,
-        colonist,
         killer,
         guilty
         //wimp

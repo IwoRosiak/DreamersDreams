@@ -7,84 +7,11 @@
     <isSideTag>true</isSideTag>
     <isSleepwalk>true</isSleepwalk>
     <chance>0</chance>
-    <chanceBoosters>
-      <li>sleepwalker</li>
-    </chanceBoosters>
     <requirements>
       <li>sleepwalker</li>
     </requirements>
   </DreamersDream.DreamTagDef>
 
-  <DreamersDream.DreamTagDef>
-    <defName>Psycho</defName>
-    <isSideTag>true</isSideTag>
-    <chance>0</chance>
-    <requirements>
-      <li>psycho</li>
-    </requirements>
-  </DreamersDream.DreamTagDef>
-  <DreamersDream.DreamTagDef>
-    <defName>Cannibal</defName>
-    <isSideTag>true</isSideTag>
-    <chance>0</chance>
-    <requirements>
-      <li>cannibal</li>
-    </requirements>
-  </DreamersDream.DreamTagDef>
-  <DreamersDream.DreamTagDef>
-    <defName>Bloodlust</defName>
-    <isSideTag>true</isSideTag>
-    <chance>0</chance>
-    <requirements>
-      <li>bloodlust</li>
-    </requirements>
-  </DreamersDream.DreamTagDef>
-  <DreamersDream.DreamTagDef>
-    <defName>Psychopath</defName>
-    <isSideTag>true</isSideTag>
-    <chance>0</chance>
-    <requirements>
-      <li>psychopath</li>
-    </requirements>
-  </DreamersDream.DreamTagDef>
-  <!--NO TRAIT-->
-  <DreamersDream.DreamTagDef>
-    <defName>Nonpsychopath</defName>
-    <isSideTag>true</isSideTag>
-    <chance>0</chance>
-    <requirements>
-      <li>nonpsychopath</li>
-    </requirements>
-  </DreamersDream.DreamTagDef>
-
-  <DreamersDream.DreamTagDef>
-    <defName>Nonpsycho</defName>
-    <isSideTag>true</isSideTag>
-    <chance>0</chance>
-    <requirements>
-      <li>nonpsycho</li>
-    </requirements>
-  </DreamersDream.DreamTagDef>
-
-
-  <DreamersDream.DreamTagDef>
-    <defName>Noncannibal</defName>
-    <isSideTag>true</isSideTag>
-    <chance>0</chance>
-    <requirements>
-      <li>noncannibal</li>
-    </requirements>
-  </DreamersDream.DreamTagDef>
-
-
-  <DreamersDream.DreamTagDef>
-    <defName>Nonbloodlust</defName>
-    <isSideTag>true</isSideTag>
-    <chance>0</chance>
-    <requirements>
-      <li>nonbloodlust</li>
-    </requirements>
-  </DreamersDream.DreamTagDef>
   <!--MIND STATE-->
   <DreamersDream.DreamTagDef>
     <defName>Happy</defName>
@@ -147,15 +74,6 @@
     <chance>0</chance>
     <requirements>
       <li>prisoner</li>
-    </requirements>
-  </DreamersDream.DreamTagDef>
-
-  <DreamersDream.DreamTagDef>
-    <defName>Colonist</defName>
-    <isSideTag>true</isSideTag>
-    <chance>0</chance>
-    <requirements>
-      <li>colonist</li>
     </requirements>
   </DreamersDream.DreamTagDef>
 

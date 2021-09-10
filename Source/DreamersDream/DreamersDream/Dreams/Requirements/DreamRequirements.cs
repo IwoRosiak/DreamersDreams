@@ -1,4 +1,5 @@
-﻿using Verse;
+﻿using RimWorld;
+using Verse;
 
 namespace DreamersDream
 {
@@ -6,12 +7,9 @@ namespace DreamersDream
     {
         public static bool IsMeetingRequirements(this DreamDef dream, Pawn pawn)
         {
-            foreach (var requirement in dream.requirements)
+            if (!ThoughtUtility.CanGetThought(pawn, dream, true))
             {
-                if (!requirement.CheckRequirementForPawn(pawn))
-                {
-                    return false;
-                }
+                return false;
             }
 
             foreach (var tag in dream.tags)

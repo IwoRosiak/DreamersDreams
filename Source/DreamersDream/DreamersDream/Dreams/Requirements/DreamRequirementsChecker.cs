@@ -16,78 +16,6 @@ namespace DreamersDream
                     }
                     break;
 
-                case Requirements.psycho:
-                    if (!pawn.story.traits.HasTrait(TraitDefOf.Psychopath) && !pawn.story.traits.HasTrait(TraitDefOf.Bloodlust))
-                    {
-                        return false;
-                    }
-                    break;
-
-                case Requirements.psychopath:
-                    if (!pawn.story.traits.HasTrait(TraitDefOf.Psychopath))
-                    {
-                        return false;
-                    }
-                    break;
-
-                case Requirements.cannibal:
-                    if (!pawn.story.traits.HasTrait(TraitDefOf.Cannibal))
-                    {
-                        return false;
-                    }
-                    break;
-
-                case Requirements.gourmand:
-                    bool hasTrait = false;
-                    foreach (var trait in pawn.story.traits.allTraits)
-                    {
-                        if (trait.def.defName == "Gourmand")
-                        {
-                            hasTrait = true;
-                        }
-                    }
-                    if (!hasTrait)
-                    {
-                        return false;
-                    }
-
-                    break;
-
-                case Requirements.bloodlust:
-                    if (!pawn.story.traits.HasTrait(TraitDefOf.Bloodlust))
-                    {
-                        return false;
-                    }
-                    break;
-
-                case Requirements.nonpsycho:
-                    if (pawn.story.traits.HasTrait(TraitDefOf.Psychopath) && pawn.story.traits.HasTrait(TraitDefOf.Bloodlust))
-                    {
-                        return false;
-                    }
-                    break;
-
-                case Requirements.nonbloodlust:
-                    if (pawn.story.traits.HasTrait(TraitDefOf.Bloodlust))
-                    {
-                        return false;
-                    }
-                    break;
-
-                case Requirements.noncannibal:
-                    if (pawn.story.traits.HasTrait(TraitDefOf.Cannibal))
-                    {
-                        return false;
-                    }
-                    break;
-
-                case Requirements.nonpsychopath:
-                    if (pawn.story.traits.HasTrait(TraitDefOf.Psychopath))
-                    {
-                        return false;
-                    }
-                    break;
-
                 case Requirements.happy:
                     if (pawn.needs.mood.CurLevel < 0.9f)
                     {
@@ -139,13 +67,6 @@ namespace DreamersDream
 
                 case Requirements.prisoner:
                     if (!pawn.IsPrisoner)
-                    {
-                        return false;
-                    }
-                    break;
-
-                case Requirements.colonist:
-                    if (!pawn.IsColonist)
                     {
                         return false;
                     }

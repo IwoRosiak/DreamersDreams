@@ -3,9 +3,9 @@
   <!--Legendary-->
   <DreamersDream.DreamDef ParentName="LegendaryDream">
     <defName>DreamSpaceship</defName>
-    <tags>
-      <li>Nonpsychopath</li>
-    </tags>
+    <nullifyingTraits>
+      <li>Psychopath</li>
+    </nullifyingTraits>
     <stages>
       <li>
         <label>Dreamt about tourist spaceship</label>
@@ -15,12 +15,13 @@
     </stages>
     <dreamedBy>fan</dreamedBy>
   </DreamersDream.DreamDef>
+  
   <DreamersDream.DreamDef ParentName="LegendaryDream">
     <defName>DreamHeroicDefence</defName>
-    <tags>
-      <li>Colonist</li>
-      <li>Nonpsychopath</li>
-    </tags>
+    <nullifyingTraits>
+      <li>Psychopath</li>
+    </nullifyingTraits>
+    <nullifiedIfNotColonist>true</nullifiedIfNotColonist>
     <stages>
       <li>
         <label>Dreamt about heroic defence</label>
@@ -30,6 +31,7 @@
     </stages>
     <dreamedBy>Smelly Fish</dreamedBy>
   </DreamersDream.DreamDef>
+  
   <DreamersDream.DreamDef ParentName="LegendaryDream">
     <defName>DreamGod</defName>
     <stages>
@@ -40,6 +42,7 @@
       </li>
     </stages>
   </DreamersDream.DreamDef>
+  
   <DreamersDream.DreamDef ParentName="LegendaryDream">
     <defName>DreamValhalla</defName>
     <stages>
@@ -62,6 +65,7 @@
       </li>
     </stages>
   </DreamersDream.DreamDef>
+  
   <DreamersDream.DreamDef ParentName="EpicDream">
     <defName>DreamAnimalCompetition</defName>
     <stages>
@@ -73,6 +77,7 @@
     </stages>
     <dreamedBy>Mitroll</dreamedBy>
   </DreamersDream.DreamDef>
+  
   <DreamersDream.DreamDef ParentName="EpicDream">
     <defName>DreamAliensFight</defName>
     <stages>
@@ -83,6 +88,7 @@
       </li>
     </stages>
   </DreamersDream.DreamDef>
+  
   <DreamersDream.DreamDef ParentName="EpicDream">
     <defName>DreamFireTornado</defName>
     <stages>
@@ -104,10 +110,12 @@
         <baseMoodEffect>6</baseMoodEffect>
       </li>
     </stages>
-    <tags>
-      <li>Nonpsycho</li>
-    </tags>
+    <nullifyingTraits>
+      <li>Psychopath</li>
+      <li>Bloodlust</li>
+    </nullifyingTraits>
   </DreamersDream.DreamDef>
+  
   <DreamersDream.DreamDef ParentName="AmazingDream">
     <defName>EverestDream</defName>
     <stages>
@@ -118,6 +126,7 @@
       </li>
     </stages>
   </DreamersDream.DreamDef>
+  
   <DreamersDream.DreamDef ParentName="AmazingDream">
     <defName>GodlyArtDream</defName>
     <stages>
@@ -128,6 +137,7 @@
       </li>
     </stages>
   </DreamersDream.DreamDef>
+  
   <DreamersDream.DreamDef ParentName="AmazingDream">
     <defName>CharismaticSpeechDream</defName>
     <stages>
@@ -138,6 +148,7 @@
       </li>
     </stages>
   </DreamersDream.DreamDef>
+  
   <DreamersDream.DreamDef ParentName="AmazingDream">
     <defName>WorkDream</defName>
     <stages>
@@ -148,6 +159,7 @@
       </li>
     </stages>
   </DreamersDream.DreamDef>
+  
   <DreamersDream.DreamDef ParentName="AmazingDream">
     <defName>DreamRaceGame</defName>
     <stages>
@@ -157,9 +169,9 @@
         <baseMoodEffect>6</baseMoodEffect>
       </li>
     </stages>
-    <tags>
-      <li>Nonpsychopath</li>
-    </tags>
+    <nullifyingTraits>
+      <li>Psychopath</li>
+    </nullifyingTraits>
     <dreamedBy>ryanizawsum</dreamedBy>
   </DreamersDream.DreamDef>
   <!--Exciting-->
@@ -172,10 +184,11 @@
         <baseMoodEffect>5</baseMoodEffect>
       </li>
     </stages>
-    <tags>
+   <!-- <tags>
       <li>Wounded</li>
-    </tags>
+    </tags> -->
   </DreamersDream.DreamDef>
+  
   <DreamersDream.DreamDef ParentName="ExcitingDream">
     <defName>DreamNoodleBath</defName>
     <stages>
@@ -187,19 +200,22 @@
     </stages>
     <dreamedBy>Maru1i</dreamedBy>
   </DreamersDream.DreamDef>
+  
   <DreamersDream.DreamDef ParentName="ExcitingDream">
     <defName>AllNakedColonyDream</defName>
     <stages>
       <li>
         <label>Dreamt about partying naked</label>
-        <description>I was walking around colony, when I realised that I'm wearing no clothes! I looked around and noticed that everyone took off their clothes as they saw me! We started to drink and dance around our home naked.</description>
+        <description>I was walking around colony, when I realised that I'm wearing no clothes! I looked around and noticed that everyone took off their clothes as they saw me! We started to drink and dance around our home nude.</description>
         <baseMoodEffect>5</baseMoodEffect>
       </li>
     </stages>
-    <tags>
-      <li>Colonist</li>
-    </tags>
+    <nullifyingTraits>
+      <li>Psychopath</li>
+    </nullifyingTraits>
+    <nullifiedIfNotColonist>true</nullifiedIfNotColonist>
   </DreamersDream.DreamDef>
+  
   <DreamersDream.DreamDef ParentName="ExcitingDream">
     <defName>FlyingDream</defName>
     <stages>
@@ -210,6 +226,7 @@
       </li>
     </stages>
   </DreamersDream.DreamDef>
+  
   <DreamersDream.DreamDef ParentName="ExcitingDream">
     <defName>SpoonDream</defName>
     <stages>
@@ -232,6 +249,7 @@
     </stages>
     <dreamedBy>Rift</dreamedBy>
   </DreamersDream.DreamDef>
+  
   <DreamersDream.DreamDef ParentName="PleasantDream">
     <defName>ChildhoodGoodDream</defName>
     <stages>
@@ -242,6 +260,7 @@
       </li>
     </stages>
   </DreamersDream.DreamDef>
+  
   <DreamersDream.DreamDef ParentName="PleasantDream">
     <defName>BeachDream</defName>
     <stages>
@@ -252,6 +271,7 @@
       </li>
     </stages>
   </DreamersDream.DreamDef>
+  
   <DreamersDream.DreamDef ParentName="PleasantDream">
     <defName>NoRememberGoodDream</defName>
     <stages>
@@ -262,6 +282,7 @@
       </li>
     </stages>
   </DreamersDream.DreamDef>
+  
   <DreamersDream.DreamDef ParentName="PleasantDream">
     <defName>DreamPleasentThings</defName>
     <stages>
@@ -272,6 +293,7 @@
       </li>
     </stages>
   </DreamersDream.DreamDef>
+  
   <DreamersDream.DreamDef ParentName="PleasantDream">
     <defName>PizzaDream</defName>
     <stages>
@@ -281,11 +303,12 @@
         <baseMoodEffect>2</baseMoodEffect>
       </li>
     </stages>
-    <tags>
-      <li>Nonpsychopath</li>
-      <li>Noncannibal</li>
-    </tags>
+    <nullifyingTraits>
+      <li>Psychopath</li>
+      <li>Cannibal</li>
+    </nullifyingTraits>
   </DreamersDream.DreamDef>
+  
   <DreamersDream.DreamDef ParentName="PleasantDream">
     <defName>CheeseDream</defName>
     <stages>
@@ -295,11 +318,12 @@
         <baseMoodEffect>2</baseMoodEffect>
       </li>
     </stages>
-    <tags>
-      <li>Noncannibal</li>
-    </tags>
+    <nullifyingTraits>
+      <li>Cannibal</li>
+    </nullifyingTraits>
     <dreamedBy>Male_07</dreamedBy>
   </DreamersDream.DreamDef>
+  
   <DreamersDream.DreamDef ParentName="PleasantDream">
     <defName>DreamGuitar</defName>
     <stages>
@@ -321,10 +345,11 @@
         <baseMoodEffect>8</baseMoodEffect>
       </li>
     </stages>
-    <tags>
-      <li>Psycho</li>
-    </tags>
+    <requiredTraits>
+      <li>Bloodlust</li>
+    </requiredTraits>
   </DreamersDream.DreamDef>
+  
   <DreamersDream.DreamDef ParentName="AmazingDream">
     <defName>KillingEveryoneDream</defName>
     <stages>
@@ -334,23 +359,25 @@
         <baseMoodEffect>6</baseMoodEffect>
       </li>
     </stages>
-    <tags>
-      <li>Psycho</li>
-    </tags>
+    <requiredTraits>
+      <li>Bloodlust</li>
+    </requiredTraits>
   </DreamersDream.DreamDef>
+  
   <DreamersDream.DreamDef ParentName="AmazingDream">
     <defName>TorturingStrangersDream</defName>
     <stages>
       <li>
         <label>Dreamt about torturing</label>
-        <description>Stranger tied up in front of me. Set of shiny and sharp tools on the table. I grabbed one of the knifes and I couldn't stop. Even when strangers body stopped shivering and screaming, I was still taking pleasure in the simple act of torture...</description>
+        <description>Stranger tied up in front of me. Set of shiny and sharp tools on the table. I grabbed one of the knifes and I couldn't stop. Even when strangers body stopped quivering, I was still taking pleasure in the simple act of torture...</description>
         <baseMoodEffect>6</baseMoodEffect>
       </li>
     </stages>
-    <tags>
-      <li>Psycho</li>
-    </tags>
+    <requiredTraits>
+      <li>Bloodlust</li>
+    </requiredTraits>
   </DreamersDream.DreamDef>
+  
   <DreamersDream.DreamDef ParentName="ExcitingDream">
     <defName>MurderDream</defName>
     <stages>
@@ -360,10 +387,11 @@
         <baseMoodEffect>5</baseMoodEffect>
       </li>
     </stages>
-    <tags>
-      <li>Psycho</li>
-    </tags>
+    <requiredTraits>
+      <li>Bloodlust</li>
+    </requiredTraits>
   </DreamersDream.DreamDef>
+  
   <DreamersDream.DreamDef ParentName="PleasantDream">
     <defName>DreamFistFightt</defName>
     <stages>
@@ -373,9 +401,9 @@
         <baseMoodEffect>2</baseMoodEffect>
       </li>
     </stages>
-    <tags>
-      <li>Psycho</li>
-    </tags>
+    <requiredTraits>
+      <li>Bloodlust</li>
+    </requiredTraits>
   </DreamersDream.DreamDef>
   <!--CANNIBAL-->
   <DreamersDream.DreamDef ParentName="EpicDream">
@@ -383,14 +411,15 @@
     <stages>
       <li>
         <label>Dreamt about eating my rival</label>
-        <description>I laughed while tying him over the fire pit. I laughed while heat was charring his face. I laughed while consuming his body...</description>
+        <description>I laughed while tying him over the fire pit. I laughed while heat was charring his face. I laughed while consuming his flesh...</description>
         <baseMoodEffect>8</baseMoodEffect>
       </li>
     </stages>
-    <tags>
+    <requiredTraits>
       <li>Cannibal</li>
-    </tags>
+    </requiredTraits>
   </DreamersDream.DreamDef>
+  
   <DreamersDream.DreamDef ParentName="AmazingDream">
     <defName>HumanMeatFeastDream</defName>
     <stages>
@@ -400,10 +429,11 @@
         <baseMoodEffect>6</baseMoodEffect>
       </li>
     </stages>
-    <tags>
+    <requiredTraits>
       <li>Cannibal</li>
-    </tags>
+    </requiredTraits>
   </DreamersDream.DreamDef>
+  
   <DreamersDream.DreamDef ParentName="ExcitingDream">
     <defName>DreamEatingStranger</defName>
     <stages>
@@ -413,9 +443,9 @@
         <baseMoodEffect>5</baseMoodEffect>
       </li>
     </stages>
-    <tags>
+    <requiredTraits>
       <li>Cannibal</li>
-    </tags>
+    </requiredTraits>
   </DreamersDream.DreamDef>
   <!-- New Dreams -->
 </Defs>
