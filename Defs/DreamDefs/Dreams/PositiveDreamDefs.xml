@@ -417,6 +417,20 @@
       <li>Cannibal</li>
     </tags>
   </DreamersDream.DreamDef>
+  
+  <DreamersDream.DreamDef ParentName="BaseDream">
+    <defName>Debug</defName>
+    <stages>
+      <li>
+        <label>Dreamt about eating someone</label>
+        <description>Eating a human being is simple. I used to think of it as a disgusting thing, but simply trying this delicacy proved me wrong!</description>
+        <baseMoodEffect>5</baseMoodEffect>
+      </li>
+    </stages>
+    <tags>
+      <li>Debug</li>
+    </tags>
+  </DreamersDream.DreamDef>
   <!-- New Dreams -->
 </Defs>
 <!--    I woke up at a dark neon hotel, and was greeted by staff right off the bed. The hotel had only mixtures of dark blue and black in it. The hotel was located on a small island in the middle of nowhere. As i continued my day in the hotel, i noticed that the staff was disrespectful to it's visitors in actions, but provided a lot of words for their actions. Soon i realised that nobody was saying anything about that because all of the hotel's guests were introverts, and they kept being abused. Soon, as i walked outside, the hotel staff greeted me, and took above. They said that there was another, much nicer island right next to us, it was a white hotel on a white island. They took me across the sky, and explained that if you never complain about some things, you will never get anyone to reform. They said that if i said a word about their behaviour, they would let me on the white island, where a much nicer hotel is. Then they took me to their ritual room, and said that the first cycle has finished (Cycle of guests not giving any attention to the staff, i suppose), and then they pressed a blue button, from where i transcended somewhere.          <DreamersDream.DreamDef Name="DivineDream" Abstract="True" ParentName = "BaseDream">
