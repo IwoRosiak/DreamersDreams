@@ -39,14 +39,24 @@ namespace DreamersDream
 
         private static bool HasDreamAlready(this Pawn pawn)
         {
-            foreach (DreamDef dream in DreamTracker.GetAllDreams)
+            foreach (var memory in pawn.needs.mood.thoughts.memories.Memories)
             {
-                if (pawn.needs.mood.thoughts.memories.GetFirstMemoryOfDef(dream) != null)
+                if (memory.def.GetType() == typeof(DreamDef))
                 {
                     return true;
                 }
             }
             return false;
+
+            /*
+        foreach (DreamDef dream in DreamTracker.GetAllDreams)
+        {
+            if (pawn.needs.mood.thoughts.memories.GetFirstMemoryOfDef(dream) != null)
+            {
+                return true;
+            }
+        }
+        return false;*/
         }
 
         //Sleepwalking

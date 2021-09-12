@@ -59,6 +59,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Defs\Dreams\DreamBuilder.cs" />
+    <Compile Include="Defs\Dreams\Dream.cs" />
     <Compile Include="Defs\Dreams\DreamTagDefOf.cs" />
     <Compile Include="Dreams\Requirements\DreamRequirements.cs" />
     <Compile Include="Dreams\Requirements\DreamRequirementsChecker.cs" />
