@@ -8,6 +8,6 @@ namespace DreamersDream
     {
         public List<DreamTagDef> tags = new List<DreamTagDef>();
 
-        public string dreamedBy;
+        public string dreamedBy = "";
     }
 }

@@ -75,7 +75,7 @@ namespace DreamersDream
 
         private void TriggerDreamEffects(DreamDef dream)
         {
-            DreamBuilder.CreateNewDream(dream);
+            DreamBuilder.CreateNewDream(dream, ref currentDream, pawn);
             if (currentDream != null)
             {
                 pawn.needs.mood.thoughts.memories.TryGainMemory(currentDream);
@@ -128,6 +128,7 @@ namespace DreamersDream
         public override void PostExposeData()
         {
             base.PostExposeData();
+
             Scribe_Defs.Look(ref currentDream, "dreamForPawn" + pawn.ThingID);
         }
 
