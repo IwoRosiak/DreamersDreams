@@ -9,7 +9,7 @@
     <stages>
       <li>
         <label>Dreamt about tourist spaceship</label>
-        <description>I was one of the high-ranking officers in white uniform. Me, and some others were on a cubical, tourist, 2 miles long spaceship. The command center was located in a tower in the middle of the ship, deep within instead of the outer shell of spacecraft. The weirdest thing was that the ship captain was a 3 feet tall rat in white uniform. Everyone respected him. One time, a canadian hockey player in his hockey uniform with the helmet on decided to visit our ship. We welcomed him aboard, and everyone was happy. While we were walking along side the footbal field, we saw a tank, and the rat was controlling it. Our rat captain pointed the tank's barrel towards the hockey player, and I had to run in front of the hockey player for it to cease fire and not shoot the hockey player. The tank stopped, and then started driving away. As it started moving backwards, we were cheering. I showed the hockey player inside the ship, where there was a ton of supermarket-like shops, one of them was hanging on the ropes. After that in some time I lost the hockey player, but then he came back, thanked me for my service and left. After a while we got news that the captain was killed in an explosion. I rushed to the top of the tower with the command center, and I entered a luxury apartament on the very top of the tower. I saw through a courner that the rat was indeed killed, but not by an explosion. We mourned his death for a while, and one of the officers of equivalent rank to mine took control, and decided to stop the tour. I told him repetitevly to bring me to my hometown because we were close to it, but he wouldn't listen.</description>
+        <description> I was on a huge, cubical spaceship. The command center was located in a tower in the middle of the ship, deep within instead of the outer shell of the craft. The weirdest thing was that the ship captain was a 3 feet tall rat in the same white uniform I was wearing, too. Everyone respected him. One time, a canadian hockey player in his hockey uniform with the helmet on decided to visit our ship. We welcomed him aboard, and everyone was happy. While we were walking alongside the football field, we saw a tank, and the rat was controlling it. Our rat captain pointed the tank's barrel towards the hockey player, and I had to run in front of the hockey player for it to cease fire and not shoot the hockey player. The tank stopped, and then started driving away. As it started moving backwards, we were cheering. I showed the hockey player inside the ship, where there was a ton of supermarket-like shops, one of them was hanging on the ropes. After that in some time I lost the hockey player, but then he came back, thanked me for my service and left. After a while we got news that the captain was killed in an explosion. I rushed to the top of the tower with the command center, and I entered a luxury apartment at the very top. I saw through a corner that the rat was indeed killed, but not by an explosion. We mourned his death for a while, and one of the officers of equivalent rank to mine took control, and decided to stop the tour. I told him repetitevly to bring me to my colony because we were close to it, but he wouldn't listen.</description>
         <baseMoodEffect>3</baseMoodEffect>
       </li>
     </stages>
@@ -25,7 +25,8 @@
     <stages>
       <li>
         <label>Dreamt about heroic defence</label>
-        <description>I had to defend our colony against waves and waves of upcoming serpent-like monsters while also sending units to enable some form of passage. It took place on a fiery planet, lots of lava, lots of fire and the sky was red. It goes on for quite a while but in the end units manage to open the passage. I board a shuttle and head towards strange gate which allows for connection of our world to abyss. While trying to do that I meet my friend who was apparently trapped on this shuttle. I free him and go close the gate. I succeed. Everyone is cheering, calling me a hero, we have a party and I can recognize most of my friends, old friends who I have lost contact with long ago. Everyone is dancing, music is playing and I get to dance with someone I love... </description>
+        <description>I had to defend our colony against waves and waves of upcoming serpent-like monsters while also sending units to enable some form of passage. It took place on a fiery planet, lots of lava, lots of fire and the sky was red. It went on for quite a while but in the end the monsters managed to open the passage. I boarded a shuttle and headed towards a strange gate which allowed for connection of our world to the abyss. While trying to do that I met my friend who was apparently trapped on this shuttle. I freed him and went to close the gate. Somehow, I succeeded. Everyone cheered, calling me a hero, and went on to have a party. I recognized most of my friends, even old friends who I have lost contact with long ago. Everyone was dancing, music played and I got to dance with someone I love... </description>
+        <!--restrict to colonists-->
         <baseMoodEffect>12</baseMoodEffect>
       </li>
     </stages>
@@ -48,7 +49,7 @@
     <stages>
       <li>
         <label>Dreamt about meeting ancient god</label>
-        <description>I was sitting on a grassy hill surrounded by mountains full of trees and green white grass. After a while, tall old man with round hat and staff approached me. There were two crows sitting on the staff. He said "look" and pointed to the horizon and then a old viking came up right next to me leaning on a tree with a battered shield and said to me "Grunts would be pigs if they knew what the old boar was suffering". Out of nowhere trees and hills are on fire. The old man looked at me and said "Valhalla is coming for you. Don't forget me."</description>
+        <description>I was sitting on a grassy hill surrounded by mountains full of trees and green white grass. After a while, a tall old man with round hat and staff approached me. There were two crows sitting on the staff. He said "look" and pointed to the horizon and then an old viking came up right next to me leaning on a tree with a battered shield and said to me "Grunts would be pigs if they knew what the old boar was suffering". Out of nowhere the trees and hills were set on fire. The old man looked at me and said "Valhalla is coming for you. Don't forget me."</description>
         <baseMoodEffect>12</baseMoodEffect>
       </li>
     </stages>
@@ -73,6 +74,7 @@
         <label>Dreamt about animal competition</label>
         <description>I joined a dog-sledding competition, which was a racetrack where the dogs ski around a track for several laps. I cheated by putting on my dog's uniform and entering the race as my dog (and giving my dog my clothes so he can look like me cheering him on). I went through the whole race, skiing stiffly to look like a dog skiing, but at the very end I felt guilty about cheating and bumped into a pole so I'd get second place. 7' tall Bruce Willis knew that I cheated and got back at me by standing very close to me and making me look short.</description>
         <baseMoodEffect>8</baseMoodEffect>
+        <!-- Change this to random animal species, maybe? -->
       </li>
     </stages>
     <dreamedBy>Mitroll</dreamedBy>
@@ -96,6 +98,7 @@
         <label>Dreamt about fire tornado</label>
         <description>I was wandering through a jungle until I noticed a giant fire tornado. It simply stood there, not burning anything - the ground around it was burnt and barren but around it was a lush wild, rain forest. There were some locals worshipping it. They told me that it was The Element and explained the lore of Elementals. Elements are aspects of reality that humanity sees as important and symbolic - they can be as basic as "fire" or as complicated as "chaos" or "jealousy". They are simultaneously Gods, Worlds and Hive Minds of living beings - smaller elementals that might think that they act of free will. But elementals are not free - they act as the Element as a whole wills them. This tornado of fire is a high level Elemental and it needs constant worship which the locals do in shifts. If they stop, it will spread fire all around and feed on our fear of it.</description>
         <baseMoodEffect>8</baseMoodEffect>
+        <!-- Considering how many dreams there are that only make sense for non-tribals, this might very well only be for tribals. -->
       </li>
     </stages>
     <dreamedBy>dambuk1</dreamedBy>
@@ -108,6 +111,7 @@
         <label>Dreamt about being a racoon</label>
         <description>I was a small animal (I think it was a raccoon?) in a random windy forest. It was pretty nice even if all I did was wander around and occasionally see other creatures, and at some point I think I befriended a groundhog. I'm not too sure on how it ended but the last thing I vaguely remember was seeing buildings over a hill. ~~okoyum</description>
         <baseMoodEffect>6</baseMoodEffect>
+        <!-- only tribals? -->
       </li>
     </stages>
     <nullifyingTraits>
@@ -154,7 +158,7 @@
     <stages>
       <li>
         <label>Dreamt about doing good job</label>
-        <description>I was tasked to build strange shapes which looked like a four triangles connected side by side. I gathered immense amounts of stone and helped little people finish the yellow construction. The little humans were so happy with my work that they decided to place their kings there after death!</description>
+        <description>I was tasked to build strange shapes which looked like four triangles connected side by side. I gathered immense amounts of stone and helped little people finish the yellow construction. The little humans were so happy with my work that they decided to place their kings there after death!</description>
         <baseMoodEffect>6</baseMoodEffect>
       </li>
     </stages>
@@ -206,7 +210,7 @@
     <stages>
       <li>
         <label>Dreamt about partying naked</label>
-        <description>I was walking around colony, when I realised that I'm wearing no clothes! I looked around and noticed that everyone took off their clothes as they saw me! We started to drink and dance around our home nude.</description>
+        <description>I was walking around the colony, when I realised that I'm wearing no clothes! I looked around and noticed that everyone took off their clothes as they saw me! We started to drink and dance naked.</description>
         <baseMoodEffect>5</baseMoodEffect>
       </li>
     </stages>
@@ -221,7 +225,7 @@
     <stages>
       <li>
         <label>Dreamt about flying</label>
-        <description>I was flying in my dream dream! It was an amazing experience. I just wanted it to keep going...</description>
+        <description>I was flying in my dream dream! It was an amazing experience. I just wanted to keep going...</description>
         <baseMoodEffect>5</baseMoodEffect>
       </li>
     </stages>
@@ -255,7 +259,7 @@
     <stages>
       <li>
         <label>Dreamt about childhood</label>
-        <description>I was back in my childhood house! I've regained connection with some of my the best memories.</description>
+        <description>I was back in my childhood house! I've regained connection with some of my best memories.</description>
         <baseMoodEffect>2</baseMoodEffect>
       </li>
     </stages>
@@ -287,7 +291,7 @@
     <defName>DreamPleasentThings</defName>
     <stages>
       <li>
-        <label>Dreamt about pleasent things</label>
+        <label>Dreamt about pleasant things</label>
         <description>I don't really remember my dreams from tonight, but when I awoke I simply felt better.</description>
         <baseMoodEffect>2</baseMoodEffect>
       </li>
@@ -314,7 +318,7 @@
     <stages>
       <li>
         <label>Dreamt about cheese</label>
-        <description>Cheese.... Cheese everywhere!</description>
+        <description>Cheese... Cheese everywhere!</description>
         <baseMoodEffect>2</baseMoodEffect>
       </li>
     </stages>
@@ -341,7 +345,7 @@
     <stages>
       <li>
         <label>Dreamt about murdering rival</label>
-        <description>I wish we could still be here. To see how much I'm enjoying now, after ending his miserable life...</description>
+        <description>I wish they could still be here. To see how much I'm enjoying myself now, after ending their miserable life...</description>
         <baseMoodEffect>8</baseMoodEffect>
       </li>
     </stages>
