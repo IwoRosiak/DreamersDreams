@@ -1,591 +1,331 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Defs>
-
   <!--Hell-Like -->
   <DreamersDream.DreamDef ParentName="HellLikeDream">
     <defName>DreamDarkFigures</defName>
-    <stages>
-      <li>
-        <label>Dreamt about dark figures</label>
-        <description>I was wandering around the colony when I saw a shadowy figure coming out of a dark corner. I asked it what it wants, but it didn't respond. The figure approached me, coming closer and closer with each second. I panicked, the fear paralysed me. Then another figure appeared behind me. After that, the figures grabbed me by my legs and arms. I screamed and everything went dark.</description>
-        <baseMoodEffect>-11</baseMoodEffect>
-      </li>
-    </stages>
+    <label>Dreamt about dark figures</label>
+    <description>I was wandering around the colony when I saw a shadowy figure coming out of a dark corner. I asked it what it wants, but it didn't respond. The figure approached me, coming closer and closer with each second. I panicked, the fear paralysed me. Then another figure appeared behind me. After that, the figures grabbed me by my legs and arms. I screamed and everything went dark.</description>
+    <moodOffset>-11</moodOffset>
     <dreamedBy>fan</dreamedBy>
-  </DreamersDream.DreamDef>
-  
-  <DreamersDream.DreamDef ParentName="HellLikeDream">
+  </DreamersDream.DreamDef><DreamersDream.DreamDef ParentName="HellLikeDream">
     <defName>DreamMoonHit</defName>
-    <stages>
-      <li>
-        <label>Dreamt about moon crash</label>
-        <description>I awoke in my room <!--Can we replace this with the pawn's sleeping place? (Barracks/Bedroom?)-->. Felt a bit thirsty so I went to the kitchen to drink some water. Went outside to get some fresh air and there was an enormous moon up in the sky. Everything was shaking, almost like an earthquake was terrorizing the area. Orange light illuminated the surroundings. Buildings were floating here and there, like gravity had been turned off. The Moon came closer. The shaking got stronger. I heard screaming. Then some odd force hit me and I collapsed.</description>
-        <baseMoodEffect>-11</baseMoodEffect>
-      </li>
-    </stages>
+    <label>Dreamt about moon crash</label>
+    <!--Can we replace this with the pawn's sleeping place? (Barracks/Bedroom?)-->
+    <description>I awoke in my room. Felt a bit thirsty so I went to the kitchen to drink some water. Went outside to get some fresh air and there was an enormous moon up in the sky. Everything was shaking, almost like an earthquake was terrorizing the area. Orange light illuminated the surroundings. Buildings were floating here and there, like gravity had been turned off. The Moon came closer. The shaking got stronger. I heard screaming. Then some odd force hit me and I collapsed.</description>
+    <moodOffset>-11</moodOffset>
     <dreamedBy>Backrevol</dreamedBy>
-  </DreamersDream.DreamDef>
-  
-  <DreamersDream.DreamDef ParentName="HellLikeDream">
+  </DreamersDream.DreamDef><DreamersDream.DreamDef ParentName="HellLikeDream">
     <defName>DreamTragicLivesAndDeaths</defName>
-    <stages>
-      <li>
-        <label>Dreamt about tragic lives and deaths</label>
-        <description>I had to enter 7 tragical lives of people who had 7 tragical deaths. I lived 7 tragic lives and died 7 tragic deaths. 7... 7... 7...</description>
-        <baseMoodEffect>-11</baseMoodEffect>
-      </li>
-    </stages>
+    <label>Dreamt about tragic lives and deaths</label>
+    <description>I had to enter 7 tragical lives of people who had 7 tragical deaths. I lived 7 tragic lives and died 7 tragic deaths. 7... 7... 7...</description>
+    <moodOffset>-11</moodOffset>
     <nullifyingTraits>
       <li>Bloodlust</li>
       <li>Psychopath</li>
     </nullifyingTraits>
     <dreamedBy>dambuk1</dreamedBy>
   </DreamersDream.DreamDef>
-
-
   <!--Terrorising-->
   <DreamersDream.DreamDef ParentName="TerrorisingDream">
     <defName>DreamWorldApart</defName>
-    <stages>
-      <li>
-        <label>Dreamt about Armageddon</label>
-        <description>I dreamt that the whole world fell apart. It was a disaster.</description>
-        <baseMoodEffect>-8</baseMoodEffect>
-      </li>
-    </stages>
-  </DreamersDream.DreamDef>
-  
-  <DreamersDream.DreamDef ParentName="TerrorisingDream">
+    <label>Dreamt about Armageddon</label>
+    <description>I dreamt that the whole world fell apart. It was a disaster.</description>
+    <moodOffset>-8</moodOffset>
+  </DreamersDream.DreamDef><DreamersDream.DreamDef ParentName="TerrorisingDream">
     <defName>DreamSleepParalysis</defName>
-    <stages>
-      <li>
-        <label>Dreamt about being attacked</label>
-        <description>A dark figure was sitting on my chest and I couldn't move!</description>
-        <baseMoodEffect>-8</baseMoodEffect>
-      </li>
-    </stages>
-  </DreamersDream.DreamDef>
-  
-  <DreamersDream.DreamDef ParentName="TerrorisingDream">
+    <label>Dreamt about being attacked</label>
+    <description>A dark figure was sitting on my chest and I couldn't move!</description>
+    <moodOffset>-8</moodOffset>
+  </DreamersDream.DreamDef><DreamersDream.DreamDef ParentName="TerrorisingDream">
     <defName>PileCorpsesDream</defName>
-    <stages>
-      <li>
-        <label>Dreamt about pile of corpses</label>
-        <description>I was lying on a huge pile of human corpses <!--Can we replace this with the pawn's species?-->, some rotten, some fresh. I couldn't move. It was some kind of cargo section inside of a ship in the ocean. From the pile crawled a rotten corpse and grabbed my feet and bit off some toes. It crawled closer and tried to bite... well... that place... I woke up with pain in that place...</description>
-        <baseMoodEffect>-8</baseMoodEffect>
-      </li>
-    </stages>
+    <label>Dreamt about pile of corpses</label>
+    <!--Can we replace this with the pawn's species?-->
+    <description>I was lying on a huge pile of human corpses , some rotten, some fresh. I couldn't move. It was some kind of cargo section inside of a ship in the ocean. From the pile crawled a rotten corpse and grabbed my feet and bit off some toes. It crawled closer and tried to bite... well... that place... I woke up with pain in that place...</description>
+    <moodOffset>-8</moodOffset>
     <nullifyingTraits>
       <li>Psychopath</li>
       <li>Cannibal</li>
     </nullifyingTraits>
-  </DreamersDream.DreamDef>
-  
-  <DreamersDream.DreamDef ParentName="TerrorisingDream">
+  </DreamersDream.DreamDef><DreamersDream.DreamDef ParentName="TerrorisingDream">
     <defName>DreamBrainJars</defName>
-    <stages>
-      <li>
-        <label>Dreamt about brain in a jar</label>
-        <description>I was in the middle of some kind of secret archotech laboratory. All surfaces were sterile and perfectly clean. I explored the place for a while until I reached a warehouse which looked like it was hundreds of miles long. On every shelf there was a jar with a brain, connected to a screen. I watched what was happening on those screens... Someone was cooking a meal... Someone else was chased by gangsters... Another person got some lovin'... but then I saw a truly extraordinary screen. It showed the perspective of a man in a huge warehouse filled with jars with brains... </description>
-        <baseMoodEffect>-8</baseMoodEffect>
-      </li>
-    </stages>
-  </DreamersDream.DreamDef>
-  
-  <DreamersDream.DreamDef ParentName="TerrorisingDream">
+    <label>Dreamt about brain in a jar</label>
+    <description>I was in the middle of some kind of secret archotech laboratory. All surfaces were sterile and perfectly clean. I explored the place for a while until I reached a warehouse which looked like it was hundreds of miles long. On every shelf there was a jar with a brain, connected to a screen. I watched what was happening on those screens... Someone was cooking a meal... Someone else was chased by gangsters... Another person got some lovin'... but then I saw a truly extraordinary screen. It showed the perspective of a man in a huge warehouse filled with jars with brains...</description>
+    <moodOffset>-8</moodOffset>
+  </DreamersDream.DreamDef><DreamersDream.DreamDef ParentName="TerrorisingDream">
     <defName>DreamMeatLocker</defName>
-    <stages>
-      <li>
-        <label>Dreamt about meat locker</label>
-        <description>I was exploring the colony in the dark when I stumbled into the freezer. I saw shapes in the heavy mist hanging on meat hooks, and when I drew close I saw that they were human. <!--Pawn/random humanoid species?--> They reached for me and I tried to turn away but there were more behind me, possessing the faces of people we have killed. They grabbed me and lifted me onto a hook to stay there with them for all eternity...</description>
-        <baseMoodEffect>-8</baseMoodEffect>
-      </li>
-    </stages>
+    <label>Dreamt about meat locker</label>
+    <description>I was exploring the colony in the dark when I stumbled into the freezer. I saw shapes in the heavy mist hanging on meat hooks, and when I drew close I saw that they were human. They reached for me and I tried to turn away but there were more behind me, possessing the faces of people we have killed. They grabbed me and lifted me onto a hook to stay there with them for all eternity...</description>
+    <moodOffset>-8</moodOffset>
     <nullifyingTraits>
       <li>Bloodlust</li>
       <li>Psychopath</li>
       <li>Cannibal</li>
     </nullifyingTraits>
     <dreamedBy>Jack_Hazardous</dreamedBy>
-  </DreamersDream.DreamDef>
-  
-  <DreamersDream.DreamDef ParentName="TerrorisingDream">
+  </DreamersDream.DreamDef><DreamersDream.DreamDef ParentName="TerrorisingDream">
     <defName>DreamSpider</defName>
-    <stages>
-      <li>
-        <label>Dreamt about tiki-spider</label>
-        <description>I was in a humid, foreign jungle, trapped in a long, ancient stone temple hallway. I turned around, and a spider with a tiki mask started chasing me. I woke up just before it pounced...</description>
-        <baseMoodEffect>-8</baseMoodEffect>
-      </li>
-    </stages>
+    <label>Dreamt about tiki-spider</label>
+    <description>I was in a humid, foreign jungle, trapped in a long, ancient stone temple hallway. I turned around, and a spider with a tiki mask started chasing me. I woke up just before it pounced...</description>
+    <moodOffset>-8</moodOffset>
     <dreamedBy>ryanizawsum</dreamedBy>
-  </DreamersDream.DreamDef>
-  
-  <DreamersDream.DreamDef ParentName="TerrorisingDream">
+  </DreamersDream.DreamDef><DreamersDream.DreamDef ParentName="TerrorisingDream">
     <defName>DreamMaze</defName>
-    <stages>
-      <li>
-        <label>Dreamt about escaping a maze</label>
-        <description>I was running on what looked like hard packed dirt with little bits of gravel and grass. As I ran I would often times have to make decisions on where to run, left or right, because the walls that blocked the way were clown and doll heads. I had to run a maze that was made out of a clown and doll head, while something chased me. I woke up and was in a dry sweat and didn't want to open my eyes at all.</description>
-        <baseMoodEffect>-8</baseMoodEffect>
-      </li>
-    </stages>
+    <label>Dreamt about escaping a maze</label>
+    <description>I was running on what looked like hard packed dirt with little bits of gravel and grass. As I ran I would often times have to make decisions on where to run, left or right, because the walls that blocked the way were clown and doll heads. I had to run a maze that was made out of a clown and doll head, while something chased me. I woke up and was in a dry sweat and didn't want to open my eyes at all.</description>
+    <moodOffset>-8</moodOffset>
     <dreamedBy>NylonWorms</dreamedBy>
-  </DreamersDream.DreamDef>
-  
-  <DreamersDream.DreamDef ParentName="TerrorisingDream">
+  </DreamersDream.DreamDef><DreamersDream.DreamDef ParentName="TerrorisingDream">
     <defName>DreamFriendsFight</defName>
-    <stages>
-      <li>
-        <label>Dreamt about fight among friends</label>
-        <description>Me and my best friend <!--Can we reference them?--> met in front of their house. We wanted to go biking together, and so we did. We were biking around many different places. When we were finally coming back home we saw a bunch of alligators climbing on a fence next to us. Scared, we rode away as fast as we could. After some time it got really cold outside, so we stopped under someone's house so we could dress up into heavier clothes. Suddenly, out of nowhere, a tank appeared and shot at us. My friend escaped with their bike, leaving me alone. Sometime later I woke up at a house. It was the same house we stopped at to dress up. An old man was the owner and he was actually nice. My phone's battery was completely dead though. I wanted to go back home with my bike, but it was in pieces and some were missing. I walked home to tell my parents what happened. When I came back for my bike my other friends were taking it apart for parts. I had to fight them for my bike.</description>
-        <!--This dream references bikes, phones and general society outside of the Rimworlds. Should be restricted to non-tribal pawns.-->
-        <baseMoodEffect>-8</baseMoodEffect>
-      </li>
-    </stages>
+    <label>Dreamt about fight among friends</label>
+    <!--Can we reference them?-->
+    <description>Me and my best friend met in front of their house. We wanted to go biking together, and so we did. We were biking around many different places. When we were finally coming back home we saw a bunch of alligators climbing on a fence next to us. Scared, we rode away as fast as we could. After some time it got really cold outside, so we stopped under someone's house so we could dress up into heavier clothes. Suddenly, out of nowhere, a tank appeared and shot at us. My friend escaped with their bike, leaving me alone. Sometime later I woke up at a house. It was the same house we stopped at to dress up. An old man was the owner and he was actually nice. My phone's battery was completely dead though. I wanted to go back home with my bike, but it was in pieces and some were missing. I walked home to tell my parents what happened. When I came back for my bike my other friends were taking it apart for parts. I had to fight them for my bike.</description>
+    <!--This dream references bikes, phones and general society outside of the Rimworlds. Should be restricted to non-tribal pawns.-->
+    <moodOffset>-8</moodOffset>
     <dreamedBy>Smelly Fish</dreamedBy>
-  </DreamersDream.DreamDef>
-  
-  <DreamersDream.DreamDef ParentName="TerrorisingDream">
+  </DreamersDream.DreamDef><DreamersDream.DreamDef ParentName="TerrorisingDream">
     <defName>DreamWerewolfMarriage</defName>
-    <stages>
-      <li>
-        <label>Dreamt about unfortunate marriage</label>
-        <description>I was in a small church, getting married. My family was sitting on one side of the room, and the other side was where my fiance's family was. The pastor was giving the ceremony, and we were holding hands, looking at each other. At one point, I slowly looked over to both our families. Nothing seemed out of the ordinary. Everything was fine. My family was sitting in the pews, as normal, my fiance's as well. After looking at them, I looked at my fiance. A few seconds later, I looked back at the families, and noticed something odd. My fiance's family had changed into a random menagerie of canines. My family was completely unphased. I look back at my fiance which had turned into a greyish black werewolf, smirking, still holding my hands.</description>
-        <!--Can we restrict this to pawns with a fiance or lover?-->
-        <baseMoodEffect>-8</baseMoodEffect>
-      </li>
-    </stages>
+    <label>Dreamt about unfortunate marriage</label>
+    <description>I was in a small church, getting married. My family was sitting on one side of the room, and the other side was where my fiance's family was. The pastor was giving the ceremony, and we were holding hands, looking at each other. At one point, I slowly looked over to both our families. Nothing seemed out of the ordinary. Everything was fine. My family was sitting in the pews, as normal, my fiance's as well. After looking at them, I looked at my fiance. A few seconds later, I looked back at the families, and noticed something odd. My fiance's family had changed into a random menagerie of canines. My family was completely unphased. I look back at my fiance which had turned into a greyish black werewolf, smirking, still holding my hands.</description>
+    <!--Can we restrict this to pawns with a fiance or lover?-->
+    <moodOffset>-8</moodOffset>
     <dreamedBy>Lt. Vulfskrag</dreamedBy>
   </DreamersDream.DreamDef>
-
-
   <!--Frightening-->
-<!--  <DreamersDream.DreamDef ParentName="FrighteningDream">
+  <!--  <DreamersDream.DreamDef ParentName="FrighteningDream">
     <defName>DreamPolishVillage</defName>
     <nullifiedIfNotColonist>true</nullifiedIfNotColonist>
-    <stages>
-      <li>
         <label>Dreamt about polish town</label>
         <description>I was a teenager in a town of Zakątek. My father was an owner of a japanese-style inn, built many years ago by a man who was obsessed with Japan. It was summer and the usual fog rolled in - the fog that made all of our powers stronger. My power of reinforcement magic helped in many incidents around town. Many youths go wild with their boosted powers so fights, petty theft or even small fires are to be expected. But this time, people were disappearing. Specifically, people who stayed at our inn. Strangers. We don't use magic on strangers. We try to hide it from strangers. But someone was kidnapping them. And we found the corpses. Mutilated except for their faces. Then not just the strangers went missing. Our girls too. All of them pretty. Their faces still preserved in their beauty when they were found.</description>
-        <baseMoodEffect>-5</baseMoodEffect>
-      </li>
-    </stages>
+        <moodOffset>-5</moodOffset>
     <dreamedBy>dambuk1</dreamedBy>
   </DreamersDream.DreamDef>
 This dream is very specifically about a person with a specific backstory. Not sure how to make this one make sense as a random dream for a random pawn. -Kas -->
   <DreamersDream.DreamDef ParentName="FrighteningDream">
     <defName>DreamMazeChildhood</defName>
-    <stages>
-      <li>
-        <label>Dreamt about abandoned maze</label>
-        <description>I wandered around a labyrinth of rooms and hallways made up of my childhood home and locations I had previously visited, like my school and my friend's and family's houses. Everything was in black and white, and I had the feeling of being followed, or even chased at times. The rooms always looked run down, like they had been abandoned...</description>
-        <baseMoodEffect>-5</baseMoodEffect>
-      </li>
-    </stages>
+    <label>Dreamt about abandoned maze</label>
+    <description>I wandered around a labyrinth of rooms and hallways made up of my childhood home and locations I had previously visited, like my school and my friend's and family's houses. Everything was in black and white, and I had the feeling of being followed, or even chased at times. The rooms always looked run down, like they had been abandoned...</description>
+    <moodOffset>-5</moodOffset>
     <dreamedBy>GHOST</dreamedBy>
-  </DreamersDream.DreamDef>
-  
-  <DreamersDream.DreamDef ParentName="FrighteningDream">
+  </DreamersDream.DreamDef><DreamersDream.DreamDef ParentName="FrighteningDream">
     <defName>DwarfAmbushDream</defName>
     <nullifyingTraits>
       <li>Bloodlust</li>
       <li>Psychopath</li>
     </nullifyingTraits>
-    <stages>
-      <li>
-        <label>Dreamt about little dwarf</label>
-        <description>I dreamt I walked around the forest with my friend and a little dwarf ambushed us and stabbed them with a tiny knife!</description>
-        <baseMoodEffect>-5</baseMoodEffect>
-      </li>
-    </stages>
-  </DreamersDream.DreamDef>
-  
-  <DreamersDream.DreamDef ParentName="FrighteningDream">
+    <label>Dreamt about little dwarf</label>
+    <description>I dreamt I walked around the forest with my friend and a little dwarf ambushed us and stabbed them with a tiny knife!</description>
+    <moodOffset>-5</moodOffset>
+  </DreamersDream.DreamDef><DreamersDream.DreamDef ParentName="FrighteningDream">
     <defName>DreamColonyDestruction</defName>
     <nullifiedIfNotColonist>true</nullifiedIfNotColonist>
-    <stages>
-      <li>
-        <label>Dreamt about destruction of colony</label>
-        <description>I was walking away from the colony. I  felt a strong sense of urgency, that I needed to get away, yet I couldn't figure out why. As I walked up to the hill overlooking the colony <!--Can we put in the (dynamic) name of the colony here?-->, I started to calm. As I reached the top, I sat down upon the grass under the trees and watched calmly as a small figure fell down from the boundless, blue sky. Only then, as the antigrain warhead went off did I understand why I had felt that urgency.</description>
-        <baseMoodEffect>-5</baseMoodEffect>
-      </li>
-    </stages>
+    <label>Dreamt about destruction of colony</label>
+    <!--Can we put in the (dynamic) name of the colony here?-->
+    <description>I was walking away from the colony. I  felt a strong sense of urgency, that I needed to get away, yet I couldn't figure out why. As I walked up to the hill overlooking the colony , I started to calm. As I reached the top, I sat down upon the grass under the trees and watched calmly as a small figure fell down from the boundless, blue sky. Only then, as the antigrain warhead went off did I understand why I had felt that urgency.</description>
+    <moodOffset>-5</moodOffset>
     <dreamedBy>Wight</dreamedBy>
-  </DreamersDream.DreamDef>
-  
-  <DreamersDream.DreamDef ParentName="FrighteningDream">
+  </DreamersDream.DreamDef><DreamersDream.DreamDef ParentName="FrighteningDream">
     <defName>DreamKillingPet</defName>
-    <stages>
-      <li>
-        <label>Dreamt about killing my favourite animal</label>
-        <description>I had to kill my pet <!--Bonded pet name here?--> by strangling it, I was squeezing its throat with both hands and it wouldn't die and just kept looking at me with its big soft eyes. I was sobbing uncontrollably in the dream but I had to just keep trying to kill it.</description>
-        <baseMoodEffect>-5</baseMoodEffect>
-      </li>
-    </stages>
+    <label>Dreamt about killing my favourite animal</label>
+    <!--Bonded pet name here?-->
+    <description>I had to kill my pet by strangling it, I was squeezing its throat with both hands and it wouldn't die and just kept looking at me with its big soft eyes. I was sobbing uncontrollably in the dream but I had to just keep trying to kill it.</description>
+    <moodOffset>-5</moodOffset>
     <nullifyingTraits>
       <li>Bloodlust</li>
       <li>Psychopath</li>
     </nullifyingTraits>
     <dreamedBy>Slavidor</dreamedBy>
-  </DreamersDream.DreamDef>
-  
-  <DreamersDream.DreamDef ParentName="FrighteningDream">
+  </DreamersDream.DreamDef><DreamersDream.DreamDef ParentName="FrighteningDream">
     <defName>LostHeadDream</defName>
-    <stages>
-      <li>
-        <label>Dreamt about distant danger</label>
-        <description>I had a dream in which I walked around the colony. After a few moments I realised that my head was rolling down the hill away from our home. I chased it until it stopped. After finally regaining my precious head, I looked around. Everything was burned to the ground and the only sounds were coming from strange machinery spitting out ancient mechanoids...</description>
-        <baseMoodEffect>-5</baseMoodEffect>
-      </li>
-    </stages>
-  </DreamersDream.DreamDef>
-  
-  <DreamersDream.DreamDef ParentName="FrighteningDream">
+    <label>Dreamt about distant danger</label>
+    <description>I had a dream in which I walked around the colony. After a few moments I realised that my head was rolling down the hill away from our home. I chased it until it stopped. After finally regaining my precious head, I looked around. Everything was burned to the ground and the only sounds were coming from strange machinery spitting out ancient mechanoids...</description>
+    <moodOffset>-5</moodOffset>
+  </DreamersDream.DreamDef><DreamersDream.DreamDef ParentName="FrighteningDream">
     <defName>KillSomeoneCloseDream</defName>
-    <stages>
-      <li>
-        <label>Dreamt about killing a close one</label>
-        <description>I killed a person close to me in my dream.</description>
-        <baseMoodEffect>-5</baseMoodEffect>
-      </li>
-    </stages>
+    <label>Dreamt about killing a close one</label>
+    <description>I killed a person close to me in my dream.</description>
+    <moodOffset>-5</moodOffset>
     <nullifyingTraits>
       <li>Bloodlust</li>
       <li>Psychopath</li>
     </nullifyingTraits>
-  </DreamersDream.DreamDef>
-  
-  <DreamersDream.DreamDef ParentName="FrighteningDream">
+  </DreamersDream.DreamDef><DreamersDream.DreamDef ParentName="FrighteningDream">
     <defName>CannibalismDream</defName>
-    <stages>
-      <li>
-        <label>Dreamt about eating humans</label>
-        <description>I was forced to eat someone in my dream. It was an awful experience...</description>
-        <baseMoodEffect>-5</baseMoodEffect>
-      </li>
-    </stages>
+    <label>Dreamt about eating humans</label>
+    <description>I was forced to eat someone in my dream. It was an awful experience...</description>
+    <moodOffset>-5</moodOffset>
     <nullifyingTraits>
       <li>Bloodlust</li>
       <li>Psychopath</li>
       <li>Cannibal</li>
     </nullifyingTraits>
-  </DreamersDream.DreamDef>
-  
-  <DreamersDream.DreamDef ParentName="FrighteningDream">
+  </DreamersDream.DreamDef><DreamersDream.DreamDef ParentName="FrighteningDream">
     <defName>NightmareDream</defName>
-    <stages>
-      <li>
-        <label>Dreamt about being chased</label>
-        <description>Something was chasing me but I couldn't run!</description>
-        <baseMoodEffect>-5</baseMoodEffect>
-      </li>
-    </stages>
-  </DreamersDream.DreamDef>
-  
-  <DreamersDream.DreamDef ParentName="FrighteningDream">
+    <label>Dreamt about being chased</label>
+    <description>Something was chasing me but I couldn't run!</description>
+    <moodOffset>-5</moodOffset>
+  </DreamersDream.DreamDef><DreamersDream.DreamDef ParentName="FrighteningDream">
     <defName>DreamZombieFight</defName>
     <nullifiedIfNotColonist>true</nullifiedIfNotColonist>
-    <stages>
-      <li>
-        <label>Dreamt about fighting zombies</label>
-        <description>Our colony had to defend against zombies using some ancient non-lethal weaponry. Why would you even use non-lethal weapons?!</description>
-        <baseMoodEffect>-5</baseMoodEffect>
-      </li>
-    </stages>
+    <label>Dreamt about fighting zombies</label>
+    <description>Our colony had to defend against zombies using some ancient non-lethal weaponry. Why would you even use non-lethal weapons?!</description>
+    <moodOffset>-5</moodOffset>
     <dreamedBy>Maru1i</dreamedBy>
-  </DreamersDream.DreamDef>
-  
-  <DreamersDream.DreamDef ParentName="FrighteningDream">
+  </DreamersDream.DreamDef><DreamersDream.DreamDef ParentName="FrighteningDream">
     <defName>HoneyDream</defName>
-    <stages>
-      <li>
-        <label>Dreamt about stealing honey</label>
-        <description>I was in some kind of magical forest. After walking a few miles I noticed a big bee hive. I was hungry, so I put my hand in it to snatch some honey but when I took it out there was no honey... only wiggling maggots.</description>
-        <baseMoodEffect>-5</baseMoodEffect>
-      </li>
-    </stages>
+    <label>Dreamt about stealing honey</label>
+    <description>I was in some kind of magical forest. After walking a few miles I noticed a big bee hive. I was hungry, so I put my hand in it to snatch some honey but when I took it out there was no honey... only wiggling maggots.</description>
+    <moodOffset>-5</moodOffset>
   </DreamersDream.DreamDef>
-
-
   <!--Disturbing -->
   <DreamersDream.DreamDef ParentName="DisturbingDream">
     <defName>DreamBanditCowboy</defName>
     <nullifiedIfNotColonist>true</nullifiedIfNotColonist>
-    <stages>
-      <li>
-        <label>Dreamt about bandit cowboy</label>
-        <description> A cowboy called us on the radio. The entire colony gathered to chat with him. Half were charmed by his outlandish tales, half felt he was sketchy. He wanted to join us, along with his giant boomalope. After a long discussion, he was refused, but he still insisted on passing through the colony. He led the boomalope through our fields and when he was in the middle of our crops, near the windmills... he released the 'lope and ran like hell. Then came the bandits. He was part of the bandits... and the boomalope exploding was the sign for the attack.</description>
-        <!--restrict to colonists -->
-        <baseMoodEffect>-3</baseMoodEffect>
-      </li>
-    </stages>
+    <label>Dreamt about bandit cowboy</label>
+    <description>A cowboy called us on the radio. The entire colony gathered to chat with him. Half were charmed by his outlandish tales, half felt he was sketchy. He wanted to join us, along with his giant boomalope. After a long discussion, he was refused, but he still insisted on passing through the colony. He led the boomalope through our fields and when he was in the middle of our crops, near the windmills... he released the 'lope and ran like hell. Then came the bandits. He was part of the bandits... and the boomalope exploding was the sign for the attack.</description>
+    <moodOffset>-3</moodOffset>
     <dreamedBy>dambuk1</dreamedBy>
-  </DreamersDream.DreamDef>
-  
-  <DreamersDream.DreamDef ParentName="DisturbingDream">
+  </DreamersDream.DreamDef><DreamersDream.DreamDef ParentName="DisturbingDream">
     <defName>PTSDDream</defName>
-    <stages>
-      <li>
-        <label>Dreamt about event from the past</label>
-        <description>I had a dream about a stressful event from my past...</description>
-        <baseMoodEffect>-3</baseMoodEffect>
-      </li>
-    </stages>
-  </DreamersDream.DreamDef>
-  
-  <DreamersDream.DreamDef ParentName="DisturbingDream">
+    <label>Dreamt about event from the past</label>
+    <description>I had a dream about a stressful event from my past...</description>
+    <moodOffset>-3</moodOffset>
+  </DreamersDream.DreamDef><DreamersDream.DreamDef ParentName="DisturbingDream">
     <defName>DreamSnake</defName>
-    <stages>
-      <li>
-        <label>Dreamt about being devoured by snake</label>
-        <description>I was slowly being devoured by a gigantic snake!</description>
-        <baseMoodEffect>-3</baseMoodEffect>
-      </li>
-    </stages>
+    <label>Dreamt about being devoured by snake</label>
+    <description>I was slowly being devoured by a gigantic snake!</description>
+    <moodOffset>-3</moodOffset>
     <dreamedBy>Djura</dreamedBy>
-  </DreamersDream.DreamDef>
-  
-  <DreamersDream.DreamDef ParentName="DisturbingDream">
+  </DreamersDream.DreamDef><DreamersDream.DreamDef ParentName="DisturbingDream">
     <defName>KillSomeoneDream</defName>
-    <stages>
-      <li>
-        <label>Dreamt about killing</label>
-        <description>I killed without mercy... But I didn't want to...</description>
-        <baseMoodEffect>-3</baseMoodEffect>
-      </li>
-    </stages>
+    <label>Dreamt about killing</label>
+    <description>I killed without mercy... But I didn't want to...</description>
+    <moodOffset>-3</moodOffset>
     <nullifyingTraits>
       <li>Bloodlust</li>
       <li>Psychopath</li>
     </nullifyingTraits>
-  </DreamersDream.DreamDef>
-  
-  <DreamersDream.DreamDef ParentName="DisturbingDream">
+  </DreamersDream.DreamDef><DreamersDream.DreamDef ParentName="DisturbingDream">
     <defName>DisturbedSleepStarvation</defName>
-    <stages>
-      <li>
-        <label>Disturbed sleep (starvation)</label>
-        <description>My growling stomach kept me awake in the night...</description>
-        <baseMoodEffect>-3</baseMoodEffect>
-      </li>
-    </stages>
+    <label>Disturbed sleep (starvation)</label>
+    <description>My growling stomach kept me awake in the night...</description>
+    <moodOffset>-3</moodOffset>
     <tags>
       <li>Starving</li>
     </tags>
-  </DreamersDream.DreamDef>
-  
-  <DreamersDream.DreamDef ParentName="DisturbingDream">
+  </DreamersDream.DreamDef><DreamersDream.DreamDef ParentName="DisturbingDream">
     <defName>HungerDream</defName>
-    <stages>
-      <li>
-        <label>Dreamt about starvation</label>
-        <description>I was starving... I begged people to help me... But they wouldn't!</description>
-        <baseMoodEffect>-3</baseMoodEffect>
-      </li>
-    </stages>
+    <label>Dreamt about starvation</label>
+    <description>I was starving... I begged people to help me... But they wouldn't!</description>
+    <moodOffset>-3</moodOffset>
     <tags>
       <li>Full</li>
     </tags>
-  </DreamersDream.DreamDef>
-  
-  <DreamersDream.DreamDef ParentName="DisturbingDream">
+  </DreamersDream.DreamDef><DreamersDream.DreamDef ParentName="DisturbingDream">
     <defName>PrisonerDream</defName>
     <nullifiedIfNotColonist>true</nullifiedIfNotColonist>
-    <stages>
-      <li>
-        <label>Dreamt about being in prison</label>
-        <description>I asked them to let me out... I was innocent...</description>
-        <baseMoodEffect>-3</baseMoodEffect>
-      </li>
-    </stages>
-  </DreamersDream.DreamDef>
-  
-  <DreamersDream.DreamDef ParentName="DisturbingDream">
+    <label>Dreamt about being in prison</label>
+    <description>I asked them to let me out... I was innocent...</description>
+    <moodOffset>-3</moodOffset>
+  </DreamersDream.DreamDef><DreamersDream.DreamDef ParentName="DisturbingDream">
     <defName>ChildhoodBadDream</defName>
-    <stages>
-      <li>
-        <label>Dreamt about childhood</label>
-        <description>I relived some of the worst moments from my childhood. <!--Put in child bio?--></description>
-        <baseMoodEffect>-3</baseMoodEffect>
-      </li>
-    </stages>
-  </DreamersDream.DreamDef>
-  
-  <DreamersDream.DreamDef ParentName="DisturbingDream">
+    <label>Dreamt about childhood</label>
+    <description>I relived some of the worst moments from my childhood.</description>
+    <!--Put in child bio?-->
+    <moodOffset>-3</moodOffset>
+  </DreamersDream.DreamDef><DreamersDream.DreamDef ParentName="DisturbingDream">
     <defName>InsectsDream</defName>
-    <stages>
-      <li>
-        <label>Dreamt about insects</label>
-        <description>They were crawling everywhere. Millions of bugs and worms were chasing me. At least I woke up the moment they got me...</description>
-        <baseMoodEffect>-3</baseMoodEffect>
-      </li>
-    </stages>
-  </DreamersDream.DreamDef>
-  
-  <DreamersDream.DreamDef ParentName="DisturbingDream">
+    <label>Dreamt about insects</label>
+    <description>They were crawling everywhere. Millions of bugs and worms were chasing me. At least I woke up the moment they got me...</description>
+    <moodOffset>-3</moodOffset>
+  </DreamersDream.DreamDef><DreamersDream.DreamDef ParentName="DisturbingDream">
     <defName>InjuryDream</defName>
     <tags>
       <li>Healthy</li>
     </tags>
-    <stages>
-      <li>
-        <label>Dreamt about injury</label>
-        <description>I had wounds all over my body. Someone hurt me pretty badly but I managed to escape.</description>
-        <baseMoodEffect>-3</baseMoodEffect>
-      </li>
-    </stages>
-  </DreamersDream.DreamDef>
-  
-  <DreamersDream.DreamDef ParentName="DisturbingDream">
+    <label>Dreamt about injury</label>
+    <description>I had wounds all over my body. Someone hurt me pretty badly but I managed to escape.</description>
+    <moodOffset>-3</moodOffset>
+  </DreamersDream.DreamDef><DreamersDream.DreamDef ParentName="DisturbingDream">
     <defName>ExclusionDrugDream</defName>
-    <stages>
-      <li>
-        <label>Dreamt about social exclusion</label>
-        <description>I was excluded from my group because I was scared to snort Yayo... Do we even have any Yayo?</description>
-        <baseMoodEffect>-3</baseMoodEffect>
-      </li>
-    </stages>
-  </DreamersDream.DreamDef>
-  
-  <DreamersDream.DreamDef ParentName="DisturbingDream">
+    <label>Dreamt about social exclusion</label>
+    <description>I was excluded from my group because I was scared to snort Yayo... Do we even have any Yayo?</description>
+    <moodOffset>-3</moodOffset>
+  </DreamersDream.DreamDef><DreamersDream.DreamDef ParentName="DisturbingDream">
     <defName>DreamZombieTrucks</defName>
-    <stages>
-      <li>
-        <label>Dreamt about zombie trucks</label>
-        <description>I was chased across an arid shrubland by zombified monster trucks that had emerged from a cave in a mountain...</description>
-        <baseMoodEffect>-3</baseMoodEffect>
-      </li>
-    </stages>
+    <label>Dreamt about zombie trucks</label>
+    <description>I was chased across an arid shrubland by zombified monster trucks that had emerged from a cave in a mountain...</description>
+    <moodOffset>-3</moodOffset>
     <dreamedBy>ManaVeil</dreamedBy>
-  </DreamersDream.DreamDef>
-  
-  <DreamersDream.DreamDef ParentName="DisturbingDream">
+  </DreamersDream.DreamDef><DreamersDream.DreamDef ParentName="DisturbingDream">
     <defName>DreamExecution</defName>
     <tags>
       <li>Prisoner</li>
     </tags>
-    <stages>
-      <li>
-        <label>Dreamt about being executed</label>
-        <description>My head rolled on the ground for a long time after being swiftly disconnected from my body...</description>
-        <baseMoodEffect>-3</baseMoodEffect>
-      </li>
-    </stages>
+    <label>Dreamt about being executed</label>
+    <description>My head rolled on the ground for a long time after being swiftly disconnected from my body...</description>
+    <moodOffset>-3</moodOffset>
     <dreamedBy>Denneisk</dreamedBy>
   </DreamersDream.DreamDef>
   <!--Unpleasent-->
   <DreamersDream.DreamDef ParentName="UnpleasantDream">
     <defName>DreamTornado</defName>
-    <stages>
-      <li>
-        <label>Dreamt about tornado</label>
-        <description>I had a dream where I was in a brick building and it got hit by a tornado. It pulled the building apart and picked me up into the air!</description>
-        <baseMoodEffect>-2</baseMoodEffect>
-      </li>
-    </stages>
+    <label>Dreamt about tornado</label>
+    <description>I had a dream where I was in a brick building and it got hit by a tornado. It pulled the building apart and picked me up into the air!</description>
+    <moodOffset>-2</moodOffset>
     <dreamedBy>Gallivant</dreamedBy>
-  </DreamersDream.DreamDef>
-  
-  <DreamersDream.DreamDef ParentName="UnpleasantDream">
+  </DreamersDream.DreamDef><DreamersDream.DreamDef ParentName="UnpleasantDream">
     <defName>NoRememberBadDream</defName>
-    <stages>
-      <li>
-        <label>Can't recall a bad dream</label>
-        <description>I dreamt about something upsetting but I don't really remember what it was...</description>
-        <baseMoodEffect>-2</baseMoodEffect>
-      </li>
-    </stages>
-  </DreamersDream.DreamDef>
-  
-  <DreamersDream.DreamDef ParentName="UnpleasantDream">
+    <label>Can't recall a bad dream</label>
+    <description>I dreamt about something upsetting but I don't really remember what it was...</description>
+    <moodOffset>-2</moodOffset>
+  </DreamersDream.DreamDef><DreamersDream.DreamDef ParentName="UnpleasantDream">
     <defName>GibberishDream</defName>
-    <stages>
-      <li>
-        <label>Dreamt about silly things</label>
-        <description>Dancing nuns, walking sofas, talking plants... I dreamt about weird things, nothing in particular but it didn't feel good.</description>
-        <baseMoodEffect>-2</baseMoodEffect>
-      </li>
-    </stages>
-  </DreamersDream.DreamDef>
-  
-  <DreamersDream.DreamDef ParentName="UnpleasantDream">
+    <label>Dreamt about silly things</label>
+    <description>Dancing nuns, walking sofas, talking plants... I dreamt about weird things, nothing in particular but it didn't feel good.</description>
+    <moodOffset>-2</moodOffset>
+  </DreamersDream.DreamDef><DreamersDream.DreamDef ParentName="UnpleasantDream">
     <defName>NakedSchoolDream</defName>
-    <stages>
-      <li>
-        <label>Dreamt about being nude</label>
-        <description>I was walking around school, when I realised that I'm wearing no clothes! I felt so embarrased when all my friends were laughing at me! ~Toast</description>
-        <baseMoodEffect>-2</baseMoodEffect>
-      </li>
-    </stages>
+    <label>Dreamt about being nude</label>
+    <description>I was walking around school, when I realised that I'm wearing no clothes! I felt so embarrased when all my friends were laughing at me! ~Toast</description>
+    <moodOffset>-2</moodOffset>
     <nullifyingTraits>
       <li>Nudist</li>
     </nullifyingTraits>
-  </DreamersDream.DreamDef>
-  
-  <DreamersDream.DreamDef ParentName="UnpleasantDream">
+  </DreamersDream.DreamDef><DreamersDream.DreamDef ParentName="UnpleasantDream">
     <defName>ExDream</defName>
-    <stages>
-      <li>
-        <label>Dreamt about my ex partner</label>
-        <description>I don't want you back in my life! Stop bothering me in my sleep!</description>
-        <baseMoodEffect>-2</baseMoodEffect>
-        <!--Can we restrict this to pawns with former partners or lovers?-->
-      </li>
-    </stages>
-  </DreamersDream.DreamDef>
-  
-  <DreamersDream.DreamDef ParentName="UnpleasantDream">
+    <label>Dreamt about my ex partner</label>
+    <description>I don't want you back in my life! Stop bothering me in my sleep!</description>
+    <moodOffset>-2</moodOffset>
+    <!--Can we restrict this to pawns with former partners or lovers?-->
+  </DreamersDream.DreamDef><DreamersDream.DreamDef ParentName="UnpleasantDream">
     <defName>NakedColonyDream</defName>
-    <stages>
-      <li>
-        <label>Dreamt about being nude</label>
-        <description>I was walking around our colony, when I realised that I'm wearing no clothes! I felt so embarrased when all the other other colonists were laughing at me!</description>
-        <baseMoodEffect>-2</baseMoodEffect>
-      </li>
-    </stages>
+    <label>Dreamt about being nude</label>
+    <description>I was walking around our colony, when I realised that I'm wearing no clothes! I felt so embarrased when all the other other colonists were laughing at me!</description>
+    <moodOffset>-2</moodOffset>
     <nullifyingTraits>
       <li>Nudist</li>
     </nullifyingTraits>
     <nullifiedIfNotColonist>true</nullifiedIfNotColonist>
-  </DreamersDream.DreamDef>
-  
-  <DreamersDream.DreamDef ParentName="UnpleasantDream">
+  </DreamersDream.DreamDef><DreamersDream.DreamDef ParentName="UnpleasantDream">
     <defName>DreamFlamingoInvasion</defName>
-    <stages>
-      <li>
-        <label>Dreamt about flamingos invasion</label>
-        <description>The world got invaded by flamingos. The flamingos had kevlar helmets, assault rifles, demonic red eyes, and they were sometimes doing drill movements.</description>
-        <baseMoodEffect>-2</baseMoodEffect>
-      </li>
-    </stages>
+    <label>Dreamt about flamingos invasion</label>
+    <description>The world got invaded by flamingos. The flamingos had kevlar helmets, assault rifles, demonic red eyes, and they were sometimes doing drill movements.</description>
+    <moodOffset>-2</moodOffset>
     <dreamedBy>CaucasianMalaysian</dreamedBy>
-  </DreamersDream.DreamDef>
-  
-  <DreamersDream.DreamDef ParentName="UnpleasantDream">
+  </DreamersDream.DreamDef><DreamersDream.DreamDef ParentName="UnpleasantDream">
     <defName>DreamMindControl</defName>
-    <stages>
-      <li>
-        <label>Dreamt about being mind controlled</label>
-        <description>People around me were getting injected with mind control drugs forcefully.</description>
-        <baseMoodEffect>-2</baseMoodEffect>
-      </li>
-    </stages>
+    <label>Dreamt about being mind controlled</label>
+    <description>People around me were getting injected with mind control drugs forcefully.</description>
+    <moodOffset>-2</moodOffset>
     <dreamedBy>Denneisk</dreamedBy>
-  </DreamersDream.DreamDef>
-  
-  <DreamersDream.DreamDef ParentName="UnpleasantDream">
+  </DreamersDream.DreamDef><DreamersDream.DreamDef ParentName="UnpleasantDream">
     <defName>DreamAnxiety</defName>
     <tags>
       <li>Stressed</li>
     </tags>
-    <stages>
-      <li>
-        <label>Disturbed sleep (anxiety)</label>
-        <description>I was stressed and I could not stop thinking. Will those worries ever end?</description>
-        <baseMoodEffect>-2</baseMoodEffect>
-      </li>
-    </stages>
+    <label>Disturbed sleep (anxiety)</label>
+    <description>I was stressed and I could not stop thinking. Will those worries ever end?</description>
+    <moodOffset>-2</moodOffset>
     <dreamedBy>Denneisk</dreamedBy>
   </DreamersDream.DreamDef>
   <!--Sleepwalks -->
@@ -594,75 +334,44 @@ This dream is very specifically about a person with a specific backstory. Not su
     <tags>
       <li>Sleepwalk</li>
     </tags>
-    <stages>
-      <li>
-        <label>Dreamt about redhead with beard</label>
-        <description>It started off at school, where I began to realize something was wrong. Everyone I saw looked like they could barely contain themselves from instantly becoming violent, and they had this look in their eyes like they had just spotted the best prey they had ever seen, but were held back by something. I remember thinking "No way, I'm out", and ran home as fast as I could. Some of it is blurry, but I remember coming across people that I knew, either friends or family, or people from the neighborhood, telling me to get home, that it's not safe. Finally I make it there, put the key in the front door, open it, and I am literally surrounded by all of those same people, only now they look like the ones at school, and there stands the redhead with the beard. Without saying a word she lunges at me and pierces my neck with her fangs. </description>
-        <!--Restrict to modern tech-->
-        <baseMoodEffect>-8</baseMoodEffect>
-      </li>
-    </stages>
+    <label>Dreamt about redhead with beard</label>
+    <description>It started off at school, where I began to realize something was wrong. Everyone I saw looked like they could barely contain themselves from instantly becoming violent, and they had this look in their eyes like they had just spotted the best prey they had ever seen, but were held back by something. I remember thinking "No way, I'm out", and ran home as fast as I could. Some of it is blurry, but I remember coming across people that I knew, either friends or family, or people from the neighborhood, telling me to get home, that it's not safe. Finally I make it there, put the key in the front door, open it, and I am literally surrounded by all of those same people, only now they look like the ones at school, and there stands the redhead with the beard. Without saying a word she lunges at me and pierces my neck with her fangs.</description>
+    <!--Restrict to modern tech-->
+    <moodOffset>-8</moodOffset>
     <dreamedBy>Rinzler0001</dreamedBy>
-  </DreamersDream.DreamDef>
-  
-  <DreamersDream.DreamDef ParentName="FrighteningDream">
+  </DreamersDream.DreamDef><DreamersDream.DreamDef ParentName="FrighteningDream">
     <defName>SleepwalkShapes</defName>
     <tags>
       <li>Sleepwalk</li>
     </tags>
-    <stages>
-      <li>
-        <label>Dreamt about abstract shapes</label>
-        <description>I saw many abstract shapes that were floating around me like planets. I thought the shapes were my family and friends. At some point a foreign shape appeared consuming my close ones and thus growing bigger. At the end it got me too... </description>
-        <baseMoodEffect>-6</baseMoodEffect>
-      </li>
-    </stages>
-  </DreamersDream.DreamDef>
-  
-  <DreamersDream.DreamDef ParentName="FrighteningDream">
+    <label>Dreamt about abstract shapes</label>
+    <description>I saw many abstract shapes that were floating around me like planets. I thought the shapes were my family and friends. At some point a foreign shape appeared consuming my close ones and thus growing bigger. At the end it got me too...</description>
+    <moodOffset>-6</moodOffset>
+  </DreamersDream.DreamDef><DreamersDream.DreamDef ParentName="FrighteningDream">
     <defName>SleepwalkSteps</defName>
     <tags>
       <li>Sleepwalk</li>
     </tags>
-    <stages>
-      <li>
-        <label>Dreamt about strange steps</label>
-        <description>I dreamt about a strange cavern with hundreds of steps. I knew some other world existed down there but it was too far for me to reach. With each step I took towards it the cavern got smaller and smaller. At some point it disappeared... and I was all alone in the dark.</description>
-        <baseMoodEffect>-4</baseMoodEffect>
-      </li>
-    </stages>
-  </DreamersDream.DreamDef>
-  
-  <DreamersDream.DreamDef ParentName="FrighteningDream">
+    <label>Dreamt about strange steps</label>
+    <description>I dreamt about a strange cavern with hundreds of steps. I knew some other world existed down there but it was too far for me to reach. With each step I took towards it the cavern got smaller and smaller. At some point it disappeared... and I was all alone in the dark.</description>
+    <moodOffset>-4</moodOffset>
+  </DreamersDream.DreamDef><DreamersDream.DreamDef ParentName="FrighteningDream">
     <defName>SleepwalkFurniture</defName>
     <tags>
       <li>Sleepwalk</li>
     </tags>
-    <stages>
-      <li>
-        <label>Dreamt about furniture</label>
-        <description>All of the furniture pieces around me started to grow and at some point they were as tall as old buildings in books. I knew they were evil... I had to fight them!</description>
-        <baseMoodEffect>-6</baseMoodEffect>
-      </li>
-    </stages>
-  </DreamersDream.DreamDef>
-  
-  <DreamersDream.DreamDef ParentName="DisturbingDream">
+    <label>Dreamt about furniture</label>
+    <description>All of the furniture pieces around me started to grow and at some point they were as tall as old buildings in books. I knew they were evil... I had to fight them!</description>
+    <moodOffset>-6</moodOffset>
+  </DreamersDream.DreamDef><DreamersDream.DreamDef ParentName="DisturbingDream">
     <defName>SleepwalkDarkness</defName>
     <tags>
       <li>Sleepwalk</li>
     </tags>
-    <stages>
-      <li>
-        <label>Dreamt about darkness</label>
-        <description>There was darkness all around me... There was light somewhere but I didn't know where, so I searched for it. Without the light there was no hope...</description>
-        <baseMoodEffect>-3</baseMoodEffect>
-      </li>
-    </stages>
+    <label>Dreamt about darkness</label>
+    <description>There was darkness all around me... There was light somewhere but I didn't know where, so I searched for it. Without the light there was no hope...</description>
+    <moodOffset>-3</moodOffset>
   </DreamersDream.DreamDef>
-
-
-
   <!-- New Dreams -->
 </Defs>
 <!--<DreamersDream.DreamDef ParentName = "BaseDream">
@@ -671,7 +380,7 @@ This dream is very specifically about a person with a specific backstory. Not su
   <li>
     <label>ulthar dream</label>
     <description>I had a dream I visited a town full of cats! </description>
-    <baseMoodEffect>6</baseMoodEffect>
+    <moodOffset>6</moodOffset>
   </li>
 </stages>
 </DreamersDream.DreamDef>
@@ -682,7 +391,7 @@ This dream is very specifically about a person with a specific backstory. Not su
     <li>
       <label>kadath dream</label>
       <description>Kadath... Chaos... Where was I...?</description>
-      <baseMoodEffect>-10</baseMoodEffect>
+      <moodOffset>-10</moodOffset>
     </li>
   </stages>
 </DreamersDream.DreamDef>
@@ -692,7 +401,7 @@ This dream is very specifically about a person with a specific backstory. Not su
     <li>
       <label>celephais dream</label>
       <description>I have visited a city full of gold and where everything is forever young!</description>
-      <baseMoodEffect>8</baseMoodEffect>
+      <moodOffset>8</moodOffset>
     </li>
   </stages>
 </DreamersDream.DreamDef>
@@ -702,7 +411,7 @@ This dream is very specifically about a person with a specific backstory. Not su
     <li>
       <label>moon dream</label>
       <description>I dreamed I've been kidnapped by disgusting creatures from the moon!</description>
-      <baseMoodEffect>-8</baseMoodEffect>
+      <moodOffset>-8</moodOffset>
     </li>
   </stages>
 </DreamersDream.DreamDef>
@@ -712,7 +421,7 @@ This dream is very specifically about a person with a specific backstory. Not su
     <li>
       <label>moon dream</label>
       <description>I visited horrible and cold place full of man eating humanlike creatures.</description>
-      <baseMoodEffect>-8</baseMoodEffect>
+      <moodOffset>-8</moodOffset>
     </li>
   </stages>
 </DreamersDream.DreamDef>
@@ -722,7 +431,7 @@ This dream is very specifically about a person with a specific backstory. Not su
     <li>
       <label>forest dream</label>
       <description>I visited horrible and cold place full of spiders and awful looking </description>
-      <baseMoodEffect>-8</baseMoodEffect>
+      <moodOffset>-8</moodOffset>
     </li>
   </stages>
 </DreamersDream.DreamDef>
@@ -732,7 +441,7 @@ This dream is very specifically about a person with a specific backstory. Not su
     <li>
       <label>Had a dream about childhood</label>
       <description>I relived some of the worst moments from my childhood.</description>
-      <baseMoodEffect>-4</baseMoodEffect>
+      <moodOffset>-4</moodOffset>
     </li>
   </stages>
   <sensitivities>

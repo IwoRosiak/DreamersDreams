@@ -21,14 +21,6 @@ namespace DreamersDream
             }
         }
 
-        public DreamDef RecurringDream
-        {
-            get
-            {
-                return this.recurringDream;
-            }
-        }
-
         public override void CompTickRare()
         {
             base.CompTickRare();
@@ -75,12 +67,11 @@ namespace DreamersDream
 
         private void TriggerDreamEffects(DreamDef dream)
         {
-            DreamBuilder.CreateNewDream(dream, ref currentDream, pawn);
-            if (currentDream != null)
+            if (dream != null)
             {
-                pawn.needs.mood.thoughts.memories.TryGainMemory(currentDream);
+                pawn.needs.mood.thoughts.memories.TryGainMemory(dream);
 
-                foreach (var dreamTag in currentDream.tags)
+                foreach (var dreamTag in dream.tags)
                 {
                     if (dreamTag.defName == "Sleepwalk" && pawn.IsSleepwalker())
                     {
@@ -125,19 +116,8 @@ namespace DreamersDream
             Log.Message("CUTOFF");
         }
 
-        public override void PostExposeData()
-        {
-            base.PostExposeData();
-
-            Scribe_Defs.Look(ref currentDream, "dreamForPawn" + pawn.ThingID);
-        }
-
         private PawnDreamTagsOddsTracker TagsOddsTracker;
 
         private PawnDreamOddsTracker OddsTracker;
-
-        private DreamDef recurringDream;
-
-        public DreamDef currentDream = new DreamDef();
     }
 }
