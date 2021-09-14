@@ -3,6 +3,7 @@
     public enum Requirements
     {
         //traits
+
         sleepwalker,
 
         //mood
@@ -26,8 +27,6 @@
         ill,
         hungry,
         full,
-
-        //hungryOrWorse,
         starving,
 
         //social status
@@ -37,11 +36,21 @@
         befriended,
         prisoner,
         killer,
-        guilty
+        guilty,
+        hasEx,
+        lonely,
         //wimp
 
         //missingLimbs
         //divorced
         //rebuffed
+
+        //colonyStatus
+
+        pirate,
+        imperialCommon,
+        outlander,
+        offworld,
+        tribal
     }
 }

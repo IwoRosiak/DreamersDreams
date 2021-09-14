@@ -102,7 +102,7 @@ namespace DreamersDream
 
             foreach (var dreamTag in DreamTracker.GetAllDreamTags)
             {
-                if (dreamTag.isSideTag)
+                if (dreamTag.chance == 0)
                 {
                     continue;
                 }
@@ -183,7 +183,7 @@ namespace DreamersDream
 
             foreach (var tag in DreamTracker.GetAllDreamTags)
             {
-                if (!tag.isSideTag)
+                if (tag.chance != 0)
                 {
                     numberOfRows++;
                 }

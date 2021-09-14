@@ -16,7 +16,7 @@ namespace DreamersDream
         {
             get
             {
-                return dreamDef.moodOffset;
+                return dreamDef.tags[0].moodOffset;
             }
         }
 

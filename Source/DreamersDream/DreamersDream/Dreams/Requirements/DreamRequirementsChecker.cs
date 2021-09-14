@@ -101,6 +101,61 @@ namespace DreamersDream
                         return false;
                     }
                     break;
+                //category of backstory
+
+                case Requirements.pirate:
+                    if (pawn.BackstoryHasThisCat("Pirate"))
+                    {
+                        return false;
+                    }
+                    break;
+
+                case Requirements.imperialCommon:
+                    if (pawn.BackstoryHasThisCat("ImperialCommon"))
+                    {
+                        return false;
+                    }
+                    break;
+
+                case Requirements.offworld:
+                    if (pawn.BackstoryHasThisCat("Offworld"))
+                    {
+                        return false;
+                    }
+                    break;
+
+                case Requirements.outlander:
+                    if (pawn.BackstoryHasThisCat("Outlander"))
+                    {
+                        return false;
+                    }
+                    break;
+
+                case Requirements.tribal:
+                    if (pawn.BackstoryHasThisCat("Tribal"))
+                    {
+                        return false;
+                    }
+                    break;
+
+                //not implemented
+                case Requirements.hungry:
+                    break;
+
+                case Requirements.married:
+                    break;
+
+                case Requirements.bonded:
+                    break;
+
+                case Requirements.befriended:
+                    break;
+
+                case Requirements.hasEx:
+                    break;
+
+                case Requirements.lonely:
+                    break;
 
                 default:
                     Log.Warning("Dreamer's Dreams: For some reason " + requirement.ToString() + " does not have implementation. If you see that please do report that on mod page :) It is just a warning, not error. It is not game breaking in any way.");
@@ -108,6 +163,27 @@ namespace DreamersDream
             }
 
             return true;
+        }
+
+        private static bool BackstoryHasThisCat(this Pawn pawn, string backstoryCat)
+        {
+            foreach (var cats in pawn.story.GetBackstory(BackstorySlot.Adulthood)?.spawnCategories)
+            {
+                if (cats == backstoryCat)
+                {
+                    return true;
+                }
+            }
+
+            foreach (var cats in pawn.story.GetBackstory(BackstorySlot.Childhood)?.spawnCategories)
+            {
+                if (cats == backstoryCat)
+                {
+                    return true;
+                }
+            }
+
+            return false;
         }
     }
 }

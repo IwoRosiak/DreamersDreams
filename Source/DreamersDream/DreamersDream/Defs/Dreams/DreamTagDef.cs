@@ -13,7 +13,7 @@ namespace DreamersDream
 
         public bool isSleepwalk = false;
 
-        public bool isSideTag = false;
+        public float moodOffset = 0;
 
         public List<Requirements> requirements = new List<Requirements>();
     }

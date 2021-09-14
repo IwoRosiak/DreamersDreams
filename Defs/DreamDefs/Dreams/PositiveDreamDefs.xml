@@ -8,9 +8,10 @@
     </nullifyingTraits>
     <label>Dreamt about tourist spaceship</label>
     <description>I was on a huge, cubical spaceship. The command center was located in a tower in the middle of the ship, deep within instead of the outer shell of the craft. The weirdest thing was that the ship captain was a 3 feet tall rat in the same white uniform I was wearing, too. Everyone respected him. One time, a canadian hockey player in his hockey uniform with the helmet on decided to visit our ship. We welcomed him aboard, and everyone was happy. While we were walking alongside the football field, we saw a tank, and the rat was controlling it. Our rat captain pointed the tank's barrel towards the hockey player, and I had to run in front of the hockey player for it to cease fire and not shoot the hockey player. The tank stopped, and then started driving away. As it started moving backwards, we were cheering. I showed the hockey player inside the ship, where there was a ton of supermarket-like shops, one of them was hanging on the ropes. After that in some time I lost the hockey player, but then he came back, thanked me for my service and left. After a while we got news that the captain was killed in an explosion. I rushed to the top of the tower with the command center, and I entered a luxury apartment at the very top. I saw through a corner that the rat was indeed killed, but not by an explosion. We mourned his death for a while, and one of the officers of equivalent rank to mine took control, and decided to stop the tour. I told him repetitevly to bring me to my colony because we were close to it, but he wouldn't listen.</description>
-    <moodOffset>3</moodOffset>
     <dreamedBy>fan</dreamedBy>
-  </DreamersDream.DreamDef><DreamersDream.DreamDef ParentName="LegendaryDream">
+  </DreamersDream.DreamDef>
+  
+  <DreamersDream.DreamDef ParentName="LegendaryDream">
     <defName>DreamHeroicDefence</defName>
     <nullifyingTraits>
       <li>Psychopath</li>
@@ -19,172 +20,191 @@
     <label>Dreamt about heroic defence</label>
     <description>I had to defend our colony against waves and waves of upcoming serpent-like monsters while also sending units to enable some form of passage. It took place on a fiery planet, lots of lava, lots of fire and the sky was red. It went on for quite a while but in the end the monsters managed to open the passage. I boarded a shuttle and headed towards a strange gate which allowed for connection of our world to the abyss. While trying to do that I met my friend who was apparently trapped on this shuttle. I freed him and went to close the gate. Somehow, I succeeded. Everyone cheered, calling me a hero, and went on to have a party. I recognized most of my friends, even old friends who I have lost contact with long ago. Everyone was dancing, music played and I got to dance with someone I love...</description>
     <!--restrict to colonists-->
-    <moodOffset>12</moodOffset>
     <dreamedBy>Smelly Fish</dreamedBy>
-  </DreamersDream.DreamDef><DreamersDream.DreamDef ParentName="LegendaryDream">
+  </DreamersDream.DreamDef>
+  
+  <DreamersDream.DreamDef ParentName="LegendaryDream">
     <defName>DreamGod</defName>
     <label>Dreamt about godhood</label>
     <description>Everything was to my command. Mountains and oceans, birds and fish, good people and bad people... Yet, I did not want to disturb that chaos. I watched and laughed.</description>
-    <moodOffset>12</moodOffset>
-  </DreamersDream.DreamDef><DreamersDream.DreamDef ParentName="LegendaryDream">
+  </DreamersDream.DreamDef>
+  
+  <DreamersDream.DreamDef ParentName="LegendaryDream">
     <defName>DreamValhalla</defName>
     <label>Dreamt about meeting ancient god</label>
     <description>I was sitting on a grassy hill surrounded by mountains full of trees and green white grass. After a while, a tall old man with round hat and staff approached me. There were two crows sitting on the staff. He said "look" and pointed to the horizon and then an old viking came up right next to me leaning on a tree with a battered shield and said to me "Grunts would be pigs if they knew what the old boar was suffering". Out of nowhere the trees and hills were set on fire. The old man looked at me and said "Valhalla is coming for you. Don't forget me."</description>
-    <moodOffset>12</moodOffset>
     <dreamedBy>SghHanzMullerSW</dreamedBy>
   </DreamersDream.DreamDef>
+  
   <!--Epic-->
   <DreamersDream.DreamDef ParentName="EpicDream">
     <defName>LucidDream</defName>
     <label>Had lucid dream</label>
     <description>I realised that I'm in the dream so I could do anything I want! If only I could do it more often...</description>
-    <moodOffset>8</moodOffset>
-  </DreamersDream.DreamDef><DreamersDream.DreamDef ParentName="EpicDream">
+  </DreamersDream.DreamDef>
+  
+  <DreamersDream.DreamDef ParentName="EpicDream">
     <defName>DreamAnimalCompetition</defName>
     <label>Dreamt about animal competition</label>
     <description>I joined a dog-sledding competition, which was a racetrack where the dogs ski around a track for several laps. I cheated by putting on my dog's uniform and entering the race as my dog (and giving my dog my clothes so he can look like me cheering him on). I went through the whole race, skiing stiffly to look like a dog skiing, but at the very end I felt guilty about cheating and bumped into a pole so I'd get second place. 7' tall Bruce Willis knew that I cheated and got back at me by standing very close to me and making me look short.</description>
-    <moodOffset>8</moodOffset>
     <!-- Change this to random animal species, maybe? -->
     <dreamedBy>Mitroll</dreamedBy>
-  </DreamersDream.DreamDef><DreamersDream.DreamDef ParentName="EpicDream">
+  </DreamersDream.DreamDef>
+  
+  <DreamersDream.DreamDef ParentName="EpicDream">
     <defName>DreamAliensFight</defName>
     <label>Dreamt about fighting with aliens</label>
     <description>I was part of an elite team, defending against the Aliens. I would love to say that my special power was a grappling hook, but alas my mind construed it as gum. The function was the same, anyhow. So there I was, zipping through the city towards one of the crashed ships. When me and my comrade got there, it opened. And I felt the most bone chilling sense of fear. I ran, and my comrades ran away. Then I stopped and instead of being on the run, I slung myself to the highest point nearby, an old construction crane. And I sat. And I watched.</description>
-    <moodOffset>8</moodOffset>
-  </DreamersDream.DreamDef><DreamersDream.DreamDef ParentName="EpicDream">
+  </DreamersDream.DreamDef>
+  
+  <DreamersDream.DreamDef ParentName="EpicDream">
     <defName>DreamFireTornado</defName>
     <label>Dreamt about fire tornado</label>
     <description>I was wandering through a jungle until I noticed a giant fire tornado. It simply stood there, not burning anything - the ground around it was burnt and barren but around it was a lush wild, rain forest. There were some locals worshipping it. They told me that it was The Element and explained the lore of Elementals. Elements are aspects of reality that humanity sees as important and symbolic - they can be as basic as "fire" or as complicated as "chaos" or "jealousy". They are simultaneously Gods, Worlds and Hive Minds of living beings - smaller elementals that might think that they act of free will. But elementals are not free - they act as the Element as a whole wills them. This tornado of fire is a high level Elemental and it needs constant worship which the locals do in shifts. If they stop, it will spread fire all around and feed on our fear of it.</description>
-    <moodOffset>8</moodOffset>
     <!-- Considering how many dreams there are that only make sense for non-tribals, this might very well only be for tribals. -->
     <dreamedBy>dambuk1</dreamedBy>
   </DreamersDream.DreamDef>
+  
   <!--Amazing-->
   <DreamersDream.DreamDef ParentName="AmazingDream">
     <defName>AnimalForestDream</defName>
     <label>Dreamt about being a racoon</label>
     <description>I was a small animal (I think it was a raccoon?) in a random windy forest. It was pretty nice even if all I did was wander around and occasionally see other creatures, and at some point I think I befriended a groundhog. I'm not too sure on how it ended but the last thing I vaguely remember was seeing buildings over a hill. ~~okoyum</description>
-    <moodOffset>6</moodOffset>
     <!-- only tribals? -->
     <nullifyingTraits>
       <li>Psychopath</li>
       <li>Bloodlust</li>
     </nullifyingTraits>
-  </DreamersDream.DreamDef><DreamersDream.DreamDef ParentName="AmazingDream">
+  </DreamersDream.DreamDef>
+  
+  <DreamersDream.DreamDef ParentName="AmazingDream">
     <defName>EverestDream</defName>
     <label>Dreamt about snow mountain</label>
     <description>From the mountaintop I could see the whole world. All the cities and forests. It was so cold though and I could barely breathe, yet I felt calm. I sat down and enjoyed the view...</description>
-    <moodOffset>6</moodOffset>
-  </DreamersDream.DreamDef><DreamersDream.DreamDef ParentName="AmazingDream">
+  </DreamersDream.DreamDef>
+  
+  <DreamersDream.DreamDef ParentName="AmazingDream">
     <defName>GodlyArtDream</defName>
     <label>Dreamt about wonders</label>
     <description>First, there was light... Then the most beautiful thing my eyes ever saw appeared before me...</description>
-    <moodOffset>6</moodOffset>
-  </DreamersDream.DreamDef><DreamersDream.DreamDef ParentName="AmazingDream">
+  </DreamersDream.DreamDef>
+  
+  <DreamersDream.DreamDef ParentName="AmazingDream">
     <defName>CharismaticSpeechDream</defName>
     <label>Dreamt about giving speech</label>
     <description>Everyone looked at me but I was not stressed. I started talking about ideals and principles of life and people listened to me with interest. Before the dream ended I received standing ovations!</description>
-    <moodOffset>6</moodOffset>
-  </DreamersDream.DreamDef><DreamersDream.DreamDef ParentName="AmazingDream">
+  </DreamersDream.DreamDef>
+  
+  <DreamersDream.DreamDef ParentName="AmazingDream">
     <defName>WorkDream</defName>
     <label>Dreamt about doing good job</label>
     <description>I was tasked to build strange shapes which looked like four triangles connected side by side. I gathered immense amounts of stone and helped little people finish the yellow construction. The little humans were so happy with my work that they decided to place their kings there after death!</description>
-    <moodOffset>6</moodOffset>
-  </DreamersDream.DreamDef><DreamersDream.DreamDef ParentName="AmazingDream">
+  </DreamersDream.DreamDef>
+  
+  <DreamersDream.DreamDef ParentName="AmazingDream">
     <defName>DreamRaceGame</defName>
     <label>Dreamt about playing racing game</label>
     <description>The archotech computer lab was cool and dark, but had a circular track around the perimeter inside. Somebody challenged me to a race, and I won!</description>
-    <moodOffset>6</moodOffset>
     <nullifyingTraits>
       <li>Psychopath</li>
     </nullifyingTraits>
     <dreamedBy>ryanizawsum</dreamedBy>
   </DreamersDream.DreamDef>
+  
   <!--Exciting-->
   <DreamersDream.DreamDef ParentName="ExcitingDream">
     <defName>HealthyDream</defName>
     <label>Dreamt about being healthy</label>
     <description>I could finally relax... No pain... No suffering.</description>
-    <moodOffset>5</moodOffset>
     <tags>
       <li>Wounded</li>
     </tags>
-  </DreamersDream.DreamDef><DreamersDream.DreamDef ParentName="ExcitingDream">
+  </DreamersDream.DreamDef>
+  
+  <DreamersDream.DreamDef ParentName="ExcitingDream">
     <defName>DreamNoodleBath</defName>
     <label>Dreamt about bathing in noodles</label>
     <description>Noodles! Noodles everywhere! The best meal in the whole universe!</description>
-    <moodOffset>5</moodOffset>
     <dreamedBy>Maru1i</dreamedBy>
-  </DreamersDream.DreamDef><DreamersDream.DreamDef ParentName="ExcitingDream">
+  </DreamersDream.DreamDef>
+  
+  <DreamersDream.DreamDef ParentName="ExcitingDream">
     <defName>AllNakedColonyDream</defName>
     <label>Dreamt about partying naked</label>
     <description>I was walking around the colony, when I realised that I'm wearing no clothes! I looked around and noticed that everyone took off their clothes as they saw me! We started to drink and dance naked.</description>
-    <moodOffset>5</moodOffset>
     <nullifyingTraits>
       <li>Psychopath</li>
     </nullifyingTraits>
     <nullifiedIfNotColonist>true</nullifiedIfNotColonist>
-  </DreamersDream.DreamDef><DreamersDream.DreamDef ParentName="ExcitingDream">
+  </DreamersDream.DreamDef>
+  
+  <DreamersDream.DreamDef ParentName="ExcitingDream">
     <defName>FlyingDream</defName>
     <label>Dreamt about flying</label>
     <description>I was flying in my dream dream! It was an amazing experience. I just wanted to keep going...</description>
-    <moodOffset>5</moodOffset>
-  </DreamersDream.DreamDef><DreamersDream.DreamDef ParentName="ExcitingDream">
+  </DreamersDream.DreamDef>
+  
+  <DreamersDream.DreamDef ParentName="ExcitingDream">
     <defName>SpoonDream</defName>
     <label>Dreamt about spoons</label>
     <description>I had a ridicoulus dream where I was drinking water using only spoons!</description>
-    <moodOffset>4</moodOffset>
   </DreamersDream.DreamDef>
   <!--Pleasent-->
   <DreamersDream.DreamDef ParentName="PleasantDream">
     <defName>DreamYoghurt</defName>
     <label>Dreamt about yoghurt</label>
     <description>I was in swimming pool park but instead of water there was yoghurt, specifically strawberry yogurt with no chunks. There was a huge bucket with yogurt in it and it splashed people with yoghurt!</description>
-    <moodOffset>2</moodOffset>
     <dreamedBy>Rift</dreamedBy>
-  </DreamersDream.DreamDef><DreamersDream.DreamDef ParentName="PleasantDream">
+  </DreamersDream.DreamDef>
+  
+  <DreamersDream.DreamDef ParentName="PleasantDream">
     <defName>ChildhoodGoodDream</defName>
     <label>Dreamt about childhood</label>
     <description>I was back in my childhood house! I've regained connection with some of my best memories.</description>
-    <moodOffset>2</moodOffset>
-  </DreamersDream.DreamDef><DreamersDream.DreamDef ParentName="PleasantDream">
+  </DreamersDream.DreamDef>
+  
+  <DreamersDream.DreamDef ParentName="PleasantDream">
     <defName>BeachDream</defName>
     <label>Dreamt about ocean beach</label>
     <description>Cold drinks and sand. Yep, I could stay there forever.</description>
-    <moodOffset>2</moodOffset>
-  </DreamersDream.DreamDef><DreamersDream.DreamDef ParentName="PleasantDream">
+  </DreamersDream.DreamDef>
+  
+  <DreamersDream.DreamDef ParentName="PleasantDream">
     <defName>NoRememberGoodDream</defName>
     <label>Can't recall a pleasant dream</label>
     <description>I had a pleasant dream but I forgot it the moment I woke up...</description>
-    <moodOffset>1</moodOffset>
-  </DreamersDream.DreamDef><DreamersDream.DreamDef ParentName="PleasantDream">
+  </DreamersDream.DreamDef>
+  
+  <DreamersDream.DreamDef ParentName="PleasantDream">
     <defName>DreamPleasentThings</defName>
     <label>Dreamt about pleasant things</label>
     <description>I don't really remember my dreams from tonight, but when I awoke I simply felt better.</description>
-    <moodOffset>2</moodOffset>
-  </DreamersDream.DreamDef><DreamersDream.DreamDef ParentName="PleasantDream">
+  </DreamersDream.DreamDef>
+  
+  <DreamersDream.DreamDef ParentName="PleasantDream">
     <defName>PizzaDream</defName>
     <label>Dreamt about pizza</label>
     <description>I dreamt I was making pizza with my friends and then having it together!</description>
-    <moodOffset>2</moodOffset>
     <nullifyingTraits>
       <li>Psychopath</li>
       <li>Cannibal</li>
     </nullifyingTraits>
-  </DreamersDream.DreamDef><DreamersDream.DreamDef ParentName="PleasantDream">
+  </DreamersDream.DreamDef>
+  
+  <DreamersDream.DreamDef ParentName="PleasantDream">
     <defName>CheeseDream</defName>
     <label>Dreamt about cheese</label>
     <description>Cheese... Cheese everywhere!</description>
-    <moodOffset>2</moodOffset>
     <nullifyingTraits>
       <li>Cannibal</li>
     </nullifyingTraits>
     <dreamedBy>Male_07</dreamedBy>
-  </DreamersDream.DreamDef><DreamersDream.DreamDef ParentName="PleasantDream">
+  </DreamersDream.DreamDef>
+  
+  <DreamersDream.DreamDef ParentName="PleasantDream">
     <defName>DreamGuitar</defName>
     <label>Dreamt about playing guitar</label>
     <description>I was playing a beautiful song on guitar in a sun room with bright light coming from above. I was alone, but it was peaceful. I've never even played guitar.</description>
-    <moodOffset>2</moodOffset>
     <dreamedBy>ryanizawsum</dreamedBy>
   </DreamersDream.DreamDef>
   <!--PSYCHO -->
@@ -192,39 +212,42 @@
     <defName>DreamMurderingRival</defName>
     <label>Dreamt about murdering rival</label>
     <description>I wish they could still be here. To see how much I'm enjoying myself now, after ending their miserable life...</description>
-    <moodOffset>8</moodOffset>
     <requiredTraits>
       <li>Bloodlust</li>
     </requiredTraits>
-  </DreamersDream.DreamDef><DreamersDream.DreamDef ParentName="AmazingDream">
+  </DreamersDream.DreamDef>
+  
+  <DreamersDream.DreamDef ParentName="AmazingDream">
     <defName>KillingEveryoneDream</defName>
     <label>Dreamt about murder spree</label>
     <description>Nothing could stop me. Murder. Everyone.</description>
-    <moodOffset>6</moodOffset>
     <requiredTraits>
       <li>Bloodlust</li>
     </requiredTraits>
-  </DreamersDream.DreamDef><DreamersDream.DreamDef ParentName="AmazingDream">
+  </DreamersDream.DreamDef>
+  
+  <DreamersDream.DreamDef ParentName="AmazingDream">
     <defName>TorturingStrangersDream</defName>
     <label>Dreamt about torturing</label>
     <description>Stranger tied up in front of me. Set of shiny and sharp tools on the table. I grabbed one of the knifes and I couldn't stop. Even when strangers body stopped quivering, I was still taking pleasure in the simple act of torture...</description>
-    <moodOffset>6</moodOffset>
     <requiredTraits>
       <li>Bloodlust</li>
     </requiredTraits>
-  </DreamersDream.DreamDef><DreamersDream.DreamDef ParentName="ExcitingDream">
+  </DreamersDream.DreamDef>
+  
+  <DreamersDream.DreamDef ParentName="ExcitingDream">
     <defName>MurderDream</defName>
     <label>Dreamt about murder</label>
     <description>Motionless body lays in front of me and I watch it. The blood pool keeps getting bigger. I don't remember why I killed this person but it feels so damn good.</description>
-    <moodOffset>5</moodOffset>
     <requiredTraits>
       <li>Bloodlust</li>
     </requiredTraits>
-  </DreamersDream.DreamDef><DreamersDream.DreamDef ParentName="PleasantDream">
+  </DreamersDream.DreamDef>
+  
+  <DreamersDream.DreamDef ParentName="PleasantDream">
     <defName>DreamFistFightt</defName>
     <label>Dreamt about fighting</label>
     <description>Breaking their bones is not enough! Let the blood spill!</description>
-    <moodOffset>2</moodOffset>
     <requiredTraits>
       <li>Bloodlust</li>
     </requiredTraits>
@@ -234,39 +257,38 @@
     <defName>EatingRivalDream</defName>
     <label>Dreamt about eating my rival</label>
     <description>I laughed while tying him over the fire pit. I laughed while heat was charring his face. I laughed while consuming his flesh...</description>
-    <moodOffset>8</moodOffset>
-    <requiredTraits>
-      <li>Cannibal</li>
-    </requiredTraits>
-  </DreamersDream.DreamDef><DreamersDream.DreamDef ParentName="AmazingDream">
-    <defName>HumanMeatFeastDream</defName>
-    <label>Dreamt about human feast</label>
-    <description>Legs, arms, eyes and brains. Cooked to perfection. I can eat my fill and no one will judge me!</description>
-    <moodOffset>6</moodOffset>
-    <requiredTraits>
-      <li>Cannibal</li>
-    </requiredTraits>
-  </DreamersDream.DreamDef><DreamersDream.DreamDef ParentName="ExcitingDream">
-    <defName>DreamEatingStranger</defName>
-    <label>Dreamt about eating someone</label>
-    <description>Eating a human being is simple. I used to think of it as a disgusting thing, but simply trying this delicacy proved me wrong!</description>
-    <moodOffset>5</moodOffset>
     <requiredTraits>
       <li>Cannibal</li>
     </requiredTraits>
   </DreamersDream.DreamDef>
-  <!--
-<DreamersDream.DreamDef ParentName="BaseDream">
+  
+  <DreamersDream.DreamDef ParentName="AmazingDream">
+    <defName>HumanMeatFeastDream</defName>
+    <label>Dreamt about human feast</label>
+    <description>Legs, arms, eyes and brains. Cooked to perfection. I can eat my fill and no one will judge me!</description>
+    <requiredTraits>
+      <li>Cannibal</li>
+    </requiredTraits>
+  </DreamersDream.DreamDef>
+  
+  <DreamersDream.DreamDef ParentName="ExcitingDream">
+    <defName>DreamEatingStranger</defName>
+    <label>Dreamt about eating someone</label>
+    <description>Eating a human being is simple. I used to think of it as a disgusting thing, but simply trying this delicacy proved me wrong!</description>
+    <requiredTraits>
+      <li>Cannibal</li>
+    </requiredTraits>
+  </DreamersDream.DreamDef><DreamersDream.DreamDef ParentName="BaseDream">
     <defName>DebugDream</defName>
     <thoughtClass>DreamersDream.Thought_Dream</thoughtClass>
     <description>description_generic</description>
     <label>Generic thought!</label>
-    <moodOffset>5</moodOffset>
     <tags>
       <li>Debug</li>
+      <li>ImperialCommon</li>
     </tags>
   </DreamersDream.DreamDef>
-   New Dreams  -->
+  <!--  New Dreams  -->
 </Defs>
 <!--     I woke up at a dark neon hotel, and was greeted by staff right off the bed. The hotel had only mixtures of dark blue and black in it. The hotel was located on a small island in the middle of nowhere. As i continued my day in the hotel, i noticed that the staff was disrespectful to it's visitors in actions, but provided a lot of words for their actions. Soon i realised that nobody was saying anything about that because all of the hotel's guests were introverts, and they kept being abused. Soon, as i walked outside, the hotel staff greeted me, and took above. They said that there was another, much nicer island right next to us, it was a white hotel on a white island. They took me across the sky, and explained that if you never complain about some things, you will never get anyone to reform. They said that if i said a word about their behaviour, they would let me on the white island, where a much nicer hotel is. Then they took me to their ritual room, and said that the first cycle has finished (Cycle of guests not giving any attention to the staff, i suppose), and then they pressed a blue button, from where i transcended somewhere.          <DreamersDream.DreamDef Name="DivineDream" Abstract="True" ParentName = "BaseDream">
 <quality>Divine</quality>
@@ -277,7 +299,7 @@
     <li>
       <label>Had a miraculus healing dream</label>
       <description>I dreamt that my wounds closed up and when I woke up I felt so much better!</description>
-      <moodOffset>2</moodOffset>
+      
     </li>
   </stages>
 </DreamersDream.DreamDef>-->

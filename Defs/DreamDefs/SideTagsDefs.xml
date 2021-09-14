@@ -4,9 +4,7 @@
 
   <DreamersDream.DreamTagDef>
     <defName>Sleepwalk</defName>
-    <isSideTag>true</isSideTag>
     <isSleepwalk>true</isSleepwalk>
-    <chance>0</chance>
     <requirements>
       <li>sleepwalker</li>
     </requirements>
@@ -15,8 +13,6 @@
   <!--MIND STATE-->
   <DreamersDream.DreamTagDef>
     <defName>Happy</defName>
-    <isSideTag>true</isSideTag>
-    <chance>0</chance>
     <requirements>
       <li>happy</li>
     </requirements>
@@ -24,8 +20,6 @@
 
   <DreamersDream.DreamTagDef>
     <defName>Stressed</defName>
-    <isSideTag>true</isSideTag>
-    <chance>0</chance>
     <requirements>
       <li>stressed</li>
     </requirements>
@@ -33,8 +27,6 @@
   <!-- BODY STATE -->
   <DreamersDream.DreamTagDef>
     <defName>Full</defName>
-    <isSideTag>true</isSideTag>
-    <chance>0</chance>
     <requirements>
       <li>full</li>
     </requirements>
@@ -42,8 +34,6 @@
 
   <DreamersDream.DreamTagDef>
     <defName>Starving</defName>
-    <isSideTag>true</isSideTag>
-    <chance>0</chance>
     <requirements>
       <li>starving</li>
     </requirements>
@@ -51,8 +41,6 @@
 
   <DreamersDream.DreamTagDef>
     <defName>Wounded</defName>
-    <isSideTag>true</isSideTag>
-    <chance>0</chance>
     <requirements>
       <li>wounded</li>
     </requirements>
@@ -60,8 +48,6 @@
 
   <DreamersDream.DreamTagDef>
     <defName>Healthy</defName>
-    <isSideTag>true</isSideTag>
-    <chance>0</chance>
     <requirements>
       <li>healthy</li>
     </requirements>
@@ -70,8 +56,6 @@
   <!-- SOCIAL STATE -->
   <DreamersDream.DreamTagDef>
     <defName>Prisoner</defName>
-    <isSideTag>true</isSideTag>
-    <chance>0</chance>
     <requirements>
       <li>prisoner</li>
     </requirements>
@@ -79,8 +63,6 @@
 
   <DreamersDream.DreamTagDef>
     <defName>Married</defName>
-    <isSideTag>true</isSideTag>
-    <chance>0</chance>
     <requirements>
       <li>married</li>
     </requirements>
@@ -88,8 +70,6 @@
 
   <DreamersDream.DreamTagDef>
     <defName>Bonded</defName>
-    <isSideTag>true</isSideTag>
-    <chance>0</chance>
     <requirements>
       <li>bonded</li>
     </requirements>
@@ -97,25 +77,22 @@
 
   <DreamersDream.DreamTagDef>
     <defName>Befriended</defName>
-    <isSideTag>true</isSideTag>
-    <chance>0</chance>
     <requirements>
       <li>befriended</li>
     </requirements>
   </DreamersDream.DreamTagDef>
-
-  <!-- SPECIAL
+  
   <DreamersDream.DreamTagDef>
-    <defName>Divine</defName>
-    <label>divine</label>
-    <isSpecial>true</isSpecial>
-    <chance>0</chance>
+    <defName>Tribal</defName>
+    <requirements>
+      <li>tribal</li>
+    </requirements>
   </DreamersDream.DreamTagDef>
-
+  
   <DreamersDream.DreamTagDef>
-    <defName>Mystical</defName>
-    <label>mystical</label>
-    <isSpecial>true</isSpecial>
-    <chance>0</chance>
-  </DreamersDream.DreamTagDef>-->
+    <defName>ImperialCommon</defName>
+    <requirements>
+      <li>imperialCommon</li>
+    </requirements>
+  </DreamersDream.DreamTagDef>
 </Defs>
