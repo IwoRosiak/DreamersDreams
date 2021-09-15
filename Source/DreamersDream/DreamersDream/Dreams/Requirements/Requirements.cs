@@ -36,6 +36,7 @@
 
     public enum MoodStatus
     {
+        none,
         happy,
         content,
         neutral,

@@ -229,18 +229,18 @@ This dream is very specifically about a person with a specific backstory. Not su
     <defName>DisturbedSleepStarvation</defName>
     <label>Disturbed sleep (starvation)</label>
     <description>My growling stomach kept me awake in the night...</description>
-    <tags>
-      <li>Starving</li>
-    </tags>
+    <requiredHealth>
+      <li>starving</li>
+    </requiredHealth>
   </DreamersDream.DreamDef>
   
   <DreamersDream.DreamDef ParentName="DisturbingDream">
     <defName>HungerDream</defName>
     <label>Dreamt about starvation</label>
     <description>I was starving... I begged people to help me... But they wouldn't!</description>
-    <tags>
-      <li>Full</li>
-    </tags>
+    <requiredHealth>
+      <li>fed</li>
+    </requiredHealth>
   </DreamersDream.DreamDef>
   
   <DreamersDream.DreamDef ParentName="DisturbingDream">
@@ -265,9 +265,9 @@ This dream is very specifically about a person with a specific backstory. Not su
   
   <DreamersDream.DreamDef ParentName="DisturbingDream">
     <defName>InjuryDream</defName>
-    <tags>
-      <li>Healthy</li>
-    </tags>
+    <requiredHealth>
+      <li>healthy</li>
+    </requiredHealth>
     <label>Dreamt about injury</label>
     <description>I had wounds all over my body. Someone hurt me pretty badly but I managed to escape.</description>
   </DreamersDream.DreamDef>
@@ -287,9 +287,9 @@ This dream is very specifically about a person with a specific backstory. Not su
   
   <DreamersDream.DreamDef ParentName="DisturbingDream">
     <defName>DreamExecution</defName>
-    <tags>
-      <li>Prisoner</li>
-    </tags>
+    <requiredOneOfStanding>
+      <li>prisoner</li>
+    </requiredOneOfStanding>
     <label>Dreamt about being executed</label>
     <description>My head rolled on the ground for a long time after being swiftly disconnected from my body...</description>
     <dreamedBy>Denneisk</dreamedBy>
@@ -356,19 +356,21 @@ This dream is very specifically about a person with a specific backstory. Not su
   
   <DreamersDream.DreamDef ParentName="UnpleasantDream">
     <defName>DreamAnxiety</defName>
-    <tags>
-      <li>Stressed</li>
-    </tags>
+    <maxMood>stressed</maxMood>
     <label>Disturbed sleep (anxiety)</label>
     <description>I was stressed and I could not stop thinking. Will those worries ever end?</description>
     <dreamedBy>Denneisk</dreamedBy>
   </DreamersDream.DreamDef>
+  
   <!--Sleepwalks -->
   <DreamersDream.DreamDef ParentName="TerrorisingDream">
     <defName>SleepwalkRedheadWithBeard</defName>
     <tags>
       <li>Sleepwalk</li>
     </tags>
+    <requiredTraits>
+      <li>Sleepwalker</li>
+    </requiredTraits>
     <label>Dreamt about redhead with beard</label>
     <description>It started off at school, where I began to realize something was wrong. Everyone I saw looked like they could barely contain themselves from instantly becoming violent, and they had this look in their eyes like they had just spotted the best prey they had ever seen, but were held back by something. I remember thinking "No way, I'm out", and ran home as fast as I could. Some of it is blurry, but I remember coming across people that I knew, either friends or family, or people from the neighborhood, telling me to get home, that it's not safe. Finally I make it there, put the key in the front door, open it, and I am literally surrounded by all of those same people, only now they look like the ones at school, and there stands the redhead with the beard. Without saying a word she lunges at me and pierces my neck with her fangs.</description>
     <!--Restrict to modern tech-->
@@ -380,6 +382,9 @@ This dream is very specifically about a person with a specific backstory. Not su
     <tags>
       <li>Sleepwalk</li>
     </tags>
+    <requiredTraits>
+      <li>Sleepwalker</li>
+    </requiredTraits>
     <label>Dreamt about abstract shapes</label>
     <description>I saw many abstract shapes that were floating around me like planets. I thought the shapes were my family and friends. At some point a foreign shape appeared consuming my close ones and thus growing bigger. At the end it got me too...</description>
   </DreamersDream.DreamDef>
@@ -389,6 +394,9 @@ This dream is very specifically about a person with a specific backstory. Not su
     <tags>
       <li>Sleepwalk</li>
     </tags>
+    <requiredTraits>
+      <li>Sleepwalker</li>
+    </requiredTraits>
     <label>Dreamt about strange steps</label>
     <description>I dreamt about a strange cavern with hundreds of steps. I knew some other world existed down there but it was too far for me to reach. With each step I took towards it the cavern got smaller and smaller. At some point it disappeared... and I was all alone in the dark.</description>
   </DreamersDream.DreamDef>
@@ -398,6 +406,9 @@ This dream is very specifically about a person with a specific backstory. Not su
     <tags>
       <li>Sleepwalk</li>
     </tags>
+    <requiredTraits>
+      <li>Sleepwalker</li>
+    </requiredTraits>
     <label>Dreamt about furniture</label>
     <description>All of the furniture pieces around me started to grow and at some point they were as tall as old buildings in books. I knew they were evil... I had to fight them!</description>
   </DreamersDream.DreamDef>
@@ -407,6 +418,9 @@ This dream is very specifically about a person with a specific backstory. Not su
     <tags>
       <li>Sleepwalk</li>
     </tags>
+    <requiredTraits>
+      <li>Sleepwalker</li>
+    </requiredTraits>
     <label>Dreamt about darkness</label>
     <description>There was darkness all around me... There was light somewhere but I didn't know where, so I searched for it. Without the light there was no hope...</description>
   </DreamersDream.DreamDef>

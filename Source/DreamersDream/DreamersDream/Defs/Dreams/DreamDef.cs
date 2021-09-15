@@ -11,16 +11,20 @@ namespace DreamersDream
         public string dreamedBy = "";
 
         public List<BackstoryCategory> requiredBackstory = new List<BackstoryCategory>();
+        public List<BackstoryCategory> requiredOneOfBackstory = new List<BackstoryCategory>();
         public List<BackstoryCategory> conflictingBackstory = new List<BackstoryCategory>();
 
-        public List<StandingStatus> requiredStandingStatus = new List<StandingStatus>();
-        public List<StandingStatus> conflictingStandingStatus = new List<StandingStatus>();
+        public List<StandingStatus> requiredStanding = new List<StandingStatus>();
+        public List<StandingStatus> requiredOneOfStanding = new List<StandingStatus>();
+        public List<StandingStatus> conflictingStanding = new List<StandingStatus>();
 
-        public List<HealthStatus> requiredHealthStatus = new List<HealthStatus>();
-        public List<HealthStatus> conflictingHealthStatus = new List<HealthStatus>();
+        public List<HealthStatus> requiredHealth = new List<HealthStatus>();
+        public List<HealthStatus> requiredOneOfHealth = new List<HealthStatus>();
+        public List<HealthStatus> conflictingHealth = new List<HealthStatus>();
 
-        public List<SocialStatus> requiredSocialStatus = new List<SocialStatus>();
-        public List<SocialStatus> conflictingSocialStatus = new List<SocialStatus>();
+        public List<SocialStatus> requiredSocial = new List<SocialStatus>();
+        public List<SocialStatus> requiredOneOfSocial = new List<SocialStatus>();
+        public List<SocialStatus> conflictingSocial = new List<SocialStatus>();
 
         public MoodStatus minMood;
         public MoodStatus maxMood;

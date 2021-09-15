@@ -201,6 +201,10 @@ namespace DreamersDream
                     moodValue = pawn.mindState.mentalBreaker.BreakThresholdExtreme;
                     break;
 
+                case MoodStatus.none:
+                    moodValue = 1f;
+                    break;
+
                 default:
                     break;
             }
@@ -234,6 +238,10 @@ namespace DreamersDream
                     moodValue = 0;
                     break;
 
+                case MoodStatus.none:
+                    moodValue = 0;
+                    break;
+
                 default:
                     break;
             }
@@ -254,6 +262,8 @@ namespace DreamersDream
 
             if (minMood > currentMood || maxMood < currentMood)
             {
+                //Log.Message("Min mood " + moodMin.ToString() + " max mood" + moodMax.ToString());
+                //Log.Message("Min mood " + minMood + " current mood " + currentMood + " max mood " + maxMood);
                 flag = false;
             }
 
@@ -269,6 +279,7 @@ namespace DreamersDream
                 if (!req.CheckBackstory(pawn, true))
                 {
                     flag = false;
+                    //Log.Message("21");
                 }
             }
             foreach (var req in dream.requiredBackstory)
@@ -276,56 +287,96 @@ namespace DreamersDream
                 if (!req.CheckBackstory(pawn, false))
                 {
                     flag = false;
+                    //Log.Message("22");
+                }
+            }
+            foreach (var req in dream.requiredOneOfBackstory)
+            {
+                if (req.CheckBackstory(pawn, false))
+                {
+                    break;
+                    //Log.Message("23");
                 }
             }
             //standing
-            foreach (var req in dream.conflictingStandingStatus)
+            foreach (var req in dream.conflictingStanding)
             {
                 if (!req.CheckStandingStatus(pawn, true))
                 {
                     flag = false;
+                    //Log.Message("31");
                 }
             }
-            foreach (var req in dream.requiredStandingStatus)
+            foreach (var req in dream.requiredStanding)
             {
                 if (!req.CheckStandingStatus(pawn, false))
                 {
                     flag = false;
+                    //Log.Message("32");
+                }
+            }
+            foreach (var req in dream.requiredOneOfStanding)
+            {
+                if (req.CheckStandingStatus(pawn, false))
+                {
+                    break;
+                    //Log.Message("33");
                 }
             }
             //health
-            foreach (var req in dream.conflictingHealthStatus)
+            foreach (var req in dream.conflictingHealth)
             {
                 if (!req.CheckHealthStatus(pawn, true))
                 {
                     flag = false;
+                    //Log.Message("41");
                 }
             }
-            foreach (var req in dream.requiredHealthStatus)
+            foreach (var req in dream.requiredHealth)
             {
                 if (!req.CheckHealthStatus(pawn, false))
                 {
                     flag = false;
+                    //Log.Message("42");
+                }
+            }
+            foreach (var req in dream.requiredOneOfHealth)
+            {
+                if (req.CheckHealthStatus(pawn, false))
+                {
+                    //Log.Message("43");
+                    break;
                 }
             }
             //social
-            foreach (var req in dream.conflictingSocialStatus)
+            foreach (var req in dream.conflictingSocial)
             {
                 if (!req.CheckSocialStatus(pawn, true))
                 {
                     flag = false;
+                    //Log.Message("51");
                 }
             }
-            foreach (var req in dream.conflictingSocialStatus)
+            foreach (var req in dream.requiredSocial)
             {
                 if (!req.CheckSocialStatus(pawn, false))
                 {
                     flag = false;
+                    //Log.Message("52");
+                }
+            }
+            foreach (var req in dream.requiredOneOfSocial)
+            {
+                if (req.CheckSocialStatus(pawn, false))
+                {
+                    //Log.Message("53");
+                    break;
                 }
             }
 
             if (!CheckMoodStatus(dream.minMood, dream.maxMood, pawn))
             {
+                //Log.Message("6");
                 flag = false;
             }
             return flag;

@@ -36,6 +36,7 @@ namespace DreamersDream
                 if (pawn.ShouldSleepwalkNow())
                 {
                     ApplyDreamOfSpecificTag(DreamTagDefOf.Sleepwalk);
+                    pawn.mindState.mentalStateHandler.TryStartMentalState(pawn.ChooseSleepwalkState(), null, true, false, null, false);
                 }
                 else
                 {
@@ -70,14 +71,6 @@ namespace DreamersDream
             if (dream != null)
             {
                 pawn.needs.mood.thoughts.memories.TryGainMemory(dream);
-
-                foreach (var dreamTag in dream.tags)
-                {
-                    if (dreamTag.defName == "Sleepwalk" && pawn.IsSleepwalker())
-                    {
-                        pawn.mindState.mentalStateHandler.TryStartMentalState(pawn.ChooseSleepwalkState(), null, true, false, null, false);
-                    }
-                }
             }
             else
             {

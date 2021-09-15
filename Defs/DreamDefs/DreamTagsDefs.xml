@@ -83,6 +83,13 @@
     <chance>500</chance>
   </DreamersDream.DreamTagDef>
   
+  <DreamersDream.DreamTagDef>
+    <defName>Sleepwalk</defName>
+    <label>sleepwalk</label>
+    <isSpecial>false</isSpecial>
+    <chance>0</chance>
+  </DreamersDream.DreamTagDef>
+  
     <DreamersDream.DreamTagDef>
     <defName>Debug</defName>
     <label>debug</label>
