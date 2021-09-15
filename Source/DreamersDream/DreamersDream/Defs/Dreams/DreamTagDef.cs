@@ -1,5 +1,4 @@
 ﻿using RimWorld;
-using System.Collections.Generic;
 using Verse;
 
 namespace DreamersDream
@@ -15,6 +14,6 @@ namespace DreamersDream
 
         public float moodOffset = 0;
 
-        public List<Requirements> requirements = new List<Requirements>();
+        //public List<Requirements> requirements = new List<Requirements>();
     }
 }

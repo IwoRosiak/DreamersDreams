@@ -2,51 +2,50 @@
 {
     public enum Requirements
     {
-        //traits
-
         sleepwalker,
+    }
 
-        //mood
+    public enum StandingStatus
+    {
+        prisoner,
+        colonist,
+        guest,
+        slave
+    }
 
-        happy,
-        contentOrMore,
-        neutralOrMore,
-        stressedOrMore,
-        stressed,
-
-        //onEdge,
-        aboutToBreak,
-
-        //state
-
+    public enum HealthStatus
+    {
         wounded,
-
-        //heavilyWounded,
         healthy,
-
         ill,
         hungry,
-        full,
-        starving,
+        fed,
+        starving
+    }
 
-        //social status
-
+    public enum SocialStatus
+    {
         married,
         bonded,
         befriended,
-        prisoner,
         killer,
         guilty,
         hasEx,
-        lonely,
-        //wimp
+        lonely
+    }
 
-        //missingLimbs
-        //divorced
-        //rebuffed
+    public enum MoodStatus
+    {
+        happy,
+        content,
+        neutral,
+        stressed,
+        onEdge,
+        aboutToBreak
+    }
 
-        //colonyStatus
-
+    public enum BackstoryCategory
+    {
         pirate,
         imperialCommon,
         outlander,
