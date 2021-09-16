@@ -90,13 +90,13 @@
     <chance>0</chance>
   </DreamersDream.DreamTagDef>
   
-    <DreamersDream.DreamTagDef>
+  <!-- <DreamersDream.DreamTagDef>
     <defName>Debug</defName>
     <label>debug</label>
     <isSpecial>false</isSpecial>
       <moodOffset>-5</moodOffset>
     <chance>99999</chance>
-    </DreamersDream.DreamTagDef><!--
+    </DreamersDream.DreamTagDef>
 SPECIAL 
   <DreamersDream.DreamTagDef>
     <defName>Lucid</defName>

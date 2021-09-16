@@ -53,10 +53,200 @@ namespace DreamersDream
             {
                 StringBuilder debugInfo = new StringBuilder();
                 debugInfo.AppendLine("");
+                debugInfo.AppendLine("");
                 debugInfo.AppendLine("Primary tag: " + dreamDef.tags[0]);
+                debugInfo.AppendLine("Base chance: " + dreamDef.CalculateChanceFor(pawn));
+                //debugInfo.AppendLine("Relative chance: " + relativeChance);
+                debugInfo.AppendLine(RequirementsInString());
+
                 return debugInfo.ToString();
             }
             return "";
         }
+
+        public string RequirementsInString()
+        {
+            StringBuilder debugInfo = new StringBuilder();
+            //traits
+            if (!dreamDef.nullifyingTraits.NullOrEmpty())
+            {
+                debugInfo.AppendInNewLine("Conflicting traits: ");
+                foreach (var req in dreamDef.nullifyingTraits)
+                {
+                    if (dreamDef.nullifyingTraits[0] == req)
+                    {
+                        debugInfo.Append(req.ToString().ToLower());
+                    }
+                    else debugInfo.AppendWithComma(req.ToString().ToLower());
+                }
+            }
+            if (!dreamDef.requiredTraits.NullOrEmpty())
+            {
+                debugInfo.AppendInNewLine("Required traits: ");
+                foreach (var req in dreamDef.requiredTraits)
+                {
+                    if (dreamDef.requiredTraits[0] == req)
+                    {
+                        debugInfo.Append(req.ToString().ToLower());
+                    }
+                    else debugInfo.AppendWithComma(req.ToString().ToLower());
+                }
+            }
+
+            //backstory
+            if (!dreamDef.conflictingBackstory.NullOrEmpty())
+            {
+                debugInfo.AppendInNewLine("Conflicting backstory tags: ");
+                foreach (var req in dreamDef.conflictingBackstory)
+                {
+                    if (dreamDef.conflictingBackstory[0] == req)
+                    {
+                        debugInfo.Append(req.ToString().ToLower());
+                    }
+                    else debugInfo.AppendWithComma(req.ToString().ToLower());
+                }
+            }
+            if (!dreamDef.requiredBackstory.NullOrEmpty())
+            {
+                debugInfo.AppendInNewLine("Required backstory tags: ");
+                foreach (var req in dreamDef.requiredBackstory)
+                {
+                    if (dreamDef.requiredBackstory[0] == req)
+                    {
+                        debugInfo.Append(req.ToString().ToLower());
+                    }
+                    else debugInfo.AppendWithComma(req.ToString().ToLower());
+                }
+            }
+            if (!dreamDef.requiredOneOfBackstory.NullOrEmpty())
+            {
+                debugInfo.AppendInNewLine("Required one of backstory tags: ");
+                foreach (var req in dreamDef.requiredOneOfBackstory)
+                {
+                    if (dreamDef.requiredOneOfBackstory[0] == req)
+                    {
+                        debugInfo.Append(req.ToString().ToLower());
+                    }
+                    else debugInfo.AppendWithComma(req.ToString().ToLower());
+                }
+            }
+            //social
+            if (!dreamDef.conflictingSocial.NullOrEmpty())
+            {
+                debugInfo.AppendInNewLine("Conflicting social tags: ");
+                foreach (var req in dreamDef.conflictingSocial)
+                {
+                    if (dreamDef.conflictingSocial[0] == req)
+                    {
+                        debugInfo.Append(req.ToString().ToLower());
+                    }
+                    else debugInfo.AppendWithComma(req.ToString().ToLower());
+                }
+            }
+            if (!dreamDef.requiredSocial.NullOrEmpty())
+            {
+                debugInfo.AppendInNewLine("Required social tags: ");
+                foreach (var req in dreamDef.requiredSocial)
+                {
+                    if (dreamDef.requiredSocial[0] == req)
+                    {
+                        debugInfo.Append(req.ToString().ToLower());
+                    }
+                    else debugInfo.AppendWithComma(req.ToString().ToLower());
+                }
+            }
+            if (!dreamDef.requiredOneOfBackstory.NullOrEmpty())
+            {
+                debugInfo.AppendInNewLine("Required one of social tags: ");
+                foreach (var req in dreamDef.requiredOneOfBackstory)
+                {
+                    if (dreamDef.requiredOneOfBackstory[0] == req)
+                    {
+                        debugInfo.Append(req.ToString().ToLower());
+                    }
+                    else debugInfo.AppendWithComma(req.ToString().ToLower());
+                }
+            }
+            //health
+            if (!dreamDef.conflictingHealth.NullOrEmpty())
+            {
+                debugInfo.AppendInNewLine("Conflicting health tags: ");
+                foreach (var req in dreamDef.conflictingHealth)
+                {
+                    if (dreamDef.conflictingHealth[0] == req)
+                    {
+                        debugInfo.Append(req.ToString().ToLower());
+                    }
+                    else debugInfo.AppendWithComma(req.ToString().ToLower());
+                }
+            }
+            if (!dreamDef.requiredHealth.NullOrEmpty())
+            {
+                debugInfo.AppendInNewLine("Required health tags: ");
+                foreach (var req in dreamDef.requiredHealth)
+                {
+                    if (dreamDef.requiredHealth[0] == req)
+                    {
+                        debugInfo.Append(req.ToString().ToLower());
+                    }
+                    else debugInfo.AppendWithComma(req.ToString().ToLower());
+                }
+            }
+            if (!dreamDef.requiredOneOfHealth.NullOrEmpty())
+            {
+                debugInfo.AppendInNewLine("Required one of health tags: ");
+                foreach (var req in dreamDef.requiredOneOfHealth)
+                {
+                    if (dreamDef.requiredOneOfHealth[0] == req)
+                    {
+                        debugInfo.Append(req.ToString().ToLower());
+                    }
+                    else debugInfo.AppendWithComma(req.ToString().ToLower());
+                }
+            }
+            //standing
+            if (!dreamDef.conflictingStanding.NullOrEmpty())
+            {
+                debugInfo.AppendInNewLine("Conflicting standing tags: ");
+                foreach (var req in dreamDef.conflictingStanding)
+                {
+                    if (dreamDef.conflictingStanding[0] == req)
+                    {
+                        debugInfo.Append(req.ToString().ToLower());
+                    }
+                    else debugInfo.AppendWithComma(req.ToString().ToLower());
+                }
+            }
+            if (!dreamDef.requiredStanding.NullOrEmpty())
+            {
+                debugInfo.AppendInNewLine("Required standing tags: ");
+                foreach (var req in dreamDef.requiredStanding)
+                {
+                    if (dreamDef.requiredStanding[0] == req)
+                    {
+                        debugInfo.Append(req.ToString().ToLower());
+                    }
+                    else debugInfo.AppendWithComma(req.ToString().ToLower());
+                }
+            }
+            if (!dreamDef.requiredOneOfStanding.NullOrEmpty())
+            {
+                debugInfo.AppendInNewLine("Required one of standing tags: ");
+                foreach (var req in dreamDef.requiredOneOfStanding)
+                {
+                    if (dreamDef.requiredOneOfStanding[0] == req)
+                    {
+                        debugInfo.Append(req.ToString().ToLower());
+                    }
+                    else debugInfo.AppendWithComma(req.ToString().ToLower());
+                }
+            }
+            //mood
+            debugInfo.AppendInNewLine("Minimum mood: " + dreamDef.minMood.ToString());
+            debugInfo.AppendInNewLine("Maximum mood: " + dreamDef.maxMood.ToString());
+            return debugInfo.ToString();
+        }
+
+        // public float relativeChance;
     }
 }
