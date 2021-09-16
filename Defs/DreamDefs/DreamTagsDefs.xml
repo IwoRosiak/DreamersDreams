@@ -94,7 +94,8 @@
     <defName>Debug</defName>
     <label>debug</label>
     <isSpecial>false</isSpecial>
-    <chance>0</chance>
+      <moodOffset>-5</moodOffset>
+    <chance>99999</chance>
     </DreamersDream.DreamTagDef><!--
 SPECIAL 
   <DreamersDream.DreamTagDef>

@@ -1,4 +1,6 @@
 ﻿using RimWorld;
+using System.Text;
+using Verse;
 
 namespace DreamersDream
 {
@@ -32,7 +34,7 @@ namespace DreamersDream
         {
             get
             {
-                return def.description + AppendDreamAuthor();
+                return def.description.TranslateSimple() + AppendDreamAuthor() + AppendDebugInfo();
             }
         }
 
@@ -41,6 +43,18 @@ namespace DreamersDream
             if (dreamDef.dreamedBy != "")
             {
                 return " dreamed by " + dreamDef.dreamedBy;
+            }
+            return "";
+        }
+
+        public string AppendDebugInfo()
+        {
+            if (DebugSettings.godMode)
+            {
+                StringBuilder debugInfo = new StringBuilder();
+                debugInfo.AppendLine("");
+                debugInfo.AppendLine("Primary tag: " + dreamDef.tags[0]);
+                return debugInfo.ToString();
             }
             return "";
         }
