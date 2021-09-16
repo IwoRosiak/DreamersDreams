@@ -283,7 +283,7 @@
   <!-- DEBUG -->
   <DreamersDream.DreamDef ParentName="BaseDream">
     <defName>DebugDream</defName>
-    <description>Hey!</description>
+    <description><![CDATA[Entering <color=#32993d>dreamworld</color>...]]></description>
     <label>Generic thought!</label>
     <tags>
       <li>Debug</li>

@@ -34,7 +34,7 @@ namespace DreamersDream
         {
             get
             {
-                return def.description.TranslateSimple() + AppendDreamAuthor() + AppendDebugInfo();
+                return def.description + AppendDreamAuthor() + AppendDebugInfo();
             }
         }
 
