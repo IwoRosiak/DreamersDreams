@@ -1,10 +1,5 @@
 ﻿namespace DreamersDream
 {
-    public enum Requirements
-    {
-        sleepwalker,
-    }
-
     public enum StandingStatus
     {
         prisoner,
@@ -15,12 +10,18 @@
 
     public enum HealthStatus
     {
+        young,
+        old,
+        male,
+        female,
         wounded,
         healthy,
         ill,
         hungry,
         fed,
-        starving
+        starving,
+        disabled,
+        reachedSkillCap
     }
 
     public enum SocialStatus
@@ -31,7 +32,14 @@
         killer,
         guilty,
         hasEx,
-        lonely
+        rejected,
+        aloneMap,
+        aloneWorld,
+        cheatedOn,
+        brokenUpWith,
+        divorced,
+        insulted,
+        hadLovin
     }
 
     public enum MoodStatus

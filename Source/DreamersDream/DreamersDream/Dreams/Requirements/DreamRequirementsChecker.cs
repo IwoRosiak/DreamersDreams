@@ -1,4 +1,5 @@
 ﻿using RimWorld;
+using System.Collections.Generic;
 using Verse;
 
 namespace DreamersDream
@@ -117,6 +118,49 @@ namespace DreamersDream
                     }
                     break;
 
+                case HealthStatus.young:
+                    if (pawn.ageTracker.AgeBiologicalYears > 30)
+                    {
+                        flag = false;
+                    }
+                    break;
+
+                case HealthStatus.old:
+                    if (pawn.ageTracker.AgeBiologicalYears < 55)
+                    {
+                        flag = false;
+                    }
+                    break;
+
+                case HealthStatus.male:
+                    if (pawn.gender != Gender.Male)
+                    {
+                        flag = false;
+                    }
+                    break;
+
+                case HealthStatus.female:
+                    if (pawn.gender != Gender.Female)
+                    {
+                        flag = false;
+                    }
+                    break;
+
+                case HealthStatus.disabled:
+                    if (!CheckIfPartsAreMissing(pawn))
+                    {
+                        flag = false;
+                    }
+                    break;
+
+                /*case HealthStatus.reachedSkillCap:
+                    foreach (var skill in pawn.skills.skills)
+                    {
+                        skill.LearningSaturatedToday;
+                        flag = false;
+                    }
+                    break;*/
+
                 default:
                     break;
             }
@@ -125,6 +169,33 @@ namespace DreamersDream
                 flag = !flag;
             }
             return flag;
+        }
+
+        public static bool CheckIfPartsAreMissing(Pawn pawn)
+        {
+            List<BodyPartRecord> bodyParts = new List<BodyPartRecord>();
+
+            bodyParts.AddRange(GetBodyPartsOfDef(BodyPartDefOf.Leg, pawn));
+            bodyParts.AddRange(GetBodyPartsOfDef(BodyPartDefOf.Arm, pawn));
+
+            foreach (var part in bodyParts)
+            {
+                if (pawn.health.hediffSet.PartIsMissing(part))
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        public static List<BodyPartRecord> GetBodyPartsOfDef(BodyPartDef def, Pawn pawn)
+        {
+            List<BodyPartRecord> bodyParts = new List<BodyPartRecord>();
+            foreach (var part in pawn.RaceProps.body.GetPartsWithDef(def))
+            {
+                bodyParts.Add(part);
+            }
+            return bodyParts;
         }
 
         public static bool CheckSocialStatus(this SocialStatus social, Pawn pawn, bool invert)
@@ -160,7 +231,64 @@ namespace DreamersDream
                 case SocialStatus.hasEx:
                     break;
 
-                case SocialStatus.lonely:
+                case SocialStatus.aloneMap:
+                    if (pawn.Map.PlayerPawnsForStoryteller.EnumerableCount() != 1)
+                    {
+                        flag = false;
+                    }
+                    break;
+
+                case SocialStatus.aloneWorld:
+                    if (Find.World.PlayerPawnsForStoryteller.EnumerableCount() != 1)
+                    {
+                        flag = false;
+                    }
+                    break;
+
+                case SocialStatus.rejected:
+                    if (!pawn.HasThought(ThoughtDefOf.RebuffedMyRomanceAttempt))
+                    {
+                        flag = false;
+                    }
+                    break;
+
+                case SocialStatus.cheatedOn:
+                    if (!pawn.HasThought(ThoughtDefOf.CheatedOnMe))
+                    {
+                        flag = false;
+                    }
+                    break;
+
+                case SocialStatus.brokenUpWith:
+                    if (!pawn.HasThought(ThoughtDefOf.BrokeUpWithMe))
+                    {
+                        flag = false;
+                    }
+
+                    break;
+
+                case SocialStatus.divorced:
+                    if (!pawn.HasThought(ThoughtDefOf.DivorcedMe))
+                    {
+                        flag = false;
+                    }
+
+                    break;
+
+                case SocialStatus.insulted:
+                    if (!pawn.HasThought(ThoughtDefOf.Insulted))
+                    {
+                        flag = false;
+                    }
+
+                    break;
+
+                case SocialStatus.hadLovin:
+                    if (!pawn.HasThought(ThoughtDefOf.GotSomeLovin))
+                    {
+                        flag = false;
+                    }
+
                     break;
 
                 default:
@@ -171,6 +299,15 @@ namespace DreamersDream
                 flag = !flag;
             }
             return flag;
+        }
+
+        private static bool HasThought(this Pawn pawn, ThoughtDef thought)
+        {
+            if (pawn.needs.mood.thoughts.memories.GetFirstMemoryOfDef(thought) != null)
+            {
+                return true;
+            }
+            return false;
         }
 
         private static void AssignMaxMoodValues(ref float moodValue, MoodStatus mood, Pawn pawn)
