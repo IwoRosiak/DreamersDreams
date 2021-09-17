@@ -131,24 +131,24 @@ namespace DreamersDream
                 }
             }
             //social
-            if (!dreamDef.conflictingSocial.NullOrEmpty())
+            if (!dreamDef.conflictingMindStates.NullOrEmpty())
             {
                 debugInfo.AppendInNewLine("Conflicting social tags: ");
-                foreach (var req in dreamDef.conflictingSocial)
+                foreach (var req in dreamDef.conflictingMindStates)
                 {
-                    if (dreamDef.conflictingSocial[0] == req)
+                    if (dreamDef.conflictingMindStates[0] == req)
                     {
                         debugInfo.Append(req.ToString().ToLower());
                     }
                     else debugInfo.AppendWithComma(req.ToString().ToLower());
                 }
             }
-            if (!dreamDef.requiredSocial.NullOrEmpty())
+            if (!dreamDef.requiredMindStates.NullOrEmpty())
             {
                 debugInfo.AppendInNewLine("Required social tags: ");
-                foreach (var req in dreamDef.requiredSocial)
+                foreach (var req in dreamDef.requiredMindStates)
                 {
-                    if (dreamDef.requiredSocial[0] == req)
+                    if (dreamDef.requiredMindStates[0] == req)
                     {
                         debugInfo.Append(req.ToString().ToLower());
                     }
@@ -168,36 +168,36 @@ namespace DreamersDream
                 }
             }
             //health
-            if (!dreamDef.conflictingHealth.NullOrEmpty())
+            if (!dreamDef.conflictingBodyStates.NullOrEmpty())
             {
                 debugInfo.AppendInNewLine("Conflicting health tags: ");
-                foreach (var req in dreamDef.conflictingHealth)
+                foreach (var req in dreamDef.conflictingBodyStates)
                 {
-                    if (dreamDef.conflictingHealth[0] == req)
+                    if (dreamDef.conflictingBodyStates[0] == req)
                     {
                         debugInfo.Append(req.ToString().ToLower());
                     }
                     else debugInfo.AppendWithComma(req.ToString().ToLower());
                 }
             }
-            if (!dreamDef.requiredHealth.NullOrEmpty())
+            if (!dreamDef.requiredBodyStates.NullOrEmpty())
             {
                 debugInfo.AppendInNewLine("Required health tags: ");
-                foreach (var req in dreamDef.requiredHealth)
+                foreach (var req in dreamDef.requiredBodyStates)
                 {
-                    if (dreamDef.requiredHealth[0] == req)
+                    if (dreamDef.requiredBodyStates[0] == req)
                     {
                         debugInfo.Append(req.ToString().ToLower());
                     }
                     else debugInfo.AppendWithComma(req.ToString().ToLower());
                 }
             }
-            if (!dreamDef.requiredOneOfHealth.NullOrEmpty())
+            if (!dreamDef.requiredOneOfBodyStates.NullOrEmpty())
             {
                 debugInfo.AppendInNewLine("Required one of health tags: ");
-                foreach (var req in dreamDef.requiredOneOfHealth)
+                foreach (var req in dreamDef.requiredOneOfBodyStates)
                 {
-                    if (dreamDef.requiredOneOfHealth[0] == req)
+                    if (dreamDef.requiredOneOfBodyStates[0] == req)
                     {
                         debugInfo.Append(req.ToString().ToLower());
                     }

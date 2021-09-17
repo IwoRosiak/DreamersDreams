@@ -71,82 +71,82 @@ namespace DreamersDream
             return flag;
         }
 
-        public static bool CheckHealthStatus(this HealthStatus health, Pawn pawn, bool invert)
+        public static bool CheckBodyState(this BodyState health, Pawn pawn, bool invert)
         {
             bool flag = true;
             switch (health)
             {
-                case HealthStatus.wounded:
+                case BodyState.wounded:
                     if (!pawn.health.hediffSet.HasNaturallyHealingInjury())
                     {
                         flag = false;
                     }
                     break;
 
-                case HealthStatus.healthy:
+                case BodyState.healthy:
                     if (pawn.health.hediffSet.HasNaturallyHealingInjury() || pawn.health.hediffSet.AnyHediffMakesSickThought)
                     {
                         flag = false;
                     }
                     break;
 
-                case HealthStatus.ill:
+                case BodyState.ill:
                     if (!pawn.health.hediffSet.AnyHediffMakesSickThought)
                     {
                         flag = false;
                     }
                     break;
 
-                case HealthStatus.hungry:
+                case BodyState.hungry:
                     if ((float)pawn.needs.food.CurCategory == 0)
                     {
                         flag = false;
                     }
                     break;
 
-                case HealthStatus.fed:
+                case BodyState.fed:
                     if ((float)pawn.needs.food.CurCategory != 0)
                     {
                         flag = false;
                     }
                     break;
 
-                case HealthStatus.starving:
+                case BodyState.starving:
                     if (!pawn.needs.food.Starving)
                     {
                         flag = false;
                     }
                     break;
 
-                case HealthStatus.young:
+                case BodyState.young:
                     if (pawn.ageTracker.AgeBiologicalYears > 30)
                     {
                         flag = false;
                     }
                     break;
 
-                case HealthStatus.old:
+                case BodyState.old:
                     if (pawn.ageTracker.AgeBiologicalYears < 55)
                     {
                         flag = false;
                     }
                     break;
 
-                case HealthStatus.male:
+                case BodyState.male:
                     if (pawn.gender != Gender.Male)
                     {
                         flag = false;
                     }
                     break;
 
-                case HealthStatus.female:
+                case BodyState.female:
                     if (pawn.gender != Gender.Female)
                     {
                         flag = false;
                     }
                     break;
 
-                case HealthStatus.disabled:
+                case BodyState.disabled:
                     if (!CheckIfPartsAreMissing(pawn))
                     {
                         flag = false;
@@ -198,97 +198,51 @@ namespace DreamersDream
             return bodyParts;
         }
 
-        public static bool CheckSocialStatus(this SocialStatus social, Pawn pawn, bool invert)
+        public static bool CheckMindState(this MindState social, Pawn pawn, bool invert)
         {
             bool flag = true;
             switch (social)
             {
-                case SocialStatus.married:
+                case MindState.married:
 
                     break;
 
-                case SocialStatus.bonded:
+                case MindState.bonded:
 
                     break;
 
-                case SocialStatus.befriended:
+                case MindState.hasFriend:
                     break;
 
-                case SocialStatus.killer:
+                case MindState.killer:
                     if (pawn.records.GetValue(RecordDefOf.KillsHumanlikes) <= 0)
                     {
                         flag = false;
                     }
                     break;
 
-                case SocialStatus.guilty:
+                case MindState.guilty:
                     if (!pawn.guilt.IsGuilty)
                     {
                         flag = false;
                     }
                     break;
 
-                case SocialStatus.hasEx:
+                case MindState.hasEx:
                     break;
 
-                case SocialStatus.aloneMap:
+                case MindState.aloneMap:
                     if (pawn.Map.PlayerPawnsForStoryteller.EnumerableCount() != 1)
                     {
                         flag = false;
                     }
                     break;
 
-                case SocialStatus.aloneWorld:
+                case MindState.aloneWorld:
                     if (Find.World.PlayerPawnsForStoryteller.EnumerableCount() != 1)
                     {
                         flag = false;
                     }
-                    break;
-
-                case SocialStatus.rejected:
-                    if (!pawn.HasThought(ThoughtDefOf.RebuffedMyRomanceAttempt))
-                    {
-                        flag = false;
-                    }
-                    break;
-
-                case SocialStatus.cheatedOn:
-                    if (!pawn.HasThought(ThoughtDefOf.CheatedOnMe))
-                    {
-                        flag = false;
-                    }
-                    break;
-
-                case SocialStatus.brokenUpWith:
-                    if (!pawn.HasThought(ThoughtDefOf.BrokeUpWithMe))
-                    {
-                        flag = false;
-                    }
-
-                    break;
-
-                case SocialStatus.divorced:
-                    if (!pawn.HasThought(ThoughtDefOf.DivorcedMe))
-                    {
-                        flag = false;
-                    }
-
-                    break;
-
-                case SocialStatus.insulted:
-                    if (!pawn.HasThought(ThoughtDefOf.Insulted))
-                    {
-                        flag = false;
-                    }
-
-                    break;
-
-                case SocialStatus.hadLovin:
-                    if (!pawn.HasThought(ThoughtDefOf.GotSomeLovin))
-                    {
-                        flag = false;
-                    }
-
                     break;
 
                 default:
@@ -299,15 +253,6 @@ namespace DreamersDream
                 flag = !flag;
             }
             return flag;
-        }
-
-        private static bool HasThought(this Pawn pawn, ThoughtDef thought)
-        {
-            if (pawn.needs.mood.thoughts.memories.GetFirstMemoryOfDef(thought) != null)
-            {
-                return true;
-            }
-            return false;
         }
 
         private static void AssignMaxMoodValues(ref float moodValue, MoodStatus mood, Pawn pawn)
@@ -461,60 +406,99 @@ namespace DreamersDream
                 }
             }
             //health
-            foreach (var req in dream.conflictingHealth)
+            foreach (var req in dream.conflictingBodyStates)
             {
-                if (!req.CheckHealthStatus(pawn, true))
+                if (!req.CheckBodyState(pawn, true))
                 {
                     flag = false;
                     //Log.Message("41");
                 }
             }
-            foreach (var req in dream.requiredHealth)
+            foreach (var req in dream.requiredBodyStates)
             {
-                if (!req.CheckHealthStatus(pawn, false))
+                if (!req.CheckBodyState(pawn, false))
                 {
                     flag = false;
                     //Log.Message("42");
                 }
             }
-            foreach (var req in dream.requiredOneOfHealth)
+            foreach (var req in dream.requiredOneOfBodyStates)
             {
-                if (req.CheckHealthStatus(pawn, false))
+                if (req.CheckBodyState(pawn, false))
                 {
                     //Log.Message("43");
                     break;
                 }
             }
             //social
-            foreach (var req in dream.conflictingSocial)
+            foreach (var req in dream.conflictingMindStates)
             {
-                if (!req.CheckSocialStatus(pawn, true))
+                if (!req.CheckMindState(pawn, true))
                 {
                     flag = false;
                     //Log.Message("51");
                 }
             }
-            foreach (var req in dream.requiredSocial)
+            foreach (var req in dream.requiredMindStates)
             {
-                if (!req.CheckSocialStatus(pawn, false))
+                if (!req.CheckMindState(pawn, false))
                 {
                     flag = false;
                     //Log.Message("52");
                 }
             }
-            foreach (var req in dream.requiredOneOfSocial)
+            foreach (var req in dream.requiredOneOfMindStates)
             {
-                if (req.CheckSocialStatus(pawn, false))
+                if (req.CheckMindState(pawn, false))
                 {
                     //Log.Message("53");
                     break;
                 }
             }
+            //thought
+            foreach (var req in dream.conflictingThoughts)
+            {
+                if (!CheckForThought(req, pawn, true))
+                {
+                    flag = false;
+                }
+            }
+            foreach (var req in dream.requiredThoughts)
+            {
+                if (!CheckForThought(req, pawn, false))
+                {
+                    flag = false;
+                }
+            }
+            foreach (var req in dream.requiredOneOfThoughts)
+            {
+                if (!CheckForThought(req, pawn, false))
+                {
+                    break;
+                }
+            }
 
+            //mood
             if (!CheckMoodStatus(dream.minMood, dream.maxMood, pawn))
             {
                 //Log.Message("6");
                 flag = false;
+            }
+            return flag;
+        }
+
+        public static bool CheckForThought(ThoughtDef def, Pawn pawn, bool invert)
+        {
+            bool flag = false;
+
+            if (pawn.needs.mood.thoughts.memories.GetFirstMemoryOfDef(def) != null)
+            {
+                flag = true;
+            }
+
+            if (invert)
+            {
+                flag = !flag;
             }
             return flag;
         }

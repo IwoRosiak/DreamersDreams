@@ -8,7 +8,7 @@
         slave
     }
 
-    public enum HealthStatus
+    public enum BodyState
     {
         young,
         old,
@@ -20,26 +20,19 @@
         hungry,
         fed,
         starving,
-        disabled,
-        reachedSkillCap
+        disabled
     }
 
-    public enum SocialStatus
+    public enum MindState
     {
         married,
         bonded,
-        befriended,
+        hasFriend,
         killer,
         guilty,
         hasEx,
-        rejected,
         aloneMap,
-        aloneWorld,
-        cheatedOn,
-        brokenUpWith,
-        divorced,
-        insulted,
-        hadLovin
+        aloneWorld
     }
 
     public enum MoodStatus

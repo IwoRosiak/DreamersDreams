@@ -18,13 +18,17 @@ namespace DreamersDream
         public List<StandingStatus> requiredOneOfStanding = new List<StandingStatus>();
         public List<StandingStatus> conflictingStanding = new List<StandingStatus>();
 
-        public List<HealthStatus> requiredHealth = new List<HealthStatus>();
-        public List<HealthStatus> requiredOneOfHealth = new List<HealthStatus>();
-        public List<HealthStatus> conflictingHealth = new List<HealthStatus>();
+        public List<BodyState> requiredBodyStates = new List<BodyState>();
+        public List<BodyState> requiredOneOfBodyStates = new List<BodyState>();
+        public List<BodyState> conflictingBodyStates = new List<BodyState>();
 
-        public List<SocialStatus> requiredSocial = new List<SocialStatus>();
-        public List<SocialStatus> requiredOneOfSocial = new List<SocialStatus>();
-        public List<SocialStatus> conflictingSocial = new List<SocialStatus>();
+        public List<MindState> requiredMindStates = new List<MindState>();
+        public List<MindState> requiredOneOfMindStates = new List<MindState>();
+        public List<MindState> conflictingMindStates = new List<MindState>();
+
+        public List<ThoughtDef> requiredThoughts = new List<ThoughtDef>();
+        public List<ThoughtDef> requiredOneOfThoughts = new List<ThoughtDef>();
+        public List<ThoughtDef> conflictingThoughts = new List<ThoughtDef>();
 
         public MoodStatus minMood;
         public MoodStatus maxMood;
