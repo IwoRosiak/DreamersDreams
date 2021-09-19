@@ -1,4 +1,5 @@
 ﻿using RimWorld;
+using RimWorld.Planet;
 using System.Collections.Generic;
 using Verse;
 
@@ -148,6 +149,13 @@ namespace DreamersDream
 
                 case BodyState.disabled:
                     if (!CheckIfPartsAreMissing(pawn))
+                    {
+                        flag = false;
+                    }
+                    break;
+
+                case BodyState.travelling:
+                    if (!pawn.IsCaravanMember())
                     {
                         flag = false;
                     }

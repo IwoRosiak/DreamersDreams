@@ -20,7 +20,8 @@
         hungry,
         fed,
         starving,
-        disabled
+        disabled,
+        travelling
     }
 
     public enum MindState
