@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Defs>
+  <!--LEGENDARY-->
   <DreamersDream.DreamDef ParentName="LegendaryDream">
     <defName>DreamTouristSpaceship</defName>
     <label>Dreamt about tourist spaceship</label>
@@ -52,8 +53,30 @@
     <dreamedBy>SghHanzMullerSW</dreamedBy>
   </DreamersDream.DreamDef>
 
+<!--EPIC-->
+  
   <DreamersDream.DreamDef ParentName="EpicDream">
-    <defName>GenericDreamLucid</defName>
+    <defName>DreamOffworldHitman</defName>
+    <label>Dreamt about being a hitman</label>
+    <description>I was a hitman protecting a young person from signing a bad contract with a bad organization. When I mean young, I mean he was about 10. It was midnight, and there was a school on an Urbworld under a tall skyscraper. The boy just finished his music class, so I when followed him and told him about my mission, he turned away. Then he entered a two-floored transport shuttle that was connected with the second floor of the school. The shuttle was black and seemed luxurious. The boy sat down on a purple couch, and a man came to him, guarded by men dressed in black. The man gave the boy a contract to sign, and then I knew he was my target to assasinate, so I shot him and escaped. The other men chased me.</description>
+    <dreamedBy>fan</dreamedBy>
+    <requiredOneOfBackstory>
+      <li>offworld</li>
+    </requiredOneOfBackstory>
+  </DreamersDream.DreamDef>
+  
+  <DreamersDream.DreamDef ParentName="EpicDream"> 
+    <defName>DreamSpaceshipHorror</defName>
+    <label>Dreamt about a space ship</label>
+    <description>I woke up on a space ship. We were all supposed to be in cryo, but as we slept, someone was preforming nasty experiments on the rest of us. It happened when my pod was breached by some horror intent on eating me. I barehanded beat up and choked it to death as it licked me with seething tentacles spilling out its mouth in a last ditch effort to make me turn away in disgust. As I looked around I saw my comrades in various states of alien transformation, I immediately recalled we were headed to "New Earth," on a colony ship. I found a futuristic axetool powered by some uranium crystal; a rotator caused the blade on the head to spin fast enough to turn into some kinda plasma that enabled me to cut into sealed chambers. The ship itself was made of some rusty brown metal, the floors were completely covered in blood and weird molds pulsated from half-eaten pools of human. I was completely naked and had slipped and slid on various occasions as I cleared the ship looking for survivors.</description>
+    <dreamedBy>OldYellah</dreamedBy>
+    <requiredOneOfBackstory>
+      <li>offworld</li>
+    </requiredOneOfBackstory>
+  </DreamersDream.DreamDef>
+  
+  <DreamersDream.DreamDef ParentName="EpicDream">
+    <defName>DreamLucid</defName>
     <label>Had lucid dream</label>
     <description>I realised that I'm in the dream so I could do anything I want! If only I could do it more often...</description>
   </DreamersDream.DreamDef>
@@ -83,9 +106,18 @@
       <li>tribal</li>
     </requiredOneOfBackstory>
   </DreamersDream.DreamDef>
+  
+  <DreamersDream.DreamDef ParentName="EpicDream">
+    <defName>DreamStutteringKid</defName>
+    <label>Have you ever had a dream...?</label>
+    <description>Have you ever had a dream that you, um, you had, your, you- you could, you’ll do, you- you wants, you, you could do so, you- you’ll do, you could- you, you want, you want him to do you so much you could do anything?</description>
+    <dreamedBy>Joseph Cirkiel</dreamedBy>
+    <minMood>happy</minMood>
+  </DreamersDream.DreamDef>
 
+  <!--AMAZING-->
   <DreamersDream.DreamDef ParentName="AmazingDream">
-    <defName>DreamBeingRacoon</defName>
+    <defName>DreamBeingAnimal</defName>
     <label>Dreamt about being a racoon</label>
     <description>I was a small animal (I think it was a raccoon?) in a random windy forest. It was pretty nice even if all I did was wander around and occasionally see other creatures, and at some point I think I befriended a groundhog. I'm not too sure on how it ended but the last thing I vaguely remember was seeing buildings over a hill.</description>
     <dreamedBy>okoyum</dreamedBy>
@@ -122,6 +154,7 @@
     <description>I was tasked to build strange shapes which looked like four triangles connected side by side. I gathered immense amounts of stone and helped little people finish the glimmering construction. The little humans were so happy with my work that they decided to place their kings there after death!</description>
   </DreamersDream.DreamDef>
 
+  <!--EXCITING-->
   <DreamersDream.DreamDef ParentName="ExcitingDream">
     <defName>DreamRacingGame</defName>
     <label>Dreamt about playing racing game</label>
@@ -136,7 +169,7 @@
   </DreamersDream.DreamDef>
 
   <DreamersDream.DreamDef ParentName="ExcitingDream">
-    <defName>GenericDreamWounded</defName>
+    <defName>DreamHealthy</defName>
     <label>Dreamt about being healthy</label>
     <description>I could finally relax... No pain... No suffering.</description>
     <requiredHealth>
@@ -155,29 +188,22 @@
   </DreamersDream.DreamDef>
 
   <DreamersDream.DreamDef ParentName="ExcitingDream">
-    <defName>DreamNakedParty</defName>
-    <label>Dreamt about partying naked</label>
-    <description>I was walking around the colony, when I realised that I'm wearing no clothes! I looked around and noticed that everyone took off their clothes as they saw me! We started to drink and dance naked until we dropped from exhaustion.<description>
-    <requiredOneOfTraits>
-      <li>Nudist</li>
-    </requiredOneOfTraits>
-    <conflictingStanding>
-      <li>guest</li>
-    </conflictingStanding>
-  </DreamersDream.DreamDef>
-
-  <DreamersDream.DreamDef ParentName="ExcitingDream">
-    <defName>GenericDreamFlying</defName>
+    <defName>DreamFlying</defName>
     <label>Dreamt about flying</label>
     <description>I was flying in my dream dream! It was an amazing experience. I just wanted to keep going...</description>
   </DreamersDream.DreamDef>
 
-  <DreamersDream.DreamDef ParentName="PleasantDream">
-    <defName>GenericDreamSpoons</defName>
-    <label>Dreamt about spoons</label>
-    <description>I had a ridicoulus dream where I was drinking water using only spoons!</description>
+  <DreamersDream.DreamDef ParentName="ExcitingDream">
+    <defName>DreamGodlyTrees</defName>
+    <label>Dreamt about godly trees</label>
+    <description>I woke up in a world that was controlled by the two trees of life. If one of the trees was worshipped, it gave people the ability to become smarter, while the other made everyone dumber. I choose to worship the wise tree and because of it I know that our planet is flat!</description>
+    <dreamedBy>fan</dreamedBy>
+    <requiredOneOfBackstory>
+      <li>tribal</li>
+    </requiredOneOfBackstory>
   </DreamersDream.DreamDef>
-
+  
+  <!--PLEASANT-->
   <DreamersDream.DreamDef ParentName="PleasantDream">
     <defName>DreamYoghurtPool</defName>
     <label>Dreamt about yoghurt</label>
@@ -204,7 +230,7 @@
   </DreamersDream.DreamDef>
 
   <DreamersDream.DreamDef ParentName="PleasantDream">
-    <defName>GenericDreamNice</defName>
+    <defName>DreamNice</defName>
     <label>Dreamt about something nice</label>
     <description>I had a pleasant dream, but I forgot it the moment I woke up...</description>
   </DreamersDream.DreamDef>
@@ -217,36 +243,13 @@
       <li>Psychopath</li>
       <li>Cannibal</li>
     </nullifyingTraits>
-  </DreamersDream.DreamDef>
-
-  <DreamersDream.DreamDef ParentName="PleasantDream">
-    <defName>DreamPizzaFriends</defName>
-    <label>Dreamt about pizza</label>
-    <description>I dreamt I was making pizza with my friends and then having it together!</description>
-    <nullifyingTraits>
-      <li>Psychopath</li>
-      <li>Cannibal</li>
-    </nullifyingTraits>
     <requiredOneOfMindStates>
       <li>hasFriend</li>
     </requiredOneOfMindStates>
   </DreamersDream.DreamDef>
 
   <DreamersDream.DreamDef ParentName="PleasantDream">
-    <defName>DreamPizzaFriendsPsychocannibal</defName>
-    <label>Dreamt about special pizza</label>
-    <description>I dreamt I was making pizza out of my friends. It was delicious.</description>
-    <requiredTraits>
-      <li>Psychopath</li>
-      <li>Cannibal</li>
-    </requiredTraits>
-    <requiredOneOfMindStates>
-      <li>hasFriend</li>
-    </requiredOneOfMindStates>
-  </DreamersDream.DreamDef>
-
-  <DreamersDream.DreamDef ParentName="PleasantDream">
-    <defName>GenericDreamCheese</defName>
+    <defName>DreamCheese</defName>
     <label>Dreamt about cheese</label>
     <description>Cheese... Cheese everywhere!</description>
     <dreamedBy>Male_07</dreamedBy>
@@ -261,127 +264,4 @@
     <description>I was playing a beautiful song on guitar in a sun room with bright light coming from above. I was alone, but it was peaceful. I've never even played guitar.</description>
     <dreamedBy>ryanizawsum</dreamedBy>
   </DreamersDream.DreamDef>
-
-  <DreamersDream.DreamDef ParentName="PleasantDream">
-    <defName>DreamMurderingRival</defName>
-    <label>Dreamt about murdering rival</label>
-    <description>I wish they could still be here. To see how much I'm enjoying myself now, after ending their miserable life...</description>
-    <requiredOneOfTraits>
-      <li>Bloodlust</li>
-    </requiredOneOfTraits>
-    <requiredOneOfMindStates>
-      <li>guilty</li>
-    </requiredOneOfMindStates>
-  </DreamersDream.DreamDef>
-
-  <DreamersDream.DreamDef ParentName="PleasantDream">
-    <defName>DreamMurderSpree</defName>
-    <label>Dreamt about murder spree</label>
-    <description>Nothing could stop me. Murder. Everyone.</description>
-    <requiredOneOfMindStates>
-      <li>killer</li>
-    </requiredOneOfMindStates>
-  </DreamersDream.DreamDef>
-
-  <DreamersDream.DreamDef ParentName="PleasantDream">
-    <defName>DreamTorturingStranger</defName>
-    <label>Dreamt about torturing</label>
-    <description>Stranger tied up in front of me. Set of shiny and sharp tools on the table. I grabbed one of the knifes and I couldn't stop. Even when strangers body stopped quivering, I was still taking pleasure in the simple act of torture...</description>
-    <requiredOneOfTraits>
-      <li>Bloodlust</li>
-      <li>Psychopath</li>
-    </requiredOneOfTraits>
-  </DreamersDream.DreamDef>
-
-  <DreamersDream.DreamDef ParentName="PleasantDream">
-    <defName>GenericDreamMurder</defName>
-    <label>Dreamt about murder</label>
-    <description>Motionless body lays in front of me and I watch it. The blood pool keeps getting bigger. I don't remember why I killed this person but it feels so damn good.</description>
-    <requiredOneOfMindStates>
-      <li>guilty</li>
-    </requiredOneOfMindStates>
-  </DreamersDream.DreamDef>
-
-  <DreamersDream.DreamDef ParentName="PleasantDream">
-    <defName>DreamFightingBloodspill</defName>
-    <label>Dreamt about fighting</label>
-    <description>Breaking their bones is not enough! Let the blood spill!</description>
-    <requiredOneOfTraits>
-      <li>Bloodlust</li>
-      <li>Cannibal</li>
-    </requiredOneOfTraits>
-  </DreamersDream.DreamDef>
-
-  <DreamersDream.DreamDef ParentName="AmazingDream">
-    <defName>DreamEatingRival</defName>
-    <label>Dreamt about eating my rival</label>
-    <description>I laughed while tying him over the fire pit. I laughed while heat was charring his face. I laughed while consuming his flesh.</description>
-    <requiredOneOfTraits>
-      <li>Cannibal</li>
-    </requiredOneOfTraits>
-  </DreamersDream.DreamDef>
-
-  <DreamersDream.DreamDef ParentName="EpicDream">
-    <defName>DreamHumanFeast</defName>
-    <label>Dreamt about human feast</label>
-    <description>Legs, arms, eyes and brains. Cooked to perfection. I can eat my fill and no one will judge me!</description>
-    <requiredOneOfTraits>
-      <li>Cannibal</li>
-    </requiredOneOfTraits>
-  </DreamersDream.DreamDef>
-
-  <DreamersDream.DreamDef ParentName="ExcitingDream">
-    <defName>DreamEatingSomeone</defName>
-    <label>Dreamt about eating someone</label>
-    <description>Eating a human being is simple. I used to think of it as a disgusting thing, but simply trying this delicacy proved me wrong!</description>
-    <requiredOneOfTraits>
-      <li>Cannibal</li>
-    </requiredOneOfTraits>
-  </DreamersDream.DreamDef>
-
-  <DreamersDream.DreamDef ParentName="PleasantDream">
-    <defName>DreamGodlyTrees</defName>
-    <label>Dreamt about godly trees</label>
-    <description>I woke up in a world that was controlled by the two trees of life. If one of the trees was worshipped, it gave people the ability to become smarter, while the other made everyone dumber. I don't remember which one did which.</description>
-    <dreamedBy>fan</dreamedBy>
-    <requiredOneOfBackstory>
-      <li>tribal</li>
-    </requiredOneOfBackstory>
-  </DreamersDream.DreamDef>
-
-  <DreamersDream.DreamDef ParentName="EpicDream">
-    <defName>DreamBeingHitman</defName>
-    <label>Dreamt about being a hitman</label>
-    <description>I was a hitman protecting a young person from signing a bad contract with a bad organization. When i mean young, i mean he was about 10. It was midnight, and there was a school on an Urbworld under a tall skyscraper. The boy just finished his music class, so I when followed him and told him about my mission, he turned away. Then he entered a two-floored transport shuttle that was connected with the second floor of the school. The shuttle was black and seemed luxurious. The boy sat down on a purple couch, and a man came to him, guarded by men dressed in black. The man gave the boy a contract to sign, and then I knew he was my target to assasinate, so I shot him and escaped. The other men chased me.</description>
-    <dreamedBy>fan</dreamedBy>
-    <requiredOneOfBackstory>
-      <li>offworld</li>
-    </requiredOneOfBackstory>
-  </DreamersDream.DreamDef>
-
-  <DreamersDream.DreamDef ParentName="EpicDream">
-    <defName>DreamSpaceshipHorror</defName>
-    <label>Dreamt about a space ship</label>
-    <description>I woke up on a space ship. We were all supposed to be in cryo, but as we slept, someone was preforming nasty experiments on the rest of us. It happened when my pod was breached by some horror intent on eating me. I barehanded beat up and choked it to death as it licked me with seething tentacles spilling out its mouth in a last ditch effort to make me turn away in disgust. As I looked around I saw my comrades in various states of alien transformation, I immediately recalled we were headed to "New Earth," on a colony ship. I found a futuristic axetool powered by some uranium crystal; a rotator caused the blade on the head to spin fast enough to turn into some kinda plasma that enabled me to cut into sealed chambers. The ship itself was made of some rusty brown metal, the floors were completely covered in blood and weird molds pulsated from half-eaten pools of human. I was completely naked and had slipped and slid on various occasions as I cleared the ship looking for survivors.</description>
-    <dreamedBy>OldYellah</dreamedBy>
-    <requiredOneOfBackstory>
-      <li>offworld</li>
-    </requiredOneOfBackstory>
-  </DreamersDream.DreamDef>
-
-  <DreamersDream.DreamDef ParentName="EpicDream">
-    <defName>JokeDreamStutteringKid</defName>
-    <label>Have you ever had a dream that you, um, you had, your, you- you could, you’ll do, you- you wants, you, you could do so, you- you’ll do, you could- you, you want, you want him to do you so much you could do anything?</label>
-    <description>No? Me neither.</description>
-    <dreamedBy>Joseph Cirkiel</dreamedBy>
-    <minMood>happy</minMood>
-  </DreamersDream.DreamDef>
 </Defs>
-<!-- =======BASIC DREAM=======
-  <DreamersDream.DreamDef ParentName="QUALITYDream">
-    <defName>DreamNAME</defName>
-    <label>THOUGHT</label>
-    <description>THOUGHTDESCRIPTION</description>
-    <dreamedBy>AUTHOR</dreamedBy>
-  </DreamersDream.DreamDef>
--->

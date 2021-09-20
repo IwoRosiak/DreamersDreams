@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Defs>
-  <DreamersDream.DreamDef ParentName="HelllikeDream">
+  <!--INFERNAL-->
+  <DreamersDream.DreamDef ParentName="InfernalDream">
     <defName>DreamDarkFigures</defName>
     <label>Dreamt about dark figures</label>
     <description>I was wandering around the colony when I saw a shadowy figure coming out of a dark corner. I asked it what it wants, but it didn't respond. The figure approached me, coming closer and closer with each second. I panicked, the fear paralysed me. Then another figure appeared behind me. After that, the figures grabbed me by my legs and arms. I screamed and everything went dark.</description>
@@ -10,15 +11,16 @@
     </conflictingStanding>
   </DreamersDream.DreamDef>
 
-  <DreamersDream.DreamDef ParentName="HelllikeDream">
+  <DreamersDream.DreamDef ParentName="InfernalDream">
     <defName>DreamMoonCrash</defName>
     <label>Dreamt about moon crash</label>
     <description>I awoke in my room. Felt a bit thirsty so I went to the kitchen to drink some water. Went outside to get some fresh air and there was an enormous moon up in the sky. Everything was shaking, almost like an earthquake was terrorizing the area. Orange light illuminated the surroundings. Buildings were floating here and there, like gravity had been turned off. The Moon came closer. The shaking got stronger. I heard screaming. Then some odd force hit me and I collapsed.</description>
     <conflictingStanding>
-      <li>prisoner<li>
+      <li>prisoner</li>
+    </conflictingStanding>
   </DreamersDream.DreamDef>
 
-  <DreamersDream.DreamDef ParentName="HelllikeDream">
+  <DreamersDream.DreamDef ParentName="InfernalDream">
     <defName>DreamSevenLives</defName>
     <label>Dreamt about tragic lives and deaths</label>
     <description>I had to enter 7 tragical lives of people who had 7 tragical deaths. I lived 7 tragic lives and died 7 tragic deaths. 7... 7... 7...</description>
@@ -29,6 +31,7 @@
     </nullifyingTraits>
   </DreamersDream.DreamDef>
 
+<!--TERRORISING-->
   <DreamersDream.DreamDef ParentName="TerrorisingDream">
     <defName>DreamWorldFellApart</defName>
     <label>Dreamt about Armageddon</label>
@@ -82,9 +85,12 @@
     <label>Dreamt about fight among friends</label>
     <description>Me and my best friend met in front of their house. We wanted to go biking together, and so we did. We were biking around many different places. When we were finally coming back home we saw a bunch of alligators climbing on a fence next to us. Scared, we rode away as fast as we could. After some time it got really cold outside, so we stopped under someone's house so we could dress up into heavier clothes. Suddenly, out of nowhere, a tank appeared and shot at us. My friend escaped with their bike, leaving me alone. Sometime later I woke up at a house. It was the same house we stopped at to dress up. An old man was the owner and he was actually nice. My phone's battery was completely dead though. I wanted to go back home with my bike, but it was in pieces and some were missing. I walked home to tell my parents what happened. When I came back for my bike my other friends were taking it apart for parts. I had to fight them for my bike.</description>
     <dreamedBy>Smelly Fish</dreamedBy>
-    <conflictingBackstory>
-      <li>tribal</li>
-      <li>imperial</li>
+    <requiredBackstory>
+      <li>offworld</li>
+     </requiredBackstory>
+    <requiredMindStates>
+      <li>hasFriend</li>
+    </requiredMindStates>
   </DreamersDream.DreamDef>
 
   <DreamersDream.DreamDef ParentName="TerrorisingDream">
@@ -97,6 +103,7 @@
     </requiredOneOfMindStates>
   </DreamersDream.DreamDef>
 
+<!--FRIGHTENING-->
   <DreamersDream.DreamDef ParentName="FrighteningDream">
     <defName>DreamAbandonedMaze</defName>
     <label>Dreamt about abandoned maze</label>
@@ -161,7 +168,7 @@
   </DreamersDream.DreamDef>
 
   <DreamersDream.DreamDef ParentName="FrighteningDream">
-    <defName>GenericDreamMurderingCloseOne</defName>
+    <defName>DreamMurderingCloseOne</defName>
     <label>Dreamt about killing a close one</label>
     <description>I killed a person close to me in my dream. I didn't want to!</description>
     <nullifyingTraits>
@@ -174,7 +181,7 @@
   </DreamersDream.DreamDef>
 
   <DreamersDream.DreamDef ParentName="FrighteningDream">
-    <defName>GenericDreamCannibalismBad</defName>
+    <defName>DreamCannibalismBad</defName>
     <label>Dreamt about eating humans</label>
     <description>I was forced to eat someone in my dream. It was an awful experience...</description>
     <nullifyingTraits>
@@ -185,13 +192,13 @@
   </DreamersDream.DreamDef>
 
   <DreamersDream.DreamDef ParentName="FrighteningDream">
-    <defName>GenericDreamBeingChased</defName>
+    <defName>DreamBeingChased</defName>
     <label>Dreamt about being chased</label>
     <description>Something was chasing me but I couldn't run!</description>
   </DreamersDream.DreamDef>
 
   <DreamersDream.DreamDef ParentName="FrighteningDream">
-    <defName>GenericDreamFightingZombies</defName>
+    <defName>DreamFightingZombies</defName>
     <label>Dreamt about fighting zombies</label>
     <description>Our group had to defend against zombies using some ancient non-lethal weaponry. Why would you even use non-lethal weapons?!</description>
     <dreamedBy>Maru1i</dreamedBy>
@@ -206,6 +213,44 @@
     <description>I was in some kind of magical forest. After walking a few miles I noticed a big bee hive. I was hungry, so I put my hand in it to snatch some honey but when I took it out there was no honey... only wiggling maggots.</description>
   </DreamersDream.DreamDef>
 
+  <DreamersDream.DreamDef ParentName="FrighteningDream">
+    <defName>DreamOrganSteal</defName>
+    <label>Dreamt about surgery</label>
+    <description>Please, no! Don't take my organs...</description>
+    <requiredOneOfStanding>
+      <li>prisoner</li>
+      <li>slave</li>
+    </requiredOneOfStanding>
+  </DreamersDream.DreamDef>
+  
+  <DreamersDream.DreamDef ParentName="FrighteningDream">
+    <defName>DreamSlavePunishment</defName>
+    <label>Dreamt about punishment</label>
+    <description>They beat me and starved me. Whatever I did, however I tried to please my captors, I only got pain in reward. The crack of the whip woke me up.</description>
+    <requiredOneOfStanding>
+      <li>slave</li>
+    </requiredOneOfStanding>
+  </DreamersDream.DreamDef>
+  
+  <DreamersDream.DreamDef ParentName="FrighteningDream">
+    <defName>DreamInvisibleMonster</defName>
+    <label>Dreamt about an invisible monster</label>
+    <description>There was an unseen creature in my bed with me, gnawing on my limbs. It seemed to enjoy itself, nibbling on every bone with endless patience. I did not feel pain, but I could hear the crunching and tearing of my body. Eventually, it ate all of me, and I was gone.</description>
+    <requiredOneOfBodyStates>
+      <li>ill</li>
+    </requiredOneOfBodyStates>
+  </DreamersDream.DreamDef>
+  
+  <DreamersDream.DreamDef ParentName="FrighteningDream">
+    <defName>DreamWitheringAway</defName>
+    <label>Dreamt about withering away</label>
+    <description>I was a flower in a beautiful, green grassland. When the sun came up, I bloomed and stretched my petals. First, the warmth felt wonderful, but then it began to burn. The grassland around me turned brown and hard until only I was left.</description>
+    <requiredOneOfBodyStates>
+      <li>hungry</li>
+    </requiredOneOfBodyStates>
+  </DreamersDream.DreamDef>
+  
+<!--DISTURBING-->
   <DreamersDream.DreamDef ParentName="DisturbingDream">
     <defName>DreamBanditCowboy</defName>
     <label>Dreamt about bandit cowboy</label>
@@ -217,7 +262,7 @@
   </DreamersDream.DreamDef>
 
   <DreamersDream.DreamDef ParentName="DisturbingDream">
-    <defName>GenericDreamPastEvent</defName>
+    <defName>DreamPastEvent</defName>
     <label>Dreamt about event from the past</label>
     <description>I had a dream about a stressful event from my past. I would rather not be reminded of it.</description>
   </DreamersDream.DreamDef>
@@ -230,7 +275,7 @@
   </DreamersDream.DreamDef>
 
   <DreamersDream.DreamDef ParentName="DisturbingDream">
-    <defName>GenericDreamMurderBad</defName>
+    <defName>DreamMurderBad</defName>
     <label>Dreamt about killing</label>
     <description>I killed without mercy... But I didn't want to...</description>
     <dreamedBy>AUTHOR</dreamedBy>
@@ -241,7 +286,7 @@
   </DreamersDream.DreamDef>
 
   <DreamersDream.DreamDef ParentName="DisturbingDream">
-    <defName>GenericDreamMurderBad</defName>
+    <defName>DreamMurderBad</defName>
     <label>Dreamt about killing</label>
     <description>I killed without mercy... But I didn't want to...</description>
     <dreamedBy>AUTHOR</dreamedBy>
@@ -252,7 +297,7 @@
   </DreamersDream.DreamDef>
 
   <DreamersDream.DreamDef ParentName="DisturbingDream">
-    <defName>NonDreamStarving</defName>
+    <defName>DreamStarving</defName>
     <label>Disturbed sleep (starvation)</label>
     <description>My growling stomach kept me awake.</description>
     <requiredOneOfBodyStates>
@@ -261,7 +306,7 @@
   </DreamersDream.DreamDef>
 
   <DreamersDream.DreamDef ParentName="DisturbingDream">
-    <defName>GenericDreamFed</defName>
+    <defName>DreamFed</defName>
     <label>Dreamt about starvation</label>
     <description>I was starving... I begged people to help me... But they wouldn't!</description>
     <requiredOneOfBodyStates>
@@ -270,13 +315,13 @@
   </DreamersDream.DreamDef>
 
   <DreamersDream.DreamDef ParentName="DisturbingDream">
-    <defName>GenericDreamImprisoned</defName>
+    <defName>DreamImprisoned</defName>
     <label>Dreamt about being in prison</label>
     <description>I asked them to let me out... I was innocent...</description>
   </DreamersDream.DreamDef>
 
   <DreamersDream.DreamDef ParentName="DisturbingDream">
-    <defName>GenericDreamChildhoodBad</defName>
+    <defName>DreamChildhoodBad</defName>
     <label>Dreamt about childhood</label>
     <description>I relived some of the worst moments from my childhood.</description>
     <requiredOneOfBackstory>
@@ -285,19 +330,19 @@
   </DreamersDream.DreamDef>
 
   <DreamersDream.DreamDef ParentName="DisturbingDream">
-    <defName>GenericDreamInsectsBad</defName>
+    <defName>DreamInsectsBad</defName>
     <label>Dreamt about insects</label>
     <description>They were crawling everywhere. Millions of bugs and worms were chasing me. At least I woke up the moment they got me...</description>
   </DreamersDream.DreamDef>
 
   <DreamersDream.DreamDef ParentName="DisturbingDream">
-    <defName>GenericDreamInjury</defName>
+    <defName>DreamInjury</defName>
     <label>Dreamt about injury</label>
     <description>I had wounds all over my body. Someone hurt me pretty badly but I managed to escape.</description>
   </DreamersDream.DreamDef>
 
   <DreamersDream.DreamDef ParentName="DisturbingDream">
-    <defName>GenericDreamSocialExclusion</defName>
+    <defName>DreamSocialExclusion</defName>
     <label>Dreamt about social exclusion</label>
     <description>I was excluded from my group because I was scared to snort Yayo... Do we even have any Yayo?</description>
   </DreamersDream.DreamDef>
@@ -309,12 +354,76 @@
   </DreamersDream.DreamDef>
 
   <DreamersDream.DreamDef ParentName="DisturbingDream">
-    <defName>GenericDreamGettingExecuted</defName>
+    <defName>DreamGettingExecuted</defName>
     <label>Dreamt about being executed</label>
     <description>My head rolled on the ground for a long time after being swiftly disconnected from my body...</description>
     <dreamedBy>Denneisk</dreamedBy>
   </DreamersDream.DreamDef>
 
+  <DreamersDream.DreamDef ParentName="DisturbingDream">
+    <defName>DreamSolitaryConfinement</defName>
+    <label>Dreamt about solitary confinement</label>
+    <description>I dreamt of all my friends leaving me, one by one. In the end, it was only me, locked in this dark hole, forever.</description>
+    <requiredOneOfStanding>
+      <li>prisoner</li>
+      <li>slave</li>
+    </requiredOneOfStanding>
+    <requiredMindState>
+      <li>hasFriend</li>
+    </requiredMindState>
+  </DreamersDream.DreamDef>
+  
+  <DreamersDream.DreamDef ParentName="DisturbingDream">
+    <defName>DreamSlaveServitude</defName>
+    <label>Dreamt about servitude</label>
+    <description>There was stone tablet hovering just above me, inscribed with the endless, demeaning tasks ahead of me and with the big plans my masters have. It didn't feel like those plans included me.</description>
+    <requiredOneOfStanding>
+      <li>slave</li>
+    </requiredOneOfStanding>
+  </DreamersDream.DreamDef>
+  
+  <DreamersDream.DreamDef ParentName="DisturbingDream">
+    <defName>DreamSlaveHierarchy</defName>
+    <label>Dreamt about hierarchy</label>
+    <description>I sat on a golden throne, eating a delicious meal. People worked around me. When I was done eating, I called to them and they turned. All of them had my face!</description>
+    <requiredOneOfStanding>
+      <li>slave</li>
+    </requiredOneOfStanding>
+  </DreamersDream.DreamDef>
+  
+  <DreamersDream.DreamDef ParentName="DisturbingDream">
+    <defName>DreamKittenCollecting</defName>
+    <label>Dreamt about kittens</label>
+    <description>There was a litter of kittens spread throughout our home. I knew I was dreaming, but I also knew I had to collect all the kittens before something bad happened. Somehow, I could not just wake up. I tried to gather the kittens, but dropped them or lost them whenever I thought I was done. I ran through the rooms, desperate and scared, but couldn't find all of them.</description>
+    <dreamedBy>Ket</dreamedBy>
+    <conflictingStanding>
+      <li>prisoner</li>
+    </conflictingStanding>
+    <nullifyingTraits>
+      <li>Psychopath</li>
+    </nullifyingTraits>
+  </DreamersDream.DreamDef>
+  
+  <DreamersDream.DreamDef ParentName="DisturbingDream">
+    <defName>DreamArrakisVision</defName>
+    <label>Dreamt about girl on desert planet</label>
+    <description>The planet was being ravaged by outsiders, its resources stolen and people enslaved. She stood among sparkling gusts of sand and reached out for me to help defend her home. But I did not know her, or the world she was from. And in the end, we both were were swallowed by the sand, reddened by the blood of her people...</description>
+    <requiredOneOfBackstory>
+      <li>offworld</li>
+    </requiredOneOfBackstory>
+  </DreamersDream.DreamDef>
+  
+  <DreamersDream.DreamDef ParentName="DisturbingDream">
+    <defName>DreamGettingCooked</defName>
+    <label>Dreamt about getting cooked</label>
+    <description>I was lying, cramped, in a small metal box with a big window. Something clicked and whirred, and the lights came on. It got hotter and hotter, and I realized I was lying in an oven! The heat rose and rose, until I woke up.</description>
+    <requiredOneOfBodyStates>
+      <li>ill</li>
+    </requiredOneOfBodyStates>
+  </DreamersDream.DreamDef>
+  
+  
+<!--UNPLEASANT-->
   <DreamersDream.DreamDef ParentName="UnpleasantDream">
     <defName>DreamTornadoFlight</defName>
     <label>Dreamt about tornado</label>
@@ -323,20 +432,20 @@
   </DreamersDream.DreamDef>
 
   <DreamersDream.DreamDef ParentName="UnpleasantDream">
-    <defName>GenericDreamDontRemember</defName>
+    <defName>DreamDontRemember</defName>
     <label>Can't recall a bad dream</label>
     <description>I dreamt about something upsetting but I don't really remember what it was...</description>
   </DreamersDream.DreamDef>
 
   <DreamersDream.DreamDef ParentName="UnpleasantDream">
-    <defName>GenericDreamSillyThingsBad</defName>
+    <defName>DreamSillyThingsBad</defName>
     <label>Dreamt about silly things</label>
     <description>Dancing nuns, walking sofas, talking plants... I dreamt about weird things, nothing in particular but it didn't feel good.</description>
     <dreamedBy>AUTHOR</dreamedBy>
   </DreamersDream.DreamDef>
 
   <DreamersDream.DreamDef ParentName="UnpleasantDream">
-    <defName>GenericDreamExpartnerBad</defName>
+    <defName>DreamExPartner</defName>
     <label>Dreamt about my ex partner</label>
     <description>I don't want you back in my life! Stop bothering me in my sleep!</description>
     <requiredOneOfMindStates>
@@ -345,7 +454,7 @@
   </DreamersDream.DreamDef>
 
   <DreamersDream.DreamDef ParentName="UnpleasantDream">
-    <defName>GenericDreamNudeBad</defName>
+    <defName>DreamNudeBad</defName>
     <label>Dreamt about being nude</label>
     <description>I was walking around our colony, when I realised that I'm wearing no clothes! I felt so embarrassed when started laughing at me!</description>
     <requiredStanding>
@@ -368,85 +477,10 @@
   </DreamersDream.DreamDef>
 
   <DreamersDream.DreamDef ParentName="UnpleasantDream">
-    <defName>NonDreamAnxiety</defName>
+    <defName>DreamAnxiety</defName>
     <label>Disturbed sleep (anxiety)</label>
     <description>I was stressed and I could not stop thinking. Will those worries ever end?</description>
     <maxMood>stressed</maxMood>
-  </DreamersDream.DreamDef>
-
-  <DreamersDream.DreamDef ParentName="UnpleasantDream">
-    <defName>GenericDreamCheeseBad</defName>
-    <label>Dreamt about cheese</label>
-    <description>Cheese... Cheese everywhere!</description>
-    <dreamedBy>Male_07</dreamedBy>
-    <requiredOneOfTraits>
-      <li>Cannibal></li>
-    </requiredOneOfTraits>
-  </DreamersDream.DreamDef>
-
-  <DreamersDream.DreamDef ParentName="FrighteningDream">
-    <defName>GenericDreamOrganSteal</defName>
-    <label>Dreamt about surgery</label>
-    <description>Please, no! Don't take my organs...</description>
-    <requiredOneOfStanding>
-      <li>prisoner</li>
-      <li>slave</li>
-    </requiredOneOfStanding>
-  </DreamersDream.DreamDef>
-
-  <DreamersDream.DreamDef ParentName="DisturbingDream">
-    <defName>GenericDreamSolitaryConfinement</defName>
-    <label>Dreamt about solitary confinement</label>
-    <description>I dreamt of all my friends leaving me, one by one. In the end, it was only me, locked in this dark hole, forever.</description>
-    <requiredOneOfStanding>
-      <li>prisoner</li>
-      <li>slave</li>
-    </requiredOneOfStanding>
-  </DreamersDream.DreamDef>
-
-  <DreamersDream.DreamDef ParentName="FrighteningDream">
-    <defName>DreamSlavePunishment</defName>
-    <label>Dreamt about punishment</label>
-    <description>They beat me and starved me. Whatever I did, however I tried to please my captors, I only got pain in reward. The crack of the whip woke me up.</description>
-    <requiredOneOfStanding>
-      <li>slave</li>
-    </requiredOneOfStanding>
-  </DreamersDream.DreamDef>
-
-  <DreamersDream.DreamDef ParentName="DisturbingDream">
-    <defName>DreamSlaveServitude</defName>
-    <label>Dreamt about servitude</label>
-    <description>There was stone tablet hovering just above me, inscribed with the endless, demeaning tasks ahead of me and with the big plans my masters have. It didn't feel like those plans included me.</description>
-    <requiredOneOfStanding>
-      <li>slave</li>
-    </requiredOneOfStanding>
-  </DreamersDream.DreamDef>
-
-  <DreamersDream.DreamDef ParentName="DisturbingDream">
-    <defName>DreamSlaveHierarchy</defName>
-    <label>Dreamt about hierarchy</label>
-    <description>I sat on a golden throne, eating a delicious meal. People worked around me. When I was done eating, I called to them and they turned. All of them had my face!</description>
-    <requiredOneOfStanding>
-      <li>slave</li>
-    </requiredOneOfStanding>
-  </DreamersDream.DreamDef>
-
-  <DreamersDream.DreamDef ParentName="FrighteningDream">
-    <defName>DreamInvisibleMonster</defName>
-    <label>Dreamt about an invisible monster</label>
-    <description>There was an unseen creature in my bed with me, gnawing on my limbs. It seemed to enjoy itself, nibbling on every bone with endless patience. I did not feel pain, but I could hear the crunching and tearing of my body. Eventually, it ate all of me, and I was gone.</description>
-    <requiredOneOfBodyStates>
-      <li>ill</li>
-    </requiredOneOfBodyStates>
-  </DreamersDream.DreamDef>
-
-  <DreamersDream.DreamDef ParentName="DisturbingDream">
-    <defName>DreamGettingCooked</defName>
-    <label>Dreamt about getting cooked</label>
-    <description>I was lying, cramped, in a small metal box with a big window. Something clicked and whirred, and the lights came on. It got hotter and hotter, and I realized I was lying in an oven! The heat rose and rose, until I woke up.</description>
-    <requiredOneOfBodyStates>
-      <li>ill</li>
-    </requiredOneOfBodyStates>
   </DreamersDream.DreamDef>
 
   <DreamersDream.DreamDef ParentName="UnpleasantDream">
@@ -457,35 +491,6 @@
       <li>ill</li>
     </requiredOneOfBodyStates>
   </DreamersDream.DreamDef>
-
-  <DreamersDream.DreamDef ParentName="DisturbingDream">
-    <defName>DreamArrakisVision</defName>
-    <label>Dreamt about girl on desert planet</label>
-    <description>The planet was being ravaged by outsiders, its resources stolen and people enslaved. She stood among sparkling gusts of sand and reached out for me to help defend her home. But I did not know her, or the world she was from. And in the end, we both were were swallowed by the sand, reddened by the blood of her people...</description>
-    <requiredOneOfBackstory>
-      <li>offworld</li>
-    </requiredOneOfBackstory>
-  </DreamersDream.DreamDef>
-
-  <DreamersDream.DreamDef ParentName="FrighteningDream">
-    <defName>DreamWitheringAway</defName>
-    <label>Dreamt about withering away</label>
-    <description>I was a flower in a beautiful, green grassland. When the sun came up, I bloomed and stretched my petals. First, the warmth felt wonderful, but then it began to burn. The grassland around me turned brown and hard until only I was left.</description>
-    <requiredOneOfBodyStates>
-      <li>hungry</li>
-    </requiredOneOfBodyStates>
-  </DreamersDream.DreamDef>
-
-  <DreamersDream.DreamDef ParentName="DisturbingDream">
-    <defName>DreamKittenCollecting</defName>
-    <label>Dreamt about kittens</label>
-    <description>There was a litter of kittens spread throughout our home. I knew I was dreaming, but I also knew I had to collect all the kittens before something bad happened. Somehow, I could not just wake up. I tried to gather the kittens, but dropped them or lost them whenever I thought I was done. I ran through the rooms, desperate and scared, but couldn't find all of them.</description>
-    <dreamedBy>Ket</dreamedBy>
-    <conflictingStanding>
-      <li>prisoner</li>
-    </conflictingStanding>
-  </DreamersDream.DreamDef>
-  
 </Defs>
 
 <!-- =======BASIC DREAM=======
