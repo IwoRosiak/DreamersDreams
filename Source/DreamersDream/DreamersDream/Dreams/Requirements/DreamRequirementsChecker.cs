@@ -10,13 +10,14 @@ namespace DreamersDream
         public static bool CheckBackstory(this BackstoryCategory backstoryCat, Pawn pawn, bool invert)
         {
             bool flag = false;
+            /*
             foreach (var cats in pawn.story.GetBackstory(BackstorySlot.Adulthood)?.spawnCategories)
             {
                 if (cats == backstoryCat.ToString())
                 {
                     flag = true;
                 }
-            }
+            }*/
 
             foreach (var cats in pawn.story.GetBackstory(BackstorySlot.Childhood)?.spawnCategories)
             {

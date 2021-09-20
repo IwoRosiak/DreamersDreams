@@ -12,53 +12,71 @@
         <baseMoodEffect>0</baseMoodEffect>
       </li>
     </stages>
-  </DreamersDream.DreamDef><DreamersDream.DreamDef Name="HellLikeDream" Abstract="True"
+  </DreamersDream.DreamDef>
+  
+  <DreamersDream.DreamDef Name="InfernalDream" Abstract="True"
     ParentName="BaseDream">
     <tags>
       <li>HellLike</li>
     </tags>
-  </DreamersDream.DreamDef><DreamersDream.DreamDef Name="TerrorisingDream" Abstract="True"
+  </DreamersDream.DreamDef>
+  
+  <DreamersDream.DreamDef Name="TerrorisingDream" Abstract="True"
     ParentName="BaseDream">
     <tags>
       <li>Terrorising</li>
     </tags>
-  </DreamersDream.DreamDef><DreamersDream.DreamDef Name="DisturbingDream" Abstract="True"
+  </DreamersDream.DreamDef>
+  
+  <DreamersDream.DreamDef Name="DisturbingDream" Abstract="True"
     ParentName="BaseDream">
     <tags>
       <li>Disturbing</li>
     </tags>
-  </DreamersDream.DreamDef><DreamersDream.DreamDef Name="UnpleasantDream" Abstract="True"
+  </DreamersDream.DreamDef>
+  
+  <DreamersDream.DreamDef Name="UnpleasantDream" Abstract="True"
     ParentName="BaseDream">
     <tags>
       <li>Unpleasant</li>
     </tags>
-  </DreamersDream.DreamDef><DreamersDream.DreamDef Name="FrighteningDream" Abstract="True"
+  </DreamersDream.DreamDef>
+  
+  <DreamersDream.DreamDef Name="FrighteningDream" Abstract="True"
     ParentName="BaseDream">
     <tags>
       <li>Frightening</li>
     </tags>
-  </DreamersDream.DreamDef><DreamersDream.DreamDef Name="LegendaryDream" Abstract="True"
+  </DreamersDream.DreamDef>
+  
+  <DreamersDream.DreamDef Name="LegendaryDream" Abstract="True"
     ParentName="BaseDream">
     <tags>
       <li>Legendary</li>
     </tags>
-  </DreamersDream.DreamDef><DreamersDream.DreamDef Name="PleasantDream" Abstract="True"
+  </DreamersDream.DreamDef>
+  
+  <DreamersDream.DreamDef Name="PleasantDream" Abstract="True"
     ParentName="BaseDream">
     <tags>
       <li>Pleasant</li>
     </tags>
-  </DreamersDream.DreamDef><DreamersDream.DreamDef Name="ExcitingDream" Abstract="True"
+  </DreamersDream.DreamDef>
+  
+  <DreamersDream.DreamDef Name="ExcitingDream" Abstract="True"
     ParentName="BaseDream">
     <tags>
       <li>Exciting</li>
     </tags>
   </DreamersDream.DreamDef>
+  
   <DreamersDream.DreamDef Name="AmazingDream" Abstract="True" ParentName="BaseDream">
     <tags>
       <li>Amazing</li>
     </tags>
-  </DreamersDream.DreamDef><DreamersDream.DreamDef Name="EpicDream" Abstract="True"
-    ParentName="BaseDream">
+  </DreamersDream.DreamDef>
+  
+  <DreamersDream.DreamDef Name="EpicDream" Abstract="True" ParentName="BaseDream">
     <tags>
       <li>Epic</li>
     </tags>

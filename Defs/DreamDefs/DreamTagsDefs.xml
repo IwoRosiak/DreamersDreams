@@ -45,7 +45,7 @@
   <!--NEGATIVE-->
   <DreamersDream.DreamTagDef>
     <defName>HellLike</defName>
-    <label>hellish</label>
+    <label>infernal</label>
     <isSpecial>true</isSpecial>
     <moodOffset>-11</moodOffset>
     <chance>5</chance>

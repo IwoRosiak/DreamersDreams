@@ -133,7 +133,7 @@ namespace DreamersDream
             //social
             if (!dreamDef.conflictingMindStates.NullOrEmpty())
             {
-                debugInfo.AppendInNewLine("Conflicting social tags: ");
+                debugInfo.AppendInNewLine("Conflicting mind tags: ");
                 foreach (var req in dreamDef.conflictingMindStates)
                 {
                     if (dreamDef.conflictingMindStates[0] == req)
@@ -145,7 +145,7 @@ namespace DreamersDream
             }
             if (!dreamDef.requiredMindStates.NullOrEmpty())
             {
-                debugInfo.AppendInNewLine("Required social tags: ");
+                debugInfo.AppendInNewLine("Required mind tags: ");
                 foreach (var req in dreamDef.requiredMindStates)
                 {
                     if (dreamDef.requiredMindStates[0] == req)
@@ -157,10 +157,10 @@ namespace DreamersDream
             }
             if (!dreamDef.requiredOneOfBackstory.NullOrEmpty())
             {
-                debugInfo.AppendInNewLine("Required one of social tags: ");
-                foreach (var req in dreamDef.requiredOneOfBackstory)
+                debugInfo.AppendInNewLine("Required one of mind tags: ");
+                foreach (var req in dreamDef.requiredOneOfMindStates)
                 {
-                    if (dreamDef.requiredOneOfBackstory[0] == req)
+                    if (dreamDef.requiredOneOfMindStates[0] == req)
                     {
                         debugInfo.Append(req.ToString().ToLower());
                     }
@@ -170,7 +170,7 @@ namespace DreamersDream
             //health
             if (!dreamDef.conflictingBodyStates.NullOrEmpty())
             {
-                debugInfo.AppendInNewLine("Conflicting health tags: ");
+                debugInfo.AppendInNewLine("Conflicting body tags: ");
                 foreach (var req in dreamDef.conflictingBodyStates)
                 {
                     if (dreamDef.conflictingBodyStates[0] == req)
@@ -182,7 +182,7 @@ namespace DreamersDream
             }
             if (!dreamDef.requiredBodyStates.NullOrEmpty())
             {
-                debugInfo.AppendInNewLine("Required health tags: ");
+                debugInfo.AppendInNewLine("Required body tags: ");
                 foreach (var req in dreamDef.requiredBodyStates)
                 {
                     if (dreamDef.requiredBodyStates[0] == req)
@@ -194,7 +194,7 @@ namespace DreamersDream
             }
             if (!dreamDef.requiredOneOfBodyStates.NullOrEmpty())
             {
-                debugInfo.AppendInNewLine("Required one of health tags: ");
+                debugInfo.AppendInNewLine("Required one of body tags: ");
                 foreach (var req in dreamDef.requiredOneOfBodyStates)
                 {
                     if (dreamDef.requiredOneOfBodyStates[0] == req)
