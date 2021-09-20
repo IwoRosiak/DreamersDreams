@@ -14,7 +14,7 @@
     </nullifyingTraits>
   </DreamersDream.DreamDef>
 
-  <DreamersDream.DreamDef ParentName="LegendaryDream">
+  <DreamersDream.DreamDef ParentName="LegendaryDream"> <!--HAS TRIBAL ALTERNATIVE -->
     <defName>DreamHeroicDefenceOffworlder</defName>
     <label>Dreamt about heroic defence</label>
     <description>I had to defend our colony against waves and waves of upcoming serpent-like monsters while also sending units to enable some form of passage. It took place on a fiery planet, lots of lava, lots of fire and the sky was red. It went on for quite a while but in the end the monsters managed to open the passage. I boarded a shuttle and headed towards a strange gate which allowed for connection of our world to the abyss. While trying to do that I met my friend who was apparently trapped on this shuttle. I freed him and went to close the gate. Somehow, I succeeded. Everyone cheered, calling me a hero, and went on to have a party. I recognized most of my friends, even old friends who I have lost contact with long ago. Everyone was dancing, music played and I got to dance with someone I love...</description>
@@ -22,12 +22,15 @@
     <nullifyingTraits>
       <li>Psychopath</li>
     </nullifyingTraits>
-    <conflictingBackstory>
-      <li>tribal</li>
-    </conflictingBackstory>
+    <requiredBackstory>
+      <li>offworld</li>
+    </requiredBackstory>
+    <requiredStanding>
+      <li>colonist</li>
+    </requiredStanding>
   </DreamersDream.DreamDef>
 
-  <DreamersDream.DreamDef ParentName="LegendaryDream">
+  <DreamersDream.DreamDef ParentName="LegendaryDream"> <!--HAS OFFWORLD ALTERNATIVE -->
     <defName>DreamHeroicDefenceTribal</defName>
     <label>Dreamt about heroic defence</label>
     <description>I had to defend our colony against waves and waves of upcoming serpent-like monsters while also sending units to enable some form of passage. It took place on a fiery planet, lots of lava, lots of fire and the sky was red. It went on for quite a while but in the end the monsters managed to open the passage. I boarded a shuttle and headed towards a strange gate which allowed for connection of our world to the abyss. While trying to do that I met my friend who was apparently trapped on this shuttle. I freed him and went to close the gate. Somehow, I succeeded. Everyone cheered, calling me a hero, and went on to have a party. I recognized most of my friends, even old friends who I have lost contact with long ago. Everyone was dancing, music played and I got to dance with someone I love...</description>
@@ -35,9 +38,12 @@
     <nullifyingTraits>
       <li>Psychopath</li>
     </nullifyingTraits>
-    <requiredOneOfBackstory>
+    <requiredBackstory>
       <li>tribal</li>
-    </requiredOneOfBackstory>
+    </requiredBackstory>
+    <requiredStanding>
+      <li>colonist</li>
+    </requiredStanding>
   </DreamersDream.DreamDef>
 
   <DreamersDream.DreamDef ParentName="LegendaryDream">
@@ -54,7 +60,6 @@
   </DreamersDream.DreamDef>
 
 <!--EPIC-->
-  
   <DreamersDream.DreamDef ParentName="EpicDream">
     <defName>DreamOffworldHitman</defName>
     <label>Dreamt about being a hitman</label>
@@ -78,7 +83,7 @@
   <DreamersDream.DreamDef ParentName="EpicDream">
     <defName>DreamLucid</defName>
     <label>Had lucid dream</label>
-    <description>I realised that I'm in the dream so I could do anything I want! If only I could do it more often...</description>
+    <description>I realised that I'm in the dream so I could do anything I want! If only I could do it more often...</description> <!-- let's make something more with lucid dreams -->
   </DreamersDream.DreamDef>
 
   <DreamersDream.DreamDef ParentName="EpicDream">
@@ -102,9 +107,9 @@
     <label>Dreamt about fire tornado</label>
     <description>I was wandering through a jungle until I noticed a giant fire tornado. It simply stood there, not burning anything - the ground around it was burnt and barren but around it was a lush wild, rain forest. There were some locals worshipping it. They told me that it was The Element and explained the lore of Elementals. Elements are aspects of reality that humanity sees as important and symbolic - they can be as basic as "fire" or as complicated as "chaos" or "jealousy". They are simultaneously Gods, Worlds and Hive Minds of living beings - smaller elementals that might think that they act of free will. But elementals are not free - they act as the Element as a whole wills them. This tornado of fire is a high level Elemental and it needs constant worship which the locals do in shifts. If they stop, it will spread fire all around and feed on our fear of it.</description>
     <dreamedBy>dambuk1</dreamedBy>
-    <requiredOneOfBackstory>
+    <requiredBackstory>
       <li>tribal</li>
-    </requiredOneOfBackstory>
+    </requiredBackstory>
   </DreamersDream.DreamDef>
   
   <DreamersDream.DreamDef ParentName="EpicDream">
@@ -119,7 +124,7 @@
   <DreamersDream.DreamDef ParentName="AmazingDream">
     <defName>DreamBeingAnimal</defName>
     <label>Dreamt about being a racoon</label>
-    <description>I was a small animal (I think it was a raccoon?) in a random windy forest. It was pretty nice even if all I did was wander around and occasionally see other creatures, and at some point I think I befriended a groundhog. I'm not too sure on how it ended but the last thing I vaguely remember was seeing buildings over a hill.</description>
+    <description>I was a small animal in a random windy forest. It was pretty nice even if all I did was wander around and occasionally see other creatures, and at some point I think I befriended a groundhog. I'm not too sure on how it ended but the last thing I vaguely remember was seeing buildings over a hill.</description>
     <dreamedBy>okoyum</dreamedBy>
     <nullifyingTraits>
       <li>Psychopath</li>
@@ -140,6 +145,9 @@
     <defName>DreamWondersLight</defName>
     <label>Dreamt about wonders</label>
     <description>First, there was light... Then the most beautiful thing my eyes ever saw appeared before me... If only I could remember what it was.</description>
+    <requiredTrait>
+      <li>TorturedArtist</li>
+    </requiredTrait>
   </DreamersDream.DreamDef>
 
   <DreamersDream.DreamDef ParentName="AmazingDream">
@@ -218,9 +226,6 @@
     <defName>GenericDreamChildhoodHouse</defName>
     <label>Dreamt about childhood</label>
     <description>I was back in my childhood house! I've regained connection with some of my best memories.</description>
-    <requiredOneOfBackstory>
-      <li>offworld</li>
-    </requiredOneOfBackstory>
   </DreamersDream.DreamDef>
 
   <DreamersDream.DreamDef ParentName="PleasantDream">

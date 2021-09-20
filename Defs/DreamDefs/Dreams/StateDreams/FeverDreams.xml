@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+    <DreamersDream.DreamDef ParentName="FrighteningDream">
+        <defName>DreamInvisibleMonster</defName>
+        <label>Dreamt about an invisible monster</label>
+        <description>There was an unseen creature in my bed with me, gnawing on my limbs. It seemed to enjoy itself, nibbling on every bone with endless patience. I did not feel pain, but I could hear the crunching and tearing of my body. Eventually, it ate all of me, and I was gone.</description>
+        <requiredBodyStates>
+            <li>ill</li>
+        </requiredBodyStates> <!-- sure that should be for ill? maybe we can drop this requirement and make something more ill specific?-->
+    </DreamersDream.DreamDef> 
+    
+    <DreamersDream.DreamDef ParentName="DisturbingDream">
+        <defName>DreamGettingCooked</defName>
+        <label>Dreamt about getting cooked</label>
+        <description>I was lying, cramped, in a small metal box with a big window. Something clicked and whirred, and the lights came on. It got hotter and hotter, and I realized I was lying in an oven! The heat rose and rose, until I woke up.</description>
+        <requiredBodyStates>
+            <li>ill</li>
+        </requiredBodyStates> <!-- we can make temperature check here :) I used to have that implemented before v2.0, so I know how to do it.-->
+    </DreamersDream.DreamDef>
+    
+    <!--<DreamersDream.DreamDef ParentName="UnpleasantDream">
+        <defName>DreamSenselessImages</defName>
+        <label>Dreamt about getting cooked</label>
+        <description>I was lying, cramped, in a small metal box with a big window. Something clicked and whirred, and the lights came on. It got hotter and hotter, and I realized I was lying in an oven! The heat rose and rose, until I woke up.</description>
+        <requiredBodyStates>
+            <li>ill</li>
+        </requiredBodyStates>
+    </DreamersDream.DreamDef> this is exactly same dream as above-->
+    
+</Defs>

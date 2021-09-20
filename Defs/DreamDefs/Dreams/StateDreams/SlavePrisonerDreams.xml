@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+    <DreamersDream.DreamDef ParentName="DisturbingDream">
+        <defName>DreamSolitaryConfinement</defName>
+        <label>Dreamt about solitary confinement</label>
+        <description>I dreamt of all my friends leaving me, one by one. In the end, it was only me, locked in this dark hole, forever.</description>
+        <requiredOneOfStanding>
+            <li>prisoner</li>
+            <li>slave</li>
+        </requiredOneOfStanding>
+        <requiredMindStates>
+            <li>hasFriend</li>
+        </requiredMindStates>
+    </DreamersDream.DreamDef>
+    
+    <DreamersDream.DreamDef ParentName="DisturbingDream">
+        <defName>DreamSlaveServitude</defName>
+        <label>Dreamt about servitude</label>
+        <description>There was stone tablet hovering just above me, inscribed with the endless, demeaning tasks ahead of me and with the big plans my masters have. It didn't feel like those plans included me.</description>
+        <requiredOneOfStanding>
+            <li>slave</li>
+        </requiredOneOfStanding>
+    </DreamersDream.DreamDef>
+    
+    
+    <DreamersDream.DreamDef ParentName="DisturbingDream">
+        <defName>DreamSlaveHierarchy</defName>
+        <label>Dreamt about hierarchy</label>
+        <description>I sat on a golden throne, eating a delicious meal. People worked around me. When I was done eating, I called to them and they turned. All of them had my face!</description>
+        <requiredOneOfStanding>
+            <li>slave</li>
+        </requiredOneOfStanding>
+    </DreamersDream.DreamDef>
+</Defs>
