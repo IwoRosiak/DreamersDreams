@@ -44,8 +44,8 @@
         <label>Dreamt about cheese</label>
         <description>Cheese... Cheese everywhere!</description>
         <dreamedBy>Male_07</dreamedBy>
-        <requiredOneOfTraits>
-            <li>Cannibal></li>
-        </requiredOneOfTraits>
+        <requiredTraits>
+            <li>Cannibal</li>
+        </requiredTraits>
     </DreamersDream.DreamDef>
 </Defs>

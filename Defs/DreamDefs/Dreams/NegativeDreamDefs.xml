@@ -282,17 +282,7 @@
     <nullifyingTraits>
       <li>Psychopath</li>
       <li>Bloodlust</li>
-    </nullifyingTraits>
-  </DreamersDream.DreamDef>
-
-  <DreamersDream.DreamDef ParentName="DisturbingDream">
-    <defName>DreamMurderBad</defName>
-    <label>Dreamt about killing</label>
-    <description>I killed without mercy... But I didn't want to...</description>
-    <dreamedBy>AUTHOR</dreamedBy>
-    <nullifyingTraits>
-      <li>Psychopath</li>
-      <li>Bloodlust</li>
+      <li>Cannibal</li>
     </nullifyingTraits>
   </DreamersDream.DreamDef>
 
@@ -368,9 +358,9 @@
       <li>prisoner</li>
       <li>slave</li>
     </requiredOneOfStanding>
-    <requiredMindState>
+    <requiredMindStates>
       <li>hasFriend</li>
-    </requiredMindState>
+    </requiredMindStates>
   </DreamersDream.DreamDef>
   
   <DreamersDream.DreamDef ParentName="DisturbingDream">

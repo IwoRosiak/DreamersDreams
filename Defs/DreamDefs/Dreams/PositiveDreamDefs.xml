@@ -172,9 +172,9 @@
     <defName>DreamHealthy</defName>
     <label>Dreamt about being healthy</label>
     <description>I could finally relax... No pain... No suffering.</description>
-    <requiredHealth>
+    <requiredBodyStates>
       <li>wounded</li>
-    </requiredHealth>
+    </requiredBodyStates>
   </DreamersDream.DreamDef>
 
   <DreamersDream.DreamDef ParentName="ExcitingDream">

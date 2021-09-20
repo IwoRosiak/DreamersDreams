@@ -5,9 +5,9 @@
         <defName>DreamMurderingRival</defName>
         <label>Dreamt about murdering rival</label>
         <description>I wish they could still be here. To see how much I'm enjoying myself now, after ending their miserable life...</description>
-        <requiredOneOfTraits>
+        <requiredTraits>
             <li>Bloodlust</li>
-        </requiredOneOfTraits>
+        </requiredTraits>
     </DreamersDream.DreamDef>
     
     <DreamersDream.DreamDef ParentName="PleasantDream">
@@ -23,10 +23,9 @@
         <defName>DreamTorturingStranger</defName>
         <label>Dreamt about torturing</label>
         <description>Stranger tied up in front of me. Set of shiny and sharp tools on the table. I grabbed one of the knifes and I couldn't stop. Even when strangers body stopped quivering, I was still taking pleasure in the simple act of torture...</description>
-        <requiredOneOfTraits>
-            <li>Bloodlust</li>
+        <requiredTraits>
             <li>Psychopath</li>
-        </requiredOneOfTraits>
+        </requiredTraits>
     </DreamersDream.DreamDef>
     
     <DreamersDream.DreamDef ParentName="PleasantDream">
@@ -42,9 +41,8 @@
         <defName>DreamFightingBloodspill</defName>
         <label>Dreamt about fighting</label>
         <description>Breaking their bones is not enough! Let the blood spill!</description>
-        <requiredOneOfTraits>
+        <requiredTraits>
             <li>Bloodlust</li>
-            <li>Cannibal</li>
-        </requiredOneOfTraits>
+        </requiredTraits>
     </DreamersDream.DreamDef>
 </Defs>
