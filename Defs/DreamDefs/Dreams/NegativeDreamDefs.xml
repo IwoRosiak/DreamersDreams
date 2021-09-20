@@ -139,7 +139,7 @@
       <li>tribal</li>
     </conflictingBackstory>
     <requiredStanding>
-      <li>Colonist</li>
+      <li>colonist</li>
     </requiredStanding>
   </DreamersDream.DreamDef>
 
@@ -329,8 +329,8 @@
     <defName>DreamSocialExclusion</defName>
     <label>Dreamt about social exclusion</label>
     <description>I was excluded from my group because I was scared to snort Yayo... Do we even have any Yayo?</description>
-    <requiredTraits> <!-- TODO when making oneOf tag add Wimp -->
-      <li>Teetotaler</li>
+    <requiredTraits> <!--we need to add teetotaler check here (can't be done this way) -->
+      <li>Wimp</li>
     </requiredTraits>
   </DreamersDream.DreamDef>
 
@@ -441,22 +441,6 @@
     <label>Dreamt about being mind controlled</label>
     <description>People around me were getting injected with mind control drugs forcefully.</description>
     <dreamedBy>Denneisk</dreamedBy>
-  </DreamersDream.DreamDef>
-
-  <DreamersDream.DreamDef ParentName="UnpleasantDream">
-    <defName>DreamAnxiety</defName>
-    <label>Disturbed sleep (anxiety)</label>
-    <description>I was stressed and I could not stop thinking. Will those worries ever end?</description>
-    <maxMood>stressed</maxMood>
-  </DreamersDream.DreamDef>
-
-  <DreamersDream.DreamDef ParentName="UnpleasantDream">
-    <defName>DreamSenselessImages</defName>
-    <label>Dreamt about getting cooked</label>
-    <description>I was lying, cramped, in a small metal box with a big window. Something clicked and whirred, and the lights came on. It got hotter and hotter, and I realized I was lying in an oven! The heat rose and rose, until I woke up.</description>
-    <requiredOneOfBodyStates>
-      <li>ill</li>
-    </requiredOneOfBodyStates>
   </DreamersDream.DreamDef>
 </Defs>
 

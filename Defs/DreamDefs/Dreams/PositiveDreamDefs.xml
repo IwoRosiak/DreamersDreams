@@ -145,9 +145,9 @@
     <defName>DreamWondersLight</defName>
     <label>Dreamt about wonders</label>
     <description>First, there was light... Then the most beautiful thing my eyes ever saw appeared before me... If only I could remember what it was.</description>
-    <requiredTrait>
+    <requiredTraits>
       <li>TorturedArtist</li>
-    </requiredTrait>
+    </requiredTraits>
   </DreamersDream.DreamDef>
 
   <DreamersDream.DreamDef ParentName="AmazingDream">
