@@ -6,6 +6,10 @@
         drugs,
         rage,
         calm,
-        tantrum
+        tantrum,
+        pyromaniac,
+        lampDestroyer,
+        suicidal,
+        corpser
     }
 }

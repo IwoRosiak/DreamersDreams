@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+    <DreamersDream.DreamDef ParentName="ExcitingDream">
+        <defName>DreamNakedParty</defName>
+        <label>Dreamt about partying naked</label>
+        <description>I was walking around the colony, when I realised that I'm wearing no clothes! I looked around and noticed that everyone took off their clothes as they saw me! We started to drink and dance naked until we dropped from exhaustion.</description>
+        <requiredTraits>
+            <li>Nudist</li>
+        </requiredTraits>
+    </DreamersDream.DreamDef>
+</Defs>

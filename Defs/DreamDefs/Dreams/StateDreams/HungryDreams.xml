@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+    <DreamersDream.DreamDef ParentName="FrighteningDream">
+        <defName>DreamWitheringAway</defName>
+        <label>Dreamt about withering away</label>
+        <description>I was a flower in a beautiful, green grassland. When the sun came up, I bloomed and stretched my petals. First, the warmth felt wonderful, but then it began to burn. The grassland around me turned brown and hard until only I was left.</description>
+        <requiredOneOfBodyStates>
+            <li>hungry</li>
+            <li>starving</li>
+        </requiredOneOfBodyStates>
+    </DreamersDream.DreamDef>
+    
+    <DreamersDream.DreamDef ParentName="DisturbingDream">
+        <defName>DreamStarving</defName>
+        <label>Disturbed sleep (starvation)</label>
+        <description>My growling stomach kept me awake...</description>
+        <requiredOneOfBodyStates>
+            <li>hungry</li>
+            <li>starving</li>
+        </requiredOneOfBodyStates>
+    </DreamersDream.DreamDef>
+</Defs>

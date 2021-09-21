@@ -45,7 +45,7 @@
   <!--NEGATIVE-->
   <DreamersDream.DreamTagDef>
     <defName>HellLike</defName>
-    <label>hellish</label>
+    <label>infernal</label>
     <isSpecial>true</isSpecial>
     <moodOffset>-11</moodOffset>
     <chance>5</chance>
@@ -90,12 +90,13 @@
     <chance>0</chance>
   </DreamersDream.DreamTagDef>
   
-    <DreamersDream.DreamTagDef>
+  <!-- <DreamersDream.DreamTagDef>
     <defName>Debug</defName>
     <label>debug</label>
     <isSpecial>false</isSpecial>
-    <chance>0</chance>
-    </DreamersDream.DreamTagDef><!--
+      <moodOffset>-5</moodOffset>
+    <chance>99999</chance>
+    </DreamersDream.DreamTagDef>
 SPECIAL 
   <DreamersDream.DreamTagDef>
     <defName>Lucid</defName>

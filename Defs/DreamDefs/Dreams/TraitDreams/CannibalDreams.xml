@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+    <DreamersDream.DreamDef ParentName="AmazingDream">
+        <defName>DreamHumanFeast</defName>
+        <label>Dreamt about human feast</label>
+        <description>Legs, arms, eyes and brains. Cooked to perfection. I can eat my fill and no one will judge me!</description>
+        <requiredTraits>
+            <li>Cannibal</li>
+        </requiredTraits>
+    </DreamersDream.DreamDef>
+    
+    <DreamersDream.DreamDef ParentName="EpicDream">
+        <defName>DreamEatingRival</defName>
+        <label>Dreamt about eating my rival</label>
+        <description>I laughed while tying him over the fire pit. I laughed while heat was charring his face. I laughed while consuming his flesh.</description>
+        <requiredTraits>
+            <li>Cannibal</li>
+        </requiredTraits>
+    </DreamersDream.DreamDef>
+    
+    <DreamersDream.DreamDef ParentName="ExcitingDream">
+        <defName>DreamEatingSomeone</defName>
+        <label>Dreamt about eating someone</label>
+        <description>Eating a human being is simple. I used to think of it as a disgusting thing, but simply trying this delicacy proved me wrong!</description>
+        <requiredTraits>
+            <li>Cannibal</li>
+        </requiredTraits>
+    </DreamersDream.DreamDef>
+    
+    <DreamersDream.DreamDef ParentName="PleasantDream">
+        <defName>DreamPizzaFriendsCannibal</defName>
+        <label>Dreamt about special pizza</label>
+        <description>I dreamt I was making pizza out of my friends. It was delicious.</description>
+        <requiredTraits>
+            <li>Cannibal</li>
+        </requiredTraits>
+        <requiredOneOfMindStates>
+            <li>hasFriend</li>
+        </requiredOneOfMindStates>
+    </DreamersDream.DreamDef>
+    
+    <DreamersDream.DreamDef ParentName="UnpleasantDream">
+        <defName>DreamCheeseBad</defName>
+        <label>Dreamt about cheese</label>
+        <description>Cheese... Cheese everywhere!</description>
+        <dreamedBy>Male_07</dreamedBy>
+        <requiredTraits>
+            <li>Cannibal</li>
+        </requiredTraits>
+    </DreamersDream.DreamDef>
+</Defs>

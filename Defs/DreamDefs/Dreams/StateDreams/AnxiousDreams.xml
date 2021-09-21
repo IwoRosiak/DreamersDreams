@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+    <DreamersDream.DreamDef ParentName="UnpleasantDream">
+        <defName>DreamAnxiety</defName>
+        <label>Disturbed sleep (anxiety)</label>
+        <description>I was stressed and I could not stop thinking. Will those worries ever end?</description>
+        <maxMood>stressed</maxMood>
+    </DreamersDream.DreamDef>
+    
+</Defs>

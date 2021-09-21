@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+    
+    <DreamersDream.DreamDef ParentName="EpicDream">
+        <defName>DreamMurderingRival</defName>
+        <label>Dreamt about murdering rival</label>
+        <description>I wish they could still be here. To see how much I'm enjoying myself now, after ending their miserable life...</description>
+        <requiredTraits>
+            <li>Bloodlust</li>
+        </requiredTraits>
+    </DreamersDream.DreamDef>
+    
+    <DreamersDream.DreamDef ParentName="AmazingDream">
+        <defName>DreamMurderSpree</defName>
+        <label>Dreamt about murder spree</label>
+        <description>Nothing can stop me. Murder. Everyone.</description>
+        <requiredTraits>
+            <li>Bloodlust</li>
+        </requiredTraits>
+    </DreamersDream.DreamDef>
+    
+    <DreamersDream.DreamDef ParentName="AmazingDream">
+        <defName>DreamTorturingStranger</defName>
+        <label>Dreamt about torturing</label>
+        <description>Stranger tied up in front of me. Set of shiny and sharp tools on the table. I grabbed one of the knifes and I couldn't stop. Even when strangers body stopped quivering, I was still taking pleasure in the simple act of torture...</description>
+        <requiredTraits>
+            <li>Bloodlust</li>
+        </requiredTraits>
+    </DreamersDream.DreamDef>
+    
+    <DreamersDream.DreamDef ParentName="ExcitingDream">
+        <defName>DreamMurder</defName>
+        <label>Dreamt about murder</label>
+        <description>Motionless body lays in front of me and I watch it. The blood pool keeps getting bigger. I don't remember why I killed this person but it feels so damn good.</description>
+        <requiredTraits>
+            <li>Bloodlust</li>
+        </requiredTraits>
+    </DreamersDream.DreamDef>
+    
+    <DreamersDream.DreamDef ParentName="PleasantDream">
+        <defName>DreamFightingBloodspill</defName>
+        <label>Dreamt about fighting</label>
+        <description>Breaking their bones is not enough! Let the blood spill!</description>
+        <requiredTraits>
+            <li>Bloodlust</li>
+        </requiredTraits>
+    </DreamersDream.DreamDef>
+</Defs>
