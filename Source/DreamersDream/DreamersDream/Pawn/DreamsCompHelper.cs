@@ -16,7 +16,7 @@ namespace DreamersDream
 
         private static bool IsPawnCapableOfDreaming(this Pawn pawn)
         {
-            return pawn.needs.mood != null && pawn.needs?.rest != null && !pawn.Dead && (pawn.Spawned || pawn.IsCaravanMember());
+            return !pawn.Dead && pawn.needs.mood != null && pawn.needs?.rest != null && !pawn.Dead && (pawn.Spawned || pawn.IsCaravanMember());
         }
 
         private static bool IsAwake(this Pawn pawn)
