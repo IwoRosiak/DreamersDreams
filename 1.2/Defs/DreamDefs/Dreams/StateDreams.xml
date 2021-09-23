@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+    <!--ANXIOUS-->
+    <DreamersDream.DreamDef ParentName="UnpleasantDream">
+        <defName>DreamAnxiety</defName>
+        <label>Disturbed sleep (anxiety)</label>
+        <description>I was stressed and I could not stop thinking. Will those worries ever end?</description>
+        <maxMood>stressed</maxMood>
+    </DreamersDream.DreamDef>
+    
+    <!--FEVER-->
+    <DreamersDream.DreamDef ParentName="FrighteningDream">
+        <defName>DreamInvisibleMonster</defName>
+        <label>Dreamt about an invisible monster</label>
+        <description>There was an unseen creature in my bed with me, gnawing on my limbs. It seemed to enjoy itself, nibbling on every bone with endless patience. I did not feel pain, but I could hear the crunching and tearing of my body. Eventually, it ate all of me, and I was gone.</description>
+        <requiredBodyStates>
+            <li>ill</li>
+        </requiredBodyStates> <!-- sure that should be for ill? maybe we can drop this requirement and make something more ill specific?-->
+    </DreamersDream.DreamDef> 
+    
+    <DreamersDream.DreamDef ParentName="DisturbingDream">
+        <defName>DreamGettingCooked</defName>
+        <label>Dreamt about getting cooked</label>
+        <description>I was lying, cramped, in a small metal box with a big window. Something clicked and whirred, and the lights came on. It got hotter and hotter, and I realized I was lying in an oven! The heat rose and rose, until I woke up.</description>
+        <requiredBodyStates>
+            <li>ill</li>
+        </requiredBodyStates> <!-- we can make temperature check here :) I used to have that implemented before v2.0, so I know how to do it.-->
+    </DreamersDream.DreamDef>
+    
+    <!--<DreamersDream.DreamDef ParentName="UnpleasantDream">
+        <defName>DreamSenselessImages</defName>
+        <label>Dreamt about getting cooked</label>
+        <description>I was lying, cramped, in a small metal box with a big window. Something clicked and whirred, and the lights came on. It got hotter and hotter, and I realized I was lying in an oven! The heat rose and rose, until I woke up.</description>
+        <requiredBodyStates>
+            <li>ill</li>
+        </requiredBodyStates>
+    </DreamersDream.DreamDef> this is exactly same dream as above-->
+    
+    <!--HUNGRY-->
+    <DreamersDream.DreamDef ParentName="FrighteningDream">
+        <defName>DreamWitheringAway</defName>
+        <label>Dreamt about withering away</label>
+        <description>I was a flower in a beautiful, green grassland. When the sun came up, I bloomed and stretched my petals. First, the warmth felt wonderful, but then it began to burn. The grassland around me turned brown and hard until only I was left.</description>
+        <requiredOneOfBodyStates>
+            <li>hungry</li>
+            <li>starving</li>
+        </requiredOneOfBodyStates>
+    </DreamersDream.DreamDef>
+    
+    <DreamersDream.DreamDef ParentName="DisturbingDream">
+        <defName>DreamStarving</defName>
+        <label>Disturbed sleep (starvation)</label>
+        <description>My growling stomach kept me awake...</description>
+        <requiredOneOfBodyStates>
+            <li>hungry</li>
+            <li>starving</li>
+        </requiredOneOfBodyStates>
+    </DreamersDream.DreamDef>
+    
+    <!--SLAVE/PRISONER-->
+    <DreamersDream.DreamDef ParentName="DisturbingDream">
+        <defName>DreamSolitaryConfinement</defName>
+        <label>Dreamt about solitary confinement</label>
+        <description>I dreamt of all my friends leaving me, one by one. In the end, it was only me, locked in this dark hole, forever.</description>
+        <requiredOneOfStanding>
+            <li>prisoner</li>
+            <li>slave</li>
+        </requiredOneOfStanding>
+        <requiredMindStates>
+            <li>hasFriend</li>
+        </requiredMindStates>
+    </DreamersDream.DreamDef>
+    
+    <DreamersDream.DreamDef ParentName="DisturbingDream">
+        <defName>DreamSlaveServitude</defName>
+        <label>Dreamt about servitude</label>
+        <description>There was stone tablet hovering just above me, inscribed with the endless, demeaning tasks ahead of me and with the big plans my masters have. It didn't feel like those plans included me.</description>
+        <requiredOneOfStanding>
+            <li>slave</li>
+        </requiredOneOfStanding>
+    </DreamersDream.DreamDef>
+    
+    
+    <DreamersDream.DreamDef ParentName="DisturbingDream">
+        <defName>DreamSlaveHierarchy</defName>
+        <label>Dreamt about hierarchy</label>
+        <description>I sat on a golden throne, eating a delicious meal. People worked around me. When I was done eating, I called to them and they turned. All of them had my face!</description>
+        <requiredOneOfStanding>
+            <li>slave</li>
+        </requiredOneOfStanding>
+    </DreamersDream.DreamDef>
+</Defs>
