@@ -11,6 +11,7 @@
         <requiredTraits>
             <li>Sleepwalker</li>
         </requiredTraits>
+        <tags><li>Sleepwalk</li></tags>
     </DreamersDream.DreamDef>
     
     <DreamersDream.DreamDef ParentName="FrighteningDream">
@@ -20,6 +21,7 @@
         <requiredTraits>
             <li>Sleepwalker</li>
         </requiredTraits>
+        <tags><li>Sleepwalk</li></tags>
     </DreamersDream.DreamDef>
     
     <DreamersDream.DreamDef ParentName="FrighteningDream">
@@ -29,6 +31,7 @@
         <requiredTraits>
             <li>Sleepwalker</li>
         </requiredTraits>
+        <tags><li>Sleepwalk</li></tags>
     </DreamersDream.DreamDef>
     
     <DreamersDream.DreamDef ParentName="DisturbingDream">
@@ -38,6 +41,7 @@
         <requiredTraits>
             <li>Sleepwalker</li>
         </requiredTraits>
+        <tags><li>Sleepwalk</li></tags>
     </DreamersDream.DreamDef>
     
     <DreamersDream.DreamDef ParentName="DisturbingDream">
@@ -47,5 +51,6 @@
         <requiredTraits>
             <li>Sleepwalker</li>
         </requiredTraits>
+        <tags><li>Sleepwalk</li></tags>
     </DreamersDream.DreamDef>
 </Defs>
