@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <TraitDef>
+    <defName>Sleepwalker</defName>
+    <commonality>0.6</commonality>
+    <degreeDatas>
+      <li>
+        <label>Occasional Sleepwalker</label>
+        <description>Once in a while [PAWN_nameDef] will sleepwalk.</description>
+        <degree>1</degree>
+      </li>
+      <li>
+        <label>Sleepwalker</label>
+        <description>For some unknown reason causes [PAWN_nameDef] to do some weird things during sleep.</description>
+        <degree>2</degree>
+      </li>
+      <li>
+        <label>Usual Sleepwalker</label>
+        <description>[PAWN_nameDef] enjoys sleepwalking almost every night. Maybe the bed is not comfortable enough?</description>
+        <degree>3</degree>
+      </li>
+    </degreeDatas>
+  </TraitDef>
+</Defs>

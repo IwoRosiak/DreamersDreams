@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+  <!-- MAIN TAGS -->
+  <!-- POSITIVE -->
+  <DreamersDream.DreamTagDef>
+    <defName>Legendary</defName>
+    <label>legendary</label>
+    <isSpecial>true</isSpecial>
+    <moodOffset>12</moodOffset>
+    <chance>5</chance>
+  </DreamersDream.DreamTagDef>
+  
+  <DreamersDream.DreamTagDef>
+    <defName>Epic</defName>
+    <label>epic</label>
+    <isSpecial>true</isSpecial>
+    <moodOffset>8</moodOffset>
+    <chance>25</chance>
+  </DreamersDream.DreamTagDef>
+  
+  <DreamersDream.DreamTagDef>
+    <defName>Amazing</defName>
+    <label>amazing</label>
+    <isSpecial>false</isSpecial>
+    <moodOffset>6</moodOffset>
+    <chance>90</chance>
+  </DreamersDream.DreamTagDef>
+  
+  <DreamersDream.DreamTagDef>
+    <defName>Exciting</defName>
+    <label>exciting</label>
+    <isSpecial>false</isSpecial>
+    <moodOffset>5</moodOffset>
+    <chance>200</chance>
+  </DreamersDream.DreamTagDef>
+  
+  <DreamersDream.DreamTagDef>
+    <defName>Pleasant</defName>
+    <label>pleasant</label>
+    <isSpecial>false</isSpecial>
+    <moodOffset>2</moodOffset>
+    <chance>500</chance>
+  </DreamersDream.DreamTagDef>
+  
+  <!--NEGATIVE-->
+  <DreamersDream.DreamTagDef>
+    <defName>HellLike</defName>
+    <label>infernal</label>
+    <isSpecial>true</isSpecial>
+    <moodOffset>-11</moodOffset>
+    <chance>5</chance>
+  </DreamersDream.DreamTagDef>
+  
+  <DreamersDream.DreamTagDef>
+    <defName>Terrorising</defName>
+    <label>terrifying</label>
+    <isSpecial>true</isSpecial>
+    <moodOffset>-8</moodOffset>
+    <chance>25</chance>
+  </DreamersDream.DreamTagDef>
+  
+  <DreamersDream.DreamTagDef>
+    <defName>Frightening</defName>
+    <label>frightening</label>
+    <isSpecial>false</isSpecial>
+    <moodOffset>-5</moodOffset>
+    <chance>90</chance>
+  </DreamersDream.DreamTagDef>
+  
+  <DreamersDream.DreamTagDef>
+    <defName>Disturbing</defName>
+    <label>disturbing</label>
+    <isSpecial>false</isSpecial>
+    <moodOffset>-3</moodOffset>
+    <chance>200</chance>
+  </DreamersDream.DreamTagDef>
+  
+  <DreamersDream.DreamTagDef>
+    <defName>Unpleasant</defName>
+    <label>unpleasant</label>
+    <isSpecial>false</isSpecial>
+    <moodOffset>-2</moodOffset>
+    <chance>500</chance>
+  </DreamersDream.DreamTagDef>
+  
+  <DreamersDream.DreamTagDef>
+    <defName>Sleepwalk</defName>
+    <label>sleepwalk</label>
+    <isSpecial>false</isSpecial>
+    <chance>0</chance>
+  </DreamersDream.DreamTagDef>
+  
+  
+  
+  <!-- <DreamersDream.DreamTagDef>
+    <defName>Debug</defName>
+    <label>debug</label>
+    <isSpecial>false</isSpecial>
+      <moodOffset>-5</moodOffset>
+    <chance>99999</chance>
+    </DreamersDream.DreamTagDef>
+SPECIAL 
+  <DreamersDream.DreamTagDef>
+    <defName>Lucid</defName>
+    <label>lucid</label>
+    <isSpecial>true</isSpecial>
+    <chance>0</chance>
+  </DreamersDream.DreamTagDef>
+
+ LUCID Today i had a lucid dream. But not the fun type - i was lucid enough to know that i was in a nightmare but not mentally strong enough to use my usual method of waking up from those. I felt all sluggish while the nightmare symbolically pointed out all the failures of my life. At times i felt at the cusp of awakening, only to be pulled back in. It was hell.
+  
+  <DreamersDream.DreamTagDef>
+    <defName>Divine</defName>
+    <label>divine</label>
+    <isSpecial>true</isSpecial>
+    <chance>0</chance>
+  </DreamersDream.DreamTagDef>
+
+  <DreamersDream.DreamTagDef>
+    <defName>Mystical</defName>
+    <label>mystical</label>
+    <isSpecial>true</isSpecial>
+    <chance>0</chance>
+  </DreamersDream.DreamTagDef>-->
+</Defs>

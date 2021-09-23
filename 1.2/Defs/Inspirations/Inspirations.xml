@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <InspirationDef>
+    <defName>Dream_Frenzy_Work</defName>
+    <label>work frenzy</label>
+    <baseDurationDays>2</baseDurationDays>
+    <beginLetter>[PAWN_pronoun] had an extraordinary dream. [PAWN_pronoun] will work faster for 2 days.</beginLetter>
+    <beginLetterDef>PositiveEvent</beginLetterDef>
+    <endMessage>{0} is no longer inspired (work frenzy).</endMessage>
+    <baseInspectLine>Dream: Work frenzy</baseInspectLine>
+    <statFactors>
+      <WorkSpeedGlobal>1.8</WorkSpeedGlobal>
+    </statFactors>
+    <baseCommonality>0</baseCommonality>
+  </InspirationDef>
+
+    <InspirationDef>
+      <defName>Dream_Inspired_Trade</defName>
+      <label>inspired trade</label>
+      <baseDurationDays>2</baseDurationDays>
+      <beginLetter>[PAWN_pronoun] had an extraordinary dream. [PAWN_pronoun] will get a significant trade price bonus when closing [PAWN_possessive] next trade deal.\n\nThe inspiration will expire after 2 days, or when the deal is done.</beginLetter>
+      <beginLetterDef>PositiveEvent</beginLetterDef>
+      <endMessage>{0} is no longer inspired (inspired trade).</endMessage>
+      <baseInspectLine>Dream: Inspired trade</baseInspectLine>
+      <baseCommonality>0</baseCommonality>
+      <requiredNonDisabledStats>
+        <li>TradePriceImprovement</li>
+      </requiredNonDisabledStats>
+      <requiredSkills>
+        <Social>3</Social>
+      </requiredSkills>
+      <associatedSkills>
+        <li>Social</li>
+      </associatedSkills>
+      <statOffsets>
+        <TradePriceImprovement>0.18</TradePriceImprovement>
+      </statOffsets>
+    </InspirationDef>
+
+
+    <InspirationDef>
+      <defName>Dream_Inspired_Creativity</defName>
+      <label>inspired creativity</label>
+      <baseDurationDays>2</baseDurationDays>
+      <beginLetter>The next item, art, or furniture [PAWN_pronoun] creates will be two quality levels higher than it would otherwise be. This even allows the creation of legendary items.\n\nThe inspiration will end after 2 days, or when the creation is completed.</beginLetter>
+      <beginLetterDef>PositiveEvent</beginLetterDef>
+      <endMessage>{0} is no longer inspired (inspired creativity).</endMessage>
+      <baseInspectLine>Dream: Inspired creativity</baseInspectLine>
+      <requiredAnyNonDisabledWorkType>
+        <li>Art</li>
+        <li>Smithing</li>
+        <li>Construction</li>
+        <li>Tailoring</li>
+      </requiredAnyNonDisabledWorkType>
+      <associatedSkills>
+        <li>Artistic</li>
+      </associatedSkills>
+      <requiredAnySkill>
+        <Construction>3</Construction>
+        <Artistic>3</Artistic>
+        <Crafting>3</Crafting>
+      </requiredAnySkill>
+      <requiredCapacities>
+        <li>Manipulation</li>
+      </requiredCapacities>
+      <baseCommonality>0</baseCommonality>
+    </InspirationDef>
+ -->
+</Defs>

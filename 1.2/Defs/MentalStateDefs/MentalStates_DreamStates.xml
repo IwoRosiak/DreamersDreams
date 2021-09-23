@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+        <MentalStateDef Name="BaseSleepWalkState" Abstract="true">
+
+          <minTicksBeforeRecovery>1250</minTicksBeforeRecovery>
+          <maxTicksBeforeRecovery>5000</maxTicksBeforeRecovery>
+          <recoveryMtbDays>0.02</recoveryMtbDays>
+          <blockNormalThoughts>true</blockNormalThoughts>
+          <blockRandomInteraction>true</blockRandomInteraction>
+          <nameColor>(0.65, 0.9, 0.93)</nameColor>
+          <recoveryMessage>{0} no longer sleepwalks.</recoveryMessage>
+          <baseInspectLine>Sleepwalking...</baseInspectLine>
+          <recoverFromSleep>false</recoverFromSleep>
+          <recoverFromDowned>true</recoverFromDowned>
+          <recoverFromCollapsingExhausted>false</recoverFromCollapsingExhausted>
+          <unspawnedCanDo>false</unspawnedCanDo>
+        </MentalStateDef>
+
+        <MentalBreakDef>
+          <defName>Sleepwalk</defName>
+          <mentalState>Sleepwalk</mentalState>
+          <baseCommonality>0</baseCommonality>
+          <intensity>Major</intensity>
+        </MentalBreakDef>
+
+        <MentalStateDef ParentName="BaseSleepWalkState" Class= "DreamersDream.DD_MentalStateDef">
+          <defName>Sleepwalk</defName>
+          <label>sleepwalking</label>
+          <stateClass>MentalState_WanderConfused</stateClass>
+        </MentalStateDef>
+
+        <MentalBreakDef>
+          <defName>SleepwalkBerserk</defName>
+          <mentalState>SleepwalkBerserk</mentalState>
+          <baseCommonality>0</baseCommonality>
+          <intensity>Extreme</intensity>
+        </MentalBreakDef>
+
+        <MentalStateDef ParentName="BaseSleepWalkState" Class= "DreamersDream.DD_MentalStateDef">
+          <defName>SleepwalkBerserk</defName>
+          <label>sleepwalking berserk</label>
+          <category>Aggro</category>
+          <stateClass>MentalState_Berserk</stateClass>
+        </MentalStateDef>
+
+        <MentalBreakDef>
+          <defName>SleepwalkSafe</defName>
+          <mentalState>SleepwalkSafe</mentalState>
+          <baseCommonality>0</baseCommonality>
+          <intensity>Extreme</intensity>
+        </MentalBreakDef>
+
+        <MentalStateDef ParentName="BaseSleepWalkState" Class= "DreamersDream.DD_MentalStateDef">
+          <defName>SleepwalkSafe</defName>
+          <label>sleepwalking</label>
+          <stateClass>MentalState_WanderConfused</stateClass>
+        </MentalStateDef>
+
+
+        <MentalBreakDef>
+          <defName>SleepwalkTantrum</defName>
+          <mentalState>SleepwalkTantrum</mentalState>
+          <baseCommonality>0</baseCommonality>
+          <intensity>Major</intensity>
+        </MentalBreakDef>
+
+        <MentalStateDef ParentName="BaseSleepWalkState" Class= "DreamersDream.DD_MentalStateDef">
+          <defName>SleepwalkTantrum</defName>
+          <label>sleepwalking tantrum</label>
+          <category>Aggro</category>
+          <stateClass>MentalState_TantrumAll</stateClass>
+          <workerClass>MentalStateWorker_TantrumAll</workerClass>
+        </MentalStateDef>
+
+
+        <MentalBreakDef>
+          <defName>SleepwalkOwnRoom</defName>
+          <mentalState>SleepwalkOwnRoom</mentalState>
+          <baseCommonality>0</baseCommonality>
+          <intensity>Extreme</intensity>
+        </MentalBreakDef>
+
+        <MentalStateDef ParentName="BaseSleepWalkState" Class= "DreamersDream.DD_MentalStateDef">
+          <defName>SleepwalkOwnRoom</defName>
+          <label>sleepwalking in own room</label>
+          <stateClass>MentalState_WanderConfused</stateClass>
+        </MentalStateDef>
+
+        <MentalBreakDef>
+          <defName>SleepwalkBingingFood</defName>
+          <mentalState>SleepwalkBingingFood</mentalState>
+          <baseCommonality>0</baseCommonality>
+          <intensity>Extreme</intensity>
+        </MentalBreakDef>
+
+        <MentalStateDef ParentName="BaseSleepWalkState" Class= "DreamersDream.DD_MentalStateDef">
+          <defName>SleepwalkBingingFood</defName>
+          <label>Sleepwalk Binging Food</label>
+          <stateClass>MentalState_Binging</stateClass>
+        </MentalStateDef>
+
+
+
+</Defs>

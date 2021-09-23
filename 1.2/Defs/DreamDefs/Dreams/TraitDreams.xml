@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+    <!--BLOODLUST-->
+    <DreamersDream.DreamDef ParentName="EpicDream">
+        <defName>DreamMurderingRival</defName>
+        <label>Dreamt about murdering rival</label>
+        <description>I wish they could still be here. To see how much I'm enjoying myself now, after ending their miserable life...</description>
+        <requiredTraits>
+            <li>Bloodlust</li>
+        </requiredTraits>
+    </DreamersDream.DreamDef>
+    
+    <DreamersDream.DreamDef ParentName="AmazingDream">
+        <defName>DreamMurderSpree</defName>
+        <label>Dreamt about murder spree</label>
+        <description>Nothing can stop me. Murder. Everyone.</description>
+        <requiredTraits>
+            <li>Bloodlust</li>
+        </requiredTraits>
+    </DreamersDream.DreamDef>
+    
+    <DreamersDream.DreamDef ParentName="AmazingDream">
+        <defName>DreamTorturingStranger</defName>
+        <label>Dreamt about torturing</label>
+        <description>Stranger tied up in front of me. Set of shiny and sharp tools on the table. I grabbed one of the knifes and I couldn't stop. Even when strangers body stopped quivering, I was still taking pleasure in the simple act of torture...</description>
+        <requiredTraits>
+            <li>Bloodlust</li>
+        </requiredTraits>
+    </DreamersDream.DreamDef>
+    
+    <DreamersDream.DreamDef ParentName="ExcitingDream">
+        <defName>DreamMurder</defName>
+        <label>Dreamt about murder</label>
+        <description>Motionless body lays in front of me and I watch it. The blood pool keeps getting bigger. I don't remember why I killed this person but it feels so damn good.</description>
+        <requiredTraits>
+            <li>Bloodlust</li>
+        </requiredTraits>
+    </DreamersDream.DreamDef>
+    
+    <DreamersDream.DreamDef ParentName="PleasantDream">
+        <defName>DreamFightingBloodspill</defName>
+        <label>Dreamt about fighting</label>
+        <description>Breaking their bones is not enough! Let the blood spill!</description>
+        <requiredTraits>
+            <li>Bloodlust</li>
+        </requiredTraits>
+    </DreamersDream.DreamDef>
+    
+    <!--NUDIST-->
+    <DreamersDream.DreamDef ParentName="ExcitingDream">
+        <defName>DreamNakedParty</defName>
+        <label>Dreamt about partying naked</label>
+        <description>I was walking around the colony, when I realised that I'm wearing no clothes! I looked around and noticed that everyone took off their clothes as they saw me! We started to drink and dance naked until we dropped from exhaustion.</description>
+        <requiredTraits>
+            <li>Nudist</li>
+        </requiredTraits>
+    </DreamersDream.DreamDef>
+    
+    <!--CANNIBAL-->
+    <DreamersDream.DreamDef ParentName="AmazingDream">
+        <defName>DreamHumanFeast</defName>
+        <label>Dreamt about human feast</label>
+        <description>Legs, arms, eyes and brains. Cooked to perfection. I can eat my fill and no one will judge me!</description>
+        <requiredTraits>
+            <li>Cannibal</li>
+        </requiredTraits>
+    </DreamersDream.DreamDef>
+    
+    <DreamersDream.DreamDef ParentName="EpicDream">
+        <defName>DreamEatingRival</defName>
+        <label>Dreamt about eating my rival</label>
+        <description>I laughed while tying him over the fire pit. I laughed while heat was charring his face. I laughed while consuming his flesh.</description>
+        <requiredTraits>
+            <li>Cannibal</li>
+        </requiredTraits>
+    </DreamersDream.DreamDef>
+    
+    <DreamersDream.DreamDef ParentName="ExcitingDream">
+        <defName>DreamEatingSomeone</defName>
+        <label>Dreamt about eating someone</label>
+        <description>Eating a human being is simple. I used to think of it as a disgusting thing, but simply trying this delicacy proved me wrong!</description>
+        <requiredTraits>
+            <li>Cannibal</li>
+        </requiredTraits>
+    </DreamersDream.DreamDef>
+    
+    <DreamersDream.DreamDef ParentName="PleasantDream">
+        <defName>DreamPizzaFriendsCannibal</defName>
+        <label>Dreamt about special pizza</label>
+        <description>I dreamt I was making pizza out of my friends. It was delicious.</description>
+        <requiredTraits>
+            <li>Cannibal</li>
+        </requiredTraits>
+        <requiredOneOfMindStates>
+            <li>hasFriend</li>
+        </requiredOneOfMindStates>
+    </DreamersDream.DreamDef>
+    
+    <DreamersDream.DreamDef ParentName="UnpleasantDream">
+        <defName>DreamCheeseBad</defName>
+        <label>Dreamt about cheese</label>
+        <description>Cheese... Cheese everywhere!</description>
+        <dreamedBy>Male_07</dreamedBy>
+        <requiredTraits>
+            <li>Cannibal</li>
+        </requiredTraits>
+    </DreamersDream.DreamDef>
+</Defs>

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThinkTreeDef>
+    <defName>DreamMentalStates</defName>
+    <insertTag>Humanlike_PostMentalState</insertTag>
+    <insertPriority>1</insertPriority>
+    <thinkRoot Class="ThinkNode_Priority">
+		<subNodes>
+
+
+            <!--WANDER-->
+      <li Class="ThinkNode_ConditionalMentalState">
+        <state>Sleepwalk</state>
+        <subNodes>
+          <li Class="ThinkNode_PrioritySorter">
+            <subNodes>
+              <li Class="JobGiver_GetFood">
+                <maxLevelPercentage>0.05</maxLevelPercentage>
+              </li>
+            </subNodes>
+          </li>
+          <li Class="JobGiver_WanderAnywhere">
+            <maxDanger>Deadly</maxDanger>
+          </li>
+        </subNodes>
+      </li>
+
+      <li Class="ThinkNode_ConditionalMentalState">
+        <state>SleepwalkSafe</state>
+        <subNodes>
+          <li Class="ThinkNode_PrioritySorter">
+            <subNodes>
+              <li Class="JobGiver_GetFood">
+                <maxLevelPercentage>0.05</maxLevelPercentage>
+              </li>
+            </subNodes>
+          </li>
+          <li Class="JobGiver_WanderColony">
+            <maxDanger>Deadly</maxDanger>
+          </li>
+        </subNodes>
+      </li>
+
+            <!--BERSERK-->
+      <li Class="ThinkNode_ConditionalMentalState">
+        <state>SleepwalkBerserk</state>
+        <subNodes>
+          <li Class="ThinkNode_Priority">
+            <subNodes>
+              <li Class="JobGiver_Berserk" />
+              <li Class="JobGiver_WanderAnywhere">
+                <maxDanger>Deadly</maxDanger>
+              </li>
+              </subNodes>
+          </li>
+        </subNodes>
+      </li>
+
+      <!--OWNROOM WANDER-->
+
+      <li Class="ThinkNode_ConditionalMentalState">
+        <state>SleepwalkOwnRoom</state>
+        <subNodes>
+          <li Class="ThinkNode_PrioritySorter">
+            <subNodes>
+              <li Class="JobGiver_GetFood">
+                <maxLevelPercentage>0.05</maxLevelPercentage>
+              </li>
+            </subNodes>
+          </li>
+          <li Class="JobGiver_WanderOwnRoom">
+            <maxDanger>Deadly</maxDanger>
+          </li>
+        </subNodes>
+      </li>
+            <!--FOOD BINGING-->
+      <li Class="ThinkNode_ConditionalMentalState">
+        <state>SleepwalkBingingFood</state>
+        <subNodes>
+          <li Class="ThinkNode_PrioritySorter">
+            <minPriority>0.5</minPriority>
+            <subNodes>
+              <li Class="JobGiver_GetFood"/>
+              <li Class="JobGiver_SatisfyChemicalNeed"/>
+            </subNodes>
+          </li>
+          <li Class="JobGiver_BingeFood"/>
+          <li Class="JobGiver_WanderColony" />
+        </subNodes>
+      </li>
+
+      <!--TANTRUM-->
+      <li Class="ThinkNode_ConditionalMentalState">
+        <state>SleepwalkTantrum</state>
+        <subNodes>
+          <li Class="JobGiver_Tantrum" />
+          <li Class="JobGiver_WanderColony" />
+        </subNodes>
+      </li>
+
+      <!-- Corpse obsession -->
+      <li Class="ThinkNode_ConditionalMentalState">
+        <state>CorpseObsession</state>
+        <subNodes>
+          <li Class="JobGiver_HaulCorpseToPublicPlace" />
+          <li Class="JobGiver_WanderColony" />
+        </subNodes>
+      </li>
+
+
+    </subNodes>
+	</thinkRoot>
+  </ThinkTreeDef>
+
+</Defs>

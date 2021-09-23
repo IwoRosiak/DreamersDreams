@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+  <DreamersDream.DreamDef Name="BaseDream" Abstract="True">
+    <showBubble>true</showBubble>
+    <thoughtClass>DreamersDream.Thought_Dream</thoughtClass>
+    <durationDays>0.8</durationDays>
+    <stackLimit>1</stackLimit>
+    <stages>
+      <li>
+        <label>NoLabel</label>
+        <description>NoDescription</description>
+        <baseMoodEffect>0</baseMoodEffect>
+      </li>
+    </stages>
+  </DreamersDream.DreamDef>
+  
+  <DreamersDream.DreamDef Name="InfernalDream" Abstract="True"
+    ParentName="BaseDream">
+    <tags>
+      <li>HellLike</li>
+    </tags>
+  </DreamersDream.DreamDef>
+  
+  <DreamersDream.DreamDef Name="TerrorisingDream" Abstract="True"
+    ParentName="BaseDream">
+    <tags>
+      <li>Terrorising</li>
+    </tags>
+  </DreamersDream.DreamDef>
+  
+  <DreamersDream.DreamDef Name="DisturbingDream" Abstract="True"
+    ParentName="BaseDream">
+    <tags>
+      <li>Disturbing</li>
+    </tags>
+  </DreamersDream.DreamDef>
+  
+  <DreamersDream.DreamDef Name="UnpleasantDream" Abstract="True"
+    ParentName="BaseDream">
+    <tags>
+      <li>Unpleasant</li>
+    </tags>
+  </DreamersDream.DreamDef>
+  
+  <DreamersDream.DreamDef Name="FrighteningDream" Abstract="True"
+    ParentName="BaseDream">
+    <tags>
+      <li>Frightening</li>
+    </tags>
+  </DreamersDream.DreamDef>
+  
+  <DreamersDream.DreamDef Name="LegendaryDream" Abstract="True"
+    ParentName="BaseDream">
+    <tags>
+      <li>Legendary</li>
+    </tags>
+  </DreamersDream.DreamDef>
+  
+  <DreamersDream.DreamDef Name="PleasantDream" Abstract="True"
+    ParentName="BaseDream">
+    <tags>
+      <li>Pleasant</li>
+    </tags>
+  </DreamersDream.DreamDef>
+  
+  <DreamersDream.DreamDef Name="ExcitingDream" Abstract="True"
+    ParentName="BaseDream">
+    <tags>
+      <li>Exciting</li>
+    </tags>
+  </DreamersDream.DreamDef>
+  
+  <DreamersDream.DreamDef Name="AmazingDream" Abstract="True" ParentName="BaseDream">
+    <tags>
+      <li>Amazing</li>
+    </tags>
+  </DreamersDream.DreamDef>
+  
+  <DreamersDream.DreamDef Name="EpicDream" Abstract="True" ParentName="BaseDream">
+    <tags>
+      <li>Epic</li>
+    </tags>
+  </DreamersDream.DreamDef>
+</Defs>
