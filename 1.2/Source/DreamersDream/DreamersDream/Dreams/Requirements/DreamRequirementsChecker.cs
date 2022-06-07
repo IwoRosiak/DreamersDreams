@@ -1,36 +1,22 @@
 ﻿using RimWorld;
 using RimWorld.Planet;
 using System.Collections.Generic;
+using System.Linq;
 using Verse;
 
 namespace DreamersDream
 {
     internal static class DreamRequirementsChecker
     {
-        public static bool CheckBackstory(this BackstoryCategory backstoryCat, Pawn pawn, bool invert)
+        public static bool CheckBackstory(this BackstoryCategory backstoryCategory, Pawn pawn, bool checksForOpposite)
         {
-            bool flag = false;
-            /*
-            foreach (var cats in pawn.story.GetBackstory(BackstorySlot.Adulthood)?.spawnCategories)
-            {
-                if (cats == backstoryCat.ToString())
-                {
-                    flag = true;
-                }
-            }*/
+            bool hasBackStory = pawn.story?.GetBackstory(BackstorySlot.Childhood)?.spawnCategories
+                .FirstOrDefault(category => category == backstoryCategory.ToString()) != null;
 
-            foreach (var cats in pawn.story.GetBackstory(BackstorySlot.Childhood)?.spawnCategories)
-            {
-                if (cats == backstoryCat.ToString())
-                {
-                    flag = true;
-                }
-            }
-            if (invert)
-            {
-                flag = !flag;
-            }
-            return flag;
+            if (checksForOpposite)
+                hasBackStory = !hasBackStory;
+
+            return hasBackStory;
         }
 
         public static bool CheckStandingStatus(this StandingStatus standing, Pawn pawn, bool invert)
@@ -43,6 +29,7 @@ namespace DreamersDream
                     {
                         flag = false;
                     }
+
                     break;
 
                 case StandingStatus.colonist:
@@ -50,6 +37,7 @@ namespace DreamersDream
                     {
                         flag = false;
                     }
+
                     break;
 
                 case StandingStatus.guest:
@@ -58,10 +46,12 @@ namespace DreamersDream
                 default:
                     break;
             }
+
             if (invert)
             {
                 flag = !flag;
             }
+
             return flag;
         }
 
@@ -75,13 +65,16 @@ namespace DreamersDream
                     {
                         flag = false;
                     }
+
                     break;
 
                 case BodyState.healthy:
-                    if (pawn.health.hediffSet.HasNaturallyHealingInjury() || pawn.health.hediffSet.AnyHediffMakesSickThought)
+                    if (pawn.health.hediffSet.HasNaturallyHealingInjury() ||
+                        pawn.health.hediffSet.AnyHediffMakesSickThought)
                     {
                         flag = false;
                     }
+
                     break;
 
                 case BodyState.ill:
@@ -89,6 +82,7 @@ namespace DreamersDream
                     {
                         flag = false;
                     }
+
                     break;
 
                 case BodyState.hungry:
@@ -96,6 +90,7 @@ namespace DreamersDream
                     {
                         flag = false;
                     }
+
                     break;
 
                 case BodyState.fed:
@@ -103,6 +98,7 @@ namespace DreamersDream
                     {
                         flag = false;
                     }
+
                     break;
 
                 case BodyState.starving:
@@ -110,6 +106,7 @@ namespace DreamersDream
                     {
                         flag = false;
                     }
+
                     break;
 
                 case BodyState.young:
@@ -117,6 +114,7 @@ namespace DreamersDream
                     {
                         flag = false;
                     }
+
                     break;
 
                 case BodyState.old:
@@ -124,6 +122,7 @@ namespace DreamersDream
                     {
                         flag = false;
                     }
+
                     break;
 
                 case BodyState.male:
@@ -131,6 +130,7 @@ namespace DreamersDream
                     {
                         flag = false;
                     }
+
                     break;
 
                 case BodyState.female:
@@ -138,6 +138,7 @@ namespace DreamersDream
                     {
                         flag = false;
                     }
+
                     break;
 
                 case BodyState.disabled:
@@ -145,6 +146,7 @@ namespace DreamersDream
                     {
                         flag = false;
                     }
+
                     break;
 
                 case BodyState.travelling:
@@ -152,6 +154,7 @@ namespace DreamersDream
                     {
                         flag = false;
                     }
+
                     break;
 
                 /*case HealthStatus.reachedSkillCap:
@@ -165,10 +168,12 @@ namespace DreamersDream
                 default:
                     break;
             }
+
             if (invert)
             {
                 flag = !flag;
             }
+
             return flag;
         }
 
@@ -186,6 +191,7 @@ namespace DreamersDream
                     return true;
                 }
             }
+
             return false;
         }
 
@@ -196,6 +202,7 @@ namespace DreamersDream
             {
                 bodyParts.Add(part);
             }
+
             return bodyParts;
         }
 
@@ -220,6 +227,7 @@ namespace DreamersDream
                     {
                         flag = false;
                     }
+
                     break;
 
                 case MindState.guilty:
@@ -227,6 +235,7 @@ namespace DreamersDream
                     {
                         flag = false;
                     }
+
                     break;
 
                 case MindState.hasEx:
@@ -237,6 +246,7 @@ namespace DreamersDream
                     {
                         flag = false;
                     }
+
                     break;
 
                 case MindState.aloneWorld:
@@ -244,15 +254,18 @@ namespace DreamersDream
                     {
                         flag = false;
                     }
+
                     break;
 
                 default:
                     break;
             }
+
             if (invert)
             {
                 flag = !flag;
             }
+
             return flag;
         }
 
@@ -365,6 +378,7 @@ namespace DreamersDream
                     //Log.Message("21");
                 }
             }
+
             foreach (var req in dream.requiredBackstory)
             {
                 if (!req.CheckBackstory(pawn, false))
@@ -373,6 +387,7 @@ namespace DreamersDream
                     //Log.Message("22");
                 }
             }
+
             foreach (var req in dream.requiredOneOfBackstory)
             {
                 if (req.CheckBackstory(pawn, false))
@@ -381,6 +396,7 @@ namespace DreamersDream
                     //Log.Message("23");
                 }
             }
+
             //standing
             foreach (var req in dream.conflictingStanding)
             {
@@ -390,6 +406,7 @@ namespace DreamersDream
                     //Log.Message("31");
                 }
             }
+
             foreach (var req in dream.requiredStanding)
             {
                 if (!req.CheckStandingStatus(pawn, false))
@@ -398,6 +415,7 @@ namespace DreamersDream
                     //Log.Message("32");
                 }
             }
+
             foreach (var req in dream.requiredOneOfStanding)
             {
                 if (req.CheckStandingStatus(pawn, false))
@@ -406,6 +424,7 @@ namespace DreamersDream
                     //Log.Message("33");
                 }
             }
+
             //health
             foreach (var req in dream.conflictingBodyStates)
             {
@@ -415,6 +434,7 @@ namespace DreamersDream
                     //Log.Message("41");
                 }
             }
+
             foreach (var req in dream.requiredBodyStates)
             {
                 if (!req.CheckBodyState(pawn, false))
@@ -423,6 +443,7 @@ namespace DreamersDream
                     //Log.Message("42");
                 }
             }
+
             foreach (var req in dream.requiredOneOfBodyStates)
             {
                 if (req.CheckBodyState(pawn, false))
@@ -431,6 +452,7 @@ namespace DreamersDream
                     break;
                 }
             }
+
             //social
             foreach (var req in dream.conflictingMindStates)
             {
@@ -440,6 +462,7 @@ namespace DreamersDream
                     //Log.Message("51");
                 }
             }
+
             foreach (var req in dream.requiredMindStates)
             {
                 if (!req.CheckMindState(pawn, false))
@@ -448,6 +471,7 @@ namespace DreamersDream
                     //Log.Message("52");
                 }
             }
+
             foreach (var req in dream.requiredOneOfMindStates)
             {
                 if (req.CheckMindState(pawn, false))
@@ -456,6 +480,7 @@ namespace DreamersDream
                     break;
                 }
             }
+
             //thought
             foreach (var req in dream.conflictingThoughts)
             {
@@ -464,6 +489,7 @@ namespace DreamersDream
                     flag = false;
                 }
             }
+
             foreach (var req in dream.requiredThoughts)
             {
                 if (!CheckForThought(req, pawn, false))
@@ -471,6 +497,7 @@ namespace DreamersDream
                     flag = false;
                 }
             }
+
             foreach (var req in dream.requiredOneOfThoughts)
             {
                 if (!CheckForThought(req, pawn, false))
@@ -485,6 +512,7 @@ namespace DreamersDream
                 //Log.Message("6");
                 flag = false;
             }
+
             return flag;
         }
 
@@ -501,6 +529,7 @@ namespace DreamersDream
             {
                 flag = !flag;
             }
+
             return flag;
         }
     }
