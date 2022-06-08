@@ -19,8 +19,8 @@ Global
 		{547A49AC-32E3-4422-9484-184E1FA544A9}.Release|Any CPU.Build.0 = Release|Any CPU
 		{547A49AC-32E3-4422-9484-184E1FA544A9}.RimWorld 1.2|Any CPU.ActiveCfg = RimWorld 1.2|Any CPU
 		{547A49AC-32E3-4422-9484-184E1FA544A9}.RimWorld 1.2|Any CPU.Build.0 = RimWorld 1.2|Any CPU
-		{547A49AC-32E3-4422-9484-184E1FA544A9}.RimWorld 1.3|Any CPU.ActiveCfg = RimWorld 1.2|Any CPU
-		{547A49AC-32E3-4422-9484-184E1FA544A9}.RimWorld 1.3|Any CPU.Build.0 = RimWorld 1.2|Any CPU
+		{547A49AC-32E3-4422-9484-184E1FA544A9}.RimWorld 1.3|Any CPU.ActiveCfg = RimWorld 1.3|Any CPU
+		{547A49AC-32E3-4422-9484-184E1FA544A9}.RimWorld 1.3|Any CPU.Build.0 = RimWorld 1.3|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
