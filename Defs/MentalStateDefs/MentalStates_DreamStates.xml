@@ -13,7 +13,6 @@
           <recoverFromSleep>false</recoverFromSleep>
           <recoverFromDowned>true</recoverFromDowned>
           <recoverFromCollapsingExhausted>false</recoverFromCollapsingExhausted>
-          <unspawnedCanDo>false</unspawnedCanDo>
         </MentalStateDef>
 
         <MentalBreakDef>
