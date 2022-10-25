@@ -7,7 +7,7 @@ namespace DreamersDream
     {
         public static bool CanGetDreamNow(this Pawn pawn)
         {
-            if (pawn.IsPawnCapableOfDreaming() && !pawn.IsAwake() && pawn.IsPawnRestedEnough() && !pawn.HasDreamAlready())
+            if (pawn.IsPawnCapableOfDreaming() && !pawn.IsAwake() && pawn.IsPawnRestedEnough() && !pawn.HasDreamAlready() && pawn.ageTracker.Adult)
             {
                 return true;
             }

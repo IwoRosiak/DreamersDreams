@@ -5,6 +5,11 @@ namespace DreamersDream
 {
     public class DreamsComp : ThingComp
     {
+
+        private PawnDreamTagsOddsTracker TagsOddsTracker;
+
+        private PawnDreamOddsTracker OddsTracker;
+
         public DreamsCompProperties Props
         {
             get
@@ -52,18 +57,18 @@ namespace DreamersDream
 
         private void ApplyRandomDream()
         {
-            var RandomTag = DreamSelector.ChooseRandomDreamTag(TagsOddsTracker.GetUpdatedTagsWithChances());
+            var randomTag = DreamSelector.ChooseRandomDreamTag(TagsOddsTracker.GetUpdatedTagsWithChances());
 
-            ApplyDreamOfSpecificTag(RandomTag);
+            ApplyDreamOfSpecificTag(randomTag);
         }
 
         private void ApplyDreamOfSpecificTag(DreamTagDef randomTag)
         {
-            var RandomDream = DreamSelector.ChooseRandomDream(OddsTracker.GetUpdatedDreamsWithChances(randomTag));
+            var randomDream = DreamSelector.ChooseRandomDream(OddsTracker.GetUpdatedDreamsWithChances(randomTag));
 
             TriggerNotification(randomTag);
 
-            TriggerDreamEffects(RandomDream);
+            TriggerDreamEffects(randomDream);
         }
 
         private void TriggerDreamEffects(DreamDef dream)
@@ -108,9 +113,5 @@ namespace DreamersDream
             }
             Log.Message("CUTOFF");
         }
-
-        private PawnDreamTagsOddsTracker TagsOddsTracker;
-
-        private PawnDreamOddsTracker OddsTracker;
     }
 }
