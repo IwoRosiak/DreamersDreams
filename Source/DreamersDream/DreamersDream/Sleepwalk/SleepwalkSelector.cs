@@ -6,6 +6,10 @@ namespace DreamersDream
 {
     internal static class SleepwalkSelector
     {
+        private static Dictionary<SleepwalkingTypes, float> SleepwalkChancesThresholds = new Dictionary<SleepwalkingTypes, float>();
+
+        private static float sumOfChances;
+
         public static bool IsSleepwalker(this Pawn pawn)
         {
             return pawn.story.traits.HasTrait(DD_TraitDefOf.Sleepwalker);
@@ -46,7 +50,7 @@ namespace DreamersDream
 
             float roll = Rand.Range(0, sumOfChances);
 
-            foreach (var sleepwalkType in SleepwalkChancesThresholds)
+            foreach (KeyValuePair<SleepwalkingTypes, float> sleepwalkType in SleepwalkChancesThresholds)
             {
                 if (roll <= sleepwalkType.Value)
                 {
@@ -80,7 +84,7 @@ namespace DreamersDream
         {
             float aggressiveness = 0;
 
-            foreach (var trait in pawn.story.traits.allTraits)
+            foreach (Trait trait in pawn.story.traits.allTraits)
             {
                 switch (trait.def.defName)
                 {
@@ -112,12 +116,12 @@ namespace DreamersDream
         {
             float anger = 0;
 
-            foreach (var trait in pawn.story.traits.allTraits)
+            foreach (Trait trait in pawn.story.traits.allTraits)
             {
                 switch (trait.def.defName)
                 {
                     case "Nerves":
-                        switch (pawn.story.traits.DegreeOfTrait(TraitDefOf.Nerves))
+                        switch (pawn.story.traits.DegreeOfTrait(DD_TraitDefOf.Nerves))
                         {
                             case -1:
                                 anger++;
@@ -143,7 +147,7 @@ namespace DreamersDream
         {
             float foodDesire = 0;
 
-            foreach (var trait in pawn.story.traits.allTraits)
+            foreach (Trait trait in pawn.story.traits.allTraits)
             {
                 switch (trait.def.defName)
                 {
@@ -152,7 +156,7 @@ namespace DreamersDream
                         break;
 
                     case "NaturalMood":
-                        switch (pawn.story.traits.DegreeOfTrait(TraitDefOf.NaturalMood))
+                        switch (pawn.story.traits.DegreeOfTrait(DD_TraitDefOf.NaturalMood))
                         {
                             case -1:
                                 foodDesire += 0.5f;
@@ -168,9 +172,5 @@ namespace DreamersDream
 
             return foodDesire;
         }
-
-        private static Dictionary<SleepwalkingTypes, float> SleepwalkChancesThresholds = new Dictionary<SleepwalkingTypes, float>();
-
-        private static float sumOfChances;
     }
 }

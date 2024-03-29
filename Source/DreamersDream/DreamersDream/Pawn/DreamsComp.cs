@@ -1,4 +1,5 @@
 ﻿using RimWorld;
+using System.Collections.Generic;
 using Verse;
 
 namespace DreamersDream
@@ -41,7 +42,7 @@ namespace DreamersDream
                 if (pawn.ShouldSleepwalkNow())
                 {
                     ApplyDreamOfSpecificTag(DreamTagDefOf.Sleepwalk);
-                    pawn.mindState.mentalStateHandler.TryStartMentalState(pawn.ChooseSleepwalkState(), null, true, false, null, false);
+                    pawn.mindState.mentalStateHandler.TryStartMentalState(pawn.ChooseSleepwalkState(), null, true, true, false, null, false);
                 }
                 else
                 {
@@ -57,14 +58,14 @@ namespace DreamersDream
 
         private void ApplyRandomDream()
         {
-            var randomTag = DreamSelector.ChooseRandomDreamTag(TagsOddsTracker.GetUpdatedTagsWithChances());
+            DreamTagDef randomTag = DreamSelector.ChooseRandomDreamTag(TagsOddsTracker.GetUpdatedTagsWithChances());
 
             ApplyDreamOfSpecificTag(randomTag);
         }
 
         private void ApplyDreamOfSpecificTag(DreamTagDef randomTag)
         {
-            var randomDream = DreamSelector.ChooseRandomDream(OddsTracker.GetUpdatedDreamsWithChances(randomTag));
+            DreamDef randomDream = DreamSelector.ChooseRandomDream(OddsTracker.GetUpdatedDreamsWithChances(randomTag));
 
             TriggerNotification(randomTag);
 
@@ -103,10 +104,10 @@ namespace DreamersDream
 
         private void DebugLogAllDreamsAndQualities()
         {
-            foreach (var tag in TagsOddsTracker.GetUpdatedTagsWithChances())
+            foreach (KeyValuePair<DreamTagDef, float> tag in TagsOddsTracker.GetUpdatedTagsWithChances())
             {
                 Log.Message(tag.Key.defName + " has " + tag.Value + "% chance upper threshold. And these are dreams for those tags: ");
-                foreach (var dream in OddsTracker.GetUpdatedDreamsWithChances(tag.Key))
+                foreach (KeyValuePair<DreamDef, float> dream in OddsTracker.GetUpdatedDreamsWithChances(tag.Key))
                 {
                     Log.Message("     -" + dream.Key.defName + " has " + dream.Value + "% chance upper threshold.");
                 }

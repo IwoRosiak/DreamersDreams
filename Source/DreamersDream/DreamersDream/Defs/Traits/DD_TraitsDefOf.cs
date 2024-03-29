@@ -13,5 +13,9 @@ namespace DreamersDream
         public static TraitDef Sleepwalker;
 
         public static TraitDef Gourmand;
+
+        public static TraitDef NaturalMood;
+
+        public static TraitDef Nerves;
     }
 }
